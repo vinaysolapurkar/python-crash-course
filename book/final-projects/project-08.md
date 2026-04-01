@@ -241,7 +241,7 @@ def login():
 
 ### Step 5: Build the Blog Post CRUD Endpoints
 
-These are the core of the API -- creating, reading, updating, and deleting blog posts.
+These are the core of the API - creating, reading, updating, and deleting blog posts.
 
 ```python
 @app.route("/api/posts", methods=["GET"])
@@ -473,7 +473,7 @@ curl -X DELETE http://localhost:5000/api/posts/1 \
 
 ## Portfolio Tips
 
-A REST API is one of the most valuable portfolio pieces you can have -- it's the backbone of modern web applications. When presenting this:
+A REST API is one of the most valuable portfolio pieces you can have - it's the backbone of modern web applications. When presenting this:
 
 - **GitHub:** Include a comprehensive README with all endpoints documented, example `curl` commands, and setup instructions. Consider adding a Postman collection file.
 - **Resume:** "Built a RESTful blog API with Flask featuring token-based authentication, SQLite persistence, full CRUD operations, and authorization controls."

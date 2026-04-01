@@ -4,7 +4,7 @@
 
 What if I told you that you could replace a 5-line loop with a single line of code? You'd probably say "that sounds either amazing or unreadable." And honestly? You'd be right on both counts.
 
-Welcome to functional programming lite. These tools won't replace everything you've learned -- but they'll give you some seriously elegant shortcuts for common patterns.
+Welcome to functional programming lite. These tools won't replace everything you've learned - but they'll give you some seriously elegant shortcuts for common patterns.
 
 > **Don't Panic:** This chapter looks fancy, but it's really just shortcuts for things you already know how to do with loops. If `map()` and `filter()` confuse you, you can always fall back to a regular for loop. Nobody will judge you. (Okay, some people on Reddit might. But ignore those people.)
 
@@ -24,7 +24,7 @@ double = lambda x: x * 2
 print(double(5))   # 10
 ```
 
-The syntax is: `lambda parameters: expression`. No `def`, no name, no `return` -- the expression IS the return value.
+The syntax is: `lambda parameters: expression`. No `def`, no name, no `return` - the expression IS the return value.
 
 ```python
 # One parameter
@@ -41,7 +41,7 @@ print(grade(75))    # Pass
 print(grade(45))    # Fail
 ```
 
-Now, here's the thing: storing a lambda in a variable kind of defeats the purpose. If you're going to name it, just write a regular function -- it's more readable. Lambdas shine when you use them *inline*, as throwaway functions passed to other functions.
+Now, here's the thing: storing a lambda in a variable kind of defeats the purpose. If you're going to name it, just write a regular function - it's more readable. Lambdas shine when you use them *inline*, as throwaway functions passed to other functions.
 
 ```python
 # This is where lambdas actually make sense
@@ -80,7 +80,7 @@ squared = list(map(lambda x: x ** 2, numbers))
 print(squared)   # [1, 4, 9, 16, 25]
 ```
 
-`map(function, iterable)` returns a map object (lazy -- doesn't compute until needed). Wrap it in `list()` to see the results.
+`map(function, iterable)` returns a map object (lazy - doesn't compute until needed). Wrap it in `list()` to see the results.
 
 More practical examples:
 
@@ -109,7 +109,7 @@ discounted = list(map(lambda p: round(p * 0.9, 2), prices))
 print(discounted)   # [899.1, 26.1, 71.1]
 ```
 
-Notice how `map(int, str_numbers)` doesn't need a lambda -- `int` is already a function that takes one argument. When the function already exists, just pass it directly.
+Notice how `map(int, str_numbers)` doesn't need a lambda - `int` is already a function that takes one argument. When the function already exists, just pass it directly.
 
 ## filter(): Keep Only the Good Stuff
 
@@ -155,7 +155,7 @@ passing = list(filter(lambda s: s >= 60, scores))
 print(passing)   # [78, 92, 67, 88, 95]
 ```
 
-The `filter(None, words)` trick filters out anything "falsy" -- empty strings, `0`, `None`, `False`, etc. Handy for cleaning data.
+The `filter(None, words)` trick filters out anything "falsy" - empty strings, `0`, `None`, `False`, etc. Handy for cleaning data.
 
 ## Combining map() and filter()
 
@@ -193,7 +193,7 @@ We'll talk about when to use which in a moment.
 
 `reduce()` takes a list and boils it down to a single value. It applies a function to the first two items, then applies the function to the result and the third item, and so on until there's only one value left.
 
-Unlike `map` and `filter`, `reduce` isn't built-in -- you have to import it.
+Unlike `map` and `filter`, `reduce` isn't built-in - you have to import it.
 
 ```python
 from functools import reduce
@@ -266,7 +266,7 @@ print(result)   # [4, 16, 36, 64, 100]
 **My honest recommendation:**
 
 | Situation | Use |
-|-----------|-----|
+|------|---|
 | Simple transformation | List comprehension |
 | Simple filtering | List comprehension |
 | Both together | List comprehension |

@@ -4,18 +4,18 @@
 
 Sprint 3 done. Take a second to appreciate what just happened.
 
-You now think in objects. You look at a problem and you see classes, attributes, methods, relationships. That's a fundamental shift in how you write code -- and honestly, in how you *think* about code. Most of the software in the world is built this way, and now you can read it, write it, and reason about it.
+You now think in objects. You look at a problem and you see classes, attributes, methods, relationships. That's a fundamental shift in how you write code - and honestly, in how you *think* about code. Most of the software in the world is built this way, and now you can read it, write it, and reason about it.
 
 Let's prove it by building something real.
 
 ## The Project: Library Management System
 
-You're going to build a Library Management System with three core classes -- `Book`, `Member`, and `Library` -- that handles checkouts, returns, searching, and saves everything to a JSON file so your data survives between runs.
+You're going to build a Library Management System with three core classes - `Book`, `Member`, and `Library` - that handles checkouts, returns, searching, and saves everything to a JSON file so your data survives between runs.
 
 This isn't a toy example. It touches every skill from this sprint:
 
 | Concept | Where You'll Use It |
-|---------|-------------------|
+|-----|----------|
 | Classes & `__init__` (Ch. 15) | Every class you build |
 | Methods & `self` (Ch. 15) | Every method you write |
 | Inheritance (Ch. 16) | `EBook` and `AudioBook` extend `Book` |
@@ -56,7 +56,7 @@ class Book:
 
     def __str__(self):
         status = "Available" if self.is_available else f"Checked out to {self._borrower}"
-        return f"'{self.title}' by {self.author} (ISBN: {self.isbn}) -- {status}"
+        return f"'{self.title}' by {self.author} (ISBN: {self.isbn}) - {status}"
 
     def __repr__(self):
         return f"Book('{self.title}', '{self.author}', '{self.isbn}')"
@@ -73,7 +73,7 @@ class Book:
         }
 ```
 
-Notice the `to_dict()` method -- that's how we'll save to JSON later. Also notice `_borrower` has a single underscore. It's internal data that should only be changed through `check_out()` and `return_book()`. That's encapsulation in action.
+Notice the `to_dict()` method - that's how we'll save to JSON later. Also notice `_borrower` has a single underscore. It's internal data that should only be changed through `check_out()` and `return_book()`. That's encapsulation in action.
 
 ## Step 2: Specialized Book Types (Inheritance)
 
@@ -142,7 +142,7 @@ class Member:
 
     def __str__(self):
         count = len(self.borrowed_books)
-        return f"Member: {self.name} (ID: {self.member_id}) -- {count} book(s) borrowed"
+        return f"Member: {self.name} (ID: {self.member_id}) - {count} book(s) borrowed"
 
     def __repr__(self):
         return f"Member('{self.name}', '{self.member_id}')"
@@ -212,7 +212,7 @@ class Library:
     def available_books(self):
         return [b for b in self._books.values() if b.is_available]
 
-    # --- Magic methods ---
+    # -- Magic methods --
 
     def __len__(self):
         return len(self._books)
@@ -225,7 +225,7 @@ class Library:
     def __contains__(self, isbn):
         return isbn in self._books
 
-    # --- JSON persistence ---
+    # -- JSON persistence --
 
     def save(self, filepath="library_data.json"):
         data = {
@@ -275,7 +275,7 @@ def main():
     # Create the library
     lib = Library("City Central Library")
 
-    # Add books (polymorphism -- different types, same interface)
+    # Add books (polymorphism - different types, same interface)
     lib.add_book(Book("The Great Gatsby", "F. Scott Fitzgerald", "978-0743273565"))
     lib.add_book(Book("1984", "George Orwell", "978-0451524935"))
     lib.add_book(EBook("Python Crash Course", "Eric Matthes", "978-1718502703", "EPUB"))
@@ -336,7 +336,7 @@ Expected output:
 ```
 City Central Library: 4 books (4 available), 2 members
 
-  Found: 'Python Crash Course' by Eric Matthes (ISBN: 978-1718502703) -- Available [EBook: EPUB]
+  Found: 'Python Crash Course' by Eric Matthes (ISBN: 978-1718502703) - Available [EBook: EPUB]
 
 'The Great Gatsby' checked out to Alice
 'Python Crash Course' checked out to Alice
@@ -345,7 +345,7 @@ City Central Library: 4 books (4 available), 2 members
 City Central Library: 4 books (1 available), 2 members
 
 Available books:
-  '1984' by George Orwell (ISBN: 978-0451524935) -- Available
+  '1984' by George Orwell (ISBN: 978-0451524935) - Available
 
 'The Great Gatsby' returned by Alice
 
@@ -384,16 +384,16 @@ Welcome to City Central Library!
 
 Take a look at what you just built:
 
-- **Classes and objects** -- `Book`, `Member`, `Library` (Chapter 15)
-- **`__init__` and `self`** -- everywhere (Chapter 15)
-- **Inheritance** -- `EBook` and `AudioBook` extending `Book` (Chapter 16)
-- **`super()`** -- child constructors calling parent setup (Chapter 16)
-- **Magic methods** -- `__str__`, `__repr__`, `__len__`, `__contains__` (Chapter 17)
-- **Encapsulation** -- `_borrower`, `_books`, `_members`, `_max_books` (Chapter 18)
-- **Composition** -- `Library` HAS books and members (Chapter 18)
-- **Polymorphism** -- `EBook`, `AudioBook`, and `Book` all work the same way (Chapter 18)
-- **File handling** -- JSON save/load (Sprint 2, Chapter 12)
-- **Error handling** -- `ValueError` for invalid operations (Sprint 2, Chapter 13)
+- **Classes and objects** - `Book`, `Member`, `Library` (Chapter 15)
+- **`__init__` and `self`** - everywhere (Chapter 15)
+- **Inheritance** - `EBook` and `AudioBook` extending `Book` (Chapter 16)
+- **`super()`** - child constructors calling parent setup (Chapter 16)
+- **Magic methods** - `__str__`, `__repr__`, `__len__`, `__contains__` (Chapter 17)
+- **Encapsulation** - `_borrower`, `_books`, `_members`, `_max_books` (Chapter 18)
+- **Composition** - `Library` HAS books and members (Chapter 18)
+- **Polymorphism** - `EBook`, `AudioBook`, and `Book` all work the same way (Chapter 18)
+- **File handling** - JSON save/load (Sprint 2, Chapter 12)
+- **Error handling** - `ValueError` for invalid operations (Sprint 2, Chapter 13)
 
 That's not a toy program. That's a real system with real design patterns. You should feel good about this.
 
@@ -401,7 +401,7 @@ That's not a toy program. That's a real system with real design patterns. You sh
 
 You're past the halfway point of the book. Most people who start learning to code quit before getting here. You didn't. That means something. It means you're the kind of person who pushes through the hard parts, who doesn't quit when `self` is confusing or when inheritance doesn't click on the first try.
 
-Sprint 4 is where things get *really* exciting. You're going to take everything you've built -- your Python fundamentals, your OOP skills -- and start building things that connect to the real world: APIs, web scraping, databases. The code you write is about to escape your terminal and start talking to the internet.
+Sprint 4 is where things get *really* exciting. You're going to take everything you've built - your Python fundamentals, your OOP skills - and start building things that connect to the real world: APIs, web scraping, databases. The code you write is about to escape your terminal and start talking to the internet.
 
 But first, take a break. Build the library project. Maybe go outside. You've earned it.
 

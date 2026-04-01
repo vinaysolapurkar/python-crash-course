@@ -2,24 +2,24 @@
 
 > **Sprint 5, Chapter 30** | **12 min read** | **Code: [github link](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-5-ai/chapter-30-ai-apis/)**
 
-LLMs are like having a very smart intern. They can write, summarize, translate, and answer questions -- but they need clear instructions and sometimes make stuff up with total confidence. Sound like anyone you know from college group projects? The key difference: this intern works 24/7, never complains, and you can build an entire product around them.
+LLMs are like having a very smart intern. They can write, summarize, translate, and answer questions - but they need clear instructions and sometimes make stuff up with total confidence. Sound like anyone you know from college group projects? The key difference: this intern works 24/7, never complains, and you can build an entire product around them.
 
 You're about to build apps that use the same technology behind ChatGPT. Take a moment. This is genuinely cool.
 
 ## What You'll Learn
 - What LLMs are (simple, no PhD required)
 - OpenAI API setup and your first API call
-- Chat completions -- the core of everything
+- Chat completions - the core of everything
 - System, user, and assistant messages
-- Temperature -- the creativity dial
-- Tokens -- how AI measures text
+- Temperature - the creativity dial
+- Tokens - how AI measures text
 - Streaming responses
 - Google Gemini API basics
 - Prompt engineering fundamentals
 
 ## Why Should I Care?
 
-ChatGPT, Gemini, Claude -- you've used them. Now you're going to build with them. This is the most in-demand skill in tech right now. Job postings that mention "LLM" or "AI integration" have exploded. Companies are building AI features into everything: customer support bots, content generators, code assistants, data analyzers. And the developers building these features? They're using the exact APIs you're about to learn.
+ChatGPT, Gemini, Claude - you've used them. Now you're going to build with them. This is the most in-demand skill in tech right now. Job postings that mention "LLM" or "AI integration" have exploded. Companies are building AI features into everything: customer support bots, content generators, code assistants, data analyzers. And the developers building these features? They're using the exact APIs you're about to learn.
 
 The barrier to entry has never been lower. You don't need to train a model. You don't need a GPU. You just need an API key and Python. You have both.
 
@@ -43,7 +43,7 @@ Think of it like autocomplete on your phone, but trained on the entire internet 
 2. Sign up or log in
 3. Go to API Keys (in the left sidebar or settings)
 4. Click "Create new secret key"
-5. Copy it immediately -- you won't see it again
+5. Copy it immediately - you won't see it again
 
 > **Warning:** Your API key is like a password. Never put it in your code. Never commit it to GitHub. Never share it. People scan GitHub for leaked keys and will run up your bill.
 
@@ -110,7 +110,7 @@ print(response.choices[0].message.content)
 
 That's it. You just called the same AI that powers ChatGPT. From your own Python code. Five lines (not counting the import).
 
-> **Don't Panic:** The API is literally just sending text and getting text back. If you've used the `requests` library (Chapter 21), this is the same concept -- you send data to a server, it sends data back. The OpenAI library just wraps that into a clean interface.
+> **Don't Panic:** The API is literally just sending text and getting text back. If you've used the `requests` library (Chapter 21), this is the same concept - you send data to a server, it sends data back. The OpenAI library just wraps that into a clean interface.
 
 ## Chat Completions: The Core API
 
@@ -198,7 +198,7 @@ Rules of thumb:
 
 ## Tokens: How AI Measures Text
 
-LLMs don't read words -- they read **tokens**. A token is roughly 3/4 of a word. "Hello, world!" is about 3 tokens. A page of text is around 500-700 tokens.
+LLMs don't read words - they read **tokens**. A token is roughly 3/4 of a word. "Hello, world!" is about 3 tokens. A page of text is around 500-700 tokens.
 
 Why do you care? Because you're **billed per token**. Both the tokens you send (input) and the tokens the AI generates (output).
 
@@ -218,11 +218,11 @@ print(f"Total tokens: {response.usage.total_tokens}")
 # Total tokens: 76
 ```
 
-> **Pro Tip:** `gpt-4o-mini` is cheap and fast -- perfect for learning and most applications. `gpt-4o` is more capable but costs more. Start with mini, upgrade only if you need better quality.
+> **Pro Tip:** `gpt-4o-mini` is cheap and fast - perfect for learning and most applications. `gpt-4o` is more capable but costs more. Start with mini, upgrade only if you need better quality.
 
 ## Streaming Responses
 
-Instead of waiting for the entire response, you can stream it word by word -- just like ChatGPT does:
+Instead of waiting for the entire response, you can stream it word by word - just like ChatGPT does:
 
 ```python
 stream = client.chat.completions.create(
@@ -372,7 +372,7 @@ print(response.text)  # Knows we're talking about lists
 
 Gemini has a generous free tier, which makes it great for learning and prototyping. The API is slightly simpler than OpenAI's, and the models are competitive in quality.
 
-> **Pro Tip:** You don't have to pick one. Many production apps use multiple LLMs -- OpenAI for some tasks, Gemini for others, Claude for yet others. The APIs are similar enough that switching is easy.
+> **Pro Tip:** You don't have to pick one. Many production apps use multiple LLMs - OpenAI for some tasks, Gemini for others, Claude for yet others. The APIs are similar enough that switching is easy.
 
 ## Prompt Engineering: 5 Practical Tips
 
@@ -440,7 +440,7 @@ messages = [
 
 ## Building a Simple Chatbot
 
-Let's put it all together -- a command-line chatbot:
+Let's put it all together - a command-line chatbot:
 
 ```python
 from openai import OpenAI
@@ -523,7 +523,7 @@ Ideas to try:
 
 ## TL;DR
 
-- LLMs are sophisticated text predictors trained on massive amounts of data -- not magic, not thinking
+- LLMs are sophisticated text predictors trained on massive amounts of data - not magic, not thinking
 - **OpenAI API**: `pip install openai`, set `OPENAI_API_KEY`, call `client.chat.completions.create()`
 - Messages have roles: **system** (personality), **user** (you), **assistant** (AI's responses)
 - **Temperature**: 0 = focused/consistent, 1 = creative/varied
@@ -531,5 +531,5 @@ Ideas to try:
 - **Streaming**: `stream=True` gives you the typing effect
 - **Gemini** works similarly: `pip install google-generativeai`, same concepts
 - **Prompt engineering** matters: be specific, give roles, show examples, specify format
-- The API is just sending text and getting text back -- you already know how to do this
+- The API is just sending text and getting text back - you already know how to do this
 - You're building AI-powered applications now. This is not a drill.

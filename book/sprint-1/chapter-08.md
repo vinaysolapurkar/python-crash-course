@@ -2,7 +2,7 @@
 
 > **Sprint 1** | **12 min read** | **Code: [github link](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-1-basics/chapter-08-tuples-sets/)**
 
-If lists are the extroverts of Python data types -- flexible, changeable, always growing -- tuples are the introverts and sets are the bouncers. Tuples are quiet, reliable, and never change. Sets refuse to let duplicates in. Together with lists, these three data types cover almost every way you'll need to store collections of data.
+If lists are the extroverts of Python data types - flexible, changeable, always growing - tuples are the introverts and sets are the bouncers. Tuples are quiet, reliable, and never change. Sets refuse to let duplicates in. Together with lists, these three data types cover almost every way you'll need to store collections of data.
 
 ## What You'll Learn
 - Tuples: what they are, when to use them, and why immutability matters
@@ -47,7 +47,7 @@ No appending. No removing. No sorting in place. It's locked down. Sealed. Immuta
 
 Great question. Here's why tuples exist:
 
-1. **Safety.** Some data shouldn't change. GPS coordinates, RGB colors, database records -- if something accidentally modifies them, bad things happen. Tuples prevent that.
+1. **Safety.** Some data shouldn't change. GPS coordinates, RGB colors, database records - if something accidentally modifies them, bad things happen. Tuples prevent that.
 
 2. **Performance.** Tuples are slightly faster than lists because Python knows they won't change. For most programs you won't notice, but it matters at scale.
 
@@ -172,7 +172,7 @@ print(unique_numbers)  # {1, 2, 3, 4}
 That deduplication trick is incredibly useful. Got a list with duplicates? Wrap it in `set()` and they're gone.
 
 ```python
-# Empty set -- this is a gotcha!
+# Empty set - this is a gotcha!
 empty_set = set()      # Correct
 empty_dict = {}        # This is an empty DICTIONARY, not a set!
 ```
@@ -186,14 +186,14 @@ fruits = {"apple", "banana", "cherry"}
 fruits.add("mango")
 print(fruits)  # {'apple', 'banana', 'cherry', 'mango'} (order may vary)
 
-# Add a duplicate -- nothing happens, no error
+# Add a duplicate - nothing happens, no error
 fruits.add("apple")
 print(fruits)  # Still the same set, no second "apple"
 
 # Remove an item (raises error if not found)
 fruits.remove("banana")
 
-# Discard an item (no error if not found -- safer!)
+# Discard an item (no error if not found - safer!)
 fruits.discard("kiwi")  # No error, even though "kiwi" isn't there
 
 # Pop a random item (sets are unordered, so you can't pick which one)
@@ -212,7 +212,7 @@ This is important: sets have **no index** and **no order**. You can't do `my_set
 
 ```python
 numbers = {3, 1, 4, 1, 5, 9}
-print(numbers)  # Maybe {1, 3, 4, 5, 9} -- you can't predict the order
+print(numbers)  # Maybe {1, 3, 4, 5, 9} - you can't predict the order
 # print(numbers[0])  # TypeError! Sets don't support indexing
 ```
 
@@ -231,17 +231,17 @@ guardians = {"Star-Lord", "Gamora", "Groot", "Rocket", "Thor"}
 
 (Yes, Thor is in both. Multiverse stuff.)
 
-**Union** -- everyone from both teams (combined roster):
+**Union** - everyone from both teams (combined roster):
 
 ```python
 all_heroes = avengers | guardians  # or avengers.union(guardians)
 print(all_heroes)
 # {'Iron Man', 'Thor', 'Hulk', 'Black Widow', 'Captain America',
 #  'Star-Lord', 'Gamora', 'Groot', 'Rocket'}
-# Thor appears only ONCE -- no duplicates!
+# Thor appears only ONCE - no duplicates!
 ```
 
-**Intersection** -- heroes on BOTH teams:
+**Intersection** - heroes on BOTH teams:
 
 ```python
 both_teams = avengers & guardians  # or avengers.intersection(guardians)
@@ -249,7 +249,7 @@ print(both_teams)
 # {'Thor'}
 ```
 
-**Difference** -- in Avengers but NOT in Guardians:
+**Difference** - in Avengers but NOT in Guardians:
 
 ```python
 avengers_only = avengers - guardians  # or avengers.difference(guardians)
@@ -257,7 +257,7 @@ print(avengers_only)
 # {'Iron Man', 'Hulk', 'Black Widow', 'Captain America'}
 ```
 
-**Symmetric Difference** -- in one team OR the other, but NOT both:
+**Symmetric Difference** - in one team OR the other, but NOT both:
 
 ```python
 exclusive = avengers ^ guardians  # or avengers.symmetric_difference(guardians)
@@ -267,7 +267,7 @@ print(exclusive)
 # Thor is excluded because he's in both!
 ```
 
-These operations are not just cool -- they're blazing fast. Checking if an item is in a set is nearly instant, no matter how large the set is. Doing the same with a list gets slower as the list grows.
+These operations are not just cool - they're blazing fast. Checking if an item is in a set is nearly instant, no matter how large the set is. Doing the same with a list gets slower as the list grows.
 
 **Subset and superset checks:**
 
@@ -283,7 +283,7 @@ print(avengers.isdisjoint(guardians))      # False (they share Thor)
 Here's your cheat sheet:
 
 | Feature | List `[]` | Tuple `()` | Set `{}` |
-|---------|-----------|------------|----------|
+|-----|------|------|-----|
 | Ordered? | Yes | Yes | No |
 | Mutable? | Yes | No | Yes |
 | Duplicates? | Allowed | Allowed | Not allowed |
@@ -353,7 +353,7 @@ for i, song in enumerate(sorted(mega_playlist), 1):
     print(f"  {i}. {song}")
 
 # Bonus: use tuple unpacking
-print("\n--- Now Playing ---")
+print("\n-- Now Playing --")
 current_song, *up_next = sorted(mega_playlist)
 print(f"Now playing: {current_song}")
 print(f"Up next: {up_next[0]}")
@@ -367,9 +367,9 @@ print(f"Songs remaining: {len(up_next)}")
 
 ## TL;DR
 
-- **Tuples** are immutable (read-only) lists: `point = (10, 20)` -- use for data that shouldn't change
+- **Tuples** are immutable (read-only) lists: `point = (10, 20)` - use for data that shouldn't change
 - **Tuple unpacking** assigns each item to a variable: `name, age = ("Alice", 30)`
-- **Swap trick:** `a, b = b, a` -- no temp variable needed
+- **Swap trick:** `a, b = b, a` - no temp variable needed
 - **Sets** are unordered collections with no duplicates: `unique = {1, 2, 3}`
 - **Set deduplication:** `set([1, 1, 2, 2, 3])` gives you `{1, 2, 3}`
 - **Set operations:** `|` (union), `&` (intersection), `-` (difference), `^` (symmetric difference)

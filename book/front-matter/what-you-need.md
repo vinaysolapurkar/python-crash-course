@@ -1,6 +1,6 @@
 # What You'll Need
 
-Before we write our first line of Python, let's make sure you've got everything set up. Don't worry — it's all free.
+Before we write our first line of Python, let's make sure you've got everything set up. Don't worry - it's all free.
 
 ## 1. Python 3.12 or Later
 
@@ -10,7 +10,7 @@ Python is the language we're learning. You need to install it on your computer.
 1. Go to python.org/downloads
 2. Click the big yellow "Download Python 3.12" button
 3. Run the installer
-4. **IMPORTANT:** Check the box that says "Add Python to PATH" — this is the one thing everyone forgets, and it causes 90% of setup headaches
+4. **IMPORTANT:** Check the box that says "Add Python to PATH" - this is the one thing everyone forgets, and it causes 90% of setup headaches
 5. Click "Install Now"
 
 **Mac:**
@@ -28,9 +28,9 @@ sudo apt install python3 python3-pip
 
 **Verify it works:** Open a terminal (Command Prompt on Windows, Terminal on Mac/Linux) and type:
 ```
-python --version
+python -version
 ```
-You should see something like `Python 3.12.x`. If you see `Python 2.x`, try `python3 --version` instead.
+You should see something like `Python 3.12.x`. If you see `Python 2.x`, try `python3 -version` instead.
 
 ## 2. VS Code (Visual Studio Code)
 
@@ -48,7 +48,7 @@ We'll use GitHub to access the companion code repository, and later you'll use i
 
 1. Go to github.com
 2. Sign up for a free account
-3. That's it for now — we'll use it more in later chapters
+3. That's it for now - we'll use it more in later chapters
 
 ## 4. An Internet Connection
 

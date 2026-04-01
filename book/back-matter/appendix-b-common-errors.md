@@ -1,6 +1,6 @@
 # Appendix B: Top 20 Python Errors (and How to Fix Them)
 
-Every Python developer -- from complete beginner to seasoned professional -- has seen these errors. The difference between a beginner and an expert isn't that experts don't get errors; it's that experts read the error message, nod, and fix it in thirty seconds. By the end of this appendix, you'll do the same.
+Every Python developer - from complete beginner to seasoned professional - has seen these errors. The difference between a beginner and an expert isn't that experts don't get errors; it's that experts read the error message, nod, and fix it in thirty seconds. By the end of this appendix, you'll do the same.
 
 ---
 
@@ -39,7 +39,7 @@ x = 5
 
 **What it means:** A line is indented when it shouldn't be, or indented to the wrong level.
 
-**Fix:** Make sure indentation is consistent. Use 4 spaces per level (never mix tabs and spaces). Most editors have a "convert tabs to spaces" setting -- turn it on.
+**Fix:** Make sure indentation is consistent. Use 4 spaces per level (never mix tabs and spaces). Most editors have a "convert tabs to spaces" setting - turn it on.
 
 ---
 
@@ -189,7 +189,7 @@ If it IS installed, check you're using the right Python environment (virtual env
 average = total / count  # count is 0
 ```
 
-**What it means:** Exactly what it says -- you divided by zero.
+**What it means:** Exactly what it says - you divided by zero.
 
 **Fix:** Check for zero before dividing:
 ```python

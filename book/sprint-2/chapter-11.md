@@ -4,7 +4,7 @@
 
 Why build everything from scratch when thousands of developers have already built it for you? That would be like insisting on growing your own wheat every time you want a sandwich.
 
-Python's real superpower isn't the language itself -- it's the ecosystem. There are tens of thousands of ready-made packages for everything from sending emails to training AI models. And you get to use them with a single line of code.
+Python's real superpower isn't the language itself - it's the ecosystem. There are tens of thousands of ready-made packages for everything from sending emails to training AI models. And you get to use them with a single line of code.
 
 ## Import Styles: Three Ways to Borrow Code
 
@@ -26,7 +26,7 @@ today = dt.date.today()
 print(today)
 ```
 
-**Style 1** is the safest -- you always know where a function came from because it's prefixed with the module name. **Style 2** is convenient for things you use a lot. **Style 3** is great for modules with long names.
+**Style 1** is the safest - you always know where a function came from because it's prefixed with the module name. **Style 2** is convenient for things you use a lot. **Style 3** is great for modules with long names.
 
 One style you should almost never use:
 
@@ -41,9 +41,9 @@ This dumps every function from the module into your code, and you lose track of 
 
 ## Standard Library Greatest Hits
 
-Python comes with a massive standard library -- modules that are installed automatically with Python. No `pip install` needed. Here are the greatest hits.
+Python comes with a massive standard library - modules that are installed automatically with Python. No `pip install` needed. Here are the greatest hits.
 
-### random -- When You Need Chaos
+### random - When You Need Chaos
 
 ```python
 import random
@@ -68,7 +68,7 @@ lottery = random.sample(range(1, 50), 3)
 print(lottery)   # e.g., [17, 42, 3]
 ```
 
-### datetime -- Time Is on Your Side
+### datetime - Time Is on Your Side
 
 ```python
 from datetime import datetime, date, timedelta
@@ -98,7 +98,7 @@ days_left = (new_year - today).days
 print(f"Days until 2027: {days_left}")
 ```
 
-### os -- Talk to Your Computer
+### os - Talk to Your Computer
 
 ```python
 import os
@@ -124,7 +124,7 @@ home = os.environ.get("HOME", "Not found")
 print(f"Home directory: {home}")
 ```
 
-### math -- For When You Need Real Math
+### math - For When You Need Real Math
 
 ```python
 import math
@@ -142,7 +142,7 @@ def distance(x1, y1, x2, y2):
 print(distance(0, 0, 3, 4))  # 5.0
 ```
 
-### json -- The Internet's Favorite Format
+### json - The Internet's Favorite Format
 
 JSON is how the internet passes data around. It looks almost exactly like Python dictionaries, which makes it really easy to work with.
 
@@ -169,7 +169,7 @@ We'll use JSON a lot more in Chapter 12 when we learn file handling. For now, ju
 
 ## pip install: Getting Packages from the Internet
 
-The standard library is great, but the real magic is **PyPI** (Python Package Index) -- a massive repository of packages built by the community. Over 500,000 packages and counting.
+The standard library is great, but the real magic is **PyPI** (Python Package Index) - a massive repository of packages built by the community. Over 500,000 packages and counting.
 
 To install a package, you use `pip`:
 
@@ -207,7 +207,7 @@ Three lines of code to talk to the internet. That's the power of packages.
 
 Here's the problem: you're working on Project A, which needs `requests` version 2.25. Then you start Project B, which needs `requests` version 2.31. If you install both globally, they'll conflict.
 
-Virtual environments solve this. They're isolated Python environments for each project. Think of them like separate apartments -- each project gets its own space with its own furniture.
+Virtual environments solve this. They're isolated Python environments for each project. Think of them like separate apartments - each project gets its own space with its own furniture.
 
 ```bash
 # Create a virtual environment
@@ -323,7 +323,7 @@ Then write a Python script that:
 4. Asks if the user wants another quote (loop until they say no)
 5. Bonus: Let the user filter quotes by author
 
-You'll need: `json`, `random`, and file handling (sneak peek of Chapter 12 -- use `open("quotes.json") as f` and `json.load(f)`).
+You'll need: `json`, `random`, and file handling (sneak peek of Chapter 12 - use `open("quotes.json") as f` and `json.load(f)`).
 
 Full solution available at:
 `https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-2-intermediate/chapter-11-modules/`

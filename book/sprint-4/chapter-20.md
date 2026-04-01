@@ -1,4 +1,4 @@
-# Chapter 20: Generators & Iterators -- Memory-Friendly Loops
+# Chapter 20: Generators & Iterators - Memory-Friendly Loops
 
 > **Sprint 4, Chapter 20** | **Estimated Time: 15-20 minutes** | **Difficulty: Advanced**
 
@@ -6,13 +6,13 @@
 
 Imagine you need to process a 10 GB log file. You could load the entire thing into memory... and watch your laptop freeze, crash, and possibly catch fire. Or you could process it one line at a time, using barely any memory at all.
 
-That's what generators do. They let you work with huge amounts of data -- or even *infinite* amounts of data -- without running out of memory. Data pipelines, machine learning preprocessing, reading massive files, streaming data from APIs -- generators are everywhere in professional Python code.
+That's what generators do. They let you work with huge amounts of data - or even *infinite* amounts of data - without running out of memory. Data pipelines, machine learning preprocessing, reading massive files, streaming data from APIs - generators are everywhere in professional Python code.
 
 ## The Netflix Analogy
 
 Think about the difference between **downloading** and **streaming**.
 
-If you wanted to watch every movie on Netflix, you *could* download all of them first. That would take... well, you'd need a warehouse of hard drives. Or you could **stream** -- watch one movie at a time, and the next one loads only when you hit play.
+If you wanted to watch every movie on Netflix, you *could* download all of them first. That would take... well, you'd need a warehouse of hard drives. Or you could **stream** - watch one movie at a time, and the next one loads only when you hit play.
 
 **Lists are like downloading.** They compute and store every value upfront. **Generators are like streaming.** They compute one value at a time, only when you ask for it.
 
@@ -20,16 +20,16 @@ Same movies. Same data. Radically different memory usage.
 
 ## The Iterator Protocol (Quick Version)
 
-Before generators, let's understand what they're built on. In Python, anything you can loop over with `for` is called an **iterable**. Lists, strings, dictionaries, files -- all iterables.
+Before generators, let's understand what they're built on. In Python, anything you can loop over with `for` is called an **iterable**. Lists, strings, dictionaries, files - all iterables.
 
 Under the hood, Python uses two special methods to make looping work:
 
 ```python
 # What Python actually does when you write: for x in [1, 2, 3]
 my_list = [1, 2, 3]
-iterator = iter(my_list)    # Calls __iter__() -- gets an iterator
+iterator = iter(my_list)    # Calls __iter__() - gets an iterator
 
-print(next(iterator))       # Calls __next__() -- gets 1
+print(next(iterator))       # Calls __next__() - gets 1
 print(next(iterator))       # Gets 2
 print(next(iterator))       # Gets 3
 # next(iterator)            # Raises StopIteration
@@ -102,7 +102,7 @@ print(next(gen))          # "Step 3" prints, then yields "C"
 # next(gen)               # "Done" prints, then StopIteration
 ```
 
-Notice: **creating the generator does nothing.** It doesn't start running until you call `next()` on it. This is called **lazy evaluation** -- values are computed only when needed.
+Notice: **creating the generator does nothing.** It doesn't start running until you call `next()` on it. This is called **lazy evaluation** - values are computed only when needed.
 
 > **Remember When?** Remember lists from Sprint 1? Generators are just lazy lists. They compute values one at a time instead of all at once. Same data, less memory.
 
@@ -111,10 +111,10 @@ Notice: **creating the generator does nothing.** It doesn't start running until 
 Just like list comprehensions give you a one-liner for lists, **generator expressions** give you a one-liner for generators. The syntax is identical, except you use parentheses instead of square brackets:
 
 ```python
-# List comprehension -- creates the entire list in memory
+# List comprehension - creates the entire list in memory
 squares_list = [x ** 2 for x in range(1000000)]
 
-# Generator expression -- creates values one at a time
+# Generator expression - creates values one at a time
 squares_gen = (x ** 2 for x in range(1000000))
 
 print(type(squares_list))  # <class 'list'>
@@ -126,7 +126,7 @@ The list version creates one million numbers in memory right now. The generator 
 You can use generator expressions anywhere you'd use a list comprehension:
 
 ```python
-# Sum of squares (no list needed -- just pass the generator)
+# Sum of squares (no list needed - just pass the generator)
 total = sum(x ** 2 for x in range(1000000))
 
 # Find the first even square over 100
@@ -207,7 +207,7 @@ def filter_by_amount(records, min_amount):
         if float(record[2]) > min_amount:
             yield record
 
-# Chain them together -- nothing runs until the for loop starts
+# Chain them together - nothing runs until the for loop starts
 lines = read_csv_lines("transactions.csv")
 records = parse_fields(lines)
 big_transactions = filter_by_amount(records, 1000)
@@ -216,7 +216,7 @@ for record in big_transactions:
     print(record)
 ```
 
-Each step processes one item at a time and hands it to the next step. It's like an assembly line -- nothing is stored, everything flows through.
+Each step processes one item at a time and hands it to the next step. It's like an assembly line - nothing is stored, everything flows through.
 
 ## Infinite Generators
 
@@ -244,7 +244,7 @@ first_10 = list(islice(fibonacci(), 10))
 print(first_10)  # [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 ```
 
-You can't do `list(fibonacci())` -- that would try to create an infinite list and crash. But you can take as many as you need with `islice`.
+You can't do `list(fibonacci())` - that would try to create an infinite list and crash. But you can take as many as you need with `islice`.
 
 > **Wait, What?** "An infinite loop that doesn't crash?" Yes! Because `yield` pauses the loop. The infinite `while True` only runs one iteration at a time. As long as you stop asking for values at some point, it's perfectly fine.
 
@@ -272,7 +272,7 @@ print(list(combined))  # [1, 2, 3, 4, 5, 6]
 ## When to Use Generators vs Lists
 
 | Use a **List** when... | Use a **Generator** when... |
-|---|---|
+|--|--|
 | You need to access items by index | You only need to iterate once |
 | You need to iterate multiple times | The data is large or infinite |
 | You need the length | Memory is a concern |
@@ -303,14 +303,14 @@ for num in even_fibonacci(limit=100):
 ## TL;DR
 
 | Concept | What It Does |
-|---|---|
+|--|--|
 | Iterator | An object with `__next__()` that produces values one at a time |
 | Generator function | A function with `yield` that becomes an iterator |
 | `yield` | Like `return` but pauses and resumes |
-| Generator expression | `(x for x in iterable)` -- lazy version of list comprehension |
+| Generator expression | `(x for x in iterable)` - lazy version of list comprehension |
 | Lazy evaluation | Values computed only when needed |
 | `itertools` | Standard library module with generator utilities |
 
 **The one-sentence version:** Generators let you process data one piece at a time instead of loading everything into memory, using `yield` to pause and resume a function.
 
-Next up: APIs -- where we teach Python to talk to the internet.
+Next up: APIs - where we teach Python to talk to the internet.

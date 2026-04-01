@@ -9,7 +9,7 @@ Imagine your brain had no names for anything. You couldn't say "pass me my phone
 - The four basic data types: strings, integers, floats, and booleans
 - How to check a variable's type
 - Naming rules that'll keep you out of trouble
-- f-strings -- the single coolest feature for beginners
+- f-strings - the single coolest feature for beginners
 
 ## Variables: Labeled Boxes
 
@@ -36,13 +36,13 @@ The `=` sign doesn't mean "equals" like in math class. It means **"put this valu
 Python has four types you'll use constantly:
 
 | Type | What It Is | Example |
-|------|-----------|---------|
+|---|------|-----|
 | `str` | Text (string) | `"Hello"`, `'Netflix'` |
 | `int` | Whole number (integer) | `42`, `-7`, `0` |
 | `float` | Decimal number | `3.14`, `-0.5`, `99.99` |
 | `bool` | True or False (boolean) | `True`, `False` |
 
-Strings need quotes (single `'` or double `"` -- Python doesn't care which, just be consistent). Numbers don't get quotes. Booleans are capitalized: `True` and `False`, not `true` or `false`.
+Strings need quotes (single `'` or double `"` - Python doesn't care which, just be consistent). Numbers don't get quotes. Booleans are capitalized: `True` and `False`, not `true` or `false`.
 
 ```python
 movie = "Inception"          # str
@@ -51,7 +51,7 @@ rating = 8.8                 # float
 is_mind_bending = True       # bool
 ```
 
-## The type() Function -- What's in the Box?
+## The type() Function - What's in the Box?
 
 Ever pick up a mystery package and shake it? Python has a built-in way to check what type of data is in a variable:
 
@@ -86,7 +86,7 @@ user_name = "Mario"
 score_2 = 150
 _secret = "hidden"
 
-# BAD -- these will crash
+# BAD - these will crash
 # 2nd_place = "Luigi"    # Can't start with a number
 # user name = "Peach"    # No spaces allowed
 # class = "Warrior"      # 'class' is a reserved word
@@ -95,12 +95,12 @@ _secret = "hidden"
 **Style Conventions (snake_case is king):**
 
 ```python
-# Python style (snake_case) -- DO THIS
+# Python style (snake_case) - DO THIS
 player_health = 100
 max_score = 999
 is_game_over = False
 
-# Other languages' style -- DON'T do this in Python
+# Other languages' style - DON'T do this in Python
 playerHealth = 100    # This is camelCase (JavaScript vibes)
 MaxScore = 999        # This is PascalCase (C# energy)
 MAXSCORE = 999        # ALL CAPS is reserved for constants
@@ -118,7 +118,7 @@ age = 48
 print("My name is " + name + " and I am " + str(age) + " years old.")
 ```
 
-That works, but it looks like someone assembled a sentence with duct tape. Enter **f-strings** -- the elegant way:
+That works, but it looks like someone assembled a sentence with duct tape. Enter **f-strings** - the elegant way:
 
 ```python
 name = "Tony Stark"
@@ -131,7 +131,7 @@ Output:
 My name is Tony Stark and I am 48 years old.
 ```
 
-See that little `f` before the opening quote? That tells Python: "Hey, anything inside `{}` is a variable -- go grab its value." That's it. No plus signs, no `str()` conversion, no mess.
+See that little `f` before the opening quote? That tells Python: "Hey, anything inside `{}` is a variable - go grab its value." That's it. No plus signs, no `str()` conversion, no mess.
 
 You can even do math inside the curly braces:
 
@@ -175,11 +175,11 @@ x = "ten"     # now x is a string!?
 print(type(x)) # <class 'str'>
 ```
 
-> **Wait, What?** "Why can I put a string in a variable that had a number?" Because Python uses **dynamic typing**. The variable doesn't have a fixed type -- the *value* does. The box doesn't care what you put in it. A box that held books can now hold shoes. Python is chill like that.
+> **Wait, What?** "Why can I put a string in a variable that had a number?" Because Python uses **dynamic typing**. The variable doesn't have a fixed type - the *value* does. The box doesn't care what you put in it. A box that held books can now hold shoes. Python is chill like that.
 
 This is different from languages like Java or C++ where you declare a variable's type upfront and it's locked in forever. Python says: "Nah, live your life."
 
-> **Pro Tip:** If you're coming from JavaScript, Java, or C#, note that Python has no `let`, `const`, `var`, or type declarations. You just write `x = 5` and Python figures out the rest. There's no `int x = 5;` -- that semicolon alone will give Python a panic attack.
+> **Pro Tip:** If you're coming from JavaScript, Java, or C#, note that Python has no `let`, `const`, `var`, or type declarations. You just write `x = 5` and Python figures out the rest. There's no `int x = 5;` - that semicolon alone will give Python a panic attack.
 
 ## Multiple Assignment (The Shortcut)
 
@@ -229,7 +229,7 @@ print("=" * 40)
 print(f"  {name} will be a {python_skill + 5}/10 by Sprint 3!")
 ```
 
-Run it. Admire your work. Change the values. Notice how everything updates automatically because you used variables instead of hardcoding the text. That's the power of variables -- change one thing, and it ripples everywhere.
+Run it. Admire your work. Change the values. Notice how everything updates automatically because you used variables instead of hardcoding the text. That's the power of variables - change one thing, and it ripples everywhere.
 
 **Bonus challenge:** Add a `is_student` boolean variable and use it in an f-string: `f"Student: {is_student}"`
 
@@ -240,5 +240,5 @@ Run it. Admire your work. Change the values. Notice how everything updates autom
 - Use `type()` to check what type a variable is
 - **Naming:** use `snake_case`, start with a letter, no spaces, no reserved words
 - **f-strings** are the best way to mix variables with text: `f"Hello, {name}!"`
-- Python is **dynamically typed** -- a variable's type can change. Python doesn't judge.
+- Python is **dynamically typed** - a variable's type can change. Python doesn't judge.
 - You can reassign variables anytime. It's your box. Do what you want with it.

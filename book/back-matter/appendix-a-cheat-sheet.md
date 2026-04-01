@@ -1,13 +1,13 @@
 # Appendix A: Python Cheat Sheet
 
-A quick-reference guide to Python syntax and common patterns. Bookmark this page -- you'll come back to it constantly.
+A quick-reference guide to Python syntax and common patterns. Bookmark this page - you'll come back to it constantly.
 
 ---
 
 ## Variables and Data Types
 
 | Syntax | Example | Notes |
-|--------|---------|-------|
+|----|-----|----|
 | Integer | `x = 42` | Whole numbers, no size limit |
 | Float | `pi = 3.14` | Decimal numbers |
 | String | `name = "Alice"` | Text, single or double quotes |
@@ -19,7 +19,7 @@ A quick-reference guide to Python syntax and common patterns. Bookmark this page
 ## Strings
 
 | Operation | Syntax | Result |
-|-----------|--------|--------|
+|------|----|----|
 | Concatenation | `"Hello" + " " + "World"` | `"Hello World"` |
 | Repetition | `"ha" * 3` | `"hahaha"` |
 | f-string | `f"Hello, {name}!"` | `"Hello, Alice!"` |
@@ -38,7 +38,7 @@ A quick-reference guide to Python syntax and common patterns. Bookmark this page
 ## f-String Formatting
 
 | Syntax | Example | Result |
-|--------|---------|--------|
+|----|-----|----|
 | Variable | `f"{name}"` | Value of `name` |
 | Expression | `f"{2 + 3}"` | `"5"` |
 | Decimal places | `f"{3.14159:.2f}"` | `"3.14"` |
@@ -52,7 +52,7 @@ A quick-reference guide to Python syntax and common patterns. Bookmark this page
 ## Lists
 
 | Operation | Syntax | Result/Effect |
-|-----------|--------|---------------|
+|------|----|--------|
 | Create | `nums = [1, 2, 3]` | |
 | Empty list | `items = []` | |
 | Access | `nums[0]`, `nums[-1]` | `1`, `3` |
@@ -90,7 +90,7 @@ flat = [x for row in matrix for x in row]
 ## Dictionaries
 
 | Operation | Syntax | Result/Effect |
-|-----------|--------|---------------|
+|------|----|--------|
 | Create | `d = {"name": "Alice", "age": 30}` | |
 | Empty dict | `d = {}` | |
 | Access | `d["name"]` | `"Alice"` (KeyError if missing) |
@@ -109,7 +109,7 @@ flat = [x for row in matrix for x in row]
 ## Sets
 
 | Operation | Syntax | Result |
-|-----------|--------|--------|
+|------|----|----|
 | Create | `s = {1, 2, 3}` | |
 | Empty set | `s = set()` | NOT `{}` (that's a dict) |
 | Add | `s.add(4)` | |
@@ -123,7 +123,7 @@ flat = [x for row in matrix for x in row]
 ## Tuples
 
 | Operation | Syntax | Notes |
-|-----------|--------|-------|
+|------|----|----|
 | Create | `t = (1, 2, 3)` | Immutable (can't change) |
 | Single item | `t = (1,)` | Comma required |
 | Unpack | `a, b, c = t` | `a=1, b=2, c=3` |
@@ -343,7 +343,7 @@ if age < 0:
 ## Common Built-in Functions
 
 | Function | Example | Result |
-|----------|---------|--------|
+|-----|-----|----|
 | `print()` | `print("hi", end="")` | Output to console |
 | `input()` | `name = input("Name: ")` | Read from user |
 | `len()` | `len([1, 2, 3])` | `3` |

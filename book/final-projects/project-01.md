@@ -20,7 +20,7 @@ Choose a category:
 
 Your choice: 1
 
---- Science ---
+-- Science --
 
 Q1: What planet is known as the Red Planet?
   a) Venus
@@ -50,7 +50,7 @@ Rating: Great job!
 
 ### Step 1: Set Up the Question Data
 
-The foundation of any quiz game is its questions. We'll store them as a list of dictionaries -- each dictionary holds the question text, the answer choices, and the correct answer.
+The foundation of any quiz game is its questions. We'll store them as a list of dictionaries - each dictionary holds the question text, the answer choices, and the correct answer.
 
 ```python
 # quiz_game.py
@@ -168,7 +168,7 @@ def choose_category():
         choice = input("\nYour choice: ").strip()
         if choice in categories:
             name, questions = categories[choice]
-            print(f"\n--- {name} ---")
+            print(f"\n-- {name} --")
             return name, questions
         else:
             print("Invalid choice. Please enter 1, 2, 3, or 4.")
@@ -237,7 +237,7 @@ def show_results(score, total, results, category_name):
     elif percentage >= 40:
         rating = "Not bad, but there's room to grow."
     else:
-        rating = "Keep learning -- you'll get there!"
+        rating = "Keep learning - you'll get there!"
 
     print(f"  Rating: {rating}")
 
@@ -301,7 +301,7 @@ Test each category, try invalid inputs (like entering "z" when it expects a-d), 
 
 ## Portfolio Tips
 
-This is your "Hello World on steroids" -- it shows you can structure data, handle user input, and build a complete program with a clear beginning, middle, and end. When presenting this project:
+This is your "Hello World on steroids" - it shows you can structure data, handle user input, and build a complete program with a clear beginning, middle, and end. When presenting this project:
 
 - **GitHub:** Include a clear README with a screenshot of the game running in the terminal. Mention the categories and how to add new questions.
 - **Resume:** "Built a terminal-based quiz game with multiple categories, input validation, and score tracking using Python."

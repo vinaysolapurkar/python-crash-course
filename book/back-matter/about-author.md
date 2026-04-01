@@ -2,7 +2,7 @@
 
 [Author Name] is a software developer, educator, and firm believer that programming should be fun, accessible, and free of unnecessary jargon.
 
-After spending years watching talented people bounce off dry textbooks and confusing tutorials, they decided to write the book they wished they'd had when starting out -- one that treats readers like intelligent adults, explains things in plain language, and builds toward real projects instead of endless toy examples.
+After spending years watching talented people bounce off dry textbooks and confusing tutorials, they decided to write the book they wished they'd had when starting out - one that treats readers like intelligent adults, explains things in plain language, and builds toward real projects instead of endless toy examples.
 
 They've worked across the software industry, from scrappy startups to established companies, and have taught Python to beginners in classrooms, workshops, and late-night debugging sessions over coffee. The common thread in all of it: the moment when something clicks for someone who thought they "weren't a tech person." That moment never gets old.
 

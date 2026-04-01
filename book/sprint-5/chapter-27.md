@@ -2,7 +2,7 @@
 
 > **Sprint 5, Chapter 27** | **12 min read** | **Code: [github link](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-5-ai/chapter-27-pandas/)**
 
-If Excel and Python had a baby, it would be pandas. All the spreadsheet power, none of the mouse clicking. No more dragging formulas across 10,000 rows. No more accidentally sorting one column and scrambling all your data. Pandas does what Excel does -- but in code, which means it's reproducible, automatable, and infinitely more powerful.
+If Excel and Python had a baby, it would be pandas. All the spreadsheet power, none of the mouse clicking. No more dragging formulas across 10,000 rows. No more accidentally sorting one column and scrambling all your data. Pandas does what Excel does - but in code, which means it's reproducible, automatable, and infinitely more powerful.
 
 ## What You'll Learn
 - Series (one column) and DataFrame (the whole spreadsheet)
@@ -11,11 +11,11 @@ If Excel and Python had a baby, it would be pandas. All the spreadsheet power, n
 - Filtering data with conditions
 - Sorting and groupby (pivot table vibes)
 - Handling missing data
-- `describe()` -- instant statistics
+- `describe()` - instant statistics
 
 ## Why Should I Care?
 
-Data science, business analytics, machine learning prep, financial analysis, marketing reports -- they all start with pandas. If data is the new oil, pandas is the refinery. Every data science job listing mentions it. Every machine learning project starts by loading data into a pandas DataFrame. If you plan to work with data in any capacity, pandas is non-negotiable.
+Data science, business analytics, machine learning prep, financial analysis, marketing reports - they all start with pandas. If data is the new oil, pandas is the refinery. Every data science job listing mentions it. Every machine learning project starts by loading data into a pandas DataFrame. If you plan to work with data in any capacity, pandas is non-negotiable.
 
 ## Installing Pandas
 
@@ -47,7 +47,7 @@ print(scores)
 # dtype: int64
 ```
 
-Notice the numbers on the left? That's the **index** -- automatic labels. You can set your own:
+Notice the numbers on the left? That's the **index** - automatic labels. You can set your own:
 
 ```python
 scores = pd.Series(
@@ -73,7 +73,7 @@ print(scores.iloc[0])     # 85
 
 ## DataFrame: The Whole Spreadsheet
 
-A **DataFrame** is the star of the show. It's a table -- rows and columns, just like a spreadsheet. Each column is a Series.
+A **DataFrame** is the star of the show. It's a table - rows and columns, just like a spreadsheet. Each column is a Series.
 
 ```python
 import pandas as pd
@@ -100,7 +100,7 @@ That's it. Dictionary keys become column names. Lists become the data. You just 
 
 ```python
 # Quick info about your DataFrame
-print(df.shape)     # (5, 4) -- 5 rows, 4 columns
+print(df.shape)     # (5, 4) - 5 rows, 4 columns
 print(df.columns)   # Index(['name', 'age', 'city', 'salary'], dtype='object')
 print(df.dtypes)
 # name      object
@@ -124,7 +124,7 @@ print(df.head())
 print(df.tail())
 
 # How big is it?
-print(df.shape)  # (1000, 8) -- 1000 movies, 8 columns
+print(df.shape)  # (1000, 8) - 1000 movies, 8 columns
 ```
 
 Let's create a sample CSV to work with throughout this chapter:
@@ -380,7 +380,7 @@ Fixing missing data:
 ```python
 # Option 1: Drop rows with any missing data
 clean = df.dropna()
-print(clean)  # Only Alice, Diana -- lost 3 rows!
+print(clean)  # Only Alice, Diana - lost 3 rows!
 
 # Option 2: Fill missing values with a specific value
 filled = df.fillna({"age": df["age"].mean(), "salary": 0, "city": "Unknown"})
@@ -397,7 +397,7 @@ has_age = df.dropna(subset=["age"])
 print(has_age)  # Keeps Alice, Charlie, Diana
 ```
 
-> **Pro Tip:** `dropna()` is aggressive -- it can remove a lot of data. `fillna()` with the mean or median is usually a better first choice for numerical columns. For categorical columns (like city), `fillna("Unknown")` is a safe bet.
+> **Pro Tip:** `dropna()` is aggressive - it can remove a lot of data. `fillna()` with the mean or median is usually a better first choice for numerical columns. For categorical columns (like city), `fillna("Unknown")` is a safe bet.
 
 ## describe(): Instant Statistics
 
@@ -416,7 +416,7 @@ print(movies.describe())
 # max  2019.0000   9.200000  2700000.000   175.000000       185.000000       1005.000000
 ```
 
-Count, mean, standard deviation, min, max, and quartiles -- all in one call. This is the first thing every data scientist runs on a new dataset. Always.
+Count, mean, standard deviation, min, max, and quartiles - all in one call. This is the first thing every data scientist runs on a new dataset. Always.
 
 ```python
 # describe() for a single column
@@ -489,15 +489,15 @@ Expected insights:
 
 ## TL;DR
 
-- Pandas is Python's data analysis powerhouse -- think Excel but with code
-- `import pandas as pd` -- the universal convention
+- Pandas is Python's data analysis powerhouse - think Excel but with code
+- `import pandas as pd` - the universal convention
 - **Series** = one column; **DataFrame** = the whole table
 - `pd.read_csv("file.csv")` loads data; `df.head()` previews it
 - Select columns: `df["col"]` or `df[["col1", "col2"]]`
 - Select rows: `df.iloc[0]` (by position) or `df.loc[0]` (by label)
-- Filter: `df[df["col"] > value]` -- same boolean indexing pattern as NumPy
+- Filter: `df[df["col"] > value]` - same boolean indexing pattern as NumPy
 - Sort: `df.sort_values("col", ascending=False)`
-- Groupby: `df.groupby("col")["other_col"].mean()` -- pivot table in one line
+- Groupby: `df.groupby("col")["other_col"].mean()` - pivot table in one line
 - Missing data: `df.isna().sum()` to find it, `df.fillna()` or `df.dropna()` to fix it
 - `df.describe()` gives you instant statistics on every numeric column
-- You only need about 20 pandas methods for 95% of your work -- this chapter covered them
+- You only need about 20 pandas methods for 95% of your work - this chapter covered them

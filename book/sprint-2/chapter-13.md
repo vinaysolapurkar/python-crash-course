@@ -2,7 +2,7 @@
 
 > **Sprint 2, Chapter 13** | **Estimated Time: 12-15 minutes** | **Difficulty: Intermediate**
 
-Here's a truth bomb: your code WILL crash. Not might. Will. Every developer in the world writes code that breaks. The difference between a junior and a senior isn't that the senior writes bug-free code -- it's that the senior's code breaks *gracefully*.
+Here's a truth bomb: your code WILL crash. Not might. Will. Every developer in the world writes code that breaks. The difference between a junior and a senior isn't that the senior writes bug-free code - it's that the senior's code breaks *gracefully*.
 
 Think of error handling like a seatbelt. You don't wear a seatbelt because you plan to crash. You wear it because you're not an idiot.
 
@@ -11,44 +11,44 @@ Think of error handling like a seatbelt. You don't wear a seatbelt because you p
 Before we learn to catch errors, let's meet the usual suspects. These are the errors you'll see most often, and recognizing them is half the battle.
 
 ```python
-# TypeError -- wrong type for an operation
+# TypeError - wrong type for an operation
 result = "hello" + 5
 # TypeError: can only concatenate str (not "int") to str
 
-# ValueError -- right type, wrong value
+# ValueError - right type, wrong value
 number = int("hello")
 # ValueError: invalid literal for int() with base 10: 'hello'
 
-# KeyError -- dictionary key doesn't exist
+# KeyError - dictionary key doesn't exist
 data = {"name": "Priya"}
 print(data["age"])
 # KeyError: 'age'
 
-# IndexError -- list index out of range
+# IndexError - list index out of range
 colors = ["red", "blue", "green"]
 print(colors[10])
 # IndexError: list index out of range
 
-# NameError -- variable doesn't exist
+# NameError - variable doesn't exist
 print(undefined_variable)
 # NameError: name 'undefined_variable' is not defined
 
-# FileNotFoundError -- file doesn't exist
+# FileNotFoundError - file doesn't exist
 with open("nonexistent.txt") as f:
     content = f.read()
 # FileNotFoundError: [Errno 2] No such file or directory: 'nonexistent.txt'
 
-# ZeroDivisionError -- math says no
+# ZeroDivisionError - math says no
 result = 10 / 0
 # ZeroDivisionError: division by zero
 
-# AttributeError -- object doesn't have that method/property
+# AttributeError - object doesn't have that method/property
 number = 42
 number.upper()
 # AttributeError: 'int' object has no attribute 'upper'
 ```
 
-> **Don't Panic:** Errors aren't failures. They're Python telling you exactly what went wrong and where. Read the last line of the error message first -- it tells you the error type and what happened. Then look at the line number. It's actually being helpful. Like a friend who says "Hey, you have spinach in your teeth" instead of letting you walk around like that.
+> **Don't Panic:** Errors aren't failures. They're Python telling you exactly what went wrong and where. Read the last line of the error message first - it tells you the error type and what happened. Then look at the line number. It's actually being helpful. Like a friend who says "Hey, you have spinach in your teeth" instead of letting you walk around like that.
 
 ## try/except: Your Safety Net
 
@@ -81,14 +81,14 @@ except ValueError:
 You should always catch *specific* exceptions when you can.
 
 ```python
-# Good -- specific exceptions
+# Good - specific exceptions
 try:
     data = {"name": "Priya"}
     print(data["age"])
 except KeyError:
     print("Key not found!")
 
-# Okay for quick scripts -- catch multiple specific exceptions
+# Okay for quick scripts - catch multiple specific exceptions
 try:
     value = int(input("Number: "))
     result = 10 / value
@@ -106,7 +106,7 @@ except (ValueError, ZeroDivisionError) as e:
     print(f"Something went wrong: {e}")
 ```
 
-Catching the general `Exception` is like using a giant net to catch fish -- sure, you'll catch everything, but you might also catch a boot, a tire, and a very confused turtle.
+Catching the general `Exception` is like using a giant net to catch fish - sure, you'll catch everything, but you might also catch a boot, a tire, and a very confused turtle.
 
 ```python
 # Avoid this unless you have a good reason
@@ -143,7 +143,7 @@ finally:
 ```
 
 - **`else`** runs only if the `try` block succeeded. It's the "if everything went well" block.
-- **`finally`** runs no matter what -- exception or no exception. It's the "cleanup" block. Use it for things that must happen regardless: closing connections, saving progress, etc.
+- **`finally`** runs no matter what - exception or no exception. It's the "cleanup" block. Use it for things that must happen regardless: closing connections, saving progress, etc.
 
 ```python
 # Practical example: file handling with full error handling
@@ -281,7 +281,7 @@ When errors happen and you're staring at your screen in confusion, try these:
 # TypeError: can't multiply sequence by non-int of type 'str'
 ```
 
-Start from the bottom. `TypeError` -- wrong type. `can't multiply sequence by non-int of type 'str'` -- you're trying to multiply a string. Line 15 in `app.py`. Go fix it.
+Start from the bottom. `TypeError` - wrong type. `can't multiply sequence by non-int of type 'str'` - you're trying to multiply a string. Line 15 in `app.py`. Go fix it.
 
 **2. Print everything.**
 

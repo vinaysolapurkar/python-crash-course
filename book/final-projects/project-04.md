@@ -14,13 +14,13 @@ Here's what it looks like:
 
 Category: Animals | Difficulty: Medium | Lives: 6
 
-   ------
+   ---
    |    |
    |    O
    |   /|
    |
    |
-  ---
+  --
 
 Word: _ _ _ _ _ _ _
 
@@ -71,64 +71,64 @@ WORD_BANK = {
     }
 }
 
-# Each stage is one more body part -- 7 stages (0 = no parts, 6 = full body)
+# Each stage is one more body part - 7 stages (0 = no parts, 6 = full body)
 HANGMAN_STAGES = [
     """
-   ------
+   ---
    |    |
    |
    |
    |
    |
-  ---""",
+  --""",
     """
-   ------
+   ---
    |    |
    |    O
    |
    |
    |
-  ---""",
+  --""",
     """
-   ------
+   ---
    |    |
    |    O
    |    |
    |
    |
-  ---""",
+  --""",
     """
-   ------
+   ---
    |    |
    |    O
    |   /|
    |
    |
-  ---""",
+  --""",
     """
-   ------
+   ---
    |    |
    |    O
    |   /|\\
    |
    |
-  ---""",
+  --""",
     """
-   ------
+   ---
    |    |
    |    O
    |   /|\\
    |   /
    |
-  ---""",
+  --""",
     """
-   ------
+   ---
    |    |
    |    O
    |   /|\\
    |   / \\
    |
-  ---"""
+  --"""
 ]
 ```
 
@@ -277,7 +277,7 @@ def show_scoreboard(wins, losses):
         return
 
     win_rate = (wins / total) * 100
-    print("\n--- Scoreboard ---")
+    print("\n-- Scoreboard --")
     print(f"  Wins: {wins}  |  Losses: {losses}  |  "
           f"Win Rate: {win_rate:.0f}%")
 
@@ -314,7 +314,7 @@ def main():
 
         again = input("\nPlay again? (y/n): ").strip().lower()
         if again != "y":
-            print("\n--- Final Results ---")
+            print("\n-- Final Results --")
             show_scoreboard(wins, losses)
             print("\nThanks for playing!")
             break

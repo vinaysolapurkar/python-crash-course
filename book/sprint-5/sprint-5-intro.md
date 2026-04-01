@@ -1,4 +1,4 @@
-# Welcome to Sprint 5: Python x AI -- The Future is Now
+# Welcome to Sprint 5: Python x AI - The Future is Now
 
 > **Chapters 26-32** | **Estimated Time: 4-5 hours** | **Difficulty: You're Ready**
 
@@ -10,13 +10,13 @@ Over the next seven chapters, you'll go from raw data to AI-powered applications
 
 Let's talk about what's ahead:
 
-- **Chapter 26:** NumPy -- the engine under every AI library
-- **Chapter 27:** Pandas -- data analysis without the spreadsheet headaches
-- **Chapter 28:** Data Visualization -- making numbers tell stories
-- **Chapter 29:** Machine Learning -- teaching computers to learn from data
-- **Chapter 30:** AI APIs & LLMs -- building with OpenAI, Gemini, and more
-- **Chapter 31:** LangChain & AI Agents -- memory, documents, and the bleeding edge
-- **Chapter 32:** Automation -- letting Python do your job while you get coffee
+- **Chapter 26:** NumPy - the engine under every AI library
+- **Chapter 27:** Pandas - data analysis without the spreadsheet headaches
+- **Chapter 28:** Data Visualization - making numbers tell stories
+- **Chapter 29:** Machine Learning - teaching computers to learn from data
+- **Chapter 30:** AI APIs & LLMs - building with OpenAI, Gemini, and more
+- **Chapter 31:** LangChain & AI Agents - memory, documents, and the bleeding edge
+- **Chapter 32:** Automation - letting Python do your job while you get coffee
 
 You went from `print("Hello, World!")` to this. Most people who start learning to code never make it past week two. You're in Sprint 5. Let that sink in.
 

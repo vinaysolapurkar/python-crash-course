@@ -2,7 +2,7 @@
 
 > **Sprint 5, Chapter 29** | **12 min read** | **Code: [github link](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-5-ai/chapter-29-machine-learning/)**
 
-Teaching ML is like teaching a toddler. You show them examples: "This is a cat. This is a dog. This is a cat." Eventually, they figure out the pattern themselves. You never explicitly explain whiskers or floppy ears -- they just *get it* after seeing enough examples. Machine learning works the same way. You give a computer enough data, and it figures out the rules on its own.
+Teaching ML is like teaching a toddler. You show them examples: "This is a cat. This is a dog. This is a cat." Eventually, they figure out the pattern themselves. You never explicitly explain whiskers or floppy ears - they just *get it* after seeing enough examples. Machine learning works the same way. You give a computer enough data, and it figures out the rules on its own.
 
 You're building machine learning models now. Most people who start coding never get here. Take a second to appreciate that.
 
@@ -37,8 +37,8 @@ And the code is literally 5 lines. Seriously. I'll show you.
 Think of it this way: traditional programming is "here are the rules, apply them to data." Machine learning is "here's the data, figure out the rules."
 
 ```
-Traditional:  Rules + Data → Answers
-ML:           Data + Answers → Rules
+Traditional:  Rules + Data -> Answers
+ML:           Data + Answers -> Rules
 ```
 
 ## The Three Types of ML
@@ -86,7 +86,7 @@ That's it. Six steps. Let's do them.
 
 ## Your First Model: House Price Prediction
 
-Let's predict house prices based on features like size, bedrooms, and age. This is a **regression** problem -- predicting a number.
+Let's predict house prices based on features like size, bedrooms, and age. This is a **regression** problem - predicting a number.
 
 ### Step 1: Load the Data
 
@@ -188,7 +188,7 @@ print(comparison)
 # 4  198000.0   205118.0     -7118.0
 ```
 
-The predictions are close. Not perfect -- there's noise in the data -- but the model learned the general pattern.
+The predictions are close. Not perfect - there's noise in the data - but the model learned the general pattern.
 
 ### Step 6: Evaluate
 
@@ -214,7 +214,7 @@ An R-squared of 0.972 means the model explains 97.2% of the variation in prices.
 
 ### The Whole Thing in One Block
 
-Here's the entire ML pipeline -- load to evaluate:
+Here's the entire ML pipeline - load to evaluate:
 
 ```python
 import pandas as pd
@@ -341,7 +341,7 @@ Detailed Report:
 ### Seeing What the Tree Learned
 
 ```python
-# Feature importance -- which features matter most?
+# Feature importance - which features matter most?
 importances = pd.Series(tree.feature_importances_, index=X.columns)
 print(importances.sort_values(ascending=False))
 # time_on_site_min     0.38
@@ -350,7 +350,7 @@ print(importances.sort_values(ascending=False))
 # age                  0.10
 ```
 
-Time on site is the most important predictor. Makes sense -- people who spend more time browsing are more likely to buy.
+Time on site is the most important predictor. Makes sense - people who spend more time browsing are more likely to buy.
 
 ```python
 # Visualize the tree (optional but cool)
@@ -358,14 +358,14 @@ from sklearn.tree import export_text
 
 tree_rules = export_text(tree, feature_names=list(X.columns))
 print(tree_rules)
-# |--- time_on_site_min <= 15.35
-# |   |--- visits_per_month <= 10.50
-# |   |   |--- income <= 49721.50
-# |   |   |   |--- class: 0
-# |   |   |--- income > 49721.50
-# |   |   |   |--- class: 0
-# |   |--- visits_per_month > 10.50
-# |   |   |--- ...
+# |-- time_on_site_min <= 15.35
+# |   |-- visits_per_month <= 10.50
+# |   |   |-- income <= 49721.50
+# |   |   |   |-- class: 0
+# |   |   |-- income > 49721.50
+# |   |   |   |-- class: 0
+# |   |-- visits_per_month > 10.50
+# |   |   |-- ...
 ```
 
 You can literally read the decision logic. "If time on site is less than 15 minutes AND visits are less than 11 AND income is under $50K, predict they won't buy." This interpretability is why decision trees are so popular in business.
@@ -465,10 +465,10 @@ Expected results:
 - Machine learning = computers learning patterns from data instead of following explicit rules
 - **Supervised learning**: give it examples with answers; it learns to predict on new data
 - The scikit-learn workflow: load data, split (train/test), create model, `.fit()`, `.predict()`, evaluate
-- **Train/test split** prevents overfitting -- always test on data the model hasn't seen
+- **Train/test split** prevents overfitting - always test on data the model hasn't seen
 - **Linear Regression** predicts numbers; **Decision Trees** and others predict categories
 - **Accuracy** = percentage correct; **Precision** = "when I said yes, was I right?"; **Recall** = "of all the yeses, did I catch them?"
 - **Feature importance** tells you which inputs matter most
-- scikit-learn's API is consistent: every model uses `.fit()` and `.predict()` -- learn one, know them all
+- scikit-learn's API is consistent: every model uses `.fit()` and `.predict()` - learn one, know them all
 - The ML code itself is 5 lines. The hard part is preparing good data and choosing what to predict
 - You just built machine learning models. You. This chapter. Right now. Let that sink in.

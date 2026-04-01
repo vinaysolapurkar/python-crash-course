@@ -16,7 +16,7 @@ Focuses on Python for machine learning, data analysis, and AI. His series on bui
 Beginner-friendly Python content with a focus on projects. Game development with Pygame, web development, and automation. His project-based tutorials help you build real things.
 
 **ArjanCodes**
-Software design and architecture in Python. Once you've learned the basics, Arjan teaches you how to write CLEAN Python -- design patterns, SOLID principles, and professional code structure. This is what takes you from "knows Python" to "writes good Python."
+Software design and architecture in Python. Once you've learned the basics, Arjan teaches you how to write CLEAN Python - design patterns, SOLID principles, and professional code structure. This is what takes you from "knows Python" to "writes good Python."
 
 **Fireship**
 Not Python-specific, but outstanding for understanding technology concepts quickly. His "100 seconds of X" series gives you rapid overviews of frameworks, languages, and tools. Great for exploring different career paths.
@@ -50,7 +50,7 @@ Free datasets, competitions, and notebooks for data science practice. Their "Lea
 The world's largest programming Q&A site. Nearly every error message you'll encounter has already been asked and answered here. Learn to search effectively: include the error message, the language, and the library name.
 
 **GitHub (github.com)**
-Not just for hosting your code -- it's the world's largest library of open-source projects. Read other people's code. Study how popular Python projects are structured. Star repos you find useful.
+Not just for hosting your code - it's the world's largest library of open-source projects. Read other people's code. Study how popular Python projects are structured. Star repos you find useful.
 
 ---
 
@@ -88,7 +88,7 @@ A large, active Discord server with channels organized by topic (help, career ad
 Listed under websites too, but it deserves mention as a community. Once you're experienced enough, answering other people's questions is one of the best ways to solidify your own knowledge.
 
 **Dev.to (dev.to)**
-A blogging platform for developers. Read articles, follow Python tags, and when you're ready, start writing your own posts. Writing about what you've learned is a powerful way to reinforce it -- and it builds your professional presence.
+A blogging platform for developers. Read articles, follow Python tags, and when you're ready, start writing your own posts. Writing about what you've learned is a powerful way to reinforce it - and it builds your professional presence.
 
 ---
 

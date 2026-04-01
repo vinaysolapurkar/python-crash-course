@@ -1,0 +1,123 @@
+/* Kindle-optimized stylesheet */
+
+body {
+  font-family: Georgia, serif;
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 1.8em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  page-break-before: always;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin-top: 0.8em;
+  margin-bottom: 0.4em;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-top: 0.6em;
+  margin-bottom: 0.3em;
+}
+
+p {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  text-indent: 0;
+}
+
+/* Remove excessive spacing around code blocks */
+pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85em;
+  background-color: #f4f4f4;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border-left: 3px solid #ccc;
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9em;
+  background-color: #f0f0f0;
+  padding: 0.1em 0.3em;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Callout boxes (blockquotes) */
+blockquote {
+  margin: 0.5em 0;
+  padding: 0.5em 1em;
+  border-left: 3px solid #666;
+  background-color: #f9f9f9;
+  font-style: normal;
+}
+
+blockquote p {
+  margin: 0.2em 0;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5em 0;
+  font-size: 0.9em;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.3em 0.5em;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+/* Lists - tighter spacing */
+ul, ol {
+  margin: 0.3em 0;
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.2em;
+}
+
+/* Horizontal rules - minimal */
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+}
+
+/* Strong and emphasis */
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}

@@ -2,18 +2,18 @@
 
 > **Sprint 1** | **12 min read** | **Code: [github link](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-1-basics/chapter-04-strings/)**
 
-Every text message you've sent, every tweet, every Netflix subtitle, every Google search, every password you've typed -- strings. Text is the backbone of computing, and Python is ridiculously good at working with it. By the end of this chapter, you'll be slicing, dicing, and formatting text like a sushi chef.
+Every text message you've sent, every tweet, every Netflix subtitle, every Google search, every password you've typed - strings. Text is the backbone of computing, and Python is ridiculously good at working with it. By the end of this chapter, you'll be slicing, dicing, and formatting text like a sushi chef.
 
 ## What You'll Learn
 - Essential string methods that'll make your life easier
-- Method chaining -- combo moves for strings
-- Slicing -- cutting strings like a pizza
+- Method chaining - combo moves for strings
+- Slicing - cutting strings like a pizza
 - Escape characters and raw strings
 - f-string formatting superpowers
 
 ## String Methods: Your Text Toolkit
 
-Remember how functions like `print()` do things? **Methods** are functions that belong to a specific data type. Strings come with a bunch of built-in methods. Think of them as tools in a Swiss Army knife -- each one does something useful.
+Remember how functions like `print()` do things? **Methods** are functions that belong to a specific data type. Strings come with a bunch of built-in methods. Think of them as tools in a Swiss Army knife - each one does something useful.
 
 ```python
 message = "hello, world"
@@ -48,7 +48,7 @@ print(text.find("World"))    # 9 (index where "World" starts)
 print(text.find("Python"))   # -1 (not found)
 ```
 
-> **Pro Tip:** Python strings are **immutable** -- they can't be changed in place. Every string method returns a **new** string. The original stays the same.
+> **Pro Tip:** Python strings are **immutable** - they can't be changed in place. Every string method returns a **new** string. The original stays the same.
 
 ```python
 name = "tony stark"
@@ -145,7 +145,7 @@ print(text[::2])     # "Hlo ol!" (every 2nd character)
 print(text[::-1])    # "!dlroW ,olleH" (reversed!)
 ```
 
-The key thing to remember: `[start:stop]` goes up to but **does not include** the stop index. Think of it like a hotel checkout -- you stay until that day but you don't stay *on* that day.
+The key thing to remember: `[start:stop]` goes up to but **does not include** the stop index. Think of it like a hotel checkout - you stay until that day but you don't stay *on* that day.
 
 ```python
 # Practical example: extracting parts of a date
@@ -160,7 +160,7 @@ The reverse trick `[::-1]` is a classic Python one-liner and a favorite intervie
 
 ```python
 word = "racecar"
-print(word == word[::-1])  # True -- it's a palindrome!
+print(word == word[::-1])  # True - it's a palindrome!
 ```
 
 ## Escape Characters and Raw Strings
@@ -193,10 +193,10 @@ print('She said "hello"')
 If you have a string with lots of backslashes (like a Windows file path), use a **raw string** with `r` prefix:
 
 ```python
-# Without raw string -- chaos
+# Without raw string - chaos
 # path = "C:\new_folder\test"  # \n becomes a newline!
 
-# With raw string -- sanity
+# With raw string - sanity
 path = r"C:\new_folder\test"
 print(path)  # C:\new_folder\test
 ```
@@ -261,7 +261,7 @@ print(f"Is cool: {10 > 5}")            # Is cool: True
 print(f"Quick math: {7 * 6}")          # Quick math: 42
 ```
 
-You can put any valid Python expression inside those curly braces. Methods, functions, math, comparisons -- whatever you need.
+You can put any valid Python expression inside those curly braces. Methods, functions, math, comparisons - whatever you need.
 
 ## Your Turn: Username Generator
 
@@ -298,9 +298,9 @@ print(f"\nAll usernames are {len(option1)}-{len(max(option1, option2, option3, o
 ## TL;DR
 
 - **String methods** are your text Swiss Army knife: `.upper()`, `.lower()`, `.strip()`, `.replace()`, `.split()`, `.join()`
-- **Strings are immutable** -- methods return NEW strings, they don't change the original
+- **Strings are immutable** - methods return NEW strings, they don't change the original
 - **Method chaining** lets you combo methods: `text.strip().lower().replace("a", "b")`
 - **Indexing** starts at 0; negative indices count from the end (`[-1]` = last character)
-- **Slicing** with `[start:stop:step]` -- stop is exclusive; `[::-1]` reverses a string
+- **Slicing** with `[start:stop:step]` - stop is exclusive; `[::-1]` reverses a string
 - **Escape characters:** `\n` (newline), `\t` (tab), `\\` (backslash); use `r""` for raw strings
 - **f-string formatting:** `:.2f` for decimals, `:,` for commas, `:<10` for padding

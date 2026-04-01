@@ -39,7 +39,7 @@ print(fruits[-1])    # mango (last item!)
 print(fruits[-2])    # cherry (second to last)
 ```
 
-> **Wait, What?** "Lists start at 0, not 1. I know. Programmers are weird." There's actually a historical reason -- it's about memory offsets -- but honestly, you just have to accept it. The first item is at index 0. The second is at index 1. If a list has 4 items, the last index is 3. You'll get used to it faster than you think.
+> **Wait, What?** "Lists start at 0, not 1. I know. Programmers are weird." There's actually a historical reason - it's about memory offsets - but honestly, you just have to accept it. The first item is at index 0. The second is at index 1. If a list has 4 items, the last index is 3. You'll get used to it faster than you think.
 
 Slicing works too, same as strings:
 
@@ -52,7 +52,7 @@ print(fruits[2:])     # ['cherry', 'mango', 'kiwi']
 print(fruits[::-1])   # ['kiwi', 'mango', 'cherry', 'banana', 'apple'] (reversed!)
 ```
 
-Unlike strings, lists are **mutable** -- you can change them:
+Unlike strings, lists are **mutable** - you can change them:
 
 ```python
 fruits = ["apple", "banana", "cherry"]
@@ -69,31 +69,31 @@ Lists come with methods for adding and removing items. This is where lists reall
 ```python
 heroes = ["Iron Man", "Thor"]
 
-# append() -- add to the END
+# append() - add to the END
 heroes.append("Hulk")
 print(heroes)  # ['Iron Man', 'Thor', 'Hulk']
 
-# insert() -- add at a specific position
+# insert() - add at a specific position
 heroes.insert(1, "Spider-Man")
 print(heroes)  # ['Iron Man', 'Spider-Man', 'Thor', 'Hulk']
 
-# extend() -- add multiple items at once
+# extend() - add multiple items at once
 heroes.extend(["Black Widow", "Hawkeye"])
 print(heroes)  # ['Iron Man', 'Spider-Man', 'Thor', 'Hulk', 'Black Widow', 'Hawkeye']
 ```
 
-> **Wait, What?** `append()` vs `extend()` -- `append` adds ONE item (even if it's a list, it adds the whole list as a single item). `extend` unpacks the items and adds them individually. Try `heroes.append(["A", "B"])` and see what happens -- you'll get a list inside a list.
+> **Wait, What?** `append()` vs `extend()` - `append` adds ONE item (even if it's a list, it adds the whole list as a single item). `extend` unpacks the items and adds them individually. Try `heroes.append(["A", "B"])` and see what happens - you'll get a list inside a list.
 
 ### Removing Items
 
 ```python
 heroes = ["Iron Man", "Spider-Man", "Thor", "Hulk", "Hawkeye"]
 
-# remove() -- remove by VALUE (first occurrence)
+# remove() - remove by VALUE (first occurrence)
 heroes.remove("Thor")
 print(heroes)  # ['Iron Man', 'Spider-Man', 'Hulk', 'Hawkeye']
 
-# pop() -- remove by INDEX and return the removed item
+# pop() - remove by INDEX and return the removed item
 removed = heroes.pop(1)
 print(removed)     # Spider-Man
 print(heroes)      # ['Iron Man', 'Hulk', 'Hawkeye']
@@ -103,11 +103,11 @@ last = heroes.pop()
 print(last)        # Hawkeye
 print(heroes)      # ['Iron Man', 'Hulk']
 
-# del -- remove by index (doesn't return anything)
+# del - remove by index (doesn't return anything)
 del heroes[0]
 print(heroes)      # ['Hulk']
 
-# clear() -- nuclear option, removes everything
+# clear() - nuclear option, removes everything
 heroes.clear()
 print(heroes)      # []
 ```
@@ -119,7 +119,7 @@ Use `remove()` when you know the value. Use `pop()` when you know the index and 
 ```python
 numbers = [3, 1, 4, 1, 5, 9, 2, 6]
 
-# sort() -- sorts IN PLACE (modifies the original list)
+# sort() - sorts IN PLACE (modifies the original list)
 numbers.sort()
 print(numbers)  # [1, 1, 2, 3, 4, 5, 6, 9]
 
@@ -127,7 +127,7 @@ print(numbers)  # [1, 1, 2, 3, 4, 5, 6, 9]
 numbers.sort(reverse=True)
 print(numbers)  # [9, 6, 5, 4, 3, 2, 1, 1]
 
-# sorted() -- returns a NEW sorted list (original unchanged)
+# sorted() - returns a NEW sorted list (original unchanged)
 original = [3, 1, 4, 1, 5]
 new_list = sorted(original)
 print(original)   # [3, 1, 4, 1, 5] (unchanged!)
@@ -176,9 +176,9 @@ print(max(numbers))         # 40
 print(sum(numbers))         # 120
 ```
 
-The `in` keyword is gold. It reads like English: `if "pizza" in toppings:` -- beautiful.
+The `in` keyword is gold. It reads like English: `if "pizza" in toppings:` - beautiful.
 
-### enumerate() -- Index AND Value
+### enumerate() - Index AND Value
 
 When you loop through a list (we'll cover loops properly in Chapter 7, but here's a preview), sometimes you need both the item AND its position:
 
@@ -212,7 +212,7 @@ Output:
 
 ## List Comprehensions: The Show-Off Move
 
-This is where Python gets elegant. A **list comprehension** lets you create a new list by transforming or filtering an existing one -- in a single line.
+This is where Python gets elegant. A **list comprehension** lets you create a new list by transforming or filtering an existing one - in a single line.
 
 The old way:
 
@@ -324,7 +324,7 @@ while True:
         print("Unknown command. Try: add, remove, show, sort, clear, quit")
 ```
 
-Don't worry if the `while True` loop looks unfamiliar -- we'll cover loops fully in Chapter 7. For now, just know it keeps the program running until you type "quit."
+Don't worry if the `while True` loop looks unfamiliar - we'll cover loops fully in Chapter 7. For now, just know it keeps the program running until you type "quit."
 
 **Bonus challenge:** Add a "search" command that checks if an item is on the list, and a "count" command that shows how many items you have.
 

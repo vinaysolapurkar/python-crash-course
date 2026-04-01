@@ -2,7 +2,7 @@
 
 > **Sprint 2, Chapter 9** | **Estimated Time: 12-15 minutes** | **Difficulty: Intermediate**
 
-Lists are great. You know that. You've been slicing them, looping through them, and generally having a good time. But lists have a secret weakness -- you can only access things by number. "Give me item number 3." That works, but what if you could say "Give me the *email*" or "Give me the *price*"? What if you could access things by NAME?
+Lists are great. You know that. You've been slicing them, looping through them, and generally having a good time. But lists have a secret weakness - you can only access things by number. "Give me item number 3." That works, but what if you could say "Give me the *email*" or "Give me the *price*"? What if you could access things by NAME?
 
 Enter dictionaries. The real MVP of Python data structures.
 
@@ -22,7 +22,7 @@ student = {
 }
 ```
 
-See those curly braces `{}`? That's how Python knows it's a dictionary. Each entry is a `key: value` pair, separated by commas. The key is always a string (usually), and the value can be anything -- a string, a number, a list, even another dictionary.
+See those curly braces `{}`? That's how Python knows it's a dictionary. Each entry is a `key: value` pair, separated by commas. The key is always a string (usually), and the value can be anything - a string, a number, a list, even another dictionary.
 
 > **Remember When?** Remember lists from Chapter 6? Dictionaries are like lists that went to college. Lists store things in order by position. Dictionaries store things by label. Both are useful, but dictionaries are what you reach for when your data has *meaning*.
 
@@ -79,7 +79,7 @@ That second argument to `.get()` is a default value. "If you can't find the key,
 
 ## Adding, Updating, and Deleting
 
-Dictionaries are mutable -- you can change them whenever you want.
+Dictionaries are mutable - you can change them whenever you want.
 
 ```python
 student = {"name": "Priya", "age": 22}
@@ -99,7 +99,7 @@ del student["gpa"]
 print(student)
 # {'name': 'Priya', 'age': 23, 'major': 'Computer Science'}
 
-# .pop() -- delete AND get the value back
+# .pop() - delete AND get the value back
 major = student.pop("major")
 print(major)      # Computer Science
 print(student)    # {'name': 'Priya', 'age': 23}
@@ -206,7 +206,7 @@ for student, grades in classroom.items():
 
 Two levels of square brackets: `classroom["priya"]["math"]`. First, get Priya's dictionary. Then, get the math value from that dictionary. It reads like English: "from the classroom, get priya's math."
 
-You can also have lists of dictionaries -- this is extremely common when working with data from the internet (APIs, databases, etc.):
+You can also have lists of dictionaries - this is extremely common when working with data from the internet (APIs, databases, etc.):
 
 ```python
 # A list of products (like you'd get from an online store API)
@@ -270,7 +270,7 @@ print(settings)
 
 Notice that when both dictionaries have the same key (like "theme"), the second one wins. The user's preferences override the defaults. That's usually exactly what you want.
 
-> **Wait, What?** The `**` spread operator "unpacks" a dictionary into key-value pairs. When you write `{**dict1, **dict2}`, you're saying "take everything from dict1, then take everything from dict2, and put it all in a new dictionary." If there are duplicates, the last one wins. It's like merging two playlists -- the second playlist's version of a song takes priority.
+> **Wait, What?** The `**` spread operator "unpacks" a dictionary into key-value pairs. When you write `{**dict1, **dict2}`, you're saying "take everything from dict1, then take everything from dict2, and put it all in a new dictionary." If there are duplicates, the last one wins. It's like merging two playlists - the second playlist's version of a song takes priority.
 
 ## Useful Dictionary Methods Cheat Sheet
 
@@ -308,7 +308,7 @@ Each contact should be stored as a dictionary inside a main contacts dictionary.
 contacts = {}
 
 while True:
-    print("\n--- Contact Book ---")
+    print("\n-- Contact Book --")
     print("1. Add Contact")
     print("2. Look Up Contact")
     print("3. Update Contact")
@@ -333,11 +333,11 @@ Full solution available at:
 
 ## TL;DR
 
-- **Dictionaries** store data as **key-value pairs** -- access by name, not position.
+- **Dictionaries** store data as **key-value pairs** - access by name, not position.
 - Use `dict["key"]` when you're sure the key exists. Use `dict.get("key")` when you're not.
 - Add/update with `dict["key"] = value`. Delete with `del dict["key"]` or `.pop("key")`.
 - Loop with `.keys()`, `.values()`, or `.items()` (the best one).
 - **Nested dictionaries** let you store complex, structured data.
 - **Dictionary comprehensions** create dictionaries in one line: `{k: v for k, v in stuff}`.
 - **Merge** with `{**dict1, **dict2}` or `dict1 | dict2`.
-- Dictionaries are everywhere in Python. APIs, configs, databases -- they all speak dictionary.
+- Dictionaries are everywhere in Python. APIs, configs, databases - they all speak dictionary.

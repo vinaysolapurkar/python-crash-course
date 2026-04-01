@@ -5,7 +5,7 @@
 
 ## What You'll Build
 
-An intelligent study assistant that loads your study materials (text files, notes, PDFs), lets you ask questions about them using AI, generates quizzes based on the content, and maintains conversation history so it remembers context. This is a real-world application of Retrieval-Augmented Generation (RAG) -- the same pattern used in enterprise AI tools.
+An intelligent study assistant that loads your study materials (text files, notes, PDFs), lets you ask questions about them using AI, generates quizzes based on the content, and maintains conversation history so it remembers context. This is a real-world application of Retrieval-Augmented Generation (RAG) - the same pattern used in enterprise AI tools.
 
 Here's what it looks like:
 
@@ -203,7 +203,7 @@ class DocumentLoader:
             )
             total_chars += len(chunk["content"])
 
-        return "\n\n---\n\n".join(context_parts)
+        return "\n\n--\n\n".join(context_parts)
 
     def _create_sample_files(self):
         """Create sample study materials for demonstration."""
@@ -303,7 +303,7 @@ class ConversationMemory:
             print("\n  No conversation history yet.")
             return
 
-        print(f"\n--- Conversation History ({len(self.messages)} messages) ---")
+        print(f"\n-- Conversation History ({len(self.messages)} messages) --")
         for msg in self.messages[-10:]:  # Show last 10
             role = "You" if msg["role"] == "user" else "Study Buddy"
             content = msg["content"][:100]
@@ -316,7 +316,7 @@ class ConversationMemory:
 
 ### Step 4: Build the AI Study Buddy Core
 
-This is the main class that ties everything together -- document context, conversation memory, and AI responses.
+This is the main class that ties everything together - document context, conversation memory, and AI responses.
 
 ```python
 class StudyBuddy:
@@ -470,7 +470,7 @@ class StudyBuddy:
 ```python
 def print_help():
     """Print available commands."""
-    print("\n--- Commands ---")
+    print("\n-- Commands --")
     print("  /quiz      - Generate a quiz from your materials")
     print("  /summary   - Summarize your study materials")
     print("  /history   - View conversation history")
@@ -542,7 +542,7 @@ def main():
                 print("  Type /help for available commands.")
 
         else:
-            # It's a question -- ask the study buddy
+            # It's a question - ask the study buddy
             print()
             answer = buddy.ask(user_input)
             print(f"Study Buddy: {answer}\n")
@@ -578,7 +578,7 @@ Try asking questions, generating quizzes, and getting summaries. The more materi
 
 ## Portfolio Tips
 
-This is your capstone project -- the one that makes hiring managers sit up. AI-powered applications are the hottest thing in tech right now. When presenting this:
+This is your capstone project - the one that makes hiring managers sit up. AI-powered applications are the hottest thing in tech right now. When presenting this:
 
 - **GitHub:** Write an excellent README with screenshots, architecture explanation (document loading, chunking, retrieval, generation), and clear setup instructions. Include sample study materials.
 - **Resume:** "Built an AI-powered study assistant using OpenAI's API with RAG (Retrieval-Augmented Generation), document chunking, context-aware Q&A, quiz generation, and persistent conversation memory."

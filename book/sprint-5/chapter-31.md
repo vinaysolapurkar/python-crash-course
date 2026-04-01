@@ -7,9 +7,9 @@ If the OpenAI API is a smart employee, LangChain is the project manager that org
 ## What You'll Learn
 - What LangChain is and why it exists
 - ChatOpenAI setup
-- PromptTemplates -- reusable instructions
-- Chains -- connecting the dots
-- Memory -- AI that remembers
+- PromptTemplates - reusable instructions
+- Chains - connecting the dots
+- Memory - AI that remembers
 - RAG: letting AI read YOUR documents
 - Embeddings, vector stores, and retrieval chains
 
@@ -28,10 +28,10 @@ pip install langchain langchain-openai langchain-community chromadb
 ```
 
 That's a few packages:
-- `langchain` -- the core framework
-- `langchain-openai` -- OpenAI integration
-- `langchain-community` -- community integrations (document loaders, etc.)
-- `chromadb` -- a vector database (more on this soon)
+- `langchain` - the core framework
+- `langchain-openai` - OpenAI integration
+- `langchain-community` - community integrations (document loaders, etc.)
+- `chromadb` - a vector database (more on this soon)
 
 ## ChatOpenAI: LangChain's Way of Talking to OpenAI
 
@@ -229,7 +229,7 @@ with_memory = RunnableWithMessageHistory(
     history_messages_key="history"
 )
 
-# Conversation -- the AI remembers!
+# Conversation - the AI remembers!
 config = {"configurable": {"session_id": "user_123"}}
 
 response = with_memory.invoke(
@@ -307,7 +307,7 @@ print(f"Split into {len(chunks)} chunks")
 print(f"First chunk: {chunks[0].page_content[:200]}...")
 ```
 
-Why overlap? Because if a sentence gets cut in half, the overlap ensures both chunks contain the complete thought. It's like how book pages overlap topics -- you don't want to lose context at the break point.
+Why overlap? Because if a sentence gets cut in half, the overlap ensures both chunks contain the complete thought. It's like how book pages overlap topics - you don't want to lose context at the break point.
 
 ### Step 3: Create Embeddings and Store in a Vector Database
 
@@ -334,7 +334,7 @@ A **vector store** is like a search engine for meaning. Instead of searching for
 
 ### Step 4: Build the Retrieval Chain
 
-Now connect everything -- user asks a question, relevant chunks are retrieved, and the LLM answers:
+Now connect everything - user asks a question, relevant chunks are retrieved, and the LLM answers:
 
 ```python
 from langchain_openai import ChatOpenAI
@@ -461,7 +461,7 @@ Q: What's the company's policy on bringing pets to the office?
 A: I don't have that information in my documents.
 ```
 
-Notice that last answer. The AI correctly says it doesn't know because the information isn't in the documents. That's the power of RAG -- the AI stays grounded in your data instead of making things up.
+Notice that last answer. The AI correctly says it doesn't know because the information isn't in the documents. That's the power of RAG - the AI stays grounded in your data instead of making things up.
 
 ## Your Turn: PDF Q&A Bot
 
@@ -505,9 +505,9 @@ Ideas for documents to try:
 - **Chains** connect components with `|`: `prompt | llm | parser`
 - **Memory** gives AI conversation history so it remembers past messages
 - **RAG** = load documents, split into chunks, embed as vectors, retrieve relevant chunks, let LLM answer
-- **Embeddings** turn text into numbers that capture meaning -- similar meanings get similar numbers
+- **Embeddings** turn text into numbers that capture meaning - similar meanings get similar numbers
 - **Vector stores** (Chroma) are search engines for meaning, not just keywords
 - The RAG workflow: `TextLoader` -> `TextSplitter` -> `Embeddings` -> `Chroma` -> `RetrievalChain`
-- RAG keeps AI grounded -- it answers from YOUR data and says "I don't know" when the answer isn't there
+- RAG keeps AI grounded - it answers from YOUR data and says "I don't know" when the answer isn't there
 - This is what companies are building right now: chatbots with memory, document Q&A, AI agents with tools
 - You just learned the hottest technology in tech. Seriously. Go update your resume.

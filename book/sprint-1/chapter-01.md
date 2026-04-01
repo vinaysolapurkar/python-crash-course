@@ -2,7 +2,7 @@
 
 > **Sprint 1** | **10 min read** | **Code: [github link](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-1-basics/chapter-01-why-python/)**
 
-If programming languages were Avengers, Python would be Iron Man. Not because it's the flashiest (that's JavaScript with its fancy websites), but because it's ridiculously versatile, it's everywhere, and it makes you feel like a genius even when you're just getting started. Also, much like Tony Stark, Python has a witty response for everything -- its error messages actually make sense.
+If programming languages were Avengers, Python would be Iron Man. Not because it's the flashiest (that's JavaScript with its fancy websites), but because it's ridiculously versatile, it's everywhere, and it makes you feel like a genius even when you're just getting started. Also, much like Tony Stark, Python has a witty response for everything - its error messages actually make sense.
 
 ## What You'll Learn
 - Why Python is the most popular beginner language on the planet
@@ -14,7 +14,7 @@ If programming languages were Avengers, Python would be Iron Man. Not because it
 
 Let me hit you with some names: **Netflix**, **Instagram**, **Spotify**, **NASA**, **Google**. What do they have in common? They all use Python. Heavily.
 
-Netflix uses Python to recommend which shows to binge next. Instagram's entire backend started with Python. NASA uses it to process space data. And the entire AI revolution -- ChatGPT, image generators, self-driving cars -- is built primarily in Python.
+Netflix uses Python to recommend which shows to binge next. Instagram's entire backend started with Python. NASA uses it to process space data. And the entire AI revolution - ChatGPT, image generators, self-driving cars - is built primarily in Python.
 
 But here's the real reason you should learn Python: **it reads like English.** Seriously, compare these:
 
@@ -79,12 +79,12 @@ sudo apt install python3 python3-pip
 Open a terminal (Command Prompt on Windows, Terminal on Mac/Linux) and type:
 
 ```bash
-python --version
+python -version
 ```
 
-You should see something like `Python 3.12.x`. If you see that, you're golden. If Windows gives you an error, try `python3 --version` instead.
+You should see something like `Python 3.12.x`. If you see that, you're golden. If Windows gives you an error, try `python3 -version` instead.
 
-> **Wait, What?** On some systems, `python` points to Python 2 (which is ancient and retired). If `python --version` shows `2.x`, use `python3` for everything in this book.
+> **Wait, What?** On some systems, `python` points to Python 2 (which is ancient and retired). If `python -version` shows `2.x`, use `python3` for everything in this book.
 
 ## Installing VS Code
 
@@ -95,7 +95,7 @@ You *could* write Python in Notepad. You could also cut your lawn with scissors.
 3. Open VS Code
 4. Click the Extensions icon on the left sidebar (it looks like four little squares)
 5. Search for **"Python"** and install the one by Microsoft (it'll be the first result with millions of downloads)
-6. While you're at it, search for **"Pylance"** and install that too -- it gives you autocomplete superpowers
+6. While you're at it, search for **"Pylance"** and install that too - it gives you autocomplete superpowers
 
 That's your setup. VS Code + Python extension = a fantastic coding experience with syntax highlighting, error detection, and a built-in terminal.
 
@@ -130,11 +130,11 @@ Congratulations. You're a programmer now. No, seriously. That's how it starts. E
 
 Let's break it down:
 
-- `print()` is a **function** -- think of it as a command you're giving Python. "Hey Python, show this on the screen."
-- `"Hello, World!"` is a **string** -- any text wrapped in quotes. Python knows it's text because of the quotes.
+- `print()` is a **function** - think of it as a command you're giving Python. "Hey Python, show this on the screen."
+- `"Hello, World!"` is a **string** - any text wrapped in quotes. Python knows it's text because of the quotes.
 - The parentheses `()` are how you hand information to a function. You're saying: "print *this*."
 
-That's it. You gave Python an instruction, and it followed it. That's all programming is -- giving instructions to a computer, one line at a time.
+That's it. You gave Python an instruction, and it followed it. That's all programming is - giving instructions to a computer, one line at a time.
 
 Let's try a few more:
 
@@ -153,7 +153,7 @@ Run it. Each `print()` shows up on its own line. You're basically writing a scri
 Time to fly solo. Create a new file called `chapter1_practice.py` and write code that:
 
 1. Prints your name
-2. Prints your favorite joke (or a terrible pun -- those are better)
+2. Prints your favorite joke (or a terrible pun - those are better)
 3. Prints a math result using `print()`:
 
 ```python
@@ -168,8 +168,8 @@ Yeah, Python can do math right inside `print()`. We'll get way deeper into that 
 
 ## TL;DR
 
-- Python is the most beginner-friendly, widely-used programming language -- powering everything from Instagram to AI
+- Python is the most beginner-friendly, widely-used programming language - powering everything from Instagram to AI
 - Install Python from python.org (**check "Add to PATH" on Windows!**)
 - Install VS Code + the Python extension for a smooth coding experience
-- `print()` displays stuff on the screen -- it's your first Python function
+- `print()` displays stuff on the screen - it's your first Python function
 - You just wrote your first program. You're officially a programmer. Tell your mom.

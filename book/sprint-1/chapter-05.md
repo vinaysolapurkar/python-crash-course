@@ -2,11 +2,11 @@
 
 > **Sprint 1** | **12 min read** | **Code: [github link](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-1-basics/chapter-05-decisions/)**
 
-Every app you've ever used makes decisions. "Is the password correct? Show the dashboard. Wrong? Show an error." "Is the player's health zero? Game over." "Is the user over 18? Show the content." Without decisions, programs would just be straight lines -- boring and useless. Time to give your code a brain.
+Every app you've ever used makes decisions. "Is the password correct? Show the dashboard. Wrong? Show an error." "Is the player's health zero? Game over." "Is the user over 18? Show the content." Without decisions, programs would just be straight lines - boring and useless. Time to give your code a brain.
 
 ## What You'll Learn
-- Comparison operators -- the questions Python asks
-- if/elif/else -- the decision-making trio
+- Comparison operators - the questions Python asks
+- if/elif/else - the decision-making trio
 - Logical operators: and, or, not
 - Nested vs. flat conditions (and why flat is better)
 - Truthy and falsy values
@@ -25,7 +25,7 @@ print(10 == 10)    # True    "Is 10 equal to 10?"
 print(10 != 5)     # True    "Is 10 not equal to 5?"
 ```
 
-> **Wait, What?** `=` vs `==` -- one assigns, one compares. `x = 5` puts 5 in the box. `x == 5` asks "is x equal to 5?" Mix them up and Python gets very confused. This is the #1 beginner bug. Tattoo it on your brain: **one equals for putting, two equals for asking.**
+> **Wait, What?** `=` vs `==` - one assigns, one compares. `x = 5` puts 5 in the box. `x == 5` asks "is x equal to 5?" Mix them up and Python gets very confused. This is the #1 beginner bug. Tattoo it on your brain: **one equals for putting, two equals for asking.**
 
 These work with strings too:
 
@@ -59,11 +59,11 @@ Let's break it down:
 
 1. `if` checks the first condition. If it's `True`, run that block and skip everything else.
 2. `elif` (short for "else if") checks the next condition, but ONLY if all previous conditions were `False`.
-3. `else` is the catch-all -- runs if nothing above was `True`. No condition needed.
+3. `else` is the catch-all - runs if nothing above was `True`. No condition needed.
 
 **The colon `:` at the end of each line is mandatory.** Forget it and Python throws a syntax error.
 
-**The indentation (4 spaces) is mandatory.** That's how Python knows which code belongs to which condition. No curly braces like other languages -- Python uses whitespace. It's cleaner, but it means spacing actually matters.
+**The indentation (4 spaces) is mandatory.** That's how Python knows which code belongs to which condition. No curly braces like other languages - Python uses whitespace. It's cleaner, but it means spacing actually matters.
 
 ```python
 age = 20
@@ -97,9 +97,9 @@ Python checks conditions **from top to bottom** and stops at the first `True`. T
 
 ## Logical Operators: The Bouncers at the Club
 
-Sometimes one condition isn't enough. Enter `and`, `or`, and `not` -- the logical operators. Think of them as bouncers at a club.
+Sometimes one condition isn't enough. Enter `and`, `or`, and `not` - the logical operators. Think of them as bouncers at a club.
 
-**`and`** -- BOTH conditions must be True (strict bouncer):
+**`and`** - BOTH conditions must be True (strict bouncer):
 
 ```python
 age = 25
@@ -111,7 +111,7 @@ else:
     print("Sorry, can't let you in.")
 ```
 
-**`or`** -- At LEAST one condition must be True (chill bouncer):
+**`or`** - At LEAST one condition must be True (chill bouncer):
 
 ```python
 is_vip = False
@@ -123,7 +123,7 @@ else:
     print("Back of the line, buddy.")
 ```
 
-**`not`** -- Flips True to False and vice versa (the contrarian):
+**`not`** - Flips True to False and vice versa (the contrarian):
 
 ```python
 is_raining = False
@@ -264,7 +264,7 @@ else:
 result = "Pass" if score >= 50 else "Fail"
 ```
 
-This is great for simple assignments. Don't go overboard though -- if your condition is complex, stick with a regular if/else. Code readability is not a place to show off.
+This is great for simple assignments. Don't go overboard though - if your condition is complex, stick with a regular if/else. Code readability is not a place to show off.
 
 ```python
 # This is fine
@@ -276,7 +276,7 @@ x = "a" if condition1 else "b" if condition2 else "c" if condition3 else "d"
 
 ## Your Turn: Movie Rating Classifier
 
-Create `movie_rater.py` -- a program that classifies movies based on user input:
+Create `movie_rater.py` - a program that classifies movies based on user input:
 
 ```python
 # Movie Rating Classifier
@@ -328,9 +328,9 @@ print(f"{'=' * 40}")
 ## TL;DR
 
 - **Comparison operators** (`==`, `!=`, `>`, `<`, `>=`, `<=`) return `True` or `False`
-- **`=` assigns, `==` compares** -- the most important distinction for beginners
+- **`=` assigns, `==` compares** - the most important distinction for beginners
 - **if/elif/else** checks conditions top to bottom; first `True` wins
 - **Logical operators:** `and` (both true), `or` (at least one true), `not` (flip it)
-- **Flat is better than nested** -- check for failures early, happy path at the end
+- **Flat is better than nested** - check for failures early, happy path at the end
 - **Truthy/falsy:** empty strings, 0, `None`, and empty collections are falsy; everything else is truthy
 - **Ternary:** `value_if_true if condition else value_if_false` for simple one-liners

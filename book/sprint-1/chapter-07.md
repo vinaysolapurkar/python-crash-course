@@ -5,15 +5,15 @@
 Imagine having to manually send 1000 emails one at a time. Or counting every item in a warehouse by hand. Or liking every photo on your friend's Instagram, one. by. one. Loops are the reason programmers still have their sanity. They let you say "do this thing, but like, a thousand times" and then go grab coffee while the computer does the work.
 
 ## What You'll Learn
-- `for` loops -- when you know what you're looping through
-- `range()` -- the loop's best friend
-- `while` loops -- when you don't know how many times
-- `break` and `continue` -- escape hatches
-- Nested loops -- when one loop isn't enough
+- `for` loops - when you know what you're looping through
+- `range()` - the loop's best friend
+- `while` loops - when you don't know how many times
+- `break` and `continue` - escape hatches
+- Nested loops - when one loop isn't enough
 
 ## for Loops: Do This for Each Thing
 
-A `for` loop goes through a collection of items and does something with each one. Think of it like a conveyor belt -- each item gets the same treatment:
+A `for` loop goes through a collection of items and does something with each one. Think of it like a conveyor belt - each item gets the same treatment:
 
 ```python
 avengers = ["Iron Man", "Thor", "Hulk", "Black Widow", "Hawkeye"]
@@ -36,7 +36,7 @@ Here's how to read it: "FOR each `hero` IN the `avengers` list, do this." The va
 You can name the loop variable whatever you want, but make it descriptive:
 
 ```python
-# Good -- you know exactly what's happening
+# Good - you know exactly what's happening
 for student in students:
     print(student)
 
@@ -68,17 +68,17 @@ What if you want to loop a specific number of times but you don't have a list? T
 **Three forms of range:**
 
 ```python
-# range(stop) -- 0 to stop-1
+# range(stop) - 0 to stop-1
 for i in range(5):
     print(i)
 # 0, 1, 2, 3, 4
 
-# range(start, stop) -- start to stop-1
+# range(start, stop) - start to stop-1
 for i in range(2, 6):
     print(i)
 # 2, 3, 4, 5
 
-# range(start, stop, step) -- with custom step
+# range(start, stop, step) - with custom step
 for i in range(0, 20, 5):
     print(i)
 # 0, 5, 10, 15
@@ -91,7 +91,7 @@ for i in range(10, 0, -1):
 
 Just like slicing, `range()` goes up to but **doesn't include** the stop number. `range(5)` gives you 0 through 4, not 0 through 5.
 
-Practical example -- print a times table:
+Practical example - print a times table:
 
 ```python
 number = 7
@@ -120,7 +120,7 @@ while password != "python123":
 print("Access granted!")
 ```
 
-This keeps asking for the password until the user gets it right. We have no idea how many tries it'll take -- could be 1, could be 100. That's the sweet spot for `while`.
+This keeps asking for the password until the user gets it right. We have no idea how many tries it'll take - could be 1, could be 100. That's the sweet spot for `while`.
 
 The pattern is: **while this condition is True, keep looping.**
 
@@ -145,12 +145,12 @@ Liftoff!
 
 See that `count -= 1`? That's crucial. If you forget to change the variable that your `while` condition checks, the condition stays `True` forever and your program runs until the heat death of the universe (or until you hit Ctrl+C).
 
-> **Pro Tip:** If your program seems frozen, it's probably stuck in an infinite loop. Press `Ctrl+C` to break out. It happens to everyone. Even senior developers accidentally create infinite loops -- they just press Ctrl+C faster.
+> **Pro Tip:** If your program seems frozen, it's probably stuck in an infinite loop. Press `Ctrl+C` to break out. It happens to everyone. Even senior developers accidentally create infinite loops - they just press Ctrl+C faster.
 
 **Common while loop patterns:**
 
 ```python
-# Accumulator -- add things up
+# Accumulator - add things up
 total = 0
 while True:
     price = input("Enter a price (or 'done'): ")
@@ -159,7 +159,7 @@ while True:
     total += float(price)
 print(f"Total: ${total:.2f}")
 
-# Validation -- keep asking until valid input
+# Validation - keep asking until valid input
 age = -1
 while age < 0 or age > 150:
     age = int(input("Enter your age (0-150): "))
@@ -168,7 +168,7 @@ print(f"Got it, you're {age}!")
 
 ## break and continue: The Escape Hatches
 
-### break -- "I'm Outta Here!"
+### break - "I'm Outta Here!"
 
 `break` immediately exits the loop. No more iterations, no more checking conditions. It's the emergency exit.
 
@@ -193,7 +193,7 @@ Found Charlie!
 
 Without `break`, the loop would keep checking Dave and Eve even after finding Charlie. Why waste the effort?
 
-### continue -- "Skip This One"
+### continue - "Skip This One"
 
 `continue` skips the rest of the current iteration and jumps to the next one. It's like saying "nah, next."
 
@@ -239,7 +239,7 @@ Output:
 
 The outer loop runs 3 times (rows). For each row, the inner loop runs 4 times (columns). That's 3 x 4 = 12 stars total.
 
-A more practical example -- finding matching pairs:
+A more practical example - finding matching pairs:
 
 ```python
 colors = ["red", "blue", "green"]
@@ -349,7 +349,7 @@ print("    ", end="")
 for i in range(1, size + 1):
     print(f"{i:4}", end="")
 print()
-print("    " + "----" * size)
+print("    " + "--" * size)
 
 # Print each row
 for row in range(1, size + 1):
@@ -373,9 +373,9 @@ Run it with a size of 10 and admire your perfectly aligned multiplication table.
 
 - **`for` loops** iterate over a collection: `for item in collection:`
 - **`range()`** generates numbers: `range(stop)`, `range(start, stop)`, `range(start, stop, step)`
-- **`while` loops** run until a condition is False -- don't forget to update the condition variable!
+- **`while` loops** run until a condition is False - don't forget to update the condition variable!
 - **`break`** exits the loop immediately; **`continue`** skips to the next iteration
 - **Nested loops:** the inner loop runs fully for each outer loop iteration
 - **`for/else`:** the `else` block runs only if the loop completes without `break`
-- If your program freezes, you probably made an infinite loop -- hit `Ctrl+C`
+- If your program freezes, you probably made an infinite loop - hit `Ctrl+C`
 - When in doubt about `for` vs `while`: if you're going through a collection, use `for`. If you're waiting for a condition, use `while`.

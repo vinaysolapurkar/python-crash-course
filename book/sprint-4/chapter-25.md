@@ -4,17 +4,17 @@
 
 ## Why Should I Care?
 
-You can write Python that works but is impossible to read. You can write functions where nobody -- including you in two weeks -- knows what types the parameters should be. You can write code that's inconsistently formatted, full of unused imports, and structured like a bowl of spaghetti.
+You can write Python that works but is impossible to read. You can write functions where nobody - including you in two weeks - knows what types the parameters should be. You can write code that's inconsistently formatted, full of unused imports, and structured like a bowl of spaghetti.
 
 And it'll still run. Python doesn't care.
 
-But your teammates care. Your future self cares. The hiring manager reviewing your GitHub portfolio cares. Code readability, team collaboration, catching bugs early, and getting hired -- clean code matters for all of these.
+But your teammates care. Your future self cares. The hiring manager reviewing your GitHub portfolio cares. Code readability, team collaboration, catching bugs early, and getting hired - clean code matters for all of these.
 
 This chapter gives you the tools that professional developers use to write code that's not just correct, but *clear*.
 
 ## The Kitchen Analogy
 
-Writing clean code is like keeping a clean kitchen. You CAN cook in a messy kitchen. The food tastes the same. But everything takes longer -- you can't find the spatula, the cutting board is buried under dishes, and you accidentally grab the sugar instead of the salt.
+Writing clean code is like keeping a clean kitchen. You CAN cook in a messy kitchen. The food tastes the same. But everything takes longer - you can't find the spatula, the cutting board is buried under dishes, and you accidentally grab the sugar instead of the salt.
 
 A clean kitchen means you cook faster, make fewer mistakes, and other people can jump in and help.
 
@@ -22,7 +22,7 @@ Clean code is the same. Variables have clear names. Functions do one thing. Type
 
 ## Type Hints: Helping Your Future Self
 
-Python is dynamically typed -- you don't have to declare what type a variable is. That's great for quick scripts. But in larger projects, it becomes a problem:
+Python is dynamically typed - you don't have to declare what type a variable is. That's great for quick scripts. But in larger projects, it becomes a problem:
 
 ```python
 # What does this function expect? What does it return?
@@ -133,7 +133,7 @@ def create_user(
 
 ### Important: Type Hints Don't Enforce Anything
 
-Here's the thing -- Python **ignores** type hints at runtime. They're documentation, not enforcement:
+Here's the thing - Python **ignores** type hints at runtime. They're documentation, not enforcement:
 
 ```python
 def add(a: int, b: int) -> int:
@@ -145,7 +145,7 @@ print(add("hello", " world"))  # "hello world"
 
 No error. Python doesn't check types at runtime. Type hints are for **humans** and **tools** (like mypy, which we'll cover next).
 
-> **Wait, What?** "If Python ignores them, why bother?" Because *you* don't ignore them. Your IDE doesn't ignore them. Your linter doesn't ignore them. Type hints catch bugs in your editor before you even run the code. They're like lane markings on a road -- your car can cross them, but they tell you where you should be.
+> **Wait, What?** "If Python ignores them, why bother?" Because *you* don't ignore them. Your IDE doesn't ignore them. Your linter doesn't ignore them. Type hints catch bugs in your editor before you even run the code. They're like lane markings on a road - your car can cross them, but they tell you where you should be.
 
 ## mypy: The Type Checker
 
@@ -193,7 +193,7 @@ mypy found both bugs without running the code. In a large project, this catches 
 The key PEP 8 rules:
 
 ```python
-# --- NAMING ---
+# -- NAMING --
 
 # Variables and functions: snake_case
 user_name = "Alice"
@@ -208,7 +208,7 @@ class ShoppingCart:
 MAX_RETRIES = 3
 DATABASE_URL = "sqlite:///app.db"
 
-# --- SPACING ---
+# -- SPACING --
 
 # Two blank lines before top-level definitions
 def function_one():
@@ -227,7 +227,7 @@ class MyClass:
     def method_two(self):
         pass
 
-# --- LINE LENGTH ---
+# -- LINE LENGTH --
 
 # Keep lines under 79 characters (or 88 with black)
 # Break long lines like this:
@@ -242,7 +242,7 @@ user = create_user(
     age=28
 )
 
-# --- IMPORTS ---
+# -- IMPORTS --
 
 # Standard library first, then third-party, then local
 import os
@@ -258,7 +258,7 @@ from my_project.utils import helper
 
 ## black: The Code Formatter That Ends All Arguments
 
-Arguing about code formatting is a waste of time. **black** formats your code automatically, and it's opinionated -- it makes the decisions so you don't have to.
+Arguing about code formatting is a waste of time. **black** formats your code automatically, and it's opinionated - it makes the decisions so you don't have to.
 
 ```bash
 pip install black
@@ -303,8 +303,8 @@ That's it. No configuration needed. No arguments about style. black decides, and
 You can also check without modifying:
 
 ```bash
-black --check my_file.py     # Check without changing
-black --diff my_file.py      # Show what would change
+black -check my_file.py     # Check without changing
+black -diff my_file.py      # Show what would change
 black my_project/             # Format an entire directory
 ```
 
@@ -312,7 +312,7 @@ Most teams add black to their CI/CD pipeline so code is automatically formatted 
 
 ## pylint and flake8: The Grammar Checkers for Code
 
-**Linters** analyze your code for potential errors, style violations, and suspicious patterns -- like a grammar checker for code.
+**Linters** analyze your code for potential errors, style violations, and suspicious patterns - like a grammar checker for code.
 
 ### flake8 (Lighter, Faster)
 
@@ -580,7 +580,7 @@ def get_expenses(
 ## TL;DR
 
 | Tool | What It Does |
-|---|---|
+|--|--|
 | Type hints (`x: int`) | Document what types your code expects |
 | mypy | Check type hints for errors without running code |
 | PEP 8 | Python's official style guide |
@@ -588,6 +588,6 @@ def get_expenses(
 | flake8 | Check for style violations and common errors |
 | pylint | Thorough code analysis (more detailed than flake8) |
 
-**The one-sentence version:** Use type hints to document your code's expectations, black to format it consistently, flake8 to catch mistakes, and mypy to verify types -- these tools turn "code that works" into "code that's professional."
+**The one-sentence version:** Use type hints to document your code's expectations, black to format it consistently, flake8 to catch mistakes, and mypy to verify types - these tools turn "code that works" into "code that's professional."
 
-Next up: The Sprint 4 Checkpoint project -- where you put everything from this sprint together into a real application.
+Next up: The Sprint 4 Checkpoint project - where you put everything from this sprint together into a real application.

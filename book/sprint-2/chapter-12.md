@@ -8,7 +8,7 @@ Let's fix that. This chapter is about making your data *survive*.
 
 ## Writing Files: The with Statement
 
-The safest way to write to a file in Python is the `with` statement. It opens the file, lets you do your thing, and then automatically closes it when you're done -- even if something goes wrong.
+The safest way to write to a file in Python is the `with` statement. It opens the file, lets you do your thing, and then automatically closes it when you're done - even if something goes wrong.
 
 ```python
 # Write to a file
@@ -19,10 +19,10 @@ with open("hello.txt", "w") as f:
 ```
 
 Let's break that down:
-- `open("hello.txt", "w")` -- opens (or creates) a file called `hello.txt` in **write** mode
-- `as f` -- gives us a variable `f` to work with (short for "file")
-- `f.write()` -- writes text to the file
-- `\n` -- newline character (hit Enter)
+- `open("hello.txt", "w")` - opens (or creates) a file called `hello.txt` in **write** mode
+- `as f` - gives us a variable `f` to work with (short for "file")
+- `f.write()` - writes text to the file
+- `\n` - newline character (hit Enter)
 
 The `"w"` mode creates the file if it doesn't exist. But be careful: if the file already exists, **it overwrites everything**. It's the nuclear option.
 
@@ -110,7 +110,7 @@ Your `app.log` file will look like:
 ## File Modes Cheat Sheet
 
 | Mode | What It Does | Creates File? | Overwrites? |
-|------|-------------|---------------|-------------|
+|---|-------|--------|-------|
 | `"r"` | Read only | No (error if missing) | No |
 | `"w"` | Write only | Yes | Yes (destroys old data!) |
 | `"a"` | Append | Yes | No (adds to end) |
@@ -192,7 +192,7 @@ with open("students.csv", "r") as f:
 > **Pro Tip:** `csv.DictReader` is almost always better than `csv.reader`. Instead of accessing columns by index (`row[0]`, `row[1]`), you access them by header name (`row["name"]`, `row["age"]`). It's more readable, and your code won't break if the column order changes.
 
 ```python
-# Method 2: csv.DictReader (gives you dictionaries -- way better)
+# Method 2: csv.DictReader (gives you dictionaries - way better)
 with open("students.csv", "r") as f:
     reader = csv.DictReader(f)
     for row in reader:
@@ -222,7 +222,7 @@ with open("students.csv", "w", newline="") as f:
 
 ## JSON Files: The Internet's Favorite Format
 
-You met `json` briefly in Chapter 11. Now let's use it with files. JSON is perfect for storing structured data -- dictionaries, lists, nested data. It's what every web API speaks.
+You met `json` briefly in Chapter 11. Now let's use it with files. JSON is perfect for storing structured data - dictionaries, lists, nested data. It's what every web API speaks.
 
 ```python
 import json
@@ -283,14 +283,14 @@ with open("data.json", "w") as f:
 ```
 
 Notice the difference:
-- `json.dump()` / `json.load()` -- work with **files**
-- `json.dumps()` / `json.loads()` -- work with **strings**
+- `json.dump()` / `json.load()` - work with **files**
+- `json.dumps()` / `json.loads()` - work with **strings**
 
 The 's' stands for 'string'. Dump to string, load from string.
 
 ## Practical Example: Settings Manager
 
-Here's a real-world pattern -- loading and saving app settings:
+Here's a real-world pattern - loading and saving app settings:
 
 ```python
 import json
@@ -348,18 +348,18 @@ def add_entry():
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
 
     with open(DIARY_FILE, "a") as f:
-        f.write(f"\n--- {timestamp} ---\n")
+        f.write(f"\n-- {timestamp} --\n")
         f.write(f"{entry}\n")
 
     print("Entry saved!")
 
 def read_entries():
-    # Your code here -- read and display the diary file
+    # Your code here - read and display the diary file
     pass
 
 # Main loop
 while True:
-    print("\n--- My Diary ---")
+    print("\n-- My Diary --")
     print("1. New Entry")
     print("2. Read Entries")
     print("3. Quit")
@@ -378,7 +378,7 @@ Full solution available at:
 
 ## TL;DR
 
-- **Always use `with open()`** -- it handles closing the file automatically.
+- **Always use `with open()`** - it handles closing the file automatically.
 - **Write mode (`"w"`)** creates or overwrites. **Append mode (`"a"`)** adds without destroying. **Read mode (`"r"`)** is the default.
 - For large files, read **line by line** with a for loop instead of `.read()`.
 - **CSV**: Use `csv.DictReader` and `csv.DictWriter` for readable, maintainable code.

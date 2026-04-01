@@ -1,4 +1,4 @@
-# Chapter 22: Databases with Python -- Storing Data for Real
+# Chapter 22: Databases with Python - Storing Data for Real
 
 > **Sprint 4, Chapter 22** | **Estimated Time: 20-25 minutes** | **Difficulty: Advanced**
 
@@ -12,17 +12,17 @@ Databases solve all of these problems. And Python comes with one built in.
 
 ## The Spreadsheet Analogy
 
-CSV files are like spreadsheets. Databases are like spreadsheets with superpowers -- they can search millions of rows in milliseconds, enforce rules about what data is allowed, handle multiple users at once, and never lose your data if the power goes out.
+CSV files are like spreadsheets. Databases are like spreadsheets with superpowers - they can search millions of rows in milliseconds, enforce rules about what data is allowed, handle multiple users at once, and never lose your data if the power goes out.
 
 Think of a database as a collection of spreadsheets (called **tables**), where each spreadsheet has defined columns (called **fields** or **columns**) and each row is a record. The difference is that databases have a powerful query language called **SQL** that lets you ask complex questions about your data instantly.
 
 ## SQLite: A Database in Your Pocket
 
-There are many database systems -- PostgreSQL, MySQL, MongoDB, Oracle. They all require installing and running a separate server. Except one.
+There are many database systems - PostgreSQL, MySQL, MongoDB, Oracle. They all require installing and running a separate server. Except one.
 
 **SQLite** is a database that lives in a single file. No server needed. No installation. No configuration. And it's **built into Python**. Just `import sqlite3` and go.
 
-Don't let the simplicity fool you -- SQLite handles databases up to 281 terabytes. It's used in every iPhone, every Android phone, every Chrome browser, and every Firefox browser. It's the most widely deployed database engine in the world.
+Don't let the simplicity fool you - SQLite handles databases up to 281 terabytes. It's used in every iPhone, every Android phone, every Chrome browser, and every Firefox browser. It's the most widely deployed database engine in the world.
 
 ```python
 import sqlite3
@@ -43,7 +43,7 @@ That's it. You now have a database. The file `my_app.db` was created in your cur
 
 ## Creating Tables
 
-Before you can store data, you need to create a **table** -- the structure that defines what your data looks like:
+Before you can store data, you need to create a **table** - the structure that defines what your data looks like:
 
 ```python
 import sqlite3
@@ -68,7 +68,7 @@ conn.close()
 Let's decode that SQL:
 
 | Part | Meaning |
-|---|---|
+|--|--|
 | `CREATE TABLE IF NOT EXISTS` | Make a table (don't crash if it already exists) |
 | `id INTEGER PRIMARY KEY AUTOINCREMENT` | Auto-numbering ID column (1, 2, 3...) |
 | `name TEXT NOT NULL` | Text column, required (can't be empty) |
@@ -127,7 +127,7 @@ See those `?` marks? Those are **placeholders**. This is critically important, s
 This is one of the most important things in this entire book:
 
 ```python
-# NEVER DO THIS -- SQL injection vulnerability!
+# NEVER DO THIS - SQL injection vulnerability!
 name = input("Enter name: ")
 cursor.execute(f"SELECT * FROM users WHERE name = '{name}'")
 
@@ -135,14 +135,14 @@ cursor.execute(f"SELECT * FROM users WHERE name = '{name}'")
 # The query becomes: SELECT * FROM users WHERE name = '' OR '1'='1'
 # That returns EVERY user in the database!
 
-# Or worse: '; DROP TABLE users; --
+# Or worse: '; DROP TABLE users; -
 # That DELETES your entire table!
 ```
 
-This is called **SQL injection**, and it's one of the most common security vulnerabilities in web applications. The fix is simple -- always use parameterized queries:
+This is called **SQL injection**, and it's one of the most common security vulnerabilities in web applications. The fix is simple - always use parameterized queries:
 
 ```python
-# ALWAYS DO THIS -- safe!
+# ALWAYS DO THIS - safe!
 name = input("Enter name: ")
 cursor.execute("SELECT * FROM users WHERE name = ?", (name,))
 ```
@@ -192,9 +192,9 @@ conn.close()
 ```
 
 Key fetch methods:
-- `fetchone()` -- get the next single row (or `None` if no more rows)
-- `fetchall()` -- get all remaining rows as a list of tuples
-- `fetchmany(n)` -- get the next `n` rows
+- `fetchone()` - get the next single row (or `None` if no more rows)
+- `fetchall()` - get all remaining rows as a list of tuples
+- `fetchmany(n)` - get the next `n` rows
 
 ### Getting Named Columns with Row Factory
 
@@ -263,11 +263,11 @@ print(f"Deleted {cursor.rowcount} rows")
 conn.close()
 ```
 
-Same warning as `UPDATE` -- always use `WHERE`. `DELETE FROM users` without a `WHERE` clause deletes everything. Every row. Gone. No undo.
+Same warning as `UPDATE` - always use `WHERE`. `DELETE FROM users` without a `WHERE` clause deletes everything. Every row. Gone. No undo.
 
 ## Context Managers: The Right Way
 
-Manually calling `conn.close()` is fragile -- if an error happens before that line, the connection stays open. Use a context manager instead:
+Manually calling `conn.close()` is fragile - if an error happens before that line, the connection stays open. Use a context manager instead:
 
 ```python
 import sqlite3
@@ -285,9 +285,9 @@ for user in users:
     print(user)
 ```
 
-The `with` statement ensures the connection is properly handled -- it commits on success and rolls back on error.
+The `with` statement ensures the connection is properly handled - it commits on success and rolls back on error.
 
-> **Remember When?** We used context managers for file handling in Sprint 2 -- `with open("file.txt") as f:`. Same pattern here. Python loves context managers because they guarantee cleanup.
+> **Remember When?** We used context managers for file handling in Sprint 2 - `with open("file.txt") as f:`. Same pattern here. Python loves context managers because they guarantee cleanup.
 
 ## Building a Complete Database Module
 
@@ -388,7 +388,7 @@ Writing raw SQL is fine for learning and small projects, but bigger projects use
 The most popular Python ORM is **SQLAlchemy**. Here's what the same task code looks like:
 
 ```python
-# This is just a preview -- don't worry about memorizing this
+# This is just a preview - don't worry about memorizing this
 from sqlalchemy import create_engine, Column, Integer, String, Boolean
 from sqlalchemy.orm import declarative_base, Session
 
@@ -469,7 +469,7 @@ Try doing *that* with a CSV file.
 ## TL;DR
 
 | Concept | What It Does |
-|---|---|
+|--|--|
 | SQLite | File-based database, built into Python |
 | `sqlite3.connect("file.db")` | Create/open a database |
 | `cursor.execute(sql, params)` | Run a SQL command with safe parameters |
@@ -482,4 +482,4 @@ Try doing *that* with a CSV file.
 
 **The one-sentence version:** Use `sqlite3` to store data in a real database file, always use `?` placeholders to prevent SQL injection, and use context managers for clean connections.
 
-Next up: Web Scraping -- where we teach Python to read websites and extract data.
+Next up: Web Scraping - where we teach Python to read websites and extract data.

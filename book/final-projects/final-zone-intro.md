@@ -2,13 +2,13 @@
 
 You made it.
 
-If you're reading this, you've gone from zero -- knowing nothing about Python -- to understanding variables, loops, functions, classes, APIs, databases, web frameworks, and even artificial intelligence. That's not a small thing. That's a genuinely impressive thing.
+If you're reading this, you've gone from zero - knowing nothing about Python - to understanding variables, loops, functions, classes, APIs, databases, web frameworks, and even artificial intelligence. That's not a small thing. That's a genuinely impressive thing.
 
 Now it's time to prove it.
 
 ## Ten Projects. Ten Portfolio Pieces.
 
-This section contains ten final projects, arranged from beginner-friendly to advanced. Each one builds on the skills you've learned throughout this book, and each one produces something real -- something that works, something you can show off, something you can talk about.
+This section contains ten final projects, arranged from beginner-friendly to advanced. Each one builds on the skills you've learned throughout this book, and each one produces something real - something that works, something you can show off, something you can talk about.
 
 **Every project you complete here is something you can show to employers, put on GitHub, and talk about in interviews.**
 
@@ -30,7 +30,7 @@ Each project guide includes:
 The projects are ordered intentionally. Start wherever your comfort level is, but if you can, work through them in order:
 
 | # | Project | Difficulty | Time |
-|---|---------|-----------|------|
+|--|-----|------|---|
 | 1 | The Quiz Game | 1/5 | ~1 hour |
 | 2 | Personal Budget Tracker | 2/5 | ~1.5 hours |
 | 3 | To-Do App (CLI) | 2/5 | ~2 hours |
@@ -53,7 +53,7 @@ Projects 1-4 use only Python's built-in features. Projects 5-6 introduce third-p
 
 ## One More Thing
 
-You will get stuck. You will see error messages. You will spend twenty minutes hunting a bug that turns out to be a missing colon. That's not failure -- that's programming. Every working developer on the planet has been exactly where you are right now.
+You will get stuck. You will see error messages. You will spend twenty minutes hunting a bug that turns out to be a missing colon. That's not failure - that's programming. Every working developer on the planet has been exactly where you are right now.
 
 The difference between someone who "tried to learn Python" and someone who "knows Python" is simply this: they kept going.
 

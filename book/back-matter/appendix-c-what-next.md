@@ -1,10 +1,10 @@
 # Appendix C: What Next? Career Paths After This Book
 
-You've finished the book. You can write Python. But "I know Python" isn't a job title -- so where do you go from here?
+You've finished the book. You can write Python. But "I know Python" isn't a job title - so where do you go from here?
 
 This appendix maps out five career paths you can pursue with Python as your foundation. Each path includes what to learn next, in what order, and what job titles to search for when you're ready.
 
-Pick the one that excites you most. You don't have to choose forever -- many developers switch paths or combine them. But having a direction beats wandering.
+Pick the one that excites you most. You don't have to choose forever - many developers switch paths or combine them. But having a direction beats wandering.
 
 ---
 
@@ -16,16 +16,16 @@ Python is one of the most popular languages for backend web development. You'll 
 
 ### What to Learn Next (in order)
 
-1. **Django or Flask (deeper)** -- You touched Flask in this book. Django is the "batteries-included" framework used by Instagram, Spotify, and Mozilla. Learn one deeply before the other.
-2. **HTML, CSS, JavaScript basics** -- You don't need to become a frontend expert, but you need to understand what the browser does with what your server sends.
-3. **SQL and PostgreSQL** -- Move beyond SQLite to a production database. Learn JOINs, indexes, and query optimization.
-4. **REST API design** -- Learn to design clean, consistent APIs. Study authentication patterns (OAuth, JWT).
-5. **Deployment** -- Learn to deploy with Docker, Heroku, or AWS. Understand Linux servers, NGINX, and HTTPS.
-6. **Frontend framework (optional)** -- React or Vue.js to become full-stack.
+1. **Django or Flask (deeper)** - You touched Flask in this book. Django is the "batteries-included" framework used by Instagram, Spotify, and Mozilla. Learn one deeply before the other.
+2. **HTML, CSS, JavaScript basics** - You don't need to become a frontend expert, but you need to understand what the browser does with what your server sends.
+3. **SQL and PostgreSQL** - Move beyond SQLite to a production database. Learn JOINs, indexes, and query optimization.
+4. **REST API design** - Learn to design clean, consistent APIs. Study authentication patterns (OAuth, JWT).
+5. **Deployment** - Learn to deploy with Docker, Heroku, or AWS. Understand Linux servers, NGINX, and HTTPS.
+6. **Frontend framework (optional)** - React or Vue.js to become full-stack.
 
 ### Recommended Resources
 
-- Django official tutorial (djangoproject.com) -- free, thorough, and well-written
+- Django official tutorial (djangoproject.com) - free, thorough, and well-written
 - "Django for Beginners" by William S. Vincent
 - MDN Web Docs for HTML/CSS/JS fundamentals
 
@@ -51,18 +51,18 @@ Data scientists are the detectives of the tech world. You'll clean messy dataset
 
 ### What to Learn Next (in order)
 
-1. **pandas (deep dive)** -- You've seen the basics. Now learn groupby, merge, pivot tables, and time series handling. This is your most-used tool.
-2. **Data visualization** -- Matplotlib, Seaborn, and Plotly. Learn to make charts that communicate clearly.
-3. **SQL** -- Most real-world data lives in databases. Learn to query, join, and aggregate.
-4. **Statistics fundamentals** -- Mean, median, standard deviation, distributions, hypothesis testing, correlation. You don't need a math degree, but you need the basics.
-5. **Jupyter Notebooks** -- The standard environment for data exploration. Interactive, visual, shareable.
-6. **Machine learning basics** -- scikit-learn for classification, regression, and clustering. Understand when to use what.
-7. **A specialization** -- Natural language processing (NLP), computer vision, time series forecasting, or recommendation systems.
+1. **pandas (deep dive)** - You've seen the basics. Now learn groupby, merge, pivot tables, and time series handling. This is your most-used tool.
+2. **Data visualization** - Matplotlib, Seaborn, and Plotly. Learn to make charts that communicate clearly.
+3. **SQL** - Most real-world data lives in databases. Learn to query, join, and aggregate.
+4. **Statistics fundamentals** - Mean, median, standard deviation, distributions, hypothesis testing, correlation. You don't need a math degree, but you need the basics.
+5. **Jupyter Notebooks** - The standard environment for data exploration. Interactive, visual, shareable.
+6. **Machine learning basics** - scikit-learn for classification, regression, and clustering. Understand when to use what.
+7. **A specialization** - Natural language processing (NLP), computer vision, time series forecasting, or recommendation systems.
 
 ### Recommended Resources
 
 - "Python for Data Analysis" by Wes McKinney (the creator of pandas)
-- Kaggle.com -- free datasets and competitions to practice on
+- Kaggle.com - free datasets and competitions to practice on
 - Khan Academy for statistics fundamentals (free)
 
 ### Job Titles to Search For
@@ -83,16 +83,16 @@ $65,000 - $95,000, scaling to $130,000+ for senior data scientists.
 
 **The path:** Build intelligent systems that learn from data.
 
-This is the cutting edge. AI/ML engineers build the models and systems behind recommendation engines, self-driving cars, chatbots, image recognition, and everything in between. This book gave you the foundation -- now you go deep.
+This is the cutting edge. AI/ML engineers build the models and systems behind recommendation engines, self-driving cars, chatbots, image recognition, and everything in between. This book gave you the foundation - now you go deep.
 
 ### What to Learn Next (in order)
 
-1. **Mathematics** -- Linear algebra (vectors, matrices), calculus (derivatives, gradients), and probability. Khan Academy and 3Blue1Brown make these accessible.
-2. **scikit-learn (mastery)** -- Classification, regression, clustering, cross-validation, hyperparameter tuning, pipelines.
-3. **Deep learning** -- Neural networks, CNNs (for images), RNNs and Transformers (for text). Start with PyTorch or TensorFlow.
-4. **Natural Language Processing** -- Tokenization, embeddings, transformer models, fine-tuning. Hugging Face is the go-to library.
-5. **MLOps** -- Model versioning (MLflow), deployment (Docker, FastAPI), monitoring, and CI/CD for ML pipelines.
-6. **Large Language Models** -- Prompt engineering, fine-tuning, RAG architectures, LangChain, vector databases.
+1. **Mathematics** - Linear algebra (vectors, matrices), calculus (derivatives, gradients), and probability. Khan Academy and 3Blue1Brown make these accessible.
+2. **scikit-learn (mastery)** - Classification, regression, clustering, cross-validation, hyperparameter tuning, pipelines.
+3. **Deep learning** - Neural networks, CNNs (for images), RNNs and Transformers (for text). Start with PyTorch or TensorFlow.
+4. **Natural Language Processing** - Tokenization, embeddings, transformer models, fine-tuning. Hugging Face is the go-to library.
+5. **MLOps** - Model versioning (MLflow), deployment (Docker, FastAPI), monitoring, and CI/CD for ML pipelines.
+6. **Large Language Models** - Prompt engineering, fine-tuning, RAG architectures, LangChain, vector databases.
 
 ### Recommended Resources
 
@@ -124,13 +124,13 @@ DevOps engineers are the invisible heroes who keep software running smoothly. Yo
 
 ### What to Learn Next (in order)
 
-1. **Linux command line** -- Become comfortable in a terminal. Learn bash scripting, file permissions, process management, and SSH.
-2. **Git (advanced)** -- Branching strategies, rebasing, cherry-picking, hooks. You'll manage complex workflows.
-3. **Docker** -- Containerize applications. Learn Dockerfiles, docker-compose, and container networking.
-4. **CI/CD pipelines** -- GitHub Actions, Jenkins, or GitLab CI. Automate testing and deployment.
-5. **Cloud platforms** -- AWS, Google Cloud, or Azure. Start with one. Learn compute (EC2/VMs), storage (S3), and networking basics.
-6. **Infrastructure as Code** -- Terraform or Ansible. Define your infrastructure in files, not click-ops.
-7. **Monitoring** -- Prometheus, Grafana, or cloud-native monitoring. Know when things break before users notice.
+1. **Linux command line** - Become comfortable in a terminal. Learn bash scripting, file permissions, process management, and SSH.
+2. **Git (advanced)** - Branching strategies, rebasing, cherry-picking, hooks. You'll manage complex workflows.
+3. **Docker** - Containerize applications. Learn Dockerfiles, docker-compose, and container networking.
+4. **CI/CD pipelines** - GitHub Actions, Jenkins, or GitLab CI. Automate testing and deployment.
+5. **Cloud platforms** - AWS, Google Cloud, or Azure. Start with one. Learn compute (EC2/VMs), storage (S3), and networking basics.
+6. **Infrastructure as Code** - Terraform or Ansible. Define your infrastructure in files, not click-ops.
+7. **Monitoring** - Prometheus, Grafana, or cloud-native monitoring. Know when things break before users notice.
 
 ### Recommended Resources
 
@@ -162,19 +162,19 @@ Game development combines programming, art, math, and storytelling. Python is a 
 
 ### What to Learn Next (in order)
 
-1. **Pygame** -- Build 2D games from scratch. Learn game loops, sprite management, collision detection, and audio.
-2. **Game design fundamentals** -- Game mechanics, level design, player psychology, balancing. Read "The Art of Game Design" by Jesse Schell.
-3. **Object-oriented patterns** -- State machines, entity-component systems, observer pattern. Games rely heavily on design patterns.
-4. **Math for games** -- Vectors, trigonometry, physics simulation (gravity, momentum, collision).
-5. **A game engine** -- Godot (uses GDScript, similar to Python) or Unity (uses C#, but your programming fundamentals transfer). Pick one and build several small games.
-6. **3D basics (optional)** -- If you want to go beyond 2D, learn 3D coordinate systems, cameras, lighting, and shaders.
+1. **Pygame** - Build 2D games from scratch. Learn game loops, sprite management, collision detection, and audio.
+2. **Game design fundamentals** - Game mechanics, level design, player psychology, balancing. Read "The Art of Game Design" by Jesse Schell.
+3. **Object-oriented patterns** - State machines, entity-component systems, observer pattern. Games rely heavily on design patterns.
+4. **Math for games** - Vectors, trigonometry, physics simulation (gravity, momentum, collision).
+5. **A game engine** - Godot (uses GDScript, similar to Python) or Unity (uses C#, but your programming fundamentals transfer). Pick one and build several small games.
+6. **3D basics (optional)** - If you want to go beyond 2D, learn 3D coordinate systems, cameras, lighting, and shaders.
 
 ### Recommended Resources
 
 - Pygame official documentation and tutorials
 - "Invent Your Own Computer Games with Python" by Al Sweigart (free online)
 - Godot Engine documentation (free, open-source game engine)
-- Game jams on itch.io (build a game in 48 hours -- incredibly educational)
+- Game jams on itch.io (build a game in 48 hours - incredibly educational)
 
 ### Job Titles to Search For
 

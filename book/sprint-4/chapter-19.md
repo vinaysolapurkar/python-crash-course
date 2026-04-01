@@ -1,4 +1,4 @@
-# Chapter 19: Decorators -- Functions That Upgrade Functions
+# Chapter 19: Decorators - Functions That Upgrade Functions
 
 > **Sprint 4, Chapter 19** | **Estimated Time: 20-25 minutes** | **Difficulty: Advanced**
 
@@ -22,13 +22,13 @@ def dashboard():
 
 That `@` symbol is a **decorator**. And they're everywhere. Flask uses `@app.route` for web URLs. Django uses `@login_required` for authentication. pytest uses `@pytest.fixture` for test setup. FastAPI uses `@app.get` for API endpoints.
 
-If you want to work with any modern Python framework, you need to understand decorators. And here's the good news -- they're simpler than they look.
+If you want to work with any modern Python framework, you need to understand decorators. And here's the good news - they're simpler than they look.
 
 ## The Gift Wrapping Analogy
 
 Think of decorators as **gift wrapping**.
 
-You have a gift (your function). It does something useful. A decorator wraps that gift with extra behavior -- maybe a nice bow, maybe some tissue paper, maybe a card that says "Happy Birthday." The gift inside doesn't change. It still does exactly what it always did. But now it has something extra on the outside.
+You have a gift (your function). It does something useful. A decorator wraps that gift with extra behavior - maybe a nice bow, maybe some tissue paper, maybe a card that says "Happy Birthday." The gift inside doesn't change. It still does exactly what it always did. But now it has something extra on the outside.
 
 A `@timer` decorator wraps your function with timing code. A `@login_required` decorator wraps your function with an authentication check. The original function stays the same. The wrapper adds the extra behavior.
 
@@ -79,7 +79,7 @@ print(howdy("Bob"))     # Howdy, Bob!
 
 Read that carefully. `make_greeter` doesn't return a string. It returns a **function**. And that inner function (`greeter`) remembers the `greeting` variable from its parent, even after `make_greeter` has finished running.
 
-This is called a **closure** -- a function that remembers values from the scope where it was created.
+This is called a **closure** - a function that remembers values from the scope where it was created.
 
 ## Closures: Functions That Remember
 
@@ -264,7 +264,7 @@ In production code, you'd write to a log file instead of printing, but the idea 
 
 ## Preserving Function Identity with functools.wraps
 
-There's one gotcha with decorators. When you decorate a function, the wrapper replaces it -- including its name and docstring:
+There's one gotcha with decorators. When you decorate a function, the wrapper replaces it - including its name and docstring:
 
 ```python
 @timer
@@ -337,11 +337,11 @@ print(circle.area)       # 314.1592653589793
 # circle.radius = -1     # ValueError: Radius cannot be negative
 ```
 
-Notice how `circle.area` doesn't have parentheses. It looks like a regular attribute, but it's actually computed every time you access it. This is the Pythonic way to do getters and setters -- no `get_radius()` and `set_radius()` methods needed.
+Notice how `circle.area` doesn't have parentheses. It looks like a regular attribute, but it's actually computed every time you access it. This is the Pythonic way to do getters and setters - no `get_radius()` and `set_radius()` methods needed.
 
 ## A Real-World Example: Retry Decorator
 
-Here's a decorator you might actually use in production -- it retries a function if it fails:
+Here's a decorator you might actually use in production - it retries a function if it fails:
 
 ```python
 import functools
@@ -373,7 +373,7 @@ def fetch_data(url):
 result = fetch_data("https://api.example.com")
 ```
 
-Notice this is a decorator *with arguments* (`max_attempts`, `delay`). That requires an extra layer of nesting -- a function that returns the decorator. It looks complicated, but it's just one more layer of the same pattern.
+Notice this is a decorator *with arguments* (`max_attempts`, `delay`). That requires an extra layer of nesting - a function that returns the decorator. It looks complicated, but it's just one more layer of the same pattern.
 
 ## Your Turn: Build a @timer Decorator
 
@@ -403,7 +403,7 @@ print(f"Result: {result}")
 ## TL;DR
 
 | Concept | What It Does |
-|---|---|
+|--|--|
 | First-class functions | Functions can be passed around like any other value |
 | Closure | A function that remembers variables from its enclosing scope |
 | Decorator | A function that takes a function and returns a new function with added behavior |
@@ -414,4 +414,4 @@ print(f"Result: {result}")
 
 **The one-sentence version:** A decorator is just a function that wraps another function to add extra behavior, and the `@` symbol is just a shortcut for applying it.
 
-Next up: Generators and Iterators -- where we learn to process data without loading it all into memory at once.
+Next up: Generators and Iterators - where we learn to process data without loading it all into memory at once.

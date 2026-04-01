@@ -1,10 +1,10 @@
-# Chapter 23: Web Scraping -- Extracting Data from the Web
+# Chapter 23: Web Scraping - Extracting Data from the Web
 
 > **Sprint 4, Chapter 23** | **Estimated Time: 20-25 minutes** | **Difficulty: Advanced**
 
 ## Why Should I Care?
 
-Not everything has a nice, clean API. Sometimes the data you want is on a website but there's no API to access it. Price comparisons, news headlines, research data, job listings, product reviews, sports statistics -- the data is right there on the page. You just need a way to grab it.
+Not everything has a nice, clean API. Sometimes the data you want is on a website but there's no API to access it. Price comparisons, news headlines, research data, job listings, product reviews, sports statistics - the data is right there on the page. You just need a way to grab it.
 
 That's web scraping. And Python is ridiculously good at it.
 
@@ -12,7 +12,7 @@ Price monitoring tools that alert you when something goes on sale? Scrapers. Tho
 
 ## The Newspaper Analogy
 
-APIs are like **politely asking for data**. You call the restaurant, place your order, and they deliver. Web scraping is like **reading the newspaper yourself and taking notes**. The information is published and public -- you're just reading it programmatically instead of with your eyes.
+APIs are like **politely asking for data**. You call the restaurant, place your order, and they deliver. Web scraping is like **reading the newspaper yourself and taking notes**. The information is published and public - you're just reading it programmatically instead of with your eyes.
 
 Your Python script visits a web page (just like your browser does), reads the HTML (just like your browser does), and extracts the specific pieces you care about (which your browser shows visually, but you grab as data).
 
@@ -44,12 +44,12 @@ The key concepts:
 - **Tags** come in pairs: `<p>text</p>` (opening and closing)
 - **Attributes** add info to tags: `<p class="intro">` has a `class` attribute
 - **Nesting**: Tags contain other tags, forming a tree
-- **id**: A unique identifier (one per page) -- `id="content"`
-- **class**: A group label (many elements can share one) -- `class="intro"`
+- **id**: A unique identifier (one per page) - `id="content"`
+- **class**: A group label (many elements can share one) - `class="intro"`
 
 Common tags you'll encounter:
 | Tag | Purpose |
-|---|---|
+|--|--|
 | `<h1>` to `<h6>` | Headings |
 | `<p>` | Paragraphs |
 | `<a href="...">` | Links |
@@ -64,8 +64,8 @@ Common tags you'll encounter:
 ## The Workflow: requests + BeautifulSoup
 
 Web scraping in Python uses two libraries:
-1. **requests** -- downloads the web page (you learned this in Chapter 21)
-2. **BeautifulSoup** -- parses the HTML and lets you search through it
+1. **requests** - downloads the web page (you learned this in Chapter 21)
+2. **BeautifulSoup** - parses the HTML and lets you search through it
 
 Install BeautifulSoup:
 
@@ -73,7 +73,7 @@ Install BeautifulSoup:
 pip install beautifulsoup4
 ```
 
-Here's the basic pattern -- you'll use this every single time:
+Here's the basic pattern - you'll use this every single time:
 
 ```python
 import requests
@@ -122,7 +122,7 @@ for quote in all_quotes:
 # element = soup.find("div", {"class": "content", "id": "main"})
 ```
 
-Notice `class_` with an underscore -- that's because `class` is a reserved word in Python. BeautifulSoup uses `class_` instead.
+Notice `class_` with an underscore - that's because `class` is a reserved word in Python. BeautifulSoup uses `class_` instead.
 
 ## Extracting Text and Attributes
 
@@ -144,7 +144,7 @@ print(quote.string)     # Same thing for simple elements
 # Get an attribute
 link = soup.find("a")
 print(link["href"])     # The URL the link points to
-print(link.get("href")) # Same thing (safer -- returns None if missing)
+print(link.get("href")) # Same thing (safer - returns None if missing)
 
 # Get all attributes as a dictionary
 print(link.attrs)       # {'href': '/login', 'class': ['...'], ...}
@@ -181,7 +181,7 @@ authors = soup.select(".quote .author")
 
 Common CSS selector patterns:
 | Selector | Meaning |
-|---|---|
+|--|--|
 | `tag` | All elements of that type |
 | `.class` | All elements with that class |
 | `#id` | Element with that id |
@@ -224,7 +224,7 @@ def scrape_quotes(url):
 quotes = scrape_quotes("https://quotes.toscrape.com/")
 for q in quotes:
     print(f'"{q["text"][:60]}..."')
-    print(f'  -- {q["author"]}')
+    print(f'  - {q["author"]}')
     print(f'  Tags: {", ".join(q["tags"])}')
     print()
 ```
@@ -263,7 +263,7 @@ def scrape_all_quotes():
         else:
             page_url = None  # No more pages
         
-        time.sleep(1)  # Be polite -- wait between requests
+        time.sleep(1)  # Be polite - wait between requests
     
     return all_quotes
 
@@ -274,7 +274,7 @@ print(f"\nTotal quotes scraped: {len(all_quotes)}")
 Key points:
 - Look for a "next" link on each page
 - Build the full URL by combining the base URL with the relative link
-- **Always add a delay** (`time.sleep(1)`) between requests -- hammering a server with rapid requests is rude and might get you blocked
+- **Always add a delay** (`time.sleep(1)`) between requests - hammering a server with rapid requests is rude and might get you blocked
 
 ## Saving Scraped Data
 
@@ -382,7 +382,7 @@ Before you scrape anything, ask yourself these questions:
 
 1. **Is there an API?** Use it instead. APIs are faster, more reliable, and the site owner prefers it.
 
-2. **Check robots.txt.** Visit `example.com/robots.txt` -- it tells you what bots are allowed to access. Respect it.
+2. **Check robots.txt.** Visit `example.com/robots.txt` - it tells you what bots are allowed to access. Respect it.
 
 ```python
 import requests
@@ -403,7 +403,7 @@ print(response.text)
 **General rules:**
 - Public data for personal/research use: Usually fine
 - Adding delays and respecting robots.txt: Always do this
-- Scraping behind a login wall: Gray area -- be careful
+- Scraping behind a login wall: Gray area - be careful
 - Scraping and republishing content: Probably not okay
 - Overwhelming a server with requests: Never okay
 
@@ -474,7 +474,7 @@ if __name__ == "__main__":
 ## TL;DR
 
 | Concept | What It Does |
-|---|---|
+|--|--|
 | `requests.get(url)` | Downloads a web page |
 | `BeautifulSoup(html, "html.parser")` | Parses HTML into a searchable tree |
 | `soup.find(tag, class_=...)` | Find the first matching element |
@@ -482,9 +482,9 @@ if __name__ == "__main__":
 | `soup.select("css selector")` | Find elements using CSS selectors |
 | `element.text` | Get the text inside an element |
 | `element["attribute"]` | Get an attribute value |
-| `time.sleep(1)` | Be polite -- wait between requests |
+| `time.sleep(1)` | Be polite - wait between requests |
 | `robots.txt` | Check what the site allows you to scrape |
 
 **The one-sentence version:** Use `requests` to download a web page and `BeautifulSoup` to search through its HTML and extract the data you need, always being respectful of the site's rules and server resources.
 
-Next up: Testing -- where we learn to prove our code actually works.
+Next up: Testing - where we learn to prove our code actually works.

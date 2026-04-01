@@ -4,14 +4,14 @@
 
 Welcome to the chapter where you go from "I can write classes" to "I can *design systems*." This is the difference between knowing how to cook and being a chef. Between playing guitar chords and writing a song. Between stacking LEGO bricks and building the Millennium Falcon.
 
-The concepts in this chapter have fancy names -- encapsulation, polymorphism, composition, SOLID. They sound like a university lecture. But they're actually just common-sense ideas with expensive vocabulary. And once you know them, you'll write code that's genuinely easier to change, test, and explain.
+The concepts in this chapter have fancy names - encapsulation, polymorphism, composition, SOLID. They sound like a university lecture. But they're actually just common-sense ideas with expensive vocabulary. And once you know them, you'll write code that's genuinely easier to change, test, and explain.
 
 ## What You'll Learn
 
-- Encapsulation -- keeping your object's internals private
-- Polymorphism -- same method name, different behavior
-- Composition vs inheritance -- "has a" vs "is a"
-- The SOLID principles -- simplified, no enterprise jargon
+- Encapsulation - keeping your object's internals private
+- Polymorphism - same method name, different behavior
+- Composition vs inheritance - "has a" vs "is a"
+- The SOLID principles - simplified, no enterprise jargon
 
 ## Why Should I Care?
 
@@ -19,7 +19,7 @@ Two reasons. First, job interviews love these concepts. If someone asks "explain
 
 But more importantly: these principles prevent your code from turning into an unmaintainable mess. You know that codebase at work that nobody wants to touch? The one where changing one thing breaks three other things? It probably ignored every concept in this chapter. These ideas exist because developers learned the hard way what happens without them.
 
-## Encapsulation -- Keep Your Internals Private
+## Encapsulation - Keep Your Internals Private
 
 Encapsulation means "don't let the outside world mess with your object's guts." It's like a restaurant kitchen: you order food (public interface), but you don't walk into the kitchen and start adjusting the oven temperature (internal state).
 
@@ -28,9 +28,9 @@ Python doesn't have *true* private attributes like Java or C++. Instead, it uses
 ```python
 class BankAccount:
     def __init__(self, owner, balance):
-        self.owner = owner          # Public -- anyone can see/change this
-        self._account_id = id(self)  # Protected -- "please don't touch" (single underscore)
-        self.__balance = balance     # Private -- "seriously don't touch" (double underscore)
+        self.owner = owner          # Public - anyone can see/change this
+        self._account_id = id(self)  # Protected - "please don't touch" (single underscore)
+        self.__balance = balance     # Private - "seriously don't touch" (double underscore)
 
     def deposit(self, amount):
         if amount <= 0:
@@ -56,13 +56,13 @@ class BankAccount:
 ```python
 account = BankAccount("Alice", 1000)
 
-# Public -- works fine
+# Public - works fine
 print(account.owner)  # Alice
 
-# Protected -- works but you SHOULDN'T
+# Protected - works but you SHOULDN'T
 print(account._account_id)  # 140234567890 (works, but it's a hint to stay away)
 
-# Private -- Python mangles the name to prevent access
+# Private - Python mangles the name to prevent access
 # print(account.__balance)  # AttributeError!
 
 # The RIGHT way to interact with balance:
@@ -76,26 +76,26 @@ print(account)  # Alice's account: $1300.00
 Here's the cheat sheet:
 
 | Convention | Example | Meaning |
-|-----------|---------|---------|
+|------|-----|-----|
 | `self.name` | Public | Go ahead, use it freely |
 | `self._name` | Protected | "Hey, this is internal. Use at your own risk." |
 | `self.__name` | Private | Python actually renames it to prevent accidental access |
 
-The double underscore triggers **name mangling** -- Python renames `__balance` to `_BankAccount__balance` behind the scenes. You *can* still access it if you really try, but it's Python's way of putting a "DO NOT ENTER" sign on the door.
+The double underscore triggers **name mangling** - Python renames `__balance` to `_BankAccount__balance` behind the scenes. You *can* still access it if you really try, but it's Python's way of putting a "DO NOT ENTER" sign on the door.
 
 > **Don't Panic:** Python's approach to privacy is sometimes called "we're all consenting adults here." It trusts you to respect the conventions rather than enforcing strict rules. A single underscore `_` is usually all you need. Double underscore `__` is for when you really want to prevent subclass name collisions. Don't overuse it.
 
-**Practical rule:** Use single underscore `_` for internal methods and attributes. Use double underscore `__` rarely. Use public attributes when there's no reason to hide them. Python isn't Java -- you don't need getters and setters for everything.
+**Practical rule:** Use single underscore `_` for internal methods and attributes. Use double underscore `__` rarely. Use public attributes when there's no reason to hide them. Python isn't Java - you don't need getters and setters for everything.
 
-## Polymorphism -- Same Name, Different Behavior
+## Polymorphism - Same Name, Different Behavior
 
 Here's the $50 word for a $5 concept.
 
 > **Fun Fact:** "Polymorphism" comes from Greek, meaning "many forms." It's a fancy way of saying "different objects can respond to the same method name in their own way." That's it. That's the whole thing.
 
-You've actually already seen this. When you call `len()` on a string, a list, or a dictionary, each one responds differently -- but the method name is the same. That's polymorphism.
+You've actually already seen this. When you call `len()` on a string, a list, or a dictionary, each one responds differently - but the method name is the same. That's polymorphism.
 
-Let's see it with our own classes. The classic example (sorry, we're using shapes -- it's the law):
+Let's see it with our own classes. The classic example (sorry, we're using shapes - it's the law):
 
 ```python
 class Shape:
@@ -145,9 +145,9 @@ for shape in shapes:
 # Triangle: area = 12.00
 ```
 
-One loop, three different classes, one method name. Each shape knows how to calculate its own area. The calling code doesn't care *which* shape it's dealing with -- it just calls `.area()` and gets the right answer.
+One loop, three different classes, one method name. Each shape knows how to calculate its own area. The calling code doesn't care *which* shape it's dealing with - it just calls `.area()` and gets the right answer.
 
-That's polymorphism. You write code that works with the *interface* (all shapes have `.area()`), not the specific type. It makes your code flexible and extensible -- you can add a `Pentagon` class tomorrow without changing the loop.
+That's polymorphism. You write code that works with the *interface* (all shapes have `.area()`), not the specific type. It makes your code flexible and extensible - you can add a `Pentagon` class tomorrow without changing the loop.
 
 ### Polymorphism Without Inheritance
 
@@ -175,7 +175,7 @@ for animal in animals:
 
 Python doesn't check if `animal` *is a* certain type. It just checks if `animal` *has* a `speak()` method. If it does, great. If it doesn't, you get an error. This is duck typing, and it's one of Python's superpowers.
 
-## Composition vs Inheritance -- "Has A" vs "Is A"
+## Composition vs Inheritance - "Has A" vs "Is A"
 
 This is one of the most important design decisions in OOP, and getting it wrong leads to tangled, fragile code.
 
@@ -240,7 +240,7 @@ print(tesla.start())
 # Tesla Model 3: electric engine started (300 HP)
 ```
 
-Same car class, different engine. That's the power of composition -- your objects are built from interchangeable parts.
+Same car class, different engine. That's the power of composition - your objects are built from interchangeable parts.
 
 ### When to Use Which?
 
@@ -257,7 +257,7 @@ Here's a practical guide:
 - The relationship doesn't fit a neat hierarchy
 - You catch yourself creating deep inheritance chains (more than 2-3 levels deep)
 
-**The famous advice:** "Favor composition over inheritance." This doesn't mean never use inheritance. It means when you're not sure, composition is usually the safer bet. Inheritance creates tight coupling -- change the parent, and all children change too. Composition is looser and more flexible.
+**The famous advice:** "Favor composition over inheritance." This doesn't mean never use inheritance. It means when you're not sure, composition is usually the safer bet. Inheritance creates tight coupling - change the parent, and all children change too. Composition is looser and more flexible.
 
 ## Let's Combine Everything
 
@@ -289,7 +289,7 @@ class PayPal(PaymentProcessor):
 
 
 class Order:
-    """Uses composition -- an order HAS a payment processor."""
+    """Uses composition - an order HAS a payment processor."""
     def __init__(self, items, payment_method):
         self.items = items
         self._payment = payment_method  # Composition
@@ -321,19 +321,19 @@ print(order2.checkout())
 
 Same `Order` class, different payment methods. The order doesn't know or care whether it's dealing with a credit card, PayPal, or crypto. It just calls `.process()`. That's polymorphism and composition working together.
 
-## SOLID Principles -- The Cliff Notes
+## SOLID Principles - The Cliff Notes
 
 SOLID is a set of five design principles that help you write maintainable code. They were originally described for enterprise Java, but the ideas apply everywhere. Here's each one in plain English, no corporate jargon.
 
-**S -- Single Responsibility Principle.** Each class should do one thing. A `User` class manages user data. A `UserValidator` class validates user data. A `UserDatabase` class saves user data. Don't cram it all into one mega-class. If you're describing your class and you need to use the word "and," it probably does too much.
+**S - Single Responsibility Principle.** Each class should do one thing. A `User` class manages user data. A `UserValidator` class validates user data. A `UserDatabase` class saves user data. Don't cram it all into one mega-class. If you're describing your class and you need to use the word "and," it probably does too much.
 
-**O -- Open/Closed Principle.** Your code should be open for extension but closed for modification. Translation: you should be able to add new features without changing existing code. Our payment example nails this -- adding `BitcoinPayment` just means writing a new class. We never touch `Order`, `CreditCard`, or `PayPal`.
+**O - Open/Closed Principle.** Your code should be open for extension but closed for modification. Translation: you should be able to add new features without changing existing code. Our payment example nails this - adding `BitcoinPayment` just means writing a new class. We never touch `Order`, `CreditCard`, or `PayPal`.
 
-**L -- Liskov Substitution Principle.** If you have a function that expects a `Shape`, it should work with any subclass of `Shape` (Circle, Rectangle, Triangle) without breaking. Your child classes shouldn't violate the promises made by the parent. If `Shape.area()` returns a number, `Circle.area()` should too -- not a string, not `None`, not a list of cats.
+**L - Liskov Substitution Principle.** If you have a function that expects a `Shape`, it should work with any subclass of `Shape` (Circle, Rectangle, Triangle) without breaking. Your child classes shouldn't violate the promises made by the parent. If `Shape.area()` returns a number, `Circle.area()` should too - not a string, not `None`, not a list of cats.
 
-**I -- Interface Segregation Principle.** Don't force a class to implement methods it doesn't need. If you have a `Worker` interface with `code()`, `test()`, and `make_coffee()`, your `Developer` class shouldn't be required to implement `make_coffee()`. (Although, let's be honest, most developers *do* make a lot of coffee.) Split big interfaces into smaller, focused ones.
+**I - Interface Segregation Principle.** Don't force a class to implement methods it doesn't need. If you have a `Worker` interface with `code()`, `test()`, and `make_coffee()`, your `Developer` class shouldn't be required to implement `make_coffee()`. (Although, let's be honest, most developers *do* make a lot of coffee.) Split big interfaces into smaller, focused ones.
 
-**D -- Dependency Inversion Principle.** High-level code shouldn't depend on low-level details. Our `Order` class depends on the `PaymentProcessor` abstraction, not on `CreditCard` specifically. This means you can swap in a new payment method without the `Order` knowing or caring. Depend on abstractions, not concrete implementations.
+**D - Dependency Inversion Principle.** High-level code shouldn't depend on low-level details. Our `Order` class depends on the `PaymentProcessor` abstraction, not on `CreditCard` specifically. This means you can swap in a new payment method without the `Order` knowing or caring. Depend on abstractions, not concrete implementations.
 
 > **Don't Panic:** These fancy words are just names for common-sense ideas. You've probably been doing some of these already without knowing it. When you wrote small, focused functions in Sprint 2? That's the Single Responsibility Principle. When your code worked with lists AND tuples because they both support iteration? That's the Liskov Substitution Principle. You were already thinking this way. Now you just have the vocabulary.
 
@@ -368,10 +368,10 @@ truck = Vehicle("Ford", "F-150", 2024, diesel_engine)
 ## TL;DR
 
 - **Encapsulation** means hiding internals: `_protected` (convention), `__private` (name-mangled)
-- Python's privacy is by convention, not enforcement -- "we're all consenting adults"
+- Python's privacy is by convention, not enforcement - "we're all consenting adults"
 - **Polymorphism** means same method name, different behavior. Call `.area()` on any shape, get the right answer
-- Python's duck typing gives you polymorphism for free -- no inheritance required
-- **Composition** ("has a") is often better than inheritance ("is a") -- it's more flexible and less fragile
+- Python's duck typing gives you polymorphism for free - no inheritance required
+- **Composition** ("has a") is often better than inheritance ("is a") - it's more flexible and less fragile
 - **SOLID** principles are common-sense rules for clean design. You don't need to memorize acronyms to write good code
 - The goal of all these concepts: code that's easy to change, test, and explain to the next person
-- These aren't academic abstractions -- they're the difference between a codebase people enjoy working on and one that makes them update their resume
+- These aren't academic abstractions - they're the difference between a codebase people enjoy working on and one that makes them update their resume

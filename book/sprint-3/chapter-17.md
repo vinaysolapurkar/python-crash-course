@@ -9,10 +9,10 @@ That's magic methods. And yes, they really do feel like magic.
 ## What You'll Learn
 
 - What magic methods are (and why they have those weird double underscores)
-- `__str__` and `__repr__` -- making your objects printable
-- `__len__` and `__getitem__` -- making objects act like lists
-- `__add__` and `__eq__` -- custom math and comparisons
-- `__lt__`, `__gt__` -- who's bigger?
+- `__str__` and `__repr__` - making your objects printable
+- `__len__` and `__getitem__` - making objects act like lists
+- `__add__` and `__eq__` - custom math and comparisons
+- `__lt__`, `__gt__` - who's bigger?
 - A taste of `__enter__` and `__exit__` (context managers)
 
 ## Why Should I Care?
@@ -27,12 +27,12 @@ If you want your objects to feel like first-class Python citizens instead of awk
 
 ## What Are Magic Methods?
 
-Magic methods (also called **dunder methods**, short for "double underscore") are special methods that Python calls automatically in certain situations. You've already met one -- `__init__`, which runs when you create an object.
+Magic methods (also called **dunder methods**, short for "double underscore") are special methods that Python calls automatically in certain situations. You've already met one - `__init__`, which runs when you create an object.
 
 Here's the pattern: when you write normal Python syntax, Python translates it into magic method calls:
 
 | You Write | Python Calls |
-|-----------|-------------|
+|------|-------|
 | `len(obj)` | `obj.__len__()` |
 | `print(obj)` | `obj.__str__()` |
 | `obj1 + obj2` | `obj1.__add__(obj2)` |
@@ -44,7 +44,7 @@ That's the whole trick. There's no actual "magic." Python sees `+` and calls `__
 
 > **Don't Panic:** The double underscores look intimidating, but these are just regular methods with funny names. You define them exactly like any other method. The only difference is that Python calls them automatically when you use certain syntax.
 
-## `__str__` and `__repr__` -- Making Objects Printable
+## `__str__` and `__repr__` - Making Objects Printable
 
 Right now, if you print a custom object, you get garbage:
 
@@ -82,12 +82,12 @@ print(repr(p))  # Pizza('large', ['pepperoni', 'mushrooms'])
 ```
 
 The difference:
-- **`__str__`** is the "pretty" version -- what users see. Called by `print()` and `str()`.
-- **`__repr__`** is the "developer" version -- what you'd type to recreate the object. Called in the REPL and by `repr()`.
+- **`__str__`** is the "pretty" version - what users see. Called by `print()` and `str()`.
+- **`__repr__`** is the "developer" version - what you'd type to recreate the object. Called in the REPL and by `repr()`.
 
-**Rule of thumb:** `__str__` is for humans. `__repr__` is for developers. If you only implement one, make it `__repr__` -- Python falls back to it when `__str__` isn't defined.
+**Rule of thumb:** `__str__` is for humans. `__repr__` is for developers. If you only implement one, make it `__repr__` - Python falls back to it when `__str__` isn't defined.
 
-## `__len__` and `__getitem__` -- Acting Like a List
+## `__len__` and `__getitem__` - Acting Like a List
 
 Want your object to work with `len()` and square brackets? Easy:
 
@@ -128,7 +128,7 @@ for song in rock:
 
 By implementing `__getitem__`, your Playlist magically works with `for` loops too. Python sees `__getitem__` and thinks "oh, I can iterate over this by calling `[0]`, `[1]`, `[2]`..." Pretty neat.
 
-## `__add__` and `__eq__` -- Custom Math and Comparisons
+## `__add__` and `__eq__` - Custom Math and Comparisons
 
 This is where it gets fun. Let's build a `Money` class that actually understands addition and equality:
 
@@ -186,7 +186,7 @@ The `+ ` operator isn't just for numbers anymore. *Your* objects understand it. 
 
 When you return `NotImplemented` (note: not the *exception* `NotImplementedError`, just the value `NotImplemented`), you're telling Python: "I don't know how to handle this." Python will then try the *other* object's method. It's a polite way of saying "not my problem."
 
-## `__lt__`, `__gt__` -- Who's Bigger?
+## `__lt__`, `__gt__` - Who's Bigger?
 
 Want to sort your objects? You need comparison methods:
 
@@ -253,14 +253,14 @@ class Money:
     # __gt__, __le__, __ge__ are auto-generated!
 ```
 
-## `__enter__` and `__exit__` -- Context Managers (Quick Taste)
+## `__enter__` and `__exit__` - Context Managers (Quick Taste)
 
 Remember `with open("file.txt") as f:`? That `with` block calls two magic methods:
 
-- `__enter__` -- runs when you enter the `with` block
-- `__exit__` -- runs when you leave it (even if there's an error)
+- `__enter__` - runs when you enter the `with` block
+- `__exit__` - runs when you leave it (even if there's an error)
 
-Here's a quick example -- a timer that measures how long a block of code takes:
+Here's a quick example - a timer that measures how long a block of code takes:
 
 ```python
 import time
@@ -286,14 +286,14 @@ with Timer():
 # Elapsed: 0.0312 seconds
 ```
 
-The `with` block guarantees `__exit__` runs no matter what, even if your code throws an error. That's why `with open(...)` is so reliable -- it always closes the file. We'll see more of this pattern in later chapters, but now you know the secret: it's just two magic methods.
+The `with` block guarantees `__exit__` runs no matter what, even if your code throws an error. That's why `with open(...)` is so reliable - it always closes the file. We'll see more of this pattern in later chapters, but now you know the secret: it's just two magic methods.
 
 ## The Full Magic Method Cheat Sheet
 
 Here are the ones you'll use most often:
 
 | Method | Triggered By | Purpose |
-|--------|-------------|---------|
+|----|-------|-----|
 | `__init__` | `MyClass()` | Set up the object |
 | `__str__` | `print(obj)`, `str(obj)` | Human-readable string |
 | `__repr__` | REPL, `repr(obj)` | Developer-readable string |
@@ -318,15 +318,15 @@ You don't need to memorize this. Bookmark it. Come back when you need one.
 
 Build a complete `Money` class with the following:
 
-1. `__init__(self, amount, currency="USD")` -- store amount (rounded to 2 decimals) and currency
-2. `__str__` -- display as `$10.99` (use proper symbol for USD, EUR, GBP)
-3. `__repr__` -- display as `Money(10.99, 'USD')`
-4. `__add__` -- add two Money objects (same currency only) or add a number
-5. `__sub__` -- subtract Money objects or numbers
-6. `__eq__` -- check if two Money objects are equal (same amount AND currency)
-7. `__lt__` and `__gt__` -- compare amounts (same currency only)
-8. `__mul__` -- multiply by a number (useful for tax: `price * 1.08`)
-9. `__bool__` -- `Money(0)` is falsy, anything else is truthy
+1. `__init__(self, amount, currency="USD")` - store amount (rounded to 2 decimals) and currency
+2. `__str__` - display as `$10.99` (use proper symbol for USD, EUR, GBP)
+3. `__repr__` - display as `Money(10.99, 'USD')`
+4. `__add__` - add two Money objects (same currency only) or add a number
+5. `__sub__` - subtract Money objects or numbers
+6. `__eq__` - check if two Money objects are equal (same amount AND currency)
+7. `__lt__` and `__gt__` - compare amounts (same currency only)
+8. `__mul__` - multiply by a number (useful for tax: `price * 1.08`)
+9. `__bool__` - `Money(0)` is falsy, anything else is truthy
 
 Test it:
 
@@ -354,5 +354,5 @@ print(f"Is free? {not final}")
 - `__len__` and `__getitem__` make your objects work with `len()` and `[]`
 - `__enter__` and `__exit__` power the `with` statement
 - Return `NotImplemented` (not `NotImplementedError`) when your method can't handle the other type
-- You've been using magic methods since Chapter 1 -- `print()`, `len()`, `+`, `for` loops all rely on them
+- You've been using magic methods since Chapter 1 - `print()`, `len()`, `+`, `for` loops all rely on them
 - The double underscores look scary but they're just regular methods that Python happens to call automatically

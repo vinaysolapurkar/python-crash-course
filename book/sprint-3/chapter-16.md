@@ -1,4 +1,4 @@
-# Chapter 16: Inheritance -- Passing Down the Family Traits
+# Chapter 16: Inheritance - Passing Down the Family Traits
 
 > **Sprint 3** | **10 min read** | **Code: [github link](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-3-oop/chapter-16-inheritance/)**
 
@@ -11,9 +11,9 @@ In Python, classes can inherit too. And honestly? It's one of the most useful tr
 - Why inheritance saves you from copy-paste nightmares
 - How to create parent and child classes
 - What gets inherited (spoiler: everything)
-- How to override methods -- doing it YOUR way
-- `super()` -- calling your parent class for help
-- `isinstance()` -- checking the family tree
+- How to override methods - doing it YOUR way
+- `super()` - calling your parent class for help
+- `isinstance()` - checking the family tree
 - A brief, responsible look at multiple inheritance
 
 ## Why Should I Care?
@@ -26,11 +26,11 @@ Every major framework uses this. Django models? Inheritance. Flask views? Inheri
 
 ## The Basics: Parent and Child
 
-Let's go back to the pizza shop. We have a `Pizza` class, but now we want to add specialty pizzas -- a `DeepDish` and a `ThinCrust`. They're both pizzas, but with some differences.
+Let's go back to the pizza shop. We have a `Pizza` class, but now we want to add specialty pizzas - a `DeepDish` and a `ThinCrust`. They're both pizzas, but with some differences.
 
 ```python
 class Pizza:
-    """The parent class -- the original recipe."""
+    """The parent class - the original recipe."""
 
     def __init__(self, size, toppings):
         self.size = size
@@ -44,7 +44,7 @@ class Pizza:
         return 15  # minutes
 ```
 
-Now, a `DeepDish` is a pizza -- it has a size and toppings -- but it takes longer to bake and has a thicker crust. Instead of rewriting everything, we **inherit**:
+Now, a `DeepDish` is a pizza - it has a size and toppings - but it takes longer to bake and has a thicker crust. Instead of rewriting everything, we **inherit**:
 
 ```python
 class DeepDish(Pizza):
@@ -71,7 +71,7 @@ print(regular.bake_time())    # 15
 print(chunky_boi.bake_time())  # 25
 ```
 
-Look at what happened. `DeepDish` never defined `__init__`. It didn't need to -- it inherited it from `Pizza`. It automatically has `size` and `toppings`. It just overrode the methods it wanted to change.
+Look at what happened. `DeepDish` never defined `__init__`. It didn't need to - it inherited it from `Pizza`. It automatically has `size` and `toppings`. It just overrode the methods it wanted to change.
 
 That's inheritance in a nutshell: **get everything from your parent, change only what you need.**
 
@@ -81,7 +81,7 @@ Everything. Methods, attributes, the whole package. A child class is a copy of t
 
 ```python
 class ThinCrust(Pizza):
-    pass  # Literally no changes -- it's identical to Pizza
+    pass  # Literally no changes - it's identical to Pizza
 ```
 
 ```python
@@ -92,9 +92,9 @@ print(skinny.bake_time())    # 15
 
 `ThinCrust` does nothing of its own, but it works perfectly. It got *everything* from `Pizza`. The `pass` keyword just means "nothing to add here."
 
-> **Don't Panic:** Inheritance is just one class borrowing from another. That's it. If you understood functions -- how one function can call another -- you can understand this. A child class just *starts with* everything its parent has.
+> **Don't Panic:** Inheritance is just one class borrowing from another. That's it. If you understood functions - how one function can call another - you can understand this. A child class just *starts with* everything its parent has.
 
-## Overriding Methods -- Doing It YOUR Way
+## Overriding Methods - Doing It YOUR Way
 
 When a child class defines a method with the same name as the parent, it **overrides** (replaces) the parent's version:
 
@@ -108,11 +108,11 @@ class DeepDish(Pizza):
         return 25  # Overrides the parent's bake_time
 ```
 
-When you call `deep_dish.bake_time()`, Python checks the child first. If it finds the method there, it uses it. If not, it goes up to the parent. It's like asking a teenager a question -- they'll give their own answer if they have one, otherwise they'll go ask their parents.
+When you call `deep_dish.bake_time()`, Python checks the child first. If it finds the method there, it uses it. If not, it goes up to the parent. It's like asking a teenager a question - they'll give their own answer if they have one, otherwise they'll go ask their parents.
 
-## `super()` -- Calling Mom for Help
+## `super()` - Calling Mom for Help
 
-Sometimes you don't want to completely replace the parent's method. You want to *extend* it -- do everything the parent does, plus a little extra. That's where `super()` comes in.
+Sometimes you don't want to completely replace the parent's method. You want to *extend* it - do everything the parent does, plus a little extra. That's where `super()` comes in.
 
 ```python
 class Pizza:
@@ -164,7 +164,7 @@ class User:
 
     def display(self):
         status = "Active" if self.is_active else "Inactive"
-        return f"{self.username} ({self.email}) -- {status}"
+        return f"{self.username} ({self.email}) - {status}"
 
 
 class AdminUser(User):
@@ -199,24 +199,24 @@ admin = AdminUser("admin_bob", "bob@email.com")
 premium = PremiumUser("charlie", "charlie@email.com", "yearly")
 
 print(alice.display())
-# alice (alice@email.com) -- Active
+# alice (alice@email.com) - Active
 
 print(admin.display())
-# admin_bob (bob@email.com) -- Active [ADMIN: full]
+# admin_bob (bob@email.com) - Active [ADMIN: full]
 
 print(admin.ban_user(alice))
 # alice has been banned by admin_bob
 
 print(alice.display())
-# alice (alice@email.com) -- Inactive
+# alice (alice@email.com) - Inactive
 
 print(premium.display())
-# charlie (charlie@email.com) -- Active [Premium: yearly]
+# charlie (charlie@email.com) - Active [Premium: yearly]
 ```
 
 Three user types, shared login logic, each with their own special powers. That's inheritance doing what it does best.
 
-## `isinstance()` -- Checking the Family Tree
+## `isinstance()` - Checking the Family Tree
 
 Sometimes you need to check what type an object is. Maybe you want to verify someone is an admin before letting them ban people:
 
@@ -238,7 +238,7 @@ print(perform_admin_action(admin, alice))   # alice has been banned by admin_bob
 print(perform_admin_action(premium, alice))  # Permission denied. Nice try though.
 ```
 
-## Multiple Inheritance -- A Brief Warning
+## Multiple Inheritance - A Brief Warning
 
 Python lets a class inherit from *multiple* parents:
 
@@ -251,7 +251,7 @@ This is legal Python. A `FlyingCar` gets everything from both `Car` and `Airplan
 
 It is. Until `Car` and `Airplane` both have a `fuel_level` attribute and a `start_engine()` method that work differently. Then Python has to figure out which one to use, and things get confusing fast.
 
-> **Pro Tip:** Multiple inheritance is like dual-wielding swords. Looks amazing in movies. In practice, you'll probably stab yourself. Stick with single inheritance until you have a really good reason not to. When you see it in the wild, it's usually with **mixins** -- small, focused classes that add one specific feature. That's the safe way to do it.
+> **Pro Tip:** Multiple inheritance is like dual-wielding swords. Looks amazing in movies. In practice, you'll probably stab yourself. Stick with single inheritance until you have a really good reason not to. When you see it in the wild, it's usually with **mixins** - small, focused classes that add one specific feature. That's the safe way to do it.
 
 We won't dive deeper into multiple inheritance here. Just know it exists, and that most Python developers use it sparingly and carefully.
 
@@ -281,9 +281,9 @@ Build a vehicle hierarchy:
 ## TL;DR
 
 - **Inheritance** lets a child class get all the methods and attributes of a parent class for free
-- Syntax: `class Child(Parent):` -- that's it, the parentheses do all the work
+- Syntax: `class Child(Parent):` - that's it, the parentheses do all the work
 - Children can **override** methods to change behavior
-- `super()` calls the parent's version of a method -- use it when you want to extend, not replace
+- `super()` calls the parent's version of a method - use it when you want to extend, not replace
 - `isinstance(obj, ClassName)` checks if an object belongs to a class (or its parents)
-- **Multiple inheritance** exists but use it carefully -- stick with single inheritance for now
+- **Multiple inheritance** exists but use it carefully - stick with single inheritance for now
 - Inheritance = "write the common stuff once, specialize as needed." Less copy-paste, fewer bugs, happier developer

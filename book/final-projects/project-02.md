@@ -21,7 +21,7 @@ Here's what it looks like:
 
 Choice: 3
 
---- Financial Summary ---
+-- Financial Summary --
 Total Income:   $3,250.00
 Total Expenses: $1,847.50
 Balance:        $1,402.50
@@ -45,7 +45,7 @@ Top Expense Categories:
 
 ### Step 1: Project Setup and Imports
 
-Create the file and import everything you'll need. The `csv` and `datetime` modules are built into Python -- no installs required.
+Create the file and import everything you'll need. The `csv` and `datetime` modules are built into Python - no installs required.
 
 ```python
 # budget_tracker.py
@@ -135,7 +135,7 @@ def choose_category(categories):
 
 def add_transaction(transactions, trans_type):
     """Add an income or expense transaction."""
-    print(f"\n--- Add {trans_type} ---")
+    print(f"\n-- Add {trans_type} --")
 
     if trans_type == "Income":
         category = choose_category(INCOME_CATEGORIES)
@@ -178,7 +178,7 @@ def view_summary(transactions):
                          if t["type"] == "Expense")
     balance = total_income - total_expenses
 
-    print("\n--- Financial Summary ---")
+    print("\n-- Financial Summary --")
     print(f"  Total Income:   ${total_income:>10,.2f}")
     print(f"  Total Expenses: ${total_expenses:>10,.2f}")
     print(f"  Balance:        ${balance:>10,.2f}")
@@ -240,7 +240,7 @@ def view_monthly_report(transactions):
     income = sum(t["amount"] for t in monthly if t["type"] == "Income")
     expenses = sum(t["amount"] for t in monthly if t["type"] == "Expense")
 
-    print(f"\n--- Report for {selected} ---")
+    print(f"\n-- Report for {selected} --")
     print(f"  Income:   ${income:>10,.2f}")
     print(f"  Expenses: ${expenses:>10,.2f}")
     print(f"  Net:      ${income - expenses:>10,.2f}")
@@ -333,7 +333,7 @@ if __name__ == "__main__":
 
 1. **Budget limits:** Let the user set monthly spending limits per category. When they add an expense that pushes a category over its limit, display a warning. Store limits in a separate CSV or JSON file.
 
-2. **Export to formatted report:** Generate a nicely formatted text file report that summarizes a month's finances -- something you could print or email to yourself.
+2. **Export to formatted report:** Generate a nicely formatted text file report that summarizes a month's finances - something you could print or email to yourself.
 
 3. **Recurring transactions:** Add support for recurring monthly transactions (like rent or salary) that auto-populate when you start a new month.
 
@@ -343,4 +343,4 @@ A budget tracker shows you understand data persistence, input validation, and pr
 
 - **GitHub:** Include sample CSV data so reviewers can see the app in action immediately. Add screenshots of the summary and monthly report output.
 - **Resume:** "Developed a CLI budget tracker with CSV persistence, category-based analytics, and monthly reporting using Python."
-- **Interview talking point:** Discuss your choice of CSV format for storage (human-readable, easily opened in Excel) and how you handled edge cases like empty files and invalid input. Mention how you'd evolve it -- perhaps adding a SQLite database if the data grew large.
+- **Interview talking point:** Discuss your choice of CSV format for storage (human-readable, easily opened in Excel) and how you handled edge cases like empty files and invalid input. Mention how you'd evolve it - perhaps adding a SQLite database if the data grew large.

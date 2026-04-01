@@ -18,7 +18,7 @@ Here's what it looks like when running:
 
 Choice: 2
 
---- Your Tasks ---
+-- Your Tasks --
   ID  Priority  Status      Task                    Due Date
   1   [!!!]     [ ]         Buy groceries           2026-04-05
   2   [!! ]     [x]         Finish Python project   2026-04-01
@@ -271,7 +271,7 @@ def display_tasks(tasks, filter_name="all"):
 ```python
 def add_task_ui(manager):
     """Interactive UI for adding a task."""
-    print("\n--- Add Task ---")
+    print("\n-- Add Task --")
     title = input("  Task title: ").strip()
     if not title:
         print("  Title cannot be empty.")
@@ -286,7 +286,7 @@ def add_task_ui(manager):
 
 def view_tasks_ui(manager):
     """Interactive UI for viewing tasks with filter/sort options."""
-    print("\n--- Your Tasks ---")
+    print("\n-- Your Tasks --")
     print("  Filter: 1=All  2=Active  3=Completed  4=High Priority")
     choice = input("  Choose (or Enter for all): ").strip()
 
@@ -300,7 +300,7 @@ def view_tasks_ui(manager):
 
 def edit_task_ui(manager):
     """Interactive UI for editing a task."""
-    print("\n--- Edit Task ---")
+    print("\n-- Edit Task --")
     display_tasks(manager.tasks)
     task_id = get_task_id("\n  Task ID to edit: ")
 
@@ -329,7 +329,7 @@ def edit_task_ui(manager):
 
 def complete_task_ui(manager):
     """Interactive UI for completing a task."""
-    print("\n--- Complete Task ---")
+    print("\n-- Complete Task --")
     active = [t for t in manager.tasks if not t.completed]
     display_tasks(active, "active")
 
@@ -346,7 +346,7 @@ def complete_task_ui(manager):
 
 def delete_task_ui(manager):
     """Interactive UI for deleting a task."""
-    print("\n--- Delete Task ---")
+    print("\n-- Delete Task --")
     display_tasks(manager.tasks)
 
     if not manager.tasks:
@@ -416,7 +416,7 @@ if __name__ == "__main__":
 
 ## Portfolio Tips
 
-This project demonstrates OOP, data persistence, and clean architecture -- three things every employer cares about. When presenting it:
+This project demonstrates OOP, data persistence, and clean architecture - three things every employer cares about. When presenting it:
 
 - **GitHub:** Structure your repo cleanly. Put the code in a `/src` folder, include sample data, and write a README that shows the app in action.
 - **Resume:** "Built an OOP-based CLI task manager with CRUD operations, JSON persistence, and priority-based filtering using Python."

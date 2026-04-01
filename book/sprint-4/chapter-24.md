@@ -1,4 +1,4 @@
-# Chapter 24: Testing -- Proving Your Code Works
+# Chapter 24: Testing - Proving Your Code Works
 
 > **Sprint 4, Chapter 24** | **Estimated Time: 20-25 minutes** | **Difficulty: Advanced**
 
@@ -14,9 +14,9 @@ Every serious software company requires tests. Every open-source project worth u
 
 ## The Proofreading Analogy
 
-Testing is like **proofreading an essay**. You could skip it -- the essay is done, the ideas are there. But do you really want to submit it with typos, missing paragraphs, and your introduction accidentally pasted in twice?
+Testing is like **proofreading an essay**. You could skip it - the essay is done, the ideas are there. But do you really want to submit it with typos, missing paragraphs, and your introduction accidentally pasted in twice?
 
-You *could* proofread by reading the whole thing yourself. That's manual testing -- running your program and clicking around. It works, but it's slow, tedious, and you'll miss things because you're human.
+You *could* proofread by reading the whole thing yourself. That's manual testing - running your program and clicking around. It works, but it's slow, tedious, and you'll miss things because you're human.
 
 Automated tests are like having a robot proofreader that checks every word, every sentence, every paragraph, instantly, every time you make a change. It never gets tired. It never misses the same mistake twice.
 
@@ -33,20 +33,20 @@ def apply_discount(price, discount_percent):
 Looks fine, right? Let's use it:
 
 ```python
-print(apply_discount(100, 20))  # 80.0 -- correct!
-print(apply_discount(50, 10))   # 45.0 -- correct!
+print(apply_discount(100, 20))  # 80.0 - correct!
+print(apply_discount(50, 10))   # 45.0 - correct!
 ```
 
 Ship it! But wait... what about edge cases?
 
 ```python
-print(apply_discount(100, 110))  # -10.0 -- negative price?!
-print(apply_discount(-50, 20))   # -40.0 -- negative input?!
-print(apply_discount(100, 0))    # 100.0 -- okay
-print(apply_discount(0, 50))     # 0.0 -- okay
+print(apply_discount(100, 110))  # -10.0 - negative price?!
+print(apply_discount(-50, 20))   # -40.0 - negative input?!
+print(apply_discount(100, 0))    # 100.0 - okay
+print(apply_discount(0, 50))     # 0.0 - okay
 ```
 
-A 110% discount gives a **negative price** -- the store pays the customer. That's a bug. If you had a test that checked "discount should not exceed 100%", you'd have caught it before deploying.
+A 110% discount gives a **negative price** - the store pays the customer. That's a bug. If you had a test that checked "discount should not exceed 100%", you'd have caught it before deploying.
 
 Here's the fixed version:
 
@@ -127,7 +127,7 @@ def test_discount_over_100_raises_error():
         apply_discount(100, 110)
 ```
 
-No classes. No `self.assertEqual`. Just `assert` -- Python's built-in keyword. pytest discovers functions that start with `test_` and runs them automatically.
+No classes. No `self.assertEqual`. Just `assert` - Python's built-in keyword. pytest discovers functions that start with `test_` and runs them automatically.
 
 Run your tests:
 
@@ -156,14 +156,14 @@ Good tests follow the **AAA pattern**: Arrange, Act, Assert.
 
 ```python
 def test_discount_calculation():
-    # Arrange -- set up the inputs
+    # Arrange - set up the inputs
     price = 100
     discount = 20
     
-    # Act -- call the function
+    # Act - call the function
     result = apply_discount(price, discount)
     
-    # Assert -- check the result
+    # Assert - check the result
     assert result == 80.0
 ```
 
@@ -172,7 +172,7 @@ What makes a good test?
 1. **Test one thing.** Each test should check a single behavior.
 2. **Use descriptive names.** `test_negative_price_raises_error` tells you exactly what it tests.
 3. **Test edge cases.** Zero, negative numbers, empty strings, `None`, very large numbers.
-4. **Test both success and failure.** Don't just test that correct inputs work -- test that incorrect inputs fail properly.
+4. **Test both success and failure.** Don't just test that correct inputs work - test that incorrect inputs fail properly.
 5. **Tests should be independent.** Each test should work alone, not depend on other tests running first.
 
 Here's a complete test suite for a password strength checker:
@@ -199,7 +199,7 @@ def check_password_strength(password):
     else:
         return "weak"
 
-# --- Tests ---
+# -- Tests --
 
 def test_short_password_is_weak():
     assert check_password_strength("abc") == "weak"
@@ -284,7 +284,7 @@ Key fixture concepts:
 - `@pytest.fixture` marks a function as a fixture
 - Tests receive fixtures by including them as parameters (pytest handles the wiring)
 - `yield` lets you do cleanup after the test
-- `:memory:` SQLite databases are perfect for testing -- they're fast and auto-delete
+- `:memory:` SQLite databases are perfect for testing - they're fast and auto-delete
 
 ## Parametrize: Many Inputs, One Test
 
@@ -335,7 +335,7 @@ The cycle:
 
 Let's try it. We want a function that converts temperatures:
 
-**Step 1: Red -- Write the test first**
+**Step 1: Red - Write the test first**
 
 ```python
 def test_celsius_to_fahrenheit():
@@ -351,7 +351,7 @@ def test_fahrenheit_to_celsius():
 
 Run pytest: **FAIL** (functions don't exist yet). Red.
 
-**Step 2: Green -- Write the minimum code**
+**Step 2: Green - Write the minimum code**
 
 ```python
 def celsius_to_fahrenheit(celsius):
@@ -363,7 +363,7 @@ def fahrenheit_to_celsius(fahrenheit):
 
 Run pytest: **PASS**. Green.
 
-**Step 3: Refactor -- Improve if needed**
+**Step 3: Refactor - Improve if needed**
 
 Maybe add input validation, type hints, or docstrings. Run tests after each change to make sure nothing breaks.
 
@@ -412,16 +412,16 @@ Want to know how much of your code is tested? Use `pytest-cov`:
 ```bash
 pip install pytest-cov
 
-pytest --cov=src --cov-report=term-missing
+pytest -cov=src -cov-report=term-missing
 ```
 
 Output:
 ```
 Name                    Stmts   Miss  Cover   Missing
------------------------------------------------------
+---------------------------
 src/calculator.py          10      0   100%
 src/password_checker.py    15      3    80%   22-24
------------------------------------------------------
+---------------------------
 TOTAL                      25      3    88%
 ```
 
@@ -469,7 +469,7 @@ def test_common_passwords_are_weak(common_passwords):
 ## TL;DR
 
 | Concept | What It Does |
-|---|---|
+|--|--|
 | `pytest` | Modern testing framework for Python |
 | `assert` | Check that something is true (test fails if not) |
 | `pytest.raises(Error)` | Test that code raises a specific exception |
@@ -477,8 +477,8 @@ def test_common_passwords_are_weak(common_passwords):
 | `@pytest.mark.parametrize` | Run one test with many different inputs |
 | TDD (Red-Green-Refactor) | Write test first, then code, then clean up |
 | `pytest -v` | Run tests with detailed output |
-| `pytest --cov` | Check how much code your tests cover |
+| `pytest -cov` | Check how much code your tests cover |
 
 **The one-sentence version:** Write functions that start with `test_`, use `assert` to check results, and run `pytest` to automatically discover and execute all your tests.
 
-Next up: Type Hints, Linting & Clean Code -- the chapter that turns your code from "it works" to "it's professional."
+Next up: Type Hints, Linting & Clean Code - the chapter that turns your code from "it works" to "it's professional."

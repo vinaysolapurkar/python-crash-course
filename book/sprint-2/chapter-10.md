@@ -4,7 +4,7 @@
 
 Copy-pasting code is like writing the same essay for every class. Sure, it works. But the moment you need to change something, you're editing it in twelve different places, and you WILL forget one. Functions let you write it once and reuse it forever.
 
-Think of a function like a recipe. You define it once -- "here's how to make pancakes" -- and then you just say "make pancakes" whenever you want them. You don't re-explain the recipe every time.
+Think of a function like a recipe. You define it once - "here's how to make pancakes" - and then you just say "make pancakes" whenever you want them. You don't re-explain the recipe every time.
 
 ## Defining and Calling Functions
 
@@ -20,7 +20,7 @@ greet()   # Hello, world!
 greet()   # Hello, world!
 ```
 
-`def` means "I'm defining a function." Then you give it a name, parentheses, and a colon. Everything indented underneath is the function's body -- the code that runs when you call it.
+`def` means "I'm defining a function." Then you give it a name, parentheses, and a colon. Everything indented underneath is the function's body - the code that runs when you call it.
 
 Calling a function is just its name followed by parentheses: `greet()`. Those parentheses are important. Without them, you're just *referring* to the function, not *running* it.
 
@@ -42,7 +42,7 @@ greet("Alex")     # Hello, Alex!
 greet("Jordan")   # Hello, Jordan!
 ```
 
-`name` is a **parameter** -- the variable name in the function definition. `"Priya"` is an **argument** -- the actual value you pass in when calling it. People use these terms interchangeably, but now you know the difference and can be annoyingly precise at parties.
+`name` is a **parameter** - the variable name in the function definition. `"Priya"` is an **argument** - the actual value you pass in when calling it. People use these terms interchangeably, but now you know the difference and can be annoyingly precise at parties.
 
 Multiple parameters? No problem:
 
@@ -56,7 +56,7 @@ introduce("Priya", 22, "Mumbai")
 
 ## Return Values: Getting Something Back
 
-So far, our functions just print stuff. But the real power is when they *return* a value -- give something back that you can store, use, or pass to another function.
+So far, our functions just print stuff. But the real power is when they *return* a value - give something back that you can store, use, or pass to another function.
 
 ```python
 def add(a, b):
@@ -220,7 +220,7 @@ my_function()       # I only exist in here
 
 The variable `secret` is **local** to the function. Once the function ends, it's gone. Like a Snapchat message for variables.
 
-Variables created outside functions are **global** -- accessible everywhere.
+Variables created outside functions are **global** - accessible everywhere.
 
 ```python
 greeting = "Hello"    # Global
@@ -266,7 +266,7 @@ print(speak(shout, "hello"))     # HELLO
 print(speak(whisper, "HELLO"))   # hello
 ```
 
-We're passing the function itself (not calling it -- no parentheses) as an argument. The `speak` function then calls it. This is a powerful pattern that shows up everywhere in Python, especially with `map()`, `filter()`, and `sorted()`.
+We're passing the function itself (not calling it - no parentheses) as an argument. The `speak` function then calls it. This is a powerful pattern that shows up everywhere in Python, especially with `map()`, `filter()`, and `sorted()`.
 
 ```python
 # Practical example: custom sorting
@@ -340,6 +340,6 @@ Full solution available at:
 - **Default parameters** give fallback values: `def greet(name, greeting="Hi")`.
 - **Keyword arguments** make calls readable: `greet(name="Priya")`.
 - **`*args`** collects extra positional args into a tuple. **`**kwargs`** collects extra keyword args into a dict.
-- Variables inside functions are **local** -- they disappear when the function ends.
-- Functions are **first-class objects** -- pass them around like any other value.
+- Variables inside functions are **local** - they disappear when the function ends.
+- Functions are **first-class objects** - pass them around like any other value.
 - When in doubt, make it a function. Seriously.

@@ -24,7 +24,7 @@ This project uses skills from every chapter in Sprint 5.
 ## Skills Used
 
 | Chapter | Skill | How It's Used |
-|---------|-------|---------------|
+|-----|----|--------|
 | 26 - NumPy | Array operations | Scoring calculations, statistics |
 | 27 - Pandas | Data analysis | Structuring resume data, analysis |
 | 28 - Visualization | Charts | Skills chart, experience timeline |
@@ -96,7 +96,7 @@ Path("sample_resume.txt").write_text(sample_resume)
 print("Sample resume saved!")
 ```
 
-### Step 2: Parse the Resume (Chapter 32 -- File Handling)
+### Step 2: Parse the Resume (Chapter 32 - File Handling)
 
 ```python
 def load_resume(file_path):
@@ -136,11 +136,11 @@ def extract_sections(resume_text):
 resume = load_resume("sample_resume.txt")
 sections = extract_sections(resume)
 for section, content in sections.items():
-    print(f"\n--- {section} ---")
+    print(f"\n-- {section} --")
     print(content[:100] + "..." if len(content) > 100 else content)
 ```
 
-### Step 3: Analyze Skills (Chapters 26 & 27 -- NumPy & Pandas)
+### Step 3: Analyze Skills (Chapters 26 & 27 - NumPy & Pandas)
 
 ```python
 def analyze_skills(resume_text):
@@ -198,7 +198,7 @@ def analyze_skills(resume_text):
 skills_df, found_skills = analyze_skills(resume)
 ```
 
-### Step 4: Visualize the Analysis (Chapter 28 -- Visualization)
+### Step 4: Visualize the Analysis (Chapter 28 - Visualization)
 
 ```python
 def create_resume_dashboard(skills_df, sections, output_path="resume_dashboard.png"):
@@ -256,7 +256,7 @@ def create_resume_dashboard(skills_df, sections, output_path="resume_dashboard.p
 create_resume_dashboard(skills_df, sections)
 ```
 
-### Step 5: Score the Resume (Chapter 29 -- ML Concepts)
+### Step 5: Score the Resume (Chapter 29 - ML Concepts)
 
 ```python
 def score_resume(resume_text, sections, skills_df):
@@ -315,7 +315,7 @@ def score_resume(resume_text, sections, skills_df):
 scores, overall = score_resume(resume, sections, skills_df)
 ```
 
-### Step 6: AI Feedback (Chapter 30 -- AI APIs)
+### Step 6: AI Feedback (Chapter 30 - AI APIs)
 
 ```python
 def get_ai_feedback(resume_text, scores):
@@ -383,7 +383,7 @@ def generate_offline_feedback(scores):
 feedback = get_ai_feedback(resume, scores)
 ```
 
-### Step 7: Generate the Final Report (Chapter 32 -- Automation)
+### Step 7: Generate the Final Report (Chapter 32 - Automation)
 
 ```python
 def generate_report(resume_path, output_dir="resume_report"):
@@ -469,7 +469,7 @@ Dashboard saved: resume_report/dashboard.png
   skill_diversity      [==========] 10/10
   skill_count          [==========] 10/10
   action_verbs         [==========] 10/10
-  quantified           [========--] 8/10
+  quantified           [========-] 8/10
 
   OVERALL              [==========] 9.7/10
 
@@ -499,7 +499,7 @@ Already done? Try these enhancements:
 Sprint 5. Complete. All five sprints. Done.
 
 Think about where you started:
-- **Sprint 1**: `print("Hello, World!")` -- variables, lists, loops
+- **Sprint 1**: `print("Hello, World!")` - variables, lists, loops
 - **Sprint 2**: Dictionaries, functions, file I/O, error handling
 - **Sprint 3**: OOP, APIs, web scraping, databases
 - **Sprint 4**: Virtual environments, testing, Flask, deployment
@@ -507,6 +507,6 @@ Think about where you started:
 
 That's not a "crash course." That's a transformation. You went from zero to someone who can build real, useful, AI-powered applications.
 
-You're not a beginner. You're not even intermediate. You're someone who can build real things with Python AND AI. The gap between you and a "professional developer" is now just practice and projects -- not knowledge.
+You're not a beginner. You're not even intermediate. You're someone who can build real things with Python AND AI. The gap between you and a "professional developer" is now just practice and projects - not knowledge.
 
 Now it's time to prove it with the Final Projects. Let's go.

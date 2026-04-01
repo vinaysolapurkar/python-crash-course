@@ -33,7 +33,7 @@ A few things to note:
 print(10 / 2)    # 5.0 (not 5)
 ```
 
-**Floor division `//` drops the decimals** -- it doesn't round, it chops:
+**Floor division `//` drops the decimals** - it doesn't round, it chops:
 
 ```python
 print(7 // 2)    # 3 (not 3.5, not 4... just 3)
@@ -43,15 +43,15 @@ print(7 // 2)    # 3 (not 3.5, not 4... just 3)
 
 ```python
 print(10 % 3)   # 1 (10 / 3 = 3 remainder 1)
-print(10 % 2)   # 0 (10 is even -- no remainder)
+print(10 % 2)   # 0 (10 is even - no remainder)
 print(7 % 2)    # 1 (7 is odd)
 ```
 
-> **Fun Fact:** The `**` operator is Python's way of doing exponents. Other languages use `^` for this, but in Python, `^` does something completely different (bitwise XOR -- don't worry about it yet). So `2 ** 10` gives you 1024, not `2 ^ 10`.
+> **Fun Fact:** The `**` operator is Python's way of doing exponents. Other languages use `^` for this, but in Python, `^` does something completely different (bitwise XOR - don't worry about it yet). So `2 ** 10` gives you 1024, not `2 ^ 10`.
 
 ## PEMDAS: Order of Operations
 
-Python follows the same order of operations you learned in school. Remember PEMDAS? (Some people learned BODMAS or BEDMAS -- same thing, different accent.)
+Python follows the same order of operations you learned in school. Remember PEMDAS? (Some people learned BODMAS or BEDMAS - same thing, different accent.)
 
 **P**arentheses > **E**xponents > **M**ultiplication/**D**ivision > **A**ddition/**S**ubtraction
 
@@ -144,7 +144,7 @@ rounded = int(3.99)    # 3 (not 4! it truncates, doesn't round)
 precise = float(5)     # 5.0
 ```
 
-Notice that `int()` doesn't round -- it chops. `int(3.99)` is `3`, not `4`. If you want actual rounding, use `round()` (we'll cover that soon).
+Notice that `int()` doesn't round - it chops. `int(3.99)` is `3`, not `4`. If you want actual rounding, use `round()` (we'll cover that soon).
 
 ## The input() Function: Talk to Me
 
@@ -163,7 +163,7 @@ When Python hits `input()`, it pauses, shows the message, and waits for the user
 
 ```python
 age = input("How old are you? ")
-print(type(age))  # <class 'str'> -- it's a STRING!
+print(type(age))  # <class 'str'> - it's a STRING!
 ```
 
 If someone types `25`, you get the string `"25"`, not the integer `25`. This means you can't do math with it directly:
@@ -192,7 +192,7 @@ decimal_number = float(input("Enter a price: "))
 Python comes with some handy math functions right out of the box:
 
 ```python
-print(abs(-42))         # 42 (absolute value -- removes the negative)
+print(abs(-42))         # 42 (absolute value - removes the negative)
 print(round(3.7))       # 4 (rounds to nearest integer)
 print(round(3.14159, 2)) # 3.14 (rounds to 2 decimal places)
 print(max(4, 7, 2, 9))  # 9 (returns the biggest)
@@ -259,8 +259,8 @@ Run it and calculate some tips! Notice the `:.2f` inside the f-strings? That for
 ## TL;DR
 
 - Python has all the standard math operators plus `//` (floor division), `%` (modulo/remainder), and `**` (exponent)
-- PEMDAS order of operations applies -- when in doubt, use parentheses
-- `"5"` (string) is NOT `5` (integer) -- use `int()` or `float()` to convert
+- PEMDAS order of operations applies - when in doubt, use parentheses
+- `"5"` (string) is NOT `5` (integer) - use `int()` or `float()` to convert
 - `input()` **always returns a string**, even if the user types a number
 - Pattern for numeric input: `int(input("prompt"))` or `float(input("prompt"))`
 - Built-in math helpers: `abs()`, `round()`, `max()`, `min()`, `pow()`

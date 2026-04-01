@@ -371,4 +371,4 @@ A networking project is a standout on any junior developer's portfolio. When pre
 
 - **GitHub:** Include clear instructions for running the server and client. Add a diagram showing the client-server architecture. Mention the threading model.
 - **Resume:** "Built a multi-user CLI chat application using TCP sockets and threading with broadcast messaging, user commands, and graceful disconnection handling."
-- **Interview talking point:** Explain the threading model and why you used a lock for the client dictionary. Discuss the difference between TCP and UDP and why TCP is appropriate for chat (reliable, ordered delivery). Mention how you'd scale this -- an event loop with `asyncio` or a message broker like Redis Pub/Sub.
+- **Interview talking point:** Explain the threading model and why you used a lock for the client dictionary. Discuss the difference between TCP and UDP and why TCP is appropriate for chat (reliable, ordered delivery). Mention how you'd scale this - an event loop with `asyncio` or a message broker like Redis Pub/Sub.

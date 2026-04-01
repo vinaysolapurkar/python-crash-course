@@ -14,19 +14,19 @@ You're going to build a complete application that scrapes job listings from the 
 
 Here's what you'll build:
 
-1. **Scraper** -- Collect job listings from a practice website (Chapter 23)
-2. **Database** -- Store listings in SQLite with proper schema (Chapter 22)
-3. **Search Engine** -- Query and filter listings (Chapter 22)
-4. **API Client** -- Fetch additional data from a public API (Chapter 21)
-5. **Data Pipeline** -- Process listings efficiently with generators (Chapter 20)
-6. **Utilities** -- Decorated helper functions for timing and logging (Chapter 19)
-7. **Test Suite** -- Prove it all works with pytest (Chapter 24)
-8. **Clean Code** -- Type hints, formatting, and linting throughout (Chapter 25)
+1. **Scraper** - Collect job listings from a practice website (Chapter 23)
+2. **Database** - Store listings in SQLite with proper schema (Chapter 22)
+3. **Search Engine** - Query and filter listings (Chapter 22)
+4. **API Client** - Fetch additional data from a public API (Chapter 21)
+5. **Data Pipeline** - Process listings efficiently with generators (Chapter 20)
+6. **Utilities** - Decorated helper functions for timing and logging (Chapter 19)
+7. **Test Suite** - Prove it all works with pytest (Chapter 24)
+8. **Clean Code** - Type hints, formatting, and linting throughout (Chapter 25)
 
 ## Skills Map
 
 | Project Component | Chapter |
-|---|---|
+|--|--|
 | `@timer` and `@logger` decorators | Chapter 19: Decorators |
 | Generator-based data pipeline | Chapter 20: Generators |
 | Fetching salary data from an API | Chapter 21: APIs |
@@ -45,7 +45,7 @@ job_scraper/
     pipeline.py         # Generator-based data processing
     utils.py            # Decorators and helper functions
     dashboard.py        # Search and display interface
-    main.py             # Entry point -- ties everything together
+    main.py             # Entry point - ties everything together
     tests/
         test_scraper.py
         test_database.py
@@ -67,7 +67,7 @@ mkdir tests
 pip install requests beautifulsoup4 pytest black flake8 mypy
 ```
 
-### Step 2: Build the Decorators (utils.py) -- Chapter 19
+### Step 2: Build the Decorators (utils.py) - Chapter 19
 
 Start with your utility decorators. You'll use these throughout the project:
 
@@ -121,7 +121,7 @@ def retry(max_attempts: int = 3, delay: float = 1.0) -> Callable:
     return decorator
 ```
 
-### Step 3: Build the Database Layer (database.py) -- Chapter 22
+### Step 3: Build the Database Layer (database.py) - Chapter 22
 
 ```python
 # database.py
@@ -218,7 +218,7 @@ def get_companies() -> list[dict]:
         return [dict(row) for row in rows]
 ```
 
-### Step 4: Build the Scraper (scraper.py) -- Chapter 23
+### Step 4: Build the Scraper (scraper.py) - Chapter 23
 
 For this project, we'll scrape from a practice site. You can adapt this to any job board:
 
@@ -298,7 +298,7 @@ def scrape_all_jobs(base_url: str = "https://quotes.toscrape.com") -> list[dict[
     return all_jobs
 ```
 
-### Step 5: Build the Data Pipeline (pipeline.py) -- Chapter 20
+### Step 5: Build the Data Pipeline (pipeline.py) - Chapter 20
 
 Use generators to process the scraped data efficiently:
 
@@ -343,7 +343,7 @@ def format_for_display(
     """Format jobs as readable strings."""
     for i, job in enumerate(jobs, 1):
         yield (
-            f"\n--- Job {i} ---\n"
+            f"\n-- Job {i} --\n"
             f"Title:    {job.get('title', 'N/A')}\n"
             f"Company:  {job.get('company', 'N/A')}\n"
             f"Location: {job.get('location', 'N/A')}\n"
@@ -473,7 +473,7 @@ if __name__ == "__main__":
     main()
 ```
 
-### Step 8: Write Tests (tests/) -- Chapter 24
+### Step 8: Write Tests (tests/) - Chapter 24
 
 ```python
 # tests/test_database.py
@@ -595,7 +595,7 @@ def test_clean_removes_duplicates():
     assert len(results) == 2
 ```
 
-### Step 9: Clean Up -- Chapter 25
+### Step 9: Clean Up - Chapter 25
 
 Run the full clean code suite:
 
@@ -627,11 +627,11 @@ Fix any issues that come up. This is the professional workflow.
 
 If you want to go further:
 
-- **Add email alerts** -- Send yourself an email when new jobs matching your criteria are found
-- **Schedule the scraper** -- Run it automatically every day using `schedule` or cron
-- **Build a web interface** -- Use Flask (you'll learn this in Sprint 5!) to create a browser-based dashboard
-- **Add salary estimation** -- Use a public API to estimate salaries based on job title and location
-- **Export to CSV/Excel** -- Let users download search results
+- **Add email alerts** - Send yourself an email when new jobs matching your criteria are found
+- **Schedule the scraper** - Run it automatically every day using `schedule` or cron
+- **Build a web interface** - Use Flask (you'll learn this in Sprint 5!) to create a browser-based dashboard
+- **Add salary estimation** - Use a public API to estimate salaries based on job title and location
+- **Export to CSV/Excel** - Let users download search results
 
 ## What You've Accomplished
 
@@ -651,6 +651,6 @@ These aren't academic exercises. These are the exact skills listed on job postin
 
 **You're one sprint away from building AI applications. ONE. Let that sink in.**
 
-Sprint 5 covers AI, machine learning, and building intelligent applications with Python. Everything you've learned -- from variables in Sprint 1 to databases and APIs in Sprint 4 -- comes together. You have the foundation. You're ready.
+Sprint 5 covers AI, machine learning, and building intelligent applications with Python. Everything you've learned - from variables in Sprint 1 to databases and APIs in Sprint 4 - comes together. You have the foundation. You're ready.
 
 See you in Sprint 5.

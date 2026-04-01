@@ -1,8 +1,8 @@
 # Python Crash Course: From Zero to AI
 
-## The Fun, ADHD-Friendly Guide to Python Programming
+## The Fun, Step-by-Step Guide to Python Programming
 
-### Learn Python Step by Step with Humor, Hands-On Projects, and Real-World AI Applications
+### Learn Python with Humor, Hands-On Projects, and Real-World AI Applications
 
 ---
 
@@ -35,7 +35,7 @@ ISBN: [To be assigned by KDP]
 
 *It is. This book will prove it.*
 
-*And to coffee — the real MVP behind every line of code ever written.*
+*And to coffee - the real MVP behind every line of code ever written.*
 
 ---
 
@@ -45,10 +45,10 @@ Welcome, future Python developer! Before we dive in, let me explain how this boo
 
 ## The Sprint Model
 
-This book is organized into **5 Sprints** — think of them like levels in a video game. Each Sprint is a collection of short chapters that build on each other, and each Sprint ends with a checkpoint project that ties everything together.
+This book is organized into **5 Sprints** - think of them like levels in a video game. Each Sprint is a collection of short chapters that build on each other, and each Sprint ends with a checkpoint project that ties everything together.
 
 | Sprint | Theme | Chapters | You'll Build |
-|--------|-------|----------|-------------|
+|----|----|-----|-------|
 | 1 | Python Basics | 1-8 | Mad Libs Generator |
 | 2 | Intermediate Python | 9-14 | Expense Tracker |
 | 3 | Object-Oriented Programming | 15-18 | Library Management System |
@@ -65,7 +65,7 @@ Here's the rhythm:
 
 1. **Read** a short chapter (10-15 minutes)
 2. **Do** the "Your Turn" exercise at the end (2-5 minutes)
-3. **Take a break** — grab a snack, scroll TikTok, pet your dog
+3. **Take a break** - grab a snack, scroll TikTok, pet your dog
 4. **Come back** for the next chapter when you're ready
 
 This book is built for how your brain actually works. Short bursts. Immediate practice. No guilt if you take a day off between chapters.
@@ -77,39 +77,39 @@ Every code example, exercise, and project in this book lives in a GitHub reposit
 **https://github.com/vinaysolapurkar/python-crash-course**
 
 Each chapter folder contains:
-- `examples.py` — All the code examples from the chapter
-- `exercises/your_turn.py` — The exercise starter (try this first!)
-- `exercises/solution.py` — The complete solution (no peeking... okay, maybe a little)
+- `examples.py` - All the code examples from the chapter
+- `exercises/your_turn.py` - The exercise starter (try this first!)
+- `exercises/solution.py` - The complete solution (no peeking... okay, maybe a little)
 
-You don't *need* the repo to follow along — all the code is right here in the book. But the repo is helpful if you want to run the examples without typing everything out.
+You don't *need* the repo to follow along - all the code is right here in the book. But the repo is helpful if you want to run the examples without typing everything out.
 
 ## Callout Boxes
 
 Throughout the book, you'll see special boxes that highlight important information:
 
-**Your Turn** — The hands-on exercise at the end of each chapter. Don't skip these! Doing > reading.
+**Your Turn** - The hands-on exercise at the end of each chapter. Don't skip these! Doing > reading.
 
-**TL;DR** — A 3-5 bullet summary of the chapter. Great for quick review or when you come back after a break.
+**TL;DR** - A 3-5 bullet summary of the chapter. Great for quick review or when you come back after a break.
 
-**Pro Tip** — Shortcuts and insights for readers who already know another programming language. If you're a complete beginner, feel free to skip these.
+**Pro Tip** - Shortcuts and insights for readers who already know another programming language. If you're a complete beginner, feel free to skip these.
 
-**Wait, What?** — Preemptive answers to the questions I know you're about to ask. "But wait, why does...?" — I got you.
+**Wait, What?** - Preemptive answers to the questions I know you're about to ask. "But wait, why does...?" - I got you.
 
-**Don't Panic** — You'll see these before harder topics. They're a reminder that the concept looks scarier than it is, and you already know most of what you need.
+**Don't Panic** - You'll see these before harder topics. They're a reminder that the concept looks scarier than it is, and you already know most of what you need.
 
-**Remember When?** — Callbacks to earlier chapters. "Remember lists? Generators are just lazy lists." These help connect new concepts to things you already understand.
+**Remember When?** - Callbacks to earlier chapters. "Remember lists? Generators are just lazy lists." These help connect new concepts to things you already understand.
 
-**Why Should I Care?** — Real-world motivation for a concept. Before I explain *how* something works, I'll show you *why* it matters.
+**Why Should I Care?** - Real-world motivation for a concept. Before I explain *how* something works, I'll show you *why* it matters.
 
-**Fun Fact** — Interesting trivia about Python, programming, or tech. Because learning should be entertaining.
+**Fun Fact** - Interesting trivia about Python, programming, or tech. Because learning should be entertaining.
 
-**Portfolio Tip** — Advice on how to present your projects to employers. Because this book isn't just about learning — it's about building a career.
+**Portfolio Tip** - Advice on how to present your projects to employers. Because this book isn't just about learning - it's about building a career.
 
 ## One Last Thing
 
 This book has exactly one rule: **No shame in looking at the solution.**
 
-Seriously. If you're stuck on an exercise for more than 10 minutes, look at the solution, understand it, then close it and try again from scratch. That's not cheating — that's learning.
+Seriously. If you're stuck on an exercise for more than 10 minutes, look at the solution, understand it, then close it and try again from scratch. That's not cheating - that's learning.
 
 The only way to fail at this book is to not start it.
 
@@ -119,7 +119,7 @@ So let's start it.
 
 # What You'll Need
 
-Before we write our first line of Python, let's make sure you've got everything set up. Don't worry — it's all free.
+Before we write our first line of Python, let's make sure you've got everything set up. Don't worry - it's all free.
 
 ## 1. Python 3.12 or Later
 
@@ -129,7 +129,7 @@ Python is the language we're learning. You need to install it on your computer.
 1. Go to python.org/downloads
 2. Click the big yellow "Download Python 3.12" button
 3. Run the installer
-4. **IMPORTANT:** Check the box that says "Add Python to PATH" — this is the one thing everyone forgets, and it causes 90% of setup headaches
+4. **IMPORTANT:** Check the box that says "Add Python to PATH" - this is the one thing everyone forgets, and it causes 90% of setup headaches
 5. Click "Install Now"
 
 **Mac:**
@@ -147,9 +147,9 @@ sudo apt install python3 python3-pip
 
 **Verify it works:** Open a terminal (Command Prompt on Windows, Terminal on Mac/Linux) and type:
 ```
-python --version
+python -version
 ```
-You should see something like `Python 3.12.x`. If you see `Python 2.x`, try `python3 --version` instead.
+You should see something like `Python 3.12.x`. If you see `Python 2.x`, try `python3 -version` instead.
 
 ## 2. VS Code (Visual Studio Code)
 
@@ -167,7 +167,7 @@ We'll use GitHub to access the companion code repository, and later you'll use i
 
 1. Go to github.com
 2. Sign up for a free account
-3. That's it for now — we'll use it more in later chapters
+3. That's it for now - we'll use it more in later chapters
 
 ## 4. An Internet Connection
 
@@ -196,7 +196,7 @@ Now let's write some Python.
 
 > **Chapters 1-8** | **Estimated Time: 2-3 hours** | **Difficulty: Absolute Beginner**
 
-Hey, you made it! Whether you're here because you want to break into tech, automate the boring stuff at work, or you just saw one too many "learn to code" TikToks at 2 AM -- welcome. You're in the right place.
+Hey, you made it! Whether you're here because you want to break into tech, automate the boring stuff at work, or you just saw one too many "learn to code" TikToks at 2 AM - welcome. You're in the right place.
 
 Sprint 1 is where we build your foundation. Think of it like the tutorial level in a video game. Yeah, you have to learn how to move and jump before you fight the boss. But I promise we'll make it fun, and you'll be writing real code from the very first chapter.
 
@@ -205,17 +205,17 @@ Sprint 1 is where we build your foundation. Think of it like the tutorial level 
 Over the next eight chapters, you're going to go from "what is a variable?" to confidently working with data, making decisions in code, and looping through stuff like a pro. Here's the lineup:
 
 - **Chapter 1:** Why Python rocks and writing your first program
-- **Chapter 2:** Variables -- giving names to stuff
+- **Chapter 2:** Variables - giving names to stuff
 - **Chapter 3:** Numbers, math, and getting input from users
-- **Chapter 4:** Strings -- slicing, dicing, and formatting text
+- **Chapter 4:** Strings - slicing, dicing, and formatting text
 - **Chapter 5:** Making decisions with if/elif/else
-- **Chapter 6:** Lists -- your first data superpower
-- **Chapter 7:** Loops -- doing things on repeat without losing your mind
-- **Chapter 8:** Tuples and sets -- lists' lesser-known cousins
+- **Chapter 6:** Lists - your first data superpower
+- **Chapter 7:** Loops - doing things on repeat without losing your mind
+- **Chapter 8:** Tuples and sets - lists' lesser-known cousins
 
 ## The Sprint 1 Project: Mad Libs Generator
 
-By the end of this sprint, you'll build a **Mad Libs Generator** from scratch. It takes user input, stores it, manipulates text, makes decisions, and loops -- basically everything you'll learn, wrapped up in one goofy project. You won't even realize how much Python you've learned until you look at what you built.
+By the end of this sprint, you'll build a **Mad Libs Generator** from scratch. It takes user input, stores it, manipulates text, makes decisions, and loops - basically everything you'll learn, wrapped up in one goofy project. You won't even realize how much Python you've learned until you look at what you built.
 
 No prior experience needed. No CS degree. No "math brain." Just you, your computer, and a willingness to type stuff and see what happens.
 
@@ -227,7 +227,7 @@ Let's go.
 
 > **Sprint 1** | **10 min read** | **Code: [github link](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-1-basics/chapter-01-why-python/)**
 
-If programming languages were Avengers, Python would be Iron Man. Not because it's the flashiest (that's JavaScript with its fancy websites), but because it's ridiculously versatile, it's everywhere, and it makes you feel like a genius even when you're just getting started. Also, much like Tony Stark, Python has a witty response for everything -- its error messages actually make sense.
+If programming languages were Avengers, Python would be Iron Man. Not because it's the flashiest (that's JavaScript with its fancy websites), but because it's ridiculously versatile, it's everywhere, and it makes you feel like a genius even when you're just getting started. Also, much like Tony Stark, Python has a witty response for everything - its error messages actually make sense.
 
 ## What You'll Learn
 - Why Python is the most popular beginner language on the planet
@@ -239,7 +239,7 @@ If programming languages were Avengers, Python would be Iron Man. Not because it
 
 Let me hit you with some names: **Netflix**, **Instagram**, **Spotify**, **NASA**, **Google**. What do they have in common? They all use Python. Heavily.
 
-Netflix uses Python to recommend which shows to binge next. Instagram's entire backend started with Python. NASA uses it to process space data. And the entire AI revolution -- ChatGPT, image generators, self-driving cars -- is built primarily in Python.
+Netflix uses Python to recommend which shows to binge next. Instagram's entire backend started with Python. NASA uses it to process space data. And the entire AI revolution - ChatGPT, image generators, self-driving cars - is built primarily in Python.
 
 But here's the real reason you should learn Python: **it reads like English.** Seriously, compare these:
 
@@ -304,12 +304,12 @@ sudo apt install python3 python3-pip
 Open a terminal (Command Prompt on Windows, Terminal on Mac/Linux) and type:
 
 ```bash
-python --version
+python -version
 ```
 
-You should see something like `Python 3.12.x`. If you see that, you're golden. If Windows gives you an error, try `python3 --version` instead.
+You should see something like `Python 3.12.x`. If you see that, you're golden. If Windows gives you an error, try `python3 -version` instead.
 
-> **Wait, What?** On some systems, `python` points to Python 2 (which is ancient and retired). If `python --version` shows `2.x`, use `python3` for everything in this book.
+> **Wait, What?** On some systems, `python` points to Python 2 (which is ancient and retired). If `python -version` shows `2.x`, use `python3` for everything in this book.
 
 ## Installing VS Code
 
@@ -320,7 +320,7 @@ You *could* write Python in Notepad. You could also cut your lawn with scissors.
 3. Open VS Code
 4. Click the Extensions icon on the left sidebar (it looks like four little squares)
 5. Search for **"Python"** and install the one by Microsoft (it'll be the first result with millions of downloads)
-6. While you're at it, search for **"Pylance"** and install that too -- it gives you autocomplete superpowers
+6. While you're at it, search for **"Pylance"** and install that too - it gives you autocomplete superpowers
 
 That's your setup. VS Code + Python extension = a fantastic coding experience with syntax highlighting, error detection, and a built-in terminal.
 
@@ -355,11 +355,11 @@ Congratulations. You're a programmer now. No, seriously. That's how it starts. E
 
 Let's break it down:
 
-- `print()` is a **function** -- think of it as a command you're giving Python. "Hey Python, show this on the screen."
-- `"Hello, World!"` is a **string** -- any text wrapped in quotes. Python knows it's text because of the quotes.
+- `print()` is a **function** - think of it as a command you're giving Python. "Hey Python, show this on the screen."
+- `"Hello, World!"` is a **string** - any text wrapped in quotes. Python knows it's text because of the quotes.
 - The parentheses `()` are how you hand information to a function. You're saying: "print *this*."
 
-That's it. You gave Python an instruction, and it followed it. That's all programming is -- giving instructions to a computer, one line at a time.
+That's it. You gave Python an instruction, and it followed it. That's all programming is - giving instructions to a computer, one line at a time.
 
 Let's try a few more:
 
@@ -378,7 +378,7 @@ Run it. Each `print()` shows up on its own line. You're basically writing a scri
 Time to fly solo. Create a new file called `chapter1_practice.py` and write code that:
 
 1. Prints your name
-2. Prints your favorite joke (or a terrible pun -- those are better)
+2. Prints your favorite joke (or a terrible pun - those are better)
 3. Prints a math result using `print()`:
 
 ```python
@@ -393,10 +393,10 @@ Yeah, Python can do math right inside `print()`. We'll get way deeper into that 
 
 ## TL;DR
 
-- Python is the most beginner-friendly, widely-used programming language -- powering everything from Instagram to AI
+- Python is the most beginner-friendly, widely-used programming language - powering everything from Instagram to AI
 - Install Python from python.org (**check "Add to PATH" on Windows!**)
 - Install VS Code + the Python extension for a smooth coding experience
-- `print()` displays stuff on the screen -- it's your first Python function
+- `print()` displays stuff on the screen - it's your first Python function
 - You just wrote your first program. You're officially a programmer. Tell your mom.
 
 ---
@@ -412,7 +412,7 @@ Imagine your brain had no names for anything. You couldn't say "pass me my phone
 - The four basic data types: strings, integers, floats, and booleans
 - How to check a variable's type
 - Naming rules that'll keep you out of trouble
-- f-strings -- the single coolest feature for beginners
+- f-strings - the single coolest feature for beginners
 
 ## Variables: Labeled Boxes
 
@@ -439,13 +439,13 @@ The `=` sign doesn't mean "equals" like in math class. It means **"put this valu
 Python has four types you'll use constantly:
 
 | Type | What It Is | Example |
-|------|-----------|---------|
+|---|------|-----|
 | `str` | Text (string) | `"Hello"`, `'Netflix'` |
 | `int` | Whole number (integer) | `42`, `-7`, `0` |
 | `float` | Decimal number | `3.14`, `-0.5`, `99.99` |
 | `bool` | True or False (boolean) | `True`, `False` |
 
-Strings need quotes (single `'` or double `"` -- Python doesn't care which, just be consistent). Numbers don't get quotes. Booleans are capitalized: `True` and `False`, not `true` or `false`.
+Strings need quotes (single `'` or double `"` - Python doesn't care which, just be consistent). Numbers don't get quotes. Booleans are capitalized: `True` and `False`, not `true` or `false`.
 
 ```python
 movie = "Inception"          # str
@@ -454,7 +454,7 @@ rating = 8.8                 # float
 is_mind_bending = True       # bool
 ```
 
-## The type() Function -- What's in the Box?
+## The type() Function - What's in the Box?
 
 Ever pick up a mystery package and shake it? Python has a built-in way to check what type of data is in a variable:
 
@@ -489,7 +489,7 @@ user_name = "Mario"
 score_2 = 150
 _secret = "hidden"
 
-# BAD -- these will crash
+# BAD - these will crash
 # 2nd_place = "Luigi"    # Can't start with a number
 # user name = "Peach"    # No spaces allowed
 # class = "Warrior"      # 'class' is a reserved word
@@ -498,12 +498,12 @@ _secret = "hidden"
 **Style Conventions (snake_case is king):**
 
 ```python
-# Python style (snake_case) -- DO THIS
+# Python style (snake_case) - DO THIS
 player_health = 100
 max_score = 999
 is_game_over = False
 
-# Other languages' style -- DON'T do this in Python
+# Other languages' style - DON'T do this in Python
 playerHealth = 100    # This is camelCase (JavaScript vibes)
 MaxScore = 999        # This is PascalCase (C# energy)
 MAXSCORE = 999        # ALL CAPS is reserved for constants
@@ -521,7 +521,7 @@ age = 48
 print("My name is " + name + " and I am " + str(age) + " years old.")
 ```
 
-That works, but it looks like someone assembled a sentence with duct tape. Enter **f-strings** -- the elegant way:
+That works, but it looks like someone assembled a sentence with duct tape. Enter **f-strings** - the elegant way:
 
 ```python
 name = "Tony Stark"
@@ -534,7 +534,7 @@ Output:
 My name is Tony Stark and I am 48 years old.
 ```
 
-See that little `f` before the opening quote? That tells Python: "Hey, anything inside `{}` is a variable -- go grab its value." That's it. No plus signs, no `str()` conversion, no mess.
+See that little `f` before the opening quote? That tells Python: "Hey, anything inside `{}` is a variable - go grab its value." That's it. No plus signs, no `str()` conversion, no mess.
 
 You can even do math inside the curly braces:
 
@@ -578,11 +578,11 @@ x = "ten"     # now x is a string!?
 print(type(x)) # <class 'str'>
 ```
 
-> **Wait, What?** "Why can I put a string in a variable that had a number?" Because Python uses **dynamic typing**. The variable doesn't have a fixed type -- the *value* does. The box doesn't care what you put in it. A box that held books can now hold shoes. Python is chill like that.
+> **Wait, What?** "Why can I put a string in a variable that had a number?" Because Python uses **dynamic typing**. The variable doesn't have a fixed type - the *value* does. The box doesn't care what you put in it. A box that held books can now hold shoes. Python is chill like that.
 
 This is different from languages like Java or C++ where you declare a variable's type upfront and it's locked in forever. Python says: "Nah, live your life."
 
-> **Pro Tip:** If you're coming from JavaScript, Java, or C#, note that Python has no `let`, `const`, `var`, or type declarations. You just write `x = 5` and Python figures out the rest. There's no `int x = 5;` -- that semicolon alone will give Python a panic attack.
+> **Pro Tip:** If you're coming from JavaScript, Java, or C#, note that Python has no `let`, `const`, `var`, or type declarations. You just write `x = 5` and Python figures out the rest. There's no `int x = 5;` - that semicolon alone will give Python a panic attack.
 
 ## Multiple Assignment (The Shortcut)
 
@@ -632,7 +632,7 @@ print("=" * 40)
 print(f"  {name} will be a {python_skill + 5}/10 by Sprint 3!")
 ```
 
-Run it. Admire your work. Change the values. Notice how everything updates automatically because you used variables instead of hardcoding the text. That's the power of variables -- change one thing, and it ripples everywhere.
+Run it. Admire your work. Change the values. Notice how everything updates automatically because you used variables instead of hardcoding the text. That's the power of variables - change one thing, and it ripples everywhere.
 
 **Bonus challenge:** Add a `is_student` boolean variable and use it in an f-string: `f"Student: {is_student}"`
 
@@ -643,7 +643,7 @@ Run it. Admire your work. Change the values. Notice how everything updates autom
 - Use `type()` to check what type a variable is
 - **Naming:** use `snake_case`, start with a letter, no spaces, no reserved words
 - **f-strings** are the best way to mix variables with text: `f"Hello, {name}!"`
-- Python is **dynamically typed** -- a variable's type can change. Python doesn't judge.
+- Python is **dynamically typed** - a variable's type can change. Python doesn't judge.
 - You can reassign variables anytime. It's your box. Do what you want with it.
 
 ---
@@ -683,7 +683,7 @@ A few things to note:
 print(10 / 2)    # 5.0 (not 5)
 ```
 
-**Floor division `//` drops the decimals** -- it doesn't round, it chops:
+**Floor division `//` drops the decimals** - it doesn't round, it chops:
 
 ```python
 print(7 // 2)    # 3 (not 3.5, not 4... just 3)
@@ -693,15 +693,15 @@ print(7 // 2)    # 3 (not 3.5, not 4... just 3)
 
 ```python
 print(10 % 3)   # 1 (10 / 3 = 3 remainder 1)
-print(10 % 2)   # 0 (10 is even -- no remainder)
+print(10 % 2)   # 0 (10 is even - no remainder)
 print(7 % 2)    # 1 (7 is odd)
 ```
 
-> **Fun Fact:** The `**` operator is Python's way of doing exponents. Other languages use `^` for this, but in Python, `^` does something completely different (bitwise XOR -- don't worry about it yet). So `2 ** 10` gives you 1024, not `2 ^ 10`.
+> **Fun Fact:** The `**` operator is Python's way of doing exponents. Other languages use `^` for this, but in Python, `^` does something completely different (bitwise XOR - don't worry about it yet). So `2 ** 10` gives you 1024, not `2 ^ 10`.
 
 ## PEMDAS: Order of Operations
 
-Python follows the same order of operations you learned in school. Remember PEMDAS? (Some people learned BODMAS or BEDMAS -- same thing, different accent.)
+Python follows the same order of operations you learned in school. Remember PEMDAS? (Some people learned BODMAS or BEDMAS - same thing, different accent.)
 
 **P**arentheses > **E**xponents > **M**ultiplication/**D**ivision > **A**ddition/**S**ubtraction
 
@@ -794,7 +794,7 @@ rounded = int(3.99)    # 3 (not 4! it truncates, doesn't round)
 precise = float(5)     # 5.0
 ```
 
-Notice that `int()` doesn't round -- it chops. `int(3.99)` is `3`, not `4`. If you want actual rounding, use `round()` (we'll cover that soon).
+Notice that `int()` doesn't round - it chops. `int(3.99)` is `3`, not `4`. If you want actual rounding, use `round()` (we'll cover that soon).
 
 ## The input() Function: Talk to Me
 
@@ -813,7 +813,7 @@ When Python hits `input()`, it pauses, shows the message, and waits for the user
 
 ```python
 age = input("How old are you? ")
-print(type(age))  # <class 'str'> -- it's a STRING!
+print(type(age))  # <class 'str'> - it's a STRING!
 ```
 
 If someone types `25`, you get the string `"25"`, not the integer `25`. This means you can't do math with it directly:
@@ -842,7 +842,7 @@ decimal_number = float(input("Enter a price: "))
 Python comes with some handy math functions right out of the box:
 
 ```python
-print(abs(-42))         # 42 (absolute value -- removes the negative)
+print(abs(-42))         # 42 (absolute value - removes the negative)
 print(round(3.7))       # 4 (rounds to nearest integer)
 print(round(3.14159, 2)) # 3.14 (rounds to 2 decimal places)
 print(max(4, 7, 2, 9))  # 9 (returns the biggest)
@@ -909,8 +909,8 @@ Run it and calculate some tips! Notice the `:.2f` inside the f-strings? That for
 ## TL;DR
 
 - Python has all the standard math operators plus `//` (floor division), `%` (modulo/remainder), and `**` (exponent)
-- PEMDAS order of operations applies -- when in doubt, use parentheses
-- `"5"` (string) is NOT `5` (integer) -- use `int()` or `float()` to convert
+- PEMDAS order of operations applies - when in doubt, use parentheses
+- `"5"` (string) is NOT `5` (integer) - use `int()` or `float()` to convert
 - `input()` **always returns a string**, even if the user types a number
 - Pattern for numeric input: `int(input("prompt"))` or `float(input("prompt"))`
 - Built-in math helpers: `abs()`, `round()`, `max()`, `min()`, `pow()`
@@ -922,18 +922,18 @@ Run it and calculate some tips! Notice the `:.2f` inside the f-strings? That for
 
 > **Sprint 1** | **12 min read** | **Code: [github link](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-1-basics/chapter-04-strings/)**
 
-Every text message you've sent, every tweet, every Netflix subtitle, every Google search, every password you've typed -- strings. Text is the backbone of computing, and Python is ridiculously good at working with it. By the end of this chapter, you'll be slicing, dicing, and formatting text like a sushi chef.
+Every text message you've sent, every tweet, every Netflix subtitle, every Google search, every password you've typed - strings. Text is the backbone of computing, and Python is ridiculously good at working with it. By the end of this chapter, you'll be slicing, dicing, and formatting text like a sushi chef.
 
 ## What You'll Learn
 - Essential string methods that'll make your life easier
-- Method chaining -- combo moves for strings
-- Slicing -- cutting strings like a pizza
+- Method chaining - combo moves for strings
+- Slicing - cutting strings like a pizza
 - Escape characters and raw strings
 - f-string formatting superpowers
 
 ## String Methods: Your Text Toolkit
 
-Remember how functions like `print()` do things? **Methods** are functions that belong to a specific data type. Strings come with a bunch of built-in methods. Think of them as tools in a Swiss Army knife -- each one does something useful.
+Remember how functions like `print()` do things? **Methods** are functions that belong to a specific data type. Strings come with a bunch of built-in methods. Think of them as tools in a Swiss Army knife - each one does something useful.
 
 ```python
 message = "hello, world"
@@ -968,7 +968,7 @@ print(text.find("World"))    # 9 (index where "World" starts)
 print(text.find("Python"))   # -1 (not found)
 ```
 
-> **Pro Tip:** Python strings are **immutable** -- they can't be changed in place. Every string method returns a **new** string. The original stays the same.
+> **Pro Tip:** Python strings are **immutable** - they can't be changed in place. Every string method returns a **new** string. The original stays the same.
 
 ```python
 name = "tony stark"
@@ -1065,7 +1065,7 @@ print(text[::2])     # "Hlo ol!" (every 2nd character)
 print(text[::-1])    # "!dlroW ,olleH" (reversed!)
 ```
 
-The key thing to remember: `[start:stop]` goes up to but **does not include** the stop index. Think of it like a hotel checkout -- you stay until that day but you don't stay *on* that day.
+The key thing to remember: `[start:stop]` goes up to but **does not include** the stop index. Think of it like a hotel checkout - you stay until that day but you don't stay *on* that day.
 
 ```python
 # Practical example: extracting parts of a date
@@ -1080,7 +1080,7 @@ The reverse trick `[::-1]` is a classic Python one-liner and a favorite intervie
 
 ```python
 word = "racecar"
-print(word == word[::-1])  # True -- it's a palindrome!
+print(word == word[::-1])  # True - it's a palindrome!
 ```
 
 ## Escape Characters and Raw Strings
@@ -1113,10 +1113,10 @@ print('She said "hello"')
 If you have a string with lots of backslashes (like a Windows file path), use a **raw string** with `r` prefix:
 
 ```python
-# Without raw string -- chaos
+# Without raw string - chaos
 # path = "C:\new_folder\test"  # \n becomes a newline!
 
-# With raw string -- sanity
+# With raw string - sanity
 path = r"C:\new_folder\test"
 print(path)  # C:\new_folder\test
 ```
@@ -1181,7 +1181,7 @@ print(f"Is cool: {10 > 5}")            # Is cool: True
 print(f"Quick math: {7 * 6}")          # Quick math: 42
 ```
 
-You can put any valid Python expression inside those curly braces. Methods, functions, math, comparisons -- whatever you need.
+You can put any valid Python expression inside those curly braces. Methods, functions, math, comparisons - whatever you need.
 
 ## Your Turn: Username Generator
 
@@ -1218,10 +1218,10 @@ print(f"\nAll usernames are {len(option1)}-{len(max(option1, option2, option3, o
 ## TL;DR
 
 - **String methods** are your text Swiss Army knife: `.upper()`, `.lower()`, `.strip()`, `.replace()`, `.split()`, `.join()`
-- **Strings are immutable** -- methods return NEW strings, they don't change the original
+- **Strings are immutable** - methods return NEW strings, they don't change the original
 - **Method chaining** lets you combo methods: `text.strip().lower().replace("a", "b")`
 - **Indexing** starts at 0; negative indices count from the end (`[-1]` = last character)
-- **Slicing** with `[start:stop:step]` -- stop is exclusive; `[::-1]` reverses a string
+- **Slicing** with `[start:stop:step]` - stop is exclusive; `[::-1]` reverses a string
 - **Escape characters:** `\n` (newline), `\t` (tab), `\\` (backslash); use `r""` for raw strings
 - **f-string formatting:** `:.2f` for decimals, `:,` for commas, `:<10` for padding
 
@@ -1231,11 +1231,11 @@ print(f"\nAll usernames are {len(option1)}-{len(max(option1, option2, option3, o
 
 > **Sprint 1** | **12 min read** | **Code: [github link](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-1-basics/chapter-05-decisions/)**
 
-Every app you've ever used makes decisions. "Is the password correct? Show the dashboard. Wrong? Show an error." "Is the player's health zero? Game over." "Is the user over 18? Show the content." Without decisions, programs would just be straight lines -- boring and useless. Time to give your code a brain.
+Every app you've ever used makes decisions. "Is the password correct? Show the dashboard. Wrong? Show an error." "Is the player's health zero? Game over." "Is the user over 18? Show the content." Without decisions, programs would just be straight lines - boring and useless. Time to give your code a brain.
 
 ## What You'll Learn
-- Comparison operators -- the questions Python asks
-- if/elif/else -- the decision-making trio
+- Comparison operators - the questions Python asks
+- if/elif/else - the decision-making trio
 - Logical operators: and, or, not
 - Nested vs. flat conditions (and why flat is better)
 - Truthy and falsy values
@@ -1254,7 +1254,7 @@ print(10 == 10)    # True    "Is 10 equal to 10?"
 print(10 != 5)     # True    "Is 10 not equal to 5?"
 ```
 
-> **Wait, What?** `=` vs `==` -- one assigns, one compares. `x = 5` puts 5 in the box. `x == 5` asks "is x equal to 5?" Mix them up and Python gets very confused. This is the #1 beginner bug. Tattoo it on your brain: **one equals for putting, two equals for asking.**
+> **Wait, What?** `=` vs `==` - one assigns, one compares. `x = 5` puts 5 in the box. `x == 5` asks "is x equal to 5?" Mix them up and Python gets very confused. This is the #1 beginner bug. Tattoo it on your brain: **one equals for putting, two equals for asking.**
 
 These work with strings too:
 
@@ -1288,11 +1288,11 @@ Let's break it down:
 
 1. `if` checks the first condition. If it's `True`, run that block and skip everything else.
 2. `elif` (short for "else if") checks the next condition, but ONLY if all previous conditions were `False`.
-3. `else` is the catch-all -- runs if nothing above was `True`. No condition needed.
+3. `else` is the catch-all - runs if nothing above was `True`. No condition needed.
 
 **The colon `:` at the end of each line is mandatory.** Forget it and Python throws a syntax error.
 
-**The indentation (4 spaces) is mandatory.** That's how Python knows which code belongs to which condition. No curly braces like other languages -- Python uses whitespace. It's cleaner, but it means spacing actually matters.
+**The indentation (4 spaces) is mandatory.** That's how Python knows which code belongs to which condition. No curly braces like other languages - Python uses whitespace. It's cleaner, but it means spacing actually matters.
 
 ```python
 age = 20
@@ -1326,9 +1326,9 @@ Python checks conditions **from top to bottom** and stops at the first `True`. T
 
 ## Logical Operators: The Bouncers at the Club
 
-Sometimes one condition isn't enough. Enter `and`, `or`, and `not` -- the logical operators. Think of them as bouncers at a club.
+Sometimes one condition isn't enough. Enter `and`, `or`, and `not` - the logical operators. Think of them as bouncers at a club.
 
-**`and`** -- BOTH conditions must be True (strict bouncer):
+**`and`** - BOTH conditions must be True (strict bouncer):
 
 ```python
 age = 25
@@ -1340,7 +1340,7 @@ else:
     print("Sorry, can't let you in.")
 ```
 
-**`or`** -- At LEAST one condition must be True (chill bouncer):
+**`or`** - At LEAST one condition must be True (chill bouncer):
 
 ```python
 is_vip = False
@@ -1352,7 +1352,7 @@ else:
     print("Back of the line, buddy.")
 ```
 
-**`not`** -- Flips True to False and vice versa (the contrarian):
+**`not`** - Flips True to False and vice versa (the contrarian):
 
 ```python
 is_raining = False
@@ -1493,7 +1493,7 @@ else:
 result = "Pass" if score >= 50 else "Fail"
 ```
 
-This is great for simple assignments. Don't go overboard though -- if your condition is complex, stick with a regular if/else. Code readability is not a place to show off.
+This is great for simple assignments. Don't go overboard though - if your condition is complex, stick with a regular if/else. Code readability is not a place to show off.
 
 ```python
 # This is fine
@@ -1505,7 +1505,7 @@ x = "a" if condition1 else "b" if condition2 else "c" if condition3 else "d"
 
 ## Your Turn: Movie Rating Classifier
 
-Create `movie_rater.py` -- a program that classifies movies based on user input:
+Create `movie_rater.py` - a program that classifies movies based on user input:
 
 ```python
 # Movie Rating Classifier
@@ -1557,10 +1557,10 @@ print(f"{'=' * 40}")
 ## TL;DR
 
 - **Comparison operators** (`==`, `!=`, `>`, `<`, `>=`, `<=`) return `True` or `False`
-- **`=` assigns, `==` compares** -- the most important distinction for beginners
+- **`=` assigns, `==` compares** - the most important distinction for beginners
 - **if/elif/else** checks conditions top to bottom; first `True` wins
 - **Logical operators:** `and` (both true), `or` (at least one true), `not` (flip it)
-- **Flat is better than nested** -- check for failures early, happy path at the end
+- **Flat is better than nested** - check for failures early, happy path at the end
 - **Truthy/falsy:** empty strings, 0, `None`, and empty collections are falsy; everything else is truthy
 - **Ternary:** `value_if_true if condition else value_if_false` for simple one-liners
 
@@ -1607,7 +1607,7 @@ print(fruits[-1])    # mango (last item!)
 print(fruits[-2])    # cherry (second to last)
 ```
 
-> **Wait, What?** "Lists start at 0, not 1. I know. Programmers are weird." There's actually a historical reason -- it's about memory offsets -- but honestly, you just have to accept it. The first item is at index 0. The second is at index 1. If a list has 4 items, the last index is 3. You'll get used to it faster than you think.
+> **Wait, What?** "Lists start at 0, not 1. I know. Programmers are weird." There's actually a historical reason - it's about memory offsets - but honestly, you just have to accept it. The first item is at index 0. The second is at index 1. If a list has 4 items, the last index is 3. You'll get used to it faster than you think.
 
 Slicing works too, same as strings:
 
@@ -1620,7 +1620,7 @@ print(fruits[2:])     # ['cherry', 'mango', 'kiwi']
 print(fruits[::-1])   # ['kiwi', 'mango', 'cherry', 'banana', 'apple'] (reversed!)
 ```
 
-Unlike strings, lists are **mutable** -- you can change them:
+Unlike strings, lists are **mutable** - you can change them:
 
 ```python
 fruits = ["apple", "banana", "cherry"]
@@ -1637,31 +1637,31 @@ Lists come with methods for adding and removing items. This is where lists reall
 ```python
 heroes = ["Iron Man", "Thor"]
 
-# append() -- add to the END
+# append() - add to the END
 heroes.append("Hulk")
 print(heroes)  # ['Iron Man', 'Thor', 'Hulk']
 
-# insert() -- add at a specific position
+# insert() - add at a specific position
 heroes.insert(1, "Spider-Man")
 print(heroes)  # ['Iron Man', 'Spider-Man', 'Thor', 'Hulk']
 
-# extend() -- add multiple items at once
+# extend() - add multiple items at once
 heroes.extend(["Black Widow", "Hawkeye"])
 print(heroes)  # ['Iron Man', 'Spider-Man', 'Thor', 'Hulk', 'Black Widow', 'Hawkeye']
 ```
 
-> **Wait, What?** `append()` vs `extend()` -- `append` adds ONE item (even if it's a list, it adds the whole list as a single item). `extend` unpacks the items and adds them individually. Try `heroes.append(["A", "B"])` and see what happens -- you'll get a list inside a list.
+> **Wait, What?** `append()` vs `extend()` - `append` adds ONE item (even if it's a list, it adds the whole list as a single item). `extend` unpacks the items and adds them individually. Try `heroes.append(["A", "B"])` and see what happens - you'll get a list inside a list.
 
 ### Removing Items
 
 ```python
 heroes = ["Iron Man", "Spider-Man", "Thor", "Hulk", "Hawkeye"]
 
-# remove() -- remove by VALUE (first occurrence)
+# remove() - remove by VALUE (first occurrence)
 heroes.remove("Thor")
 print(heroes)  # ['Iron Man', 'Spider-Man', 'Hulk', 'Hawkeye']
 
-# pop() -- remove by INDEX and return the removed item
+# pop() - remove by INDEX and return the removed item
 removed = heroes.pop(1)
 print(removed)     # Spider-Man
 print(heroes)      # ['Iron Man', 'Hulk', 'Hawkeye']
@@ -1671,11 +1671,11 @@ last = heroes.pop()
 print(last)        # Hawkeye
 print(heroes)      # ['Iron Man', 'Hulk']
 
-# del -- remove by index (doesn't return anything)
+# del - remove by index (doesn't return anything)
 del heroes[0]
 print(heroes)      # ['Hulk']
 
-# clear() -- nuclear option, removes everything
+# clear() - nuclear option, removes everything
 heroes.clear()
 print(heroes)      # []
 ```
@@ -1687,7 +1687,7 @@ Use `remove()` when you know the value. Use `pop()` when you know the index and 
 ```python
 numbers = [3, 1, 4, 1, 5, 9, 2, 6]
 
-# sort() -- sorts IN PLACE (modifies the original list)
+# sort() - sorts IN PLACE (modifies the original list)
 numbers.sort()
 print(numbers)  # [1, 1, 2, 3, 4, 5, 6, 9]
 
@@ -1695,7 +1695,7 @@ print(numbers)  # [1, 1, 2, 3, 4, 5, 6, 9]
 numbers.sort(reverse=True)
 print(numbers)  # [9, 6, 5, 4, 3, 2, 1, 1]
 
-# sorted() -- returns a NEW sorted list (original unchanged)
+# sorted() - returns a NEW sorted list (original unchanged)
 original = [3, 1, 4, 1, 5]
 new_list = sorted(original)
 print(original)   # [3, 1, 4, 1, 5] (unchanged!)
@@ -1744,9 +1744,9 @@ print(max(numbers))         # 40
 print(sum(numbers))         # 120
 ```
 
-The `in` keyword is gold. It reads like English: `if "pizza" in toppings:` -- beautiful.
+The `in` keyword is gold. It reads like English: `if "pizza" in toppings:` - beautiful.
 
-### enumerate() -- Index AND Value
+### enumerate() - Index AND Value
 
 When you loop through a list (we'll cover loops properly in Chapter 7, but here's a preview), sometimes you need both the item AND its position:
 
@@ -1780,7 +1780,7 @@ Output:
 
 ## List Comprehensions: The Show-Off Move
 
-This is where Python gets elegant. A **list comprehension** lets you create a new list by transforming or filtering an existing one -- in a single line.
+This is where Python gets elegant. A **list comprehension** lets you create a new list by transforming or filtering an existing one - in a single line.
 
 The old way:
 
@@ -1892,7 +1892,7 @@ while True:
         print("Unknown command. Try: add, remove, show, sort, clear, quit")
 ```
 
-Don't worry if the `while True` loop looks unfamiliar -- we'll cover loops fully in Chapter 7. For now, just know it keeps the program running until you type "quit."
+Don't worry if the `while True` loop looks unfamiliar - we'll cover loops fully in Chapter 7. For now, just know it keeps the program running until you type "quit."
 
 **Bonus challenge:** Add a "search" command that checks if an item is on the list, and a "count" command that shows how many items you have.
 
@@ -1916,15 +1916,15 @@ Don't worry if the `while True` loop looks unfamiliar -- we'll cover loops fully
 Imagine having to manually send 1000 emails one at a time. Or counting every item in a warehouse by hand. Or liking every photo on your friend's Instagram, one. by. one. Loops are the reason programmers still have their sanity. They let you say "do this thing, but like, a thousand times" and then go grab coffee while the computer does the work.
 
 ## What You'll Learn
-- `for` loops -- when you know what you're looping through
-- `range()` -- the loop's best friend
-- `while` loops -- when you don't know how many times
-- `break` and `continue` -- escape hatches
-- Nested loops -- when one loop isn't enough
+- `for` loops - when you know what you're looping through
+- `range()` - the loop's best friend
+- `while` loops - when you don't know how many times
+- `break` and `continue` - escape hatches
+- Nested loops - when one loop isn't enough
 
 ## for Loops: Do This for Each Thing
 
-A `for` loop goes through a collection of items and does something with each one. Think of it like a conveyor belt -- each item gets the same treatment:
+A `for` loop goes through a collection of items and does something with each one. Think of it like a conveyor belt - each item gets the same treatment:
 
 ```python
 avengers = ["Iron Man", "Thor", "Hulk", "Black Widow", "Hawkeye"]
@@ -1947,7 +1947,7 @@ Here's how to read it: "FOR each `hero` IN the `avengers` list, do this." The va
 You can name the loop variable whatever you want, but make it descriptive:
 
 ```python
-# Good -- you know exactly what's happening
+# Good - you know exactly what's happening
 for student in students:
     print(student)
 
@@ -1979,17 +1979,17 @@ What if you want to loop a specific number of times but you don't have a list? T
 **Three forms of range:**
 
 ```python
-# range(stop) -- 0 to stop-1
+# range(stop) - 0 to stop-1
 for i in range(5):
     print(i)
 # 0, 1, 2, 3, 4
 
-# range(start, stop) -- start to stop-1
+# range(start, stop) - start to stop-1
 for i in range(2, 6):
     print(i)
 # 2, 3, 4, 5
 
-# range(start, stop, step) -- with custom step
+# range(start, stop, step) - with custom step
 for i in range(0, 20, 5):
     print(i)
 # 0, 5, 10, 15
@@ -2002,7 +2002,7 @@ for i in range(10, 0, -1):
 
 Just like slicing, `range()` goes up to but **doesn't include** the stop number. `range(5)` gives you 0 through 4, not 0 through 5.
 
-Practical example -- print a times table:
+Practical example - print a times table:
 
 ```python
 number = 7
@@ -2031,7 +2031,7 @@ while password != "python123":
 print("Access granted!")
 ```
 
-This keeps asking for the password until the user gets it right. We have no idea how many tries it'll take -- could be 1, could be 100. That's the sweet spot for `while`.
+This keeps asking for the password until the user gets it right. We have no idea how many tries it'll take - could be 1, could be 100. That's the sweet spot for `while`.
 
 The pattern is: **while this condition is True, keep looping.**
 
@@ -2056,12 +2056,12 @@ Liftoff!
 
 See that `count -= 1`? That's crucial. If you forget to change the variable that your `while` condition checks, the condition stays `True` forever and your program runs until the heat death of the universe (or until you hit Ctrl+C).
 
-> **Pro Tip:** If your program seems frozen, it's probably stuck in an infinite loop. Press `Ctrl+C` to break out. It happens to everyone. Even senior developers accidentally create infinite loops -- they just press Ctrl+C faster.
+> **Pro Tip:** If your program seems frozen, it's probably stuck in an infinite loop. Press `Ctrl+C` to break out. It happens to everyone. Even senior developers accidentally create infinite loops - they just press Ctrl+C faster.
 
 **Common while loop patterns:**
 
 ```python
-# Accumulator -- add things up
+# Accumulator - add things up
 total = 0
 while True:
     price = input("Enter a price (or 'done'): ")
@@ -2070,7 +2070,7 @@ while True:
     total += float(price)
 print(f"Total: ${total:.2f}")
 
-# Validation -- keep asking until valid input
+# Validation - keep asking until valid input
 age = -1
 while age < 0 or age > 150:
     age = int(input("Enter your age (0-150): "))
@@ -2079,7 +2079,7 @@ print(f"Got it, you're {age}!")
 
 ## break and continue: The Escape Hatches
 
-### break -- "I'm Outta Here!"
+### break - "I'm Outta Here!"
 
 `break` immediately exits the loop. No more iterations, no more checking conditions. It's the emergency exit.
 
@@ -2104,7 +2104,7 @@ Found Charlie!
 
 Without `break`, the loop would keep checking Dave and Eve even after finding Charlie. Why waste the effort?
 
-### continue -- "Skip This One"
+### continue - "Skip This One"
 
 `continue` skips the rest of the current iteration and jumps to the next one. It's like saying "nah, next."
 
@@ -2150,7 +2150,7 @@ Output:
 
 The outer loop runs 3 times (rows). For each row, the inner loop runs 4 times (columns). That's 3 x 4 = 12 stars total.
 
-A more practical example -- finding matching pairs:
+A more practical example - finding matching pairs:
 
 ```python
 colors = ["red", "blue", "green"]
@@ -2260,7 +2260,7 @@ print("    ", end="")
 for i in range(1, size + 1):
     print(f"{i:4}", end="")
 print()
-print("    " + "----" * size)
+print("    " + "--" * size)
 
 # Print each row
 for row in range(1, size + 1):
@@ -2284,11 +2284,11 @@ Run it with a size of 10 and admire your perfectly aligned multiplication table.
 
 - **`for` loops** iterate over a collection: `for item in collection:`
 - **`range()`** generates numbers: `range(stop)`, `range(start, stop)`, `range(start, stop, step)`
-- **`while` loops** run until a condition is False -- don't forget to update the condition variable!
+- **`while` loops** run until a condition is False - don't forget to update the condition variable!
 - **`break`** exits the loop immediately; **`continue`** skips to the next iteration
 - **Nested loops:** the inner loop runs fully for each outer loop iteration
 - **`for/else`:** the `else` block runs only if the loop completes without `break`
-- If your program freezes, you probably made an infinite loop -- hit `Ctrl+C`
+- If your program freezes, you probably made an infinite loop - hit `Ctrl+C`
 - When in doubt about `for` vs `while`: if you're going through a collection, use `for`. If you're waiting for a condition, use `while`.
 
 ---
@@ -2297,7 +2297,7 @@ Run it with a size of 10 and admire your perfectly aligned multiplication table.
 
 > **Sprint 1** | **12 min read** | **Code: [github link](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-1-basics/chapter-08-tuples-sets/)**
 
-If lists are the extroverts of Python data types -- flexible, changeable, always growing -- tuples are the introverts and sets are the bouncers. Tuples are quiet, reliable, and never change. Sets refuse to let duplicates in. Together with lists, these three data types cover almost every way you'll need to store collections of data.
+If lists are the extroverts of Python data types - flexible, changeable, always growing - tuples are the introverts and sets are the bouncers. Tuples are quiet, reliable, and never change. Sets refuse to let duplicates in. Together with lists, these three data types cover almost every way you'll need to store collections of data.
 
 ## What You'll Learn
 - Tuples: what they are, when to use them, and why immutability matters
@@ -2342,7 +2342,7 @@ No appending. No removing. No sorting in place. It's locked down. Sealed. Immuta
 
 Great question. Here's why tuples exist:
 
-1. **Safety.** Some data shouldn't change. GPS coordinates, RGB colors, database records -- if something accidentally modifies them, bad things happen. Tuples prevent that.
+1. **Safety.** Some data shouldn't change. GPS coordinates, RGB colors, database records - if something accidentally modifies them, bad things happen. Tuples prevent that.
 
 2. **Performance.** Tuples are slightly faster than lists because Python knows they won't change. For most programs you won't notice, but it matters at scale.
 
@@ -2467,7 +2467,7 @@ print(unique_numbers)  # {1, 2, 3, 4}
 That deduplication trick is incredibly useful. Got a list with duplicates? Wrap it in `set()` and they're gone.
 
 ```python
-# Empty set -- this is a gotcha!
+# Empty set - this is a gotcha!
 empty_set = set()      # Correct
 empty_dict = {}        # This is an empty DICTIONARY, not a set!
 ```
@@ -2481,14 +2481,14 @@ fruits = {"apple", "banana", "cherry"}
 fruits.add("mango")
 print(fruits)  # {'apple', 'banana', 'cherry', 'mango'} (order may vary)
 
-# Add a duplicate -- nothing happens, no error
+# Add a duplicate - nothing happens, no error
 fruits.add("apple")
 print(fruits)  # Still the same set, no second "apple"
 
 # Remove an item (raises error if not found)
 fruits.remove("banana")
 
-# Discard an item (no error if not found -- safer!)
+# Discard an item (no error if not found - safer!)
 fruits.discard("kiwi")  # No error, even though "kiwi" isn't there
 
 # Pop a random item (sets are unordered, so you can't pick which one)
@@ -2507,7 +2507,7 @@ This is important: sets have **no index** and **no order**. You can't do `my_set
 
 ```python
 numbers = {3, 1, 4, 1, 5, 9}
-print(numbers)  # Maybe {1, 3, 4, 5, 9} -- you can't predict the order
+print(numbers)  # Maybe {1, 3, 4, 5, 9} - you can't predict the order
 # print(numbers[0])  # TypeError! Sets don't support indexing
 ```
 
@@ -2526,17 +2526,17 @@ guardians = {"Star-Lord", "Gamora", "Groot", "Rocket", "Thor"}
 
 (Yes, Thor is in both. Multiverse stuff.)
 
-**Union** -- everyone from both teams (combined roster):
+**Union** - everyone from both teams (combined roster):
 
 ```python
 all_heroes = avengers | guardians  # or avengers.union(guardians)
 print(all_heroes)
 # {'Iron Man', 'Thor', 'Hulk', 'Black Widow', 'Captain America',
 #  'Star-Lord', 'Gamora', 'Groot', 'Rocket'}
-# Thor appears only ONCE -- no duplicates!
+# Thor appears only ONCE - no duplicates!
 ```
 
-**Intersection** -- heroes on BOTH teams:
+**Intersection** - heroes on BOTH teams:
 
 ```python
 both_teams = avengers & guardians  # or avengers.intersection(guardians)
@@ -2544,7 +2544,7 @@ print(both_teams)
 # {'Thor'}
 ```
 
-**Difference** -- in Avengers but NOT in Guardians:
+**Difference** - in Avengers but NOT in Guardians:
 
 ```python
 avengers_only = avengers - guardians  # or avengers.difference(guardians)
@@ -2552,7 +2552,7 @@ print(avengers_only)
 # {'Iron Man', 'Hulk', 'Black Widow', 'Captain America'}
 ```
 
-**Symmetric Difference** -- in one team OR the other, but NOT both:
+**Symmetric Difference** - in one team OR the other, but NOT both:
 
 ```python
 exclusive = avengers ^ guardians  # or avengers.symmetric_difference(guardians)
@@ -2562,7 +2562,7 @@ print(exclusive)
 # Thor is excluded because he's in both!
 ```
 
-These operations are not just cool -- they're blazing fast. Checking if an item is in a set is nearly instant, no matter how large the set is. Doing the same with a list gets slower as the list grows.
+These operations are not just cool - they're blazing fast. Checking if an item is in a set is nearly instant, no matter how large the set is. Doing the same with a list gets slower as the list grows.
 
 **Subset and superset checks:**
 
@@ -2578,7 +2578,7 @@ print(avengers.isdisjoint(guardians))      # False (they share Thor)
 Here's your cheat sheet:
 
 | Feature | List `[]` | Tuple `()` | Set `{}` |
-|---------|-----------|------------|----------|
+|-----|------|------|-----|
 | Ordered? | Yes | Yes | No |
 | Mutable? | Yes | No | Yes |
 | Duplicates? | Allowed | Allowed | Not allowed |
@@ -2648,7 +2648,7 @@ for i, song in enumerate(sorted(mega_playlist), 1):
     print(f"  {i}. {song}")
 
 # Bonus: use tuple unpacking
-print("\n--- Now Playing ---")
+print("\n-- Now Playing --")
 current_song, *up_next = sorted(mega_playlist)
 print(f"Now playing: {current_song}")
 print(f"Up next: {up_next[0]}")
@@ -2662,9 +2662,9 @@ print(f"Songs remaining: {len(up_next)}")
 
 ## TL;DR
 
-- **Tuples** are immutable (read-only) lists: `point = (10, 20)` -- use for data that shouldn't change
+- **Tuples** are immutable (read-only) lists: `point = (10, 20)` - use for data that shouldn't change
 - **Tuple unpacking** assigns each item to a variable: `name, age = ("Alice", 30)`
-- **Swap trick:** `a, b = b, a` -- no temp variable needed
+- **Swap trick:** `a, b = b, a` - no temp variable needed
 - **Sets** are unordered collections with no duplicates: `unique = {1, 2, 3}`
 - **Set deduplication:** `set([1, 1, 2, 2, 3])` gives you `{1, 2, 3}`
 - **Set operations:** `|` (union), `&` (intersection), `-` (difference), `^` (symmetric difference)
@@ -2678,7 +2678,7 @@ print(f"Songs remaining: {len(up_next)}")
 
 > **Project** | **30 min build** | **Code: [starter](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-1-basics/sprint-1-project/starter/) | [solution](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-1-basics/sprint-1-project/solution/)**
 
-Congratulations! You just finished Sprint 1. Eight chapters. Variables, strings, numbers, decisions, lists, loops, tuples, sets. That's a LOT of Python, and you should feel genuinely proud. Seriously -- most people who say "I'll learn to code" never get past Chapter 2. You're here at the checkpoint. That puts you ahead of 90% of people who downloaded this book.
+Congratulations! You just finished Sprint 1. Eight chapters. Variables, strings, numbers, decisions, lists, loops, tuples, sets. That's a LOT of Python, and you should feel genuinely proud. Seriously - most people who say "I'll learn to code" never get past Chapter 2. You're here at the checkpoint. That puts you ahead of 90% of people who downloaded this book.
 
 Now let's prove you learned something. We're going to build a **Mad Libs Generator** that uses practically everything from Sprint 1.
 
@@ -2696,7 +2696,7 @@ Our version will:
 ## Skills You'll Use
 
 | Skill | Where You Learned It |
-|-------|---------------------|
+|----|-----------|
 | `input()` and `print()` | Chapters 1 & 3 |
 | Variables and f-strings | Chapter 2 |
 | Type conversion (`int()`) | Chapter 3 |
@@ -2804,7 +2804,7 @@ Now let's build the main game logic:
 ```python
 # Game state
 rounds_played = 0
-words_used = set()  # Track unique words they've used (sets -- Chapter 8!)
+words_used = set()  # Track unique words they've used (sets - Chapter 8!)
 
 print("=" * 50)
 print("   WELCOME TO MAD LIBS GENERATOR!")
@@ -2833,7 +2833,7 @@ while True:
 
 ```python
     # Collect words
-    print(f"\n--- {title} ---")
+    print(f"\n-- {title} --")
     print("Give me the following words:\n")
 
     collected_words = {}
@@ -2844,13 +2844,13 @@ while True:
         # Clean up the input a little
         if word == "":
             word = "banana"  # Default for lazy players
-            print(f"  (Nothing entered -- using 'banana' because why not)")
+            print(f"  (Nothing entered - using 'banana' because why not)")
 
         collected_words[placeholder] = word
         words_used.add(word.lower())  # Track unique words
 ```
 
-Don't worry about the `{}` dictionary syntax -- that's a preview of Sprint 2. For now, just know it maps each placeholder name to the word the user entered.
+Don't worry about the `{}` dictionary syntax - that's a preview of Sprint 2. For now, just know it maps each placeholder name to the word the user entered.
 
 ### Step 4: Fill In the Story and Display It
 
@@ -2912,21 +2912,21 @@ Put steps 1-5 together in `mad_libs.py` and run it. You should be able to:
 
 Once you've got the basic version working, try these enhancements:
 
-1. **Add your own story templates** -- the sillier the better
-2. **Add a "random word" option** -- create lists of random nouns, verbs, adjectives and pick from them when the user types "random"
-3. **Save the best stories** -- collect them in a list and print a "greatest hits" at the end
-4. **Add categories** -- "funny," "scary," "work-appropriate" story groups
-5. **Score system** -- rate each story on a silliness scale based on the words used
+1. **Add your own story templates** - the sillier the better
+2. **Add a "random word" option** - create lists of random nouns, verbs, adjectives and pick from them when the user types "random"
+3. **Save the best stories** - collect them in a list and print a "greatest hits" at the end
+4. **Add categories** - "funny," "scary," "work-appropriate" story groups
+5. **Score system** - rate each story on a silliness scale based on the words used
 
 ## What's Coming in Sprint 2
 
 You've got the basics down. Sprint 2 is where things get interesting:
 
-- **Dictionaries** -- the data structure that powers most real-world programs
-- **Functions** -- stop repeating yourself and start building reusable blocks
-- **Error handling** -- your programs stop crashing on bad input
-- **File I/O** -- read from and write to actual files
-- **Modules** -- tap into Python's massive standard library
+- **Dictionaries** - the data structure that powers most real-world programs
+- **Functions** - stop repeating yourself and start building reusable blocks
+- **Error handling** - your programs stop crashing on bad input
+- **File I/O** - read from and write to actual files
+- **Modules** - tap into Python's massive standard library
 
 The project? A **Personal Finance Tracker** that reads and writes files, handles errors gracefully, and is actually useful in your daily life.
 
@@ -2940,7 +2940,7 @@ Take a break. You've earned it. Go touch grass, pet a dog, watch an episode of s
 
 > **Chapters 9-14** | **Estimated Time: 3-4 hours** | **Difficulty: Intermediate**
 
-Look at you. You survived Sprint 1. You know variables, loops, lists, conditionals -- you've got the vocabulary of a Python speaker. But right now, you're kind of like someone who knows how to boil water and make toast. Technically, you can feed yourself. But nobody's calling you a chef.
+Look at you. You survived Sprint 1. You know variables, loops, lists, conditionals - you've got the vocabulary of a Python speaker. But right now, you're kind of like someone who knows how to boil water and make toast. Technically, you can feed yourself. But nobody's calling you a chef.
 
 Sprint 2 is where you become the chef.
 
@@ -2948,18 +2948,18 @@ Sprint 2 is where you become the chef.
 
 Over the next six chapters, you're going to unlock the tools that separate "I'm learning Python" from "I know Python." Here's what's coming:
 
-- **Chapter 9:** Dictionaries -- accessing data by name instead of number (game-changer)
-- **Chapter 10:** Functions -- stop copy-pasting code forever
-- **Chapter 11:** Modules & packages -- use code written by thousands of other developers
-- **Chapter 12:** File handling -- save data so it survives when your program stops
-- **Chapter 13:** Error handling -- make your code crash-proof (or at least crash-graceful)
-- **Chapter 14:** Lambda, map, filter, reduce -- one-liner wizardry
+- **Chapter 9:** Dictionaries - accessing data by name instead of number (game-changer)
+- **Chapter 10:** Functions - stop copy-pasting code forever
+- **Chapter 11:** Modules & packages - use code written by thousands of other developers
+- **Chapter 12:** File handling - save data so it survives when your program stops
+- **Chapter 13:** Error handling - make your code crash-proof (or at least crash-graceful)
+- **Chapter 14:** Lambda, map, filter, reduce - one-liner wizardry
 
 ## The Sprint 2 Project: Expense Tracker
 
 By the end of this sprint, you'll build a fully functional **Expense Tracker** that saves data to CSV files, handles errors gracefully, uses functions to stay organized, and actually persists between sessions. It's the kind of thing you could genuinely use in real life. Or at least, the kind of thing that makes you feel productive before you go back to impulse-buying on Amazon.
 
-The training wheels are off. The stabilizers are gone. But you've got this -- because everything you learned in Sprint 1 is about to click into place.
+The training wheels are off. The stabilizers are gone. But you've got this - because everything you learned in Sprint 1 is about to click into place.
 
 Let's cook.
 
@@ -2969,7 +2969,7 @@ Let's cook.
 
 > **Sprint 2, Chapter 9** | **Estimated Time: 12-15 minutes** | **Difficulty: Intermediate**
 
-Lists are great. You know that. You've been slicing them, looping through them, and generally having a good time. But lists have a secret weakness -- you can only access things by number. "Give me item number 3." That works, but what if you could say "Give me the *email*" or "Give me the *price*"? What if you could access things by NAME?
+Lists are great. You know that. You've been slicing them, looping through them, and generally having a good time. But lists have a secret weakness - you can only access things by number. "Give me item number 3." That works, but what if you could say "Give me the *email*" or "Give me the *price*"? What if you could access things by NAME?
 
 Enter dictionaries. The real MVP of Python data structures.
 
@@ -2989,7 +2989,7 @@ student = {
 }
 ```
 
-See those curly braces `{}`? That's how Python knows it's a dictionary. Each entry is a `key: value` pair, separated by commas. The key is always a string (usually), and the value can be anything -- a string, a number, a list, even another dictionary.
+See those curly braces `{}`? That's how Python knows it's a dictionary. Each entry is a `key: value` pair, separated by commas. The key is always a string (usually), and the value can be anything - a string, a number, a list, even another dictionary.
 
 > **Remember When?** Remember lists from Chapter 6? Dictionaries are like lists that went to college. Lists store things in order by position. Dictionaries store things by label. Both are useful, but dictionaries are what you reach for when your data has *meaning*.
 
@@ -3046,7 +3046,7 @@ That second argument to `.get()` is a default value. "If you can't find the key,
 
 ## Adding, Updating, and Deleting
 
-Dictionaries are mutable -- you can change them whenever you want.
+Dictionaries are mutable - you can change them whenever you want.
 
 ```python
 student = {"name": "Priya", "age": 22}
@@ -3066,7 +3066,7 @@ del student["gpa"]
 print(student)
 # {'name': 'Priya', 'age': 23, 'major': 'Computer Science'}
 
-# .pop() -- delete AND get the value back
+# .pop() - delete AND get the value back
 major = student.pop("major")
 print(major)      # Computer Science
 print(student)    # {'name': 'Priya', 'age': 23}
@@ -3173,7 +3173,7 @@ for student, grades in classroom.items():
 
 Two levels of square brackets: `classroom["priya"]["math"]`. First, get Priya's dictionary. Then, get the math value from that dictionary. It reads like English: "from the classroom, get priya's math."
 
-You can also have lists of dictionaries -- this is extremely common when working with data from the internet (APIs, databases, etc.):
+You can also have lists of dictionaries - this is extremely common when working with data from the internet (APIs, databases, etc.):
 
 ```python
 # A list of products (like you'd get from an online store API)
@@ -3237,7 +3237,7 @@ print(settings)
 
 Notice that when both dictionaries have the same key (like "theme"), the second one wins. The user's preferences override the defaults. That's usually exactly what you want.
 
-> **Wait, What?** The `**` spread operator "unpacks" a dictionary into key-value pairs. When you write `{**dict1, **dict2}`, you're saying "take everything from dict1, then take everything from dict2, and put it all in a new dictionary." If there are duplicates, the last one wins. It's like merging two playlists -- the second playlist's version of a song takes priority.
+> **Wait, What?** The `**` spread operator "unpacks" a dictionary into key-value pairs. When you write `{**dict1, **dict2}`, you're saying "take everything from dict1, then take everything from dict2, and put it all in a new dictionary." If there are duplicates, the last one wins. It's like merging two playlists - the second playlist's version of a song takes priority.
 
 ## Useful Dictionary Methods Cheat Sheet
 
@@ -3275,7 +3275,7 @@ Each contact should be stored as a dictionary inside a main contacts dictionary.
 contacts = {}
 
 while True:
-    print("\n--- Contact Book ---")
+    print("\n-- Contact Book --")
     print("1. Add Contact")
     print("2. Look Up Contact")
     print("3. Update Contact")
@@ -3300,14 +3300,14 @@ Full solution available at:
 
 ## TL;DR
 
-- **Dictionaries** store data as **key-value pairs** -- access by name, not position.
+- **Dictionaries** store data as **key-value pairs** - access by name, not position.
 - Use `dict["key"]` when you're sure the key exists. Use `dict.get("key")` when you're not.
 - Add/update with `dict["key"] = value`. Delete with `del dict["key"]` or `.pop("key")`.
 - Loop with `.keys()`, `.values()`, or `.items()` (the best one).
 - **Nested dictionaries** let you store complex, structured data.
 - **Dictionary comprehensions** create dictionaries in one line: `{k: v for k, v in stuff}`.
 - **Merge** with `{**dict1, **dict2}` or `dict1 | dict2`.
-- Dictionaries are everywhere in Python. APIs, configs, databases -- they all speak dictionary.
+- Dictionaries are everywhere in Python. APIs, configs, databases - they all speak dictionary.
 
 ---
 
@@ -3317,7 +3317,7 @@ Full solution available at:
 
 Copy-pasting code is like writing the same essay for every class. Sure, it works. But the moment you need to change something, you're editing it in twelve different places, and you WILL forget one. Functions let you write it once and reuse it forever.
 
-Think of a function like a recipe. You define it once -- "here's how to make pancakes" -- and then you just say "make pancakes" whenever you want them. You don't re-explain the recipe every time.
+Think of a function like a recipe. You define it once - "here's how to make pancakes" - and then you just say "make pancakes" whenever you want them. You don't re-explain the recipe every time.
 
 ## Defining and Calling Functions
 
@@ -3333,7 +3333,7 @@ greet()   # Hello, world!
 greet()   # Hello, world!
 ```
 
-`def` means "I'm defining a function." Then you give it a name, parentheses, and a colon. Everything indented underneath is the function's body -- the code that runs when you call it.
+`def` means "I'm defining a function." Then you give it a name, parentheses, and a colon. Everything indented underneath is the function's body - the code that runs when you call it.
 
 Calling a function is just its name followed by parentheses: `greet()`. Those parentheses are important. Without them, you're just *referring* to the function, not *running* it.
 
@@ -3355,7 +3355,7 @@ greet("Alex")     # Hello, Alex!
 greet("Jordan")   # Hello, Jordan!
 ```
 
-`name` is a **parameter** -- the variable name in the function definition. `"Priya"` is an **argument** -- the actual value you pass in when calling it. People use these terms interchangeably, but now you know the difference and can be annoyingly precise at parties.
+`name` is a **parameter** - the variable name in the function definition. `"Priya"` is an **argument** - the actual value you pass in when calling it. People use these terms interchangeably, but now you know the difference and can be annoyingly precise at parties.
 
 Multiple parameters? No problem:
 
@@ -3369,7 +3369,7 @@ introduce("Priya", 22, "Mumbai")
 
 ## Return Values: Getting Something Back
 
-So far, our functions just print stuff. But the real power is when they *return* a value -- give something back that you can store, use, or pass to another function.
+So far, our functions just print stuff. But the real power is when they *return* a value - give something back that you can store, use, or pass to another function.
 
 ```python
 def add(a, b):
@@ -3533,7 +3533,7 @@ my_function()       # I only exist in here
 
 The variable `secret` is **local** to the function. Once the function ends, it's gone. Like a Snapchat message for variables.
 
-Variables created outside functions are **global** -- accessible everywhere.
+Variables created outside functions are **global** - accessible everywhere.
 
 ```python
 greeting = "Hello"    # Global
@@ -3579,7 +3579,7 @@ print(speak(shout, "hello"))     # HELLO
 print(speak(whisper, "HELLO"))   # hello
 ```
 
-We're passing the function itself (not calling it -- no parentheses) as an argument. The `speak` function then calls it. This is a powerful pattern that shows up everywhere in Python, especially with `map()`, `filter()`, and `sorted()`.
+We're passing the function itself (not calling it - no parentheses) as an argument. The `speak` function then calls it. This is a powerful pattern that shows up everywhere in Python, especially with `map()`, `filter()`, and `sorted()`.
 
 ```python
 # Practical example: custom sorting
@@ -3653,8 +3653,8 @@ Full solution available at:
 - **Default parameters** give fallback values: `def greet(name, greeting="Hi")`.
 - **Keyword arguments** make calls readable: `greet(name="Priya")`.
 - **`*args`** collects extra positional args into a tuple. **`**kwargs`** collects extra keyword args into a dict.
-- Variables inside functions are **local** -- they disappear when the function ends.
-- Functions are **first-class objects** -- pass them around like any other value.
+- Variables inside functions are **local** - they disappear when the function ends.
+- Functions are **first-class objects** - pass them around like any other value.
 - When in doubt, make it a function. Seriously.
 
 ---
@@ -3665,7 +3665,7 @@ Full solution available at:
 
 Why build everything from scratch when thousands of developers have already built it for you? That would be like insisting on growing your own wheat every time you want a sandwich.
 
-Python's real superpower isn't the language itself -- it's the ecosystem. There are tens of thousands of ready-made packages for everything from sending emails to training AI models. And you get to use them with a single line of code.
+Python's real superpower isn't the language itself - it's the ecosystem. There are tens of thousands of ready-made packages for everything from sending emails to training AI models. And you get to use them with a single line of code.
 
 ## Import Styles: Three Ways to Borrow Code
 
@@ -3687,7 +3687,7 @@ today = dt.date.today()
 print(today)
 ```
 
-**Style 1** is the safest -- you always know where a function came from because it's prefixed with the module name. **Style 2** is convenient for things you use a lot. **Style 3** is great for modules with long names.
+**Style 1** is the safest - you always know where a function came from because it's prefixed with the module name. **Style 2** is convenient for things you use a lot. **Style 3** is great for modules with long names.
 
 One style you should almost never use:
 
@@ -3702,9 +3702,9 @@ This dumps every function from the module into your code, and you lose track of 
 
 ## Standard Library Greatest Hits
 
-Python comes with a massive standard library -- modules that are installed automatically with Python. No `pip install` needed. Here are the greatest hits.
+Python comes with a massive standard library - modules that are installed automatically with Python. No `pip install` needed. Here are the greatest hits.
 
-### random -- When You Need Chaos
+### random - When You Need Chaos
 
 ```python
 import random
@@ -3729,7 +3729,7 @@ lottery = random.sample(range(1, 50), 3)
 print(lottery)   # e.g., [17, 42, 3]
 ```
 
-### datetime -- Time Is on Your Side
+### datetime - Time Is on Your Side
 
 ```python
 from datetime import datetime, date, timedelta
@@ -3759,7 +3759,7 @@ days_left = (new_year - today).days
 print(f"Days until 2027: {days_left}")
 ```
 
-### os -- Talk to Your Computer
+### os - Talk to Your Computer
 
 ```python
 import os
@@ -3785,7 +3785,7 @@ home = os.environ.get("HOME", "Not found")
 print(f"Home directory: {home}")
 ```
 
-### math -- For When You Need Real Math
+### math - For When You Need Real Math
 
 ```python
 import math
@@ -3803,7 +3803,7 @@ def distance(x1, y1, x2, y2):
 print(distance(0, 0, 3, 4))  # 5.0
 ```
 
-### json -- The Internet's Favorite Format
+### json - The Internet's Favorite Format
 
 JSON is how the internet passes data around. It looks almost exactly like Python dictionaries, which makes it really easy to work with.
 
@@ -3830,7 +3830,7 @@ We'll use JSON a lot more in Chapter 12 when we learn file handling. For now, ju
 
 ## pip install: Getting Packages from the Internet
 
-The standard library is great, but the real magic is **PyPI** (Python Package Index) -- a massive repository of packages built by the community. Over 500,000 packages and counting.
+The standard library is great, but the real magic is **PyPI** (Python Package Index) - a massive repository of packages built by the community. Over 500,000 packages and counting.
 
 To install a package, you use `pip`:
 
@@ -3868,7 +3868,7 @@ Three lines of code to talk to the internet. That's the power of packages.
 
 Here's the problem: you're working on Project A, which needs `requests` version 2.25. Then you start Project B, which needs `requests` version 2.31. If you install both globally, they'll conflict.
 
-Virtual environments solve this. They're isolated Python environments for each project. Think of them like separate apartments -- each project gets its own space with its own furniture.
+Virtual environments solve this. They're isolated Python environments for each project. Think of them like separate apartments - each project gets its own space with its own furniture.
 
 ```bash
 # Create a virtual environment
@@ -3984,7 +3984,7 @@ Then write a Python script that:
 4. Asks if the user wants another quote (loop until they say no)
 5. Bonus: Let the user filter quotes by author
 
-You'll need: `json`, `random`, and file handling (sneak peek of Chapter 12 -- use `open("quotes.json") as f` and `json.load(f)`).
+You'll need: `json`, `random`, and file handling (sneak peek of Chapter 12 - use `open("quotes.json") as f` and `json.load(f)`).
 
 Full solution available at:
 `https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-2-intermediate/chapter-11-modules/`
@@ -4012,7 +4012,7 @@ Let's fix that. This chapter is about making your data *survive*.
 
 ## Writing Files: The with Statement
 
-The safest way to write to a file in Python is the `with` statement. It opens the file, lets you do your thing, and then automatically closes it when you're done -- even if something goes wrong.
+The safest way to write to a file in Python is the `with` statement. It opens the file, lets you do your thing, and then automatically closes it when you're done - even if something goes wrong.
 
 ```python
 # Write to a file
@@ -4023,10 +4023,10 @@ with open("hello.txt", "w") as f:
 ```
 
 Let's break that down:
-- `open("hello.txt", "w")` -- opens (or creates) a file called `hello.txt` in **write** mode
-- `as f` -- gives us a variable `f` to work with (short for "file")
-- `f.write()` -- writes text to the file
-- `\n` -- newline character (hit Enter)
+- `open("hello.txt", "w")` - opens (or creates) a file called `hello.txt` in **write** mode
+- `as f` - gives us a variable `f` to work with (short for "file")
+- `f.write()` - writes text to the file
+- `\n` - newline character (hit Enter)
 
 The `"w"` mode creates the file if it doesn't exist. But be careful: if the file already exists, **it overwrites everything**. It's the nuclear option.
 
@@ -4114,7 +4114,7 @@ Your `app.log` file will look like:
 ## File Modes Cheat Sheet
 
 | Mode | What It Does | Creates File? | Overwrites? |
-|------|-------------|---------------|-------------|
+|---|-------|--------|-------|
 | `"r"` | Read only | No (error if missing) | No |
 | `"w"` | Write only | Yes | Yes (destroys old data!) |
 | `"a"` | Append | Yes | No (adds to end) |
@@ -4196,7 +4196,7 @@ with open("students.csv", "r") as f:
 > **Pro Tip:** `csv.DictReader` is almost always better than `csv.reader`. Instead of accessing columns by index (`row[0]`, `row[1]`), you access them by header name (`row["name"]`, `row["age"]`). It's more readable, and your code won't break if the column order changes.
 
 ```python
-# Method 2: csv.DictReader (gives you dictionaries -- way better)
+# Method 2: csv.DictReader (gives you dictionaries - way better)
 with open("students.csv", "r") as f:
     reader = csv.DictReader(f)
     for row in reader:
@@ -4226,7 +4226,7 @@ with open("students.csv", "w", newline="") as f:
 
 ## JSON Files: The Internet's Favorite Format
 
-You met `json` briefly in Chapter 11. Now let's use it with files. JSON is perfect for storing structured data -- dictionaries, lists, nested data. It's what every web API speaks.
+You met `json` briefly in Chapter 11. Now let's use it with files. JSON is perfect for storing structured data - dictionaries, lists, nested data. It's what every web API speaks.
 
 ```python
 import json
@@ -4287,14 +4287,14 @@ with open("data.json", "w") as f:
 ```
 
 Notice the difference:
-- `json.dump()` / `json.load()` -- work with **files**
-- `json.dumps()` / `json.loads()` -- work with **strings**
+- `json.dump()` / `json.load()` - work with **files**
+- `json.dumps()` / `json.loads()` - work with **strings**
 
 The 's' stands for 'string'. Dump to string, load from string.
 
 ## Practical Example: Settings Manager
 
-Here's a real-world pattern -- loading and saving app settings:
+Here's a real-world pattern - loading and saving app settings:
 
 ```python
 import json
@@ -4352,18 +4352,18 @@ def add_entry():
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
 
     with open(DIARY_FILE, "a") as f:
-        f.write(f"\n--- {timestamp} ---\n")
+        f.write(f"\n-- {timestamp} --\n")
         f.write(f"{entry}\n")
 
     print("Entry saved!")
 
 def read_entries():
-    # Your code here -- read and display the diary file
+    # Your code here - read and display the diary file
     pass
 
 # Main loop
 while True:
-    print("\n--- My Diary ---")
+    print("\n-- My Diary --")
     print("1. New Entry")
     print("2. Read Entries")
     print("3. Quit")
@@ -4382,7 +4382,7 @@ Full solution available at:
 
 ## TL;DR
 
-- **Always use `with open()`** -- it handles closing the file automatically.
+- **Always use `with open()`** - it handles closing the file automatically.
 - **Write mode (`"w"`)** creates or overwrites. **Append mode (`"a"`)** adds without destroying. **Read mode (`"r"`)** is the default.
 - For large files, read **line by line** with a for loop instead of `.read()`.
 - **CSV**: Use `csv.DictReader` and `csv.DictWriter` for readable, maintainable code.
@@ -4396,7 +4396,7 @@ Full solution available at:
 
 > **Sprint 2, Chapter 13** | **Estimated Time: 12-15 minutes** | **Difficulty: Intermediate**
 
-Here's a truth bomb: your code WILL crash. Not might. Will. Every developer in the world writes code that breaks. The difference between a junior and a senior isn't that the senior writes bug-free code -- it's that the senior's code breaks *gracefully*.
+Here's a truth bomb: your code WILL crash. Not might. Will. Every developer in the world writes code that breaks. The difference between a junior and a senior isn't that the senior writes bug-free code - it's that the senior's code breaks *gracefully*.
 
 Think of error handling like a seatbelt. You don't wear a seatbelt because you plan to crash. You wear it because you're not an idiot.
 
@@ -4405,44 +4405,44 @@ Think of error handling like a seatbelt. You don't wear a seatbelt because you p
 Before we learn to catch errors, let's meet the usual suspects. These are the errors you'll see most often, and recognizing them is half the battle.
 
 ```python
-# TypeError -- wrong type for an operation
+# TypeError - wrong type for an operation
 result = "hello" + 5
 # TypeError: can only concatenate str (not "int") to str
 
-# ValueError -- right type, wrong value
+# ValueError - right type, wrong value
 number = int("hello")
 # ValueError: invalid literal for int() with base 10: 'hello'
 
-# KeyError -- dictionary key doesn't exist
+# KeyError - dictionary key doesn't exist
 data = {"name": "Priya"}
 print(data["age"])
 # KeyError: 'age'
 
-# IndexError -- list index out of range
+# IndexError - list index out of range
 colors = ["red", "blue", "green"]
 print(colors[10])
 # IndexError: list index out of range
 
-# NameError -- variable doesn't exist
+# NameError - variable doesn't exist
 print(undefined_variable)
 # NameError: name 'undefined_variable' is not defined
 
-# FileNotFoundError -- file doesn't exist
+# FileNotFoundError - file doesn't exist
 with open("nonexistent.txt") as f:
     content = f.read()
 # FileNotFoundError: [Errno 2] No such file or directory: 'nonexistent.txt'
 
-# ZeroDivisionError -- math says no
+# ZeroDivisionError - math says no
 result = 10 / 0
 # ZeroDivisionError: division by zero
 
-# AttributeError -- object doesn't have that method/property
+# AttributeError - object doesn't have that method/property
 number = 42
 number.upper()
 # AttributeError: 'int' object has no attribute 'upper'
 ```
 
-> **Don't Panic:** Errors aren't failures. They're Python telling you exactly what went wrong and where. Read the last line of the error message first -- it tells you the error type and what happened. Then look at the line number. It's actually being helpful. Like a friend who says "Hey, you have spinach in your teeth" instead of letting you walk around like that.
+> **Don't Panic:** Errors aren't failures. They're Python telling you exactly what went wrong and where. Read the last line of the error message first - it tells you the error type and what happened. Then look at the line number. It's actually being helpful. Like a friend who says "Hey, you have spinach in your teeth" instead of letting you walk around like that.
 
 ## try/except: Your Safety Net
 
@@ -4475,14 +4475,14 @@ except ValueError:
 You should always catch *specific* exceptions when you can.
 
 ```python
-# Good -- specific exceptions
+# Good - specific exceptions
 try:
     data = {"name": "Priya"}
     print(data["age"])
 except KeyError:
     print("Key not found!")
 
-# Okay for quick scripts -- catch multiple specific exceptions
+# Okay for quick scripts - catch multiple specific exceptions
 try:
     value = int(input("Number: "))
     result = 10 / value
@@ -4500,7 +4500,7 @@ except (ValueError, ZeroDivisionError) as e:
     print(f"Something went wrong: {e}")
 ```
 
-Catching the general `Exception` is like using a giant net to catch fish -- sure, you'll catch everything, but you might also catch a boot, a tire, and a very confused turtle.
+Catching the general `Exception` is like using a giant net to catch fish - sure, you'll catch everything, but you might also catch a boot, a tire, and a very confused turtle.
 
 ```python
 # Avoid this unless you have a good reason
@@ -4537,7 +4537,7 @@ finally:
 ```
 
 - **`else`** runs only if the `try` block succeeded. It's the "if everything went well" block.
-- **`finally`** runs no matter what -- exception or no exception. It's the "cleanup" block. Use it for things that must happen regardless: closing connections, saving progress, etc.
+- **`finally`** runs no matter what - exception or no exception. It's the "cleanup" block. Use it for things that must happen regardless: closing connections, saving progress, etc.
 
 ```python
 # Practical example: file handling with full error handling
@@ -4675,7 +4675,7 @@ When errors happen and you're staring at your screen in confusion, try these:
 # TypeError: can't multiply sequence by non-int of type 'str'
 ```
 
-Start from the bottom. `TypeError` -- wrong type. `can't multiply sequence by non-int of type 'str'` -- you're trying to multiply a string. Line 15 in `app.py`. Go fix it.
+Start from the bottom. `TypeError` - wrong type. `can't multiply sequence by non-int of type 'str'` - you're trying to multiply a string. Line 15 in `app.py`. Go fix it.
 
 **2. Print everything.**
 
@@ -4749,7 +4749,7 @@ Full solution available at:
 
 What if I told you that you could replace a 5-line loop with a single line of code? You'd probably say "that sounds either amazing or unreadable." And honestly? You'd be right on both counts.
 
-Welcome to functional programming lite. These tools won't replace everything you've learned -- but they'll give you some seriously elegant shortcuts for common patterns.
+Welcome to functional programming lite. These tools won't replace everything you've learned - but they'll give you some seriously elegant shortcuts for common patterns.
 
 > **Don't Panic:** This chapter looks fancy, but it's really just shortcuts for things you already know how to do with loops. If `map()` and `filter()` confuse you, you can always fall back to a regular for loop. Nobody will judge you. (Okay, some people on Reddit might. But ignore those people.)
 
@@ -4769,7 +4769,7 @@ double = lambda x: x * 2
 print(double(5))   # 10
 ```
 
-The syntax is: `lambda parameters: expression`. No `def`, no name, no `return` -- the expression IS the return value.
+The syntax is: `lambda parameters: expression`. No `def`, no name, no `return` - the expression IS the return value.
 
 ```python
 # One parameter
@@ -4786,7 +4786,7 @@ print(grade(75))    # Pass
 print(grade(45))    # Fail
 ```
 
-Now, here's the thing: storing a lambda in a variable kind of defeats the purpose. If you're going to name it, just write a regular function -- it's more readable. Lambdas shine when you use them *inline*, as throwaway functions passed to other functions.
+Now, here's the thing: storing a lambda in a variable kind of defeats the purpose. If you're going to name it, just write a regular function - it's more readable. Lambdas shine when you use them *inline*, as throwaway functions passed to other functions.
 
 ```python
 # This is where lambdas actually make sense
@@ -4825,7 +4825,7 @@ squared = list(map(lambda x: x ** 2, numbers))
 print(squared)   # [1, 4, 9, 16, 25]
 ```
 
-`map(function, iterable)` returns a map object (lazy -- doesn't compute until needed). Wrap it in `list()` to see the results.
+`map(function, iterable)` returns a map object (lazy - doesn't compute until needed). Wrap it in `list()` to see the results.
 
 More practical examples:
 
@@ -4854,7 +4854,7 @@ discounted = list(map(lambda p: round(p * 0.9, 2), prices))
 print(discounted)   # [899.1, 26.1, 71.1]
 ```
 
-Notice how `map(int, str_numbers)` doesn't need a lambda -- `int` is already a function that takes one argument. When the function already exists, just pass it directly.
+Notice how `map(int, str_numbers)` doesn't need a lambda - `int` is already a function that takes one argument. When the function already exists, just pass it directly.
 
 ## filter(): Keep Only the Good Stuff
 
@@ -4900,7 +4900,7 @@ passing = list(filter(lambda s: s >= 60, scores))
 print(passing)   # [78, 92, 67, 88, 95]
 ```
 
-The `filter(None, words)` trick filters out anything "falsy" -- empty strings, `0`, `None`, `False`, etc. Handy for cleaning data.
+The `filter(None, words)` trick filters out anything "falsy" - empty strings, `0`, `None`, `False`, etc. Handy for cleaning data.
 
 ## Combining map() and filter()
 
@@ -4938,7 +4938,7 @@ We'll talk about when to use which in a moment.
 
 `reduce()` takes a list and boils it down to a single value. It applies a function to the first two items, then applies the function to the result and the third item, and so on until there's only one value left.
 
-Unlike `map` and `filter`, `reduce` isn't built-in -- you have to import it.
+Unlike `map` and `filter`, `reduce` isn't built-in - you have to import it.
 
 ```python
 from functools import reduce
@@ -5011,7 +5011,7 @@ print(result)   # [4, 16, 36, 64, 100]
 **My honest recommendation:**
 
 | Situation | Use |
-|-----------|-----|
+|------|---|
 | Simple transformation | List comprehension |
 | Simple filtering | List comprehension |
 | Both together | List comprehension |
@@ -5145,7 +5145,7 @@ That's a serious level-up. Time to prove it.
 
 ## What You're Building
 
-An **Expense Tracker** that runs in the terminal. It lets you add expenses, view them by category, see spending summaries, and -- here's the important part -- it saves everything to a CSV file so your data survives between sessions.
+An **Expense Tracker** that runs in the terminal. It lets you add expenses, view them by category, see spending summaries, and - here's the important part - it saves everything to a CSV file so your data survives between sessions.
 
 This isn't a toy. This is a tool you could actually use. (Or at least show off in an interview.)
 
@@ -5161,7 +5161,7 @@ This isn't a toy. This is a tool you could actually use. (Or at least show off i
 ### Skills You'll Use
 
 | Feature | Chapter |
-|---------|---------|
+|-----|-----|
 | Storing expense data as dictionaries | Chapter 9 - Dictionaries |
 | Organizing code into reusable functions | Chapter 10 - Functions |
 | Using `csv`, `datetime`, and `os` modules | Chapter 11 - Modules |
@@ -5266,7 +5266,7 @@ def get_category():
 ```python
 def add_expense(expenses):
     """Add a new expense to the list."""
-    print("\n--- Add Expense ---")
+    print("\n-- Add Expense --")
 
     amount = get_amount("Amount: $")
     category = get_category()
@@ -5318,7 +5318,7 @@ def view_by_category(expenses):
         print(f"\nNo expenses in {category}.")
         return
 
-    print(f"\n--- {category} Expenses ---")
+    print(f"\n-- {category} Expenses --")
     for e in filtered:
         print(f"  {e['date']} - ${e['amount']:.2f} - {e['description']}")
 
@@ -5335,7 +5335,7 @@ def spending_summary(expenses):
         print("\nNo expenses recorded yet.")
         return
 
-    print("\n--- Spending Summary ---")
+    print("\n-- Spending Summary --")
 
     # Group expenses by category
     category_totals = {}
@@ -5367,7 +5367,7 @@ def main():
     print("=" * 40)
 
     while True:
-        print("\n--- Menu ---")
+        print("\n-- Menu --")
         print("1. Add Expense")
         print("2. View All Expenses")
         print("3. View by Category")
@@ -5403,17 +5403,17 @@ Save the file and run it:
 python expense_tracker.py
 ```
 
-Try adding a few expenses, viewing them, checking the summary. Close the program and run it again -- your expenses are still there because they're saved to `expenses.csv`.
+Try adding a few expenses, viewing them, checking the summary. Close the program and run it again - your expenses are still there because they're saved to `expenses.csv`.
 
 ## Challenge Upgrades
 
 If you breezed through the basic version, try these enhancements:
 
-1. **Delete an expense** -- Show numbered expenses and let the user pick one to remove
-2. **Monthly report** -- Filter expenses by month and show monthly totals
-3. **Budget limits** -- Set a budget per category and warn when approaching the limit
-4. **Export summary** -- Save the spending summary to a separate text file
-5. **JSON storage** -- Replace CSV with JSON for more flexible data storage
+1. **Delete an expense** - Show numbered expenses and let the user pick one to remove
+2. **Monthly report** - Filter expenses by month and show monthly totals
+3. **Budget limits** - Set a budget per category and warn when approaching the limit
+4. **Export summary** - Save the spending summary to a separate text file
+5. **JSON storage** - Replace CSV with JSON for more flexible data storage
 
 ## The Full Code
 
@@ -5421,15 +5421,15 @@ The complete, working expense tracker is available at:
 `https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-2-intermediate/sprint-2-checkpoint-expense-tracker/`
 
 The repo includes:
-- `expense_tracker.py` -- The complete solution
-- `expense_tracker_starter.py` -- A skeleton with function signatures and comments
-- `sample_expenses.csv` -- Sample data to test with
+- `expense_tracker.py` - The complete solution
+- `expense_tracker_starter.py` - A skeleton with function signatures and comments
+- `sample_expenses.csv` - Sample data to test with
 
 ## What's Next: Sprint 3
 
-You've just built a real application. It has a menu system, file persistence, error handling, and organized code. That's not a tutorial exercise -- that's a project.
+You've just built a real application. It has a menu system, file persistence, error handling, and organized code. That's not a tutorial exercise - that's a project.
 
-Sprint 3 is where things get *really* interesting. You're going to learn **Object-Oriented Programming** -- the paradigm that powers everything from video games to web apps to AI systems. You'll learn about classes, objects, inheritance, and all the patterns that make large-scale software possible.
+Sprint 3 is where things get *really* interesting. You're going to learn **Object-Oriented Programming** - the paradigm that powers everything from video games to web apps to AI systems. You'll learn about classes, objects, inheritance, and all the patterns that make large-scale software possible.
 
 You'll build a **Library Management System** that puts all of it together.
 
@@ -5439,7 +5439,7 @@ See you in Sprint 3.
 
 ---
 
-# Welcome to Sprint 3: Object-Oriented -- Think in Objects
+# Welcome to Sprint 3: Object-Oriented - Think in Objects
 
 > **Chapters 15-18** | **Estimated Time: 2-3 hours** | **Difficulty: Intermediate-Advanced**
 
@@ -5455,16 +5455,16 @@ You'll create a `Pizza` class, give it toppings and a price, teach it to calcula
 
 ## What's Coming
 
-- **Chapter 15:** Classes & objects -- building your own types
-- **Chapter 16:** Inheritance -- passing down traits from parent to child
-- **Chapter 17:** Magic methods -- making your objects work with `+`, `print()`, and more
-- **Chapter 18:** Encapsulation, polymorphism & design principles -- thinking like an architect
+- **Chapter 15:** Classes & objects - building your own types
+- **Chapter 16:** Inheritance - passing down traits from parent to child
+- **Chapter 17:** Magic methods - making your objects work with `+`, `print()`, and more
+- **Chapter 18:** Encapsulation, polymorphism & design principles - thinking like an architect
 
 ## The Sprint 3 Project: Library Management System
 
 You'll build a full **Library Management System** with `Book`, `Member`, and `Library` classes, complete with JSON file persistence. Real OOP. Real data. Real satisfying.
 
-Here's the thing: if you made it through Sprint 2 -- functions, file handling, error handling, lambdas -- you already have every tool you need. OOP is just a new way of *organizing* those tools. It's not harder. It's just different.
+Here's the thing: if you made it through Sprint 2 - functions, file handling, error handling, lambdas - you already have every tool you need. OOP is just a new way of *organizing* those tools. It's not harder. It's just different.
 
 And different is good. Different is how you level up.
 
@@ -5472,11 +5472,11 @@ Let's think in objects.
 
 ---
 
-# Chapter 15: Classes & Objects -- Building Your Own Types
+# Chapter 15: Classes & Objects - Building Your Own Types
 
 > **Sprint 3** | **10 min read** | **Code: [github link](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-3-oop/chapter-15-classes-and-objects/)**
 
-Imagine you're opening a pizza shop. You need to track each pizza -- its size, toppings, price. You *could* use a dictionary for each pizza:
+Imagine you're opening a pizza shop. You need to track each pizza - its size, toppings, price. You *could* use a dictionary for each pizza:
 
 ```python
 pizza1 = {"size": "large", "toppings": ["pepperoni", "mushrooms"], "price": 15.99}
@@ -5493,14 +5493,14 @@ There is. It's called a **class**.
 
 - Why OOP matters (and why every app you use relies on it)
 - How to define a class and create objects
-- The `__init__` method -- the automatic setup function
-- `self` -- demystified, once and for all
+- The `__init__` method - the automatic setup function
+- `self` - demystified, once and for all
 - Class vs instance attributes
-- Methods -- things your object can do
+- Methods - things your object can do
 
 ## Why Should I Care?
 
-Every app, game, and website you use is built with OOP. That Instagram post you liked? An object. That Spotify song in your queue? An object. That Uber ride you took? Also an object -- with attributes like `driver`, `pickup_location`, `fare`, and methods like `cancel()` and `rate_driver()`.
+Every app, game, and website you use is built with OOP. That Instagram post you liked? An object. That Spotify song in your queue? An object. That Uber ride you took? Also an object - with attributes like `driver`, `pickup_location`, `fare`, and methods like `cancel()` and `rate_driver()`.
 
 OOP isn't some academic exercise. It's the way professional software is actually built. And once you get it, you'll never want to go back to juggling loose variables and random functions.
 
@@ -5508,7 +5508,7 @@ OOP isn't some academic exercise. It's the way professional software is actually
 
 Here's the core idea, and it's simpler than you think:
 
-- A **class** is a recipe. It describes *what a pizza is* -- it has a size, toppings, and a price.
+- A **class** is a recipe. It describes *what a pizza is* - it has a size, toppings, and a price.
 - An **object** is an actual pizza. Made from the recipe, sitting on the counter, ready to eat.
 
 One recipe, infinite pizzas. One class, infinite objects.
@@ -5534,21 +5534,21 @@ print(your_pizza.toppings)  # ['margherita']
 
 Let's break this down piece by piece.
 
-### `class Pizza:` -- The Recipe
+### `class Pizza:` - The Recipe
 
 This line says "I'm defining a new type called Pizza." By convention, class names use **CamelCase** (capital first letter of each word). Not `pizza`, not `PIZZA`, not `my_pizza_class`. Just `Pizza`.
 
-### `__init__` -- The Setup Function
+### `__init__` - The Setup Function
 
 ```python
 def __init__(self, size, toppings, price):
 ```
 
-This is the **initializer** (some people call it the constructor). It runs automatically every time you create a new Pizza object. You never call `__init__` directly -- Python calls it for you.
+This is the **initializer** (some people call it the constructor). It runs automatically every time you create a new Pizza object. You never call `__init__` directly - Python calls it for you.
 
-Think of it like the moment the pizza comes out of the oven. The second it exists, it *already* has a size, toppings, and a price. That's what `__init__` does -- it sets up the object the instant it's born.
+Think of it like the moment the pizza comes out of the oven. The second it exists, it *already* has a size, toppings, and a price. That's what `__init__` does - it sets up the object the instant it's born.
 
-### `self` -- The Most Confusing Word in Python
+### `self` - The Most Confusing Word in Python
 
 Okay, let's talk about `self`. It trips up literally everyone. Here's the simple version:
 
@@ -5566,7 +5566,7 @@ class Pizza:
         self.price = price        # THIS pizza's price
 ```
 
-> **Don't Panic:** If `self` confuses you, you're in excellent company. It confuses *everyone* at first. Seriously -- there are thousands of Stack Overflow questions about it. Just remember: **self = "this specific object."** Use it, and one day it'll click. Promise.
+> **Don't Panic:** If `self` confuses you, you're in excellent company. It confuses *everyone* at first. Seriously - there are thousands of Stack Overflow questions about it. Just remember: **self = "this specific object."** Use it, and one day it'll click. Promise.
 
 ### Why Do We Need `self`?
 
@@ -5583,9 +5583,9 @@ print(veggie.size)     # small
 
 `self` is what keeps them separate. Without it, Python would have no idea whose `size` you mean.
 
-## Methods -- Things Your Object Can Do
+## Methods - Things Your Object Can Do
 
-A class isn't just data storage. The whole point is that objects can *do stuff*. Those actions are called **methods** -- they're just functions that live inside a class.
+A class isn't just data storage. The whole point is that objects can *do stuff*. Those actions are called **methods** - they're just functions that live inside a class.
 
 ```python
 class Pizza:
@@ -5596,7 +5596,7 @@ class Pizza:
 
     def describe(self):
         topping_list = ", ".join(self.toppings)
-        return f"{self.size} pizza with {topping_list} -- ${self.price}"
+        return f"{self.size} pizza with {topping_list} - ${self.price}"
 
     def total_with_tax(self, tax_rate=0.08):
         return round(self.price * (1 + tax_rate), 2)
@@ -5610,7 +5610,7 @@ class Pizza:
 my_pizza = Pizza("large", ["pepperoni", "mushrooms"], 15.99)
 
 print(my_pizza.describe())
-# large pizza with pepperoni, mushrooms -- $15.99
+# large pizza with pepperoni, mushrooms - $15.99
 
 print(my_pizza.total_with_tax())
 # 17.27
@@ -5633,11 +5633,11 @@ There are two kinds of attributes:
 
 ```python
 class Pizza:
-    restaurant = "Py's Pizzeria"  # Class attribute -- same for ALL pizzas
-    total_pizzas_made = 0         # Class attribute -- shared counter
+    restaurant = "Py's Pizzeria"  # Class attribute - same for ALL pizzas
+    total_pizzas_made = 0         # Class attribute - shared counter
 
     def __init__(self, size, toppings, price):
-        self.size = size           # Instance attribute -- unique per pizza
+        self.size = size           # Instance attribute - unique per pizza
         self.toppings = toppings   # Instance attribute
         self.price = price         # Instance attribute
         Pizza.total_pizzas_made += 1
@@ -5674,7 +5674,7 @@ class Pizza:
 
     def describe(self):
         topping_list = ", ".join(self.toppings) if self.toppings else "just cheese"
-        return f"{self.size.title()} pizza with {topping_list} -- ${self.price:.2f}"
+        return f"{self.size.title()} pizza with {topping_list} - ${self.price:.2f}"
 
     def total_with_tax(self, tax_rate=0.08):
         return round(self.price * (1 + tax_rate), 2)
@@ -5703,11 +5703,11 @@ Output:
 
 ```
 Order from Py's Pizzeria
-----------------------------------------
-Large pizza with pepperoni, mushrooms -- $17.99
-Small pizza with just cheese -- $8.99
-Medium pizza with olives, onions, peppers -- $16.49
-----------------------------------------
+--------------------
+Large pizza with pepperoni, mushrooms - $17.99
+Small pizza with just cheese - $8.99
+Medium pizza with olives, onions, peppers - $16.49
+--------------------
 Total (with tax): $46.95
 ```
 
@@ -5718,7 +5718,7 @@ Look at that. Clean, organized, and each pizza knows how to describe itself and 
 **Forgetting `self` in method definitions:**
 
 ```python
-# WRONG -- will crash
+# WRONG - will crash
 class Pizza:
     def describe():  # Missing self!
         return f"{self.size} pizza"
@@ -5732,7 +5732,7 @@ class Pizza:
 **Forgetting `self` when accessing attributes:**
 
 ```python
-# WRONG -- will crash
+# WRONG - will crash
 def describe(self):
     return f"{size} pizza"  # What's 'size'? Python doesn't know
 
@@ -5744,11 +5744,11 @@ def describe(self):
 **Using the class name instead of `self`:**
 
 ```python
-# WRONG (usually) -- this changes it for ALL pizzas
+# WRONG (usually) - this changes it for ALL pizzas
 def apply_discount(self):
     Pizza.price = Pizza.price * 0.9
 
-# RIGHT -- changes it for THIS pizza
+# RIGHT - changes it for THIS pizza
 def apply_discount(self):
     self.price = self.price * 0.9
 ```
@@ -5770,16 +5770,16 @@ Create at least two Dog objects and call all their methods.
 ## TL;DR
 
 - A **class** is a blueprint/recipe. An **object** is a thing made from that blueprint
-- `__init__` runs automatically when you create an object -- it sets up the initial data
-- `self` means "this specific object" -- it's how each object keeps its own data separate
+- `__init__` runs automatically when you create an object - it sets up the initial data
+- `self` means "this specific object" - it's how each object keeps its own data separate
 - **Instance attributes** (`self.x`) are unique to each object. **Class attributes** are shared by all objects
-- **Methods** are functions inside a class -- they define what an object can *do*
+- **Methods** are functions inside a class - they define what an object can *do*
 - OOP = data + behavior, bundled together. It's a dictionary that can do things
 - If `self` is still confusing, keep going. It clicks with practice. Everyone gets there eventually
 
 ---
 
-# Chapter 16: Inheritance -- Passing Down the Family Traits
+# Chapter 16: Inheritance - Passing Down the Family Traits
 
 > **Sprint 3** | **10 min read** | **Code: [github link](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-3-oop/chapter-16-inheritance/)**
 
@@ -5792,9 +5792,9 @@ In Python, classes can inherit too. And honestly? It's one of the most useful tr
 - Why inheritance saves you from copy-paste nightmares
 - How to create parent and child classes
 - What gets inherited (spoiler: everything)
-- How to override methods -- doing it YOUR way
-- `super()` -- calling your parent class for help
-- `isinstance()` -- checking the family tree
+- How to override methods - doing it YOUR way
+- `super()` - calling your parent class for help
+- `isinstance()` - checking the family tree
 - A brief, responsible look at multiple inheritance
 
 ## Why Should I Care?
@@ -5807,11 +5807,11 @@ Every major framework uses this. Django models? Inheritance. Flask views? Inheri
 
 ## The Basics: Parent and Child
 
-Let's go back to the pizza shop. We have a `Pizza` class, but now we want to add specialty pizzas -- a `DeepDish` and a `ThinCrust`. They're both pizzas, but with some differences.
+Let's go back to the pizza shop. We have a `Pizza` class, but now we want to add specialty pizzas - a `DeepDish` and a `ThinCrust`. They're both pizzas, but with some differences.
 
 ```python
 class Pizza:
-    """The parent class -- the original recipe."""
+    """The parent class - the original recipe."""
 
     def __init__(self, size, toppings):
         self.size = size
@@ -5825,7 +5825,7 @@ class Pizza:
         return 15  # minutes
 ```
 
-Now, a `DeepDish` is a pizza -- it has a size and toppings -- but it takes longer to bake and has a thicker crust. Instead of rewriting everything, we **inherit**:
+Now, a `DeepDish` is a pizza - it has a size and toppings - but it takes longer to bake and has a thicker crust. Instead of rewriting everything, we **inherit**:
 
 ```python
 class DeepDish(Pizza):
@@ -5852,7 +5852,7 @@ print(regular.bake_time())    # 15
 print(chunky_boi.bake_time())  # 25
 ```
 
-Look at what happened. `DeepDish` never defined `__init__`. It didn't need to -- it inherited it from `Pizza`. It automatically has `size` and `toppings`. It just overrode the methods it wanted to change.
+Look at what happened. `DeepDish` never defined `__init__`. It didn't need to - it inherited it from `Pizza`. It automatically has `size` and `toppings`. It just overrode the methods it wanted to change.
 
 That's inheritance in a nutshell: **get everything from your parent, change only what you need.**
 
@@ -5862,7 +5862,7 @@ Everything. Methods, attributes, the whole package. A child class is a copy of t
 
 ```python
 class ThinCrust(Pizza):
-    pass  # Literally no changes -- it's identical to Pizza
+    pass  # Literally no changes - it's identical to Pizza
 ```
 
 ```python
@@ -5873,9 +5873,9 @@ print(skinny.bake_time())    # 15
 
 `ThinCrust` does nothing of its own, but it works perfectly. It got *everything* from `Pizza`. The `pass` keyword just means "nothing to add here."
 
-> **Don't Panic:** Inheritance is just one class borrowing from another. That's it. If you understood functions -- how one function can call another -- you can understand this. A child class just *starts with* everything its parent has.
+> **Don't Panic:** Inheritance is just one class borrowing from another. That's it. If you understood functions - how one function can call another - you can understand this. A child class just *starts with* everything its parent has.
 
-## Overriding Methods -- Doing It YOUR Way
+## Overriding Methods - Doing It YOUR Way
 
 When a child class defines a method with the same name as the parent, it **overrides** (replaces) the parent's version:
 
@@ -5889,11 +5889,11 @@ class DeepDish(Pizza):
         return 25  # Overrides the parent's bake_time
 ```
 
-When you call `deep_dish.bake_time()`, Python checks the child first. If it finds the method there, it uses it. If not, it goes up to the parent. It's like asking a teenager a question -- they'll give their own answer if they have one, otherwise they'll go ask their parents.
+When you call `deep_dish.bake_time()`, Python checks the child first. If it finds the method there, it uses it. If not, it goes up to the parent. It's like asking a teenager a question - they'll give their own answer if they have one, otherwise they'll go ask their parents.
 
-## `super()` -- Calling Mom for Help
+## `super()` - Calling Mom for Help
 
-Sometimes you don't want to completely replace the parent's method. You want to *extend* it -- do everything the parent does, plus a little extra. That's where `super()` comes in.
+Sometimes you don't want to completely replace the parent's method. You want to *extend* it - do everything the parent does, plus a little extra. That's where `super()` comes in.
 
 ```python
 class Pizza:
@@ -5945,7 +5945,7 @@ class User:
 
     def display(self):
         status = "Active" if self.is_active else "Inactive"
-        return f"{self.username} ({self.email}) -- {status}"
+        return f"{self.username} ({self.email}) - {status}"
 
 
 class AdminUser(User):
@@ -5980,24 +5980,24 @@ admin = AdminUser("admin_bob", "bob@email.com")
 premium = PremiumUser("charlie", "charlie@email.com", "yearly")
 
 print(alice.display())
-# alice (alice@email.com) -- Active
+# alice (alice@email.com) - Active
 
 print(admin.display())
-# admin_bob (bob@email.com) -- Active [ADMIN: full]
+# admin_bob (bob@email.com) - Active [ADMIN: full]
 
 print(admin.ban_user(alice))
 # alice has been banned by admin_bob
 
 print(alice.display())
-# alice (alice@email.com) -- Inactive
+# alice (alice@email.com) - Inactive
 
 print(premium.display())
-# charlie (charlie@email.com) -- Active [Premium: yearly]
+# charlie (charlie@email.com) - Active [Premium: yearly]
 ```
 
 Three user types, shared login logic, each with their own special powers. That's inheritance doing what it does best.
 
-## `isinstance()` -- Checking the Family Tree
+## `isinstance()` - Checking the Family Tree
 
 Sometimes you need to check what type an object is. Maybe you want to verify someone is an admin before letting them ban people:
 
@@ -6019,7 +6019,7 @@ print(perform_admin_action(admin, alice))   # alice has been banned by admin_bob
 print(perform_admin_action(premium, alice))  # Permission denied. Nice try though.
 ```
 
-## Multiple Inheritance -- A Brief Warning
+## Multiple Inheritance - A Brief Warning
 
 Python lets a class inherit from *multiple* parents:
 
@@ -6032,7 +6032,7 @@ This is legal Python. A `FlyingCar` gets everything from both `Car` and `Airplan
 
 It is. Until `Car` and `Airplane` both have a `fuel_level` attribute and a `start_engine()` method that work differently. Then Python has to figure out which one to use, and things get confusing fast.
 
-> **Pro Tip:** Multiple inheritance is like dual-wielding swords. Looks amazing in movies. In practice, you'll probably stab yourself. Stick with single inheritance until you have a really good reason not to. When you see it in the wild, it's usually with **mixins** -- small, focused classes that add one specific feature. That's the safe way to do it.
+> **Pro Tip:** Multiple inheritance is like dual-wielding swords. Looks amazing in movies. In practice, you'll probably stab yourself. Stick with single inheritance until you have a really good reason not to. When you see it in the wild, it's usually with **mixins** - small, focused classes that add one specific feature. That's the safe way to do it.
 
 We won't dive deeper into multiple inheritance here. Just know it exists, and that most Python developers use it sparingly and carefully.
 
@@ -6062,11 +6062,11 @@ Build a vehicle hierarchy:
 ## TL;DR
 
 - **Inheritance** lets a child class get all the methods and attributes of a parent class for free
-- Syntax: `class Child(Parent):` -- that's it, the parentheses do all the work
+- Syntax: `class Child(Parent):` - that's it, the parentheses do all the work
 - Children can **override** methods to change behavior
-- `super()` calls the parent's version of a method -- use it when you want to extend, not replace
+- `super()` calls the parent's version of a method - use it when you want to extend, not replace
 - `isinstance(obj, ClassName)` checks if an object belongs to a class (or its parents)
-- **Multiple inheritance** exists but use it carefully -- stick with single inheritance for now
+- **Multiple inheritance** exists but use it carefully - stick with single inheritance for now
 - Inheritance = "write the common stuff once, specialize as needed." Less copy-paste, fewer bugs, happier developer
 
 ---
@@ -6082,10 +6082,10 @@ That's magic methods. And yes, they really do feel like magic.
 ## What You'll Learn
 
 - What magic methods are (and why they have those weird double underscores)
-- `__str__` and `__repr__` -- making your objects printable
-- `__len__` and `__getitem__` -- making objects act like lists
-- `__add__` and `__eq__` -- custom math and comparisons
-- `__lt__`, `__gt__` -- who's bigger?
+- `__str__` and `__repr__` - making your objects printable
+- `__len__` and `__getitem__` - making objects act like lists
+- `__add__` and `__eq__` - custom math and comparisons
+- `__lt__`, `__gt__` - who's bigger?
 - A taste of `__enter__` and `__exit__` (context managers)
 
 ## Why Should I Care?
@@ -6100,12 +6100,12 @@ If you want your objects to feel like first-class Python citizens instead of awk
 
 ## What Are Magic Methods?
 
-Magic methods (also called **dunder methods**, short for "double underscore") are special methods that Python calls automatically in certain situations. You've already met one -- `__init__`, which runs when you create an object.
+Magic methods (also called **dunder methods**, short for "double underscore") are special methods that Python calls automatically in certain situations. You've already met one - `__init__`, which runs when you create an object.
 
 Here's the pattern: when you write normal Python syntax, Python translates it into magic method calls:
 
 | You Write | Python Calls |
-|-----------|-------------|
+|------|-------|
 | `len(obj)` | `obj.__len__()` |
 | `print(obj)` | `obj.__str__()` |
 | `obj1 + obj2` | `obj1.__add__(obj2)` |
@@ -6117,7 +6117,7 @@ That's the whole trick. There's no actual "magic." Python sees `+` and calls `__
 
 > **Don't Panic:** The double underscores look intimidating, but these are just regular methods with funny names. You define them exactly like any other method. The only difference is that Python calls them automatically when you use certain syntax.
 
-## `__str__` and `__repr__` -- Making Objects Printable
+## `__str__` and `__repr__` - Making Objects Printable
 
 Right now, if you print a custom object, you get garbage:
 
@@ -6155,12 +6155,12 @@ print(repr(p))  # Pizza('large', ['pepperoni', 'mushrooms'])
 ```
 
 The difference:
-- **`__str__`** is the "pretty" version -- what users see. Called by `print()` and `str()`.
-- **`__repr__`** is the "developer" version -- what you'd type to recreate the object. Called in the REPL and by `repr()`.
+- **`__str__`** is the "pretty" version - what users see. Called by `print()` and `str()`.
+- **`__repr__`** is the "developer" version - what you'd type to recreate the object. Called in the REPL and by `repr()`.
 
-**Rule of thumb:** `__str__` is for humans. `__repr__` is for developers. If you only implement one, make it `__repr__` -- Python falls back to it when `__str__` isn't defined.
+**Rule of thumb:** `__str__` is for humans. `__repr__` is for developers. If you only implement one, make it `__repr__` - Python falls back to it when `__str__` isn't defined.
 
-## `__len__` and `__getitem__` -- Acting Like a List
+## `__len__` and `__getitem__` - Acting Like a List
 
 Want your object to work with `len()` and square brackets? Easy:
 
@@ -6201,7 +6201,7 @@ for song in rock:
 
 By implementing `__getitem__`, your Playlist magically works with `for` loops too. Python sees `__getitem__` and thinks "oh, I can iterate over this by calling `[0]`, `[1]`, `[2]`..." Pretty neat.
 
-## `__add__` and `__eq__` -- Custom Math and Comparisons
+## `__add__` and `__eq__` - Custom Math and Comparisons
 
 This is where it gets fun. Let's build a `Money` class that actually understands addition and equality:
 
@@ -6259,7 +6259,7 @@ The `+ ` operator isn't just for numbers anymore. *Your* objects understand it. 
 
 When you return `NotImplemented` (note: not the *exception* `NotImplementedError`, just the value `NotImplemented`), you're telling Python: "I don't know how to handle this." Python will then try the *other* object's method. It's a polite way of saying "not my problem."
 
-## `__lt__`, `__gt__` -- Who's Bigger?
+## `__lt__`, `__gt__` - Who's Bigger?
 
 Want to sort your objects? You need comparison methods:
 
@@ -6326,14 +6326,14 @@ class Money:
     # __gt__, __le__, __ge__ are auto-generated!
 ```
 
-## `__enter__` and `__exit__` -- Context Managers (Quick Taste)
+## `__enter__` and `__exit__` - Context Managers (Quick Taste)
 
 Remember `with open("file.txt") as f:`? That `with` block calls two magic methods:
 
-- `__enter__` -- runs when you enter the `with` block
-- `__exit__` -- runs when you leave it (even if there's an error)
+- `__enter__` - runs when you enter the `with` block
+- `__exit__` - runs when you leave it (even if there's an error)
 
-Here's a quick example -- a timer that measures how long a block of code takes:
+Here's a quick example - a timer that measures how long a block of code takes:
 
 ```python
 import time
@@ -6359,14 +6359,14 @@ with Timer():
 # Elapsed: 0.0312 seconds
 ```
 
-The `with` block guarantees `__exit__` runs no matter what, even if your code throws an error. That's why `with open(...)` is so reliable -- it always closes the file. We'll see more of this pattern in later chapters, but now you know the secret: it's just two magic methods.
+The `with` block guarantees `__exit__` runs no matter what, even if your code throws an error. That's why `with open(...)` is so reliable - it always closes the file. We'll see more of this pattern in later chapters, but now you know the secret: it's just two magic methods.
 
 ## The Full Magic Method Cheat Sheet
 
 Here are the ones you'll use most often:
 
 | Method | Triggered By | Purpose |
-|--------|-------------|---------|
+|----|-------|-----|
 | `__init__` | `MyClass()` | Set up the object |
 | `__str__` | `print(obj)`, `str(obj)` | Human-readable string |
 | `__repr__` | REPL, `repr(obj)` | Developer-readable string |
@@ -6391,15 +6391,15 @@ You don't need to memorize this. Bookmark it. Come back when you need one.
 
 Build a complete `Money` class with the following:
 
-1. `__init__(self, amount, currency="USD")` -- store amount (rounded to 2 decimals) and currency
-2. `__str__` -- display as `$10.99` (use proper symbol for USD, EUR, GBP)
-3. `__repr__` -- display as `Money(10.99, 'USD')`
-4. `__add__` -- add two Money objects (same currency only) or add a number
-5. `__sub__` -- subtract Money objects or numbers
-6. `__eq__` -- check if two Money objects are equal (same amount AND currency)
-7. `__lt__` and `__gt__` -- compare amounts (same currency only)
-8. `__mul__` -- multiply by a number (useful for tax: `price * 1.08`)
-9. `__bool__` -- `Money(0)` is falsy, anything else is truthy
+1. `__init__(self, amount, currency="USD")` - store amount (rounded to 2 decimals) and currency
+2. `__str__` - display as `$10.99` (use proper symbol for USD, EUR, GBP)
+3. `__repr__` - display as `Money(10.99, 'USD')`
+4. `__add__` - add two Money objects (same currency only) or add a number
+5. `__sub__` - subtract Money objects or numbers
+6. `__eq__` - check if two Money objects are equal (same amount AND currency)
+7. `__lt__` and `__gt__` - compare amounts (same currency only)
+8. `__mul__` - multiply by a number (useful for tax: `price * 1.08`)
+9. `__bool__` - `Money(0)` is falsy, anything else is truthy
 
 Test it:
 
@@ -6427,7 +6427,7 @@ print(f"Is free? {not final}")
 - `__len__` and `__getitem__` make your objects work with `len()` and `[]`
 - `__enter__` and `__exit__` power the `with` statement
 - Return `NotImplemented` (not `NotImplementedError`) when your method can't handle the other type
-- You've been using magic methods since Chapter 1 -- `print()`, `len()`, `+`, `for` loops all rely on them
+- You've been using magic methods since Chapter 1 - `print()`, `len()`, `+`, `for` loops all rely on them
 - The double underscores look scary but they're just regular methods that Python happens to call automatically
 
 ---
@@ -6438,14 +6438,14 @@ print(f"Is free? {not final}")
 
 Welcome to the chapter where you go from "I can write classes" to "I can *design systems*." This is the difference between knowing how to cook and being a chef. Between playing guitar chords and writing a song. Between stacking LEGO bricks and building the Millennium Falcon.
 
-The concepts in this chapter have fancy names -- encapsulation, polymorphism, composition, SOLID. They sound like a university lecture. But they're actually just common-sense ideas with expensive vocabulary. And once you know them, you'll write code that's genuinely easier to change, test, and explain.
+The concepts in this chapter have fancy names - encapsulation, polymorphism, composition, SOLID. They sound like a university lecture. But they're actually just common-sense ideas with expensive vocabulary. And once you know them, you'll write code that's genuinely easier to change, test, and explain.
 
 ## What You'll Learn
 
-- Encapsulation -- keeping your object's internals private
-- Polymorphism -- same method name, different behavior
-- Composition vs inheritance -- "has a" vs "is a"
-- The SOLID principles -- simplified, no enterprise jargon
+- Encapsulation - keeping your object's internals private
+- Polymorphism - same method name, different behavior
+- Composition vs inheritance - "has a" vs "is a"
+- The SOLID principles - simplified, no enterprise jargon
 
 ## Why Should I Care?
 
@@ -6453,7 +6453,7 @@ Two reasons. First, job interviews love these concepts. If someone asks "explain
 
 But more importantly: these principles prevent your code from turning into an unmaintainable mess. You know that codebase at work that nobody wants to touch? The one where changing one thing breaks three other things? It probably ignored every concept in this chapter. These ideas exist because developers learned the hard way what happens without them.
 
-## Encapsulation -- Keep Your Internals Private
+## Encapsulation - Keep Your Internals Private
 
 Encapsulation means "don't let the outside world mess with your object's guts." It's like a restaurant kitchen: you order food (public interface), but you don't walk into the kitchen and start adjusting the oven temperature (internal state).
 
@@ -6462,9 +6462,9 @@ Python doesn't have *true* private attributes like Java or C++. Instead, it uses
 ```python
 class BankAccount:
     def __init__(self, owner, balance):
-        self.owner = owner          # Public -- anyone can see/change this
-        self._account_id = id(self)  # Protected -- "please don't touch" (single underscore)
-        self.__balance = balance     # Private -- "seriously don't touch" (double underscore)
+        self.owner = owner          # Public - anyone can see/change this
+        self._account_id = id(self)  # Protected - "please don't touch" (single underscore)
+        self.__balance = balance     # Private - "seriously don't touch" (double underscore)
 
     def deposit(self, amount):
         if amount <= 0:
@@ -6490,13 +6490,13 @@ class BankAccount:
 ```python
 account = BankAccount("Alice", 1000)
 
-# Public -- works fine
+# Public - works fine
 print(account.owner)  # Alice
 
-# Protected -- works but you SHOULDN'T
+# Protected - works but you SHOULDN'T
 print(account._account_id)  # 140234567890 (works, but it's a hint to stay away)
 
-# Private -- Python mangles the name to prevent access
+# Private - Python mangles the name to prevent access
 # print(account.__balance)  # AttributeError!
 
 # The RIGHT way to interact with balance:
@@ -6510,26 +6510,26 @@ print(account)  # Alice's account: $1300.00
 Here's the cheat sheet:
 
 | Convention | Example | Meaning |
-|-----------|---------|---------|
+|------|-----|-----|
 | `self.name` | Public | Go ahead, use it freely |
 | `self._name` | Protected | "Hey, this is internal. Use at your own risk." |
 | `self.__name` | Private | Python actually renames it to prevent accidental access |
 
-The double underscore triggers **name mangling** -- Python renames `__balance` to `_BankAccount__balance` behind the scenes. You *can* still access it if you really try, but it's Python's way of putting a "DO NOT ENTER" sign on the door.
+The double underscore triggers **name mangling** - Python renames `__balance` to `_BankAccount__balance` behind the scenes. You *can* still access it if you really try, but it's Python's way of putting a "DO NOT ENTER" sign on the door.
 
 > **Don't Panic:** Python's approach to privacy is sometimes called "we're all consenting adults here." It trusts you to respect the conventions rather than enforcing strict rules. A single underscore `_` is usually all you need. Double underscore `__` is for when you really want to prevent subclass name collisions. Don't overuse it.
 
-**Practical rule:** Use single underscore `_` for internal methods and attributes. Use double underscore `__` rarely. Use public attributes when there's no reason to hide them. Python isn't Java -- you don't need getters and setters for everything.
+**Practical rule:** Use single underscore `_` for internal methods and attributes. Use double underscore `__` rarely. Use public attributes when there's no reason to hide them. Python isn't Java - you don't need getters and setters for everything.
 
-## Polymorphism -- Same Name, Different Behavior
+## Polymorphism - Same Name, Different Behavior
 
 Here's the $50 word for a $5 concept.
 
 > **Fun Fact:** "Polymorphism" comes from Greek, meaning "many forms." It's a fancy way of saying "different objects can respond to the same method name in their own way." That's it. That's the whole thing.
 
-You've actually already seen this. When you call `len()` on a string, a list, or a dictionary, each one responds differently -- but the method name is the same. That's polymorphism.
+You've actually already seen this. When you call `len()` on a string, a list, or a dictionary, each one responds differently - but the method name is the same. That's polymorphism.
 
-Let's see it with our own classes. The classic example (sorry, we're using shapes -- it's the law):
+Let's see it with our own classes. The classic example (sorry, we're using shapes - it's the law):
 
 ```python
 class Shape:
@@ -6579,9 +6579,9 @@ for shape in shapes:
 # Triangle: area = 12.00
 ```
 
-One loop, three different classes, one method name. Each shape knows how to calculate its own area. The calling code doesn't care *which* shape it's dealing with -- it just calls `.area()` and gets the right answer.
+One loop, three different classes, one method name. Each shape knows how to calculate its own area. The calling code doesn't care *which* shape it's dealing with - it just calls `.area()` and gets the right answer.
 
-That's polymorphism. You write code that works with the *interface* (all shapes have `.area()`), not the specific type. It makes your code flexible and extensible -- you can add a `Pentagon` class tomorrow without changing the loop.
+That's polymorphism. You write code that works with the *interface* (all shapes have `.area()`), not the specific type. It makes your code flexible and extensible - you can add a `Pentagon` class tomorrow without changing the loop.
 
 ### Polymorphism Without Inheritance
 
@@ -6609,7 +6609,7 @@ for animal in animals:
 
 Python doesn't check if `animal` *is a* certain type. It just checks if `animal` *has* a `speak()` method. If it does, great. If it doesn't, you get an error. This is duck typing, and it's one of Python's superpowers.
 
-## Composition vs Inheritance -- "Has A" vs "Is A"
+## Composition vs Inheritance - "Has A" vs "Is A"
 
 This is one of the most important design decisions in OOP, and getting it wrong leads to tangled, fragile code.
 
@@ -6674,7 +6674,7 @@ print(tesla.start())
 # Tesla Model 3: electric engine started (300 HP)
 ```
 
-Same car class, different engine. That's the power of composition -- your objects are built from interchangeable parts.
+Same car class, different engine. That's the power of composition - your objects are built from interchangeable parts.
 
 ### When to Use Which?
 
@@ -6691,7 +6691,7 @@ Here's a practical guide:
 - The relationship doesn't fit a neat hierarchy
 - You catch yourself creating deep inheritance chains (more than 2-3 levels deep)
 
-**The famous advice:** "Favor composition over inheritance." This doesn't mean never use inheritance. It means when you're not sure, composition is usually the safer bet. Inheritance creates tight coupling -- change the parent, and all children change too. Composition is looser and more flexible.
+**The famous advice:** "Favor composition over inheritance." This doesn't mean never use inheritance. It means when you're not sure, composition is usually the safer bet. Inheritance creates tight coupling - change the parent, and all children change too. Composition is looser and more flexible.
 
 ## Let's Combine Everything
 
@@ -6723,7 +6723,7 @@ class PayPal(PaymentProcessor):
 
 
 class Order:
-    """Uses composition -- an order HAS a payment processor."""
+    """Uses composition - an order HAS a payment processor."""
     def __init__(self, items, payment_method):
         self.items = items
         self._payment = payment_method  # Composition
@@ -6755,19 +6755,19 @@ print(order2.checkout())
 
 Same `Order` class, different payment methods. The order doesn't know or care whether it's dealing with a credit card, PayPal, or crypto. It just calls `.process()`. That's polymorphism and composition working together.
 
-## SOLID Principles -- The Cliff Notes
+## SOLID Principles - The Cliff Notes
 
 SOLID is a set of five design principles that help you write maintainable code. They were originally described for enterprise Java, but the ideas apply everywhere. Here's each one in plain English, no corporate jargon.
 
-**S -- Single Responsibility Principle.** Each class should do one thing. A `User` class manages user data. A `UserValidator` class validates user data. A `UserDatabase` class saves user data. Don't cram it all into one mega-class. If you're describing your class and you need to use the word "and," it probably does too much.
+**S - Single Responsibility Principle.** Each class should do one thing. A `User` class manages user data. A `UserValidator` class validates user data. A `UserDatabase` class saves user data. Don't cram it all into one mega-class. If you're describing your class and you need to use the word "and," it probably does too much.
 
-**O -- Open/Closed Principle.** Your code should be open for extension but closed for modification. Translation: you should be able to add new features without changing existing code. Our payment example nails this -- adding `BitcoinPayment` just means writing a new class. We never touch `Order`, `CreditCard`, or `PayPal`.
+**O - Open/Closed Principle.** Your code should be open for extension but closed for modification. Translation: you should be able to add new features without changing existing code. Our payment example nails this - adding `BitcoinPayment` just means writing a new class. We never touch `Order`, `CreditCard`, or `PayPal`.
 
-**L -- Liskov Substitution Principle.** If you have a function that expects a `Shape`, it should work with any subclass of `Shape` (Circle, Rectangle, Triangle) without breaking. Your child classes shouldn't violate the promises made by the parent. If `Shape.area()` returns a number, `Circle.area()` should too -- not a string, not `None`, not a list of cats.
+**L - Liskov Substitution Principle.** If you have a function that expects a `Shape`, it should work with any subclass of `Shape` (Circle, Rectangle, Triangle) without breaking. Your child classes shouldn't violate the promises made by the parent. If `Shape.area()` returns a number, `Circle.area()` should too - not a string, not `None`, not a list of cats.
 
-**I -- Interface Segregation Principle.** Don't force a class to implement methods it doesn't need. If you have a `Worker` interface with `code()`, `test()`, and `make_coffee()`, your `Developer` class shouldn't be required to implement `make_coffee()`. (Although, let's be honest, most developers *do* make a lot of coffee.) Split big interfaces into smaller, focused ones.
+**I - Interface Segregation Principle.** Don't force a class to implement methods it doesn't need. If you have a `Worker` interface with `code()`, `test()`, and `make_coffee()`, your `Developer` class shouldn't be required to implement `make_coffee()`. (Although, let's be honest, most developers *do* make a lot of coffee.) Split big interfaces into smaller, focused ones.
 
-**D -- Dependency Inversion Principle.** High-level code shouldn't depend on low-level details. Our `Order` class depends on the `PaymentProcessor` abstraction, not on `CreditCard` specifically. This means you can swap in a new payment method without the `Order` knowing or caring. Depend on abstractions, not concrete implementations.
+**D - Dependency Inversion Principle.** High-level code shouldn't depend on low-level details. Our `Order` class depends on the `PaymentProcessor` abstraction, not on `CreditCard` specifically. This means you can swap in a new payment method without the `Order` knowing or caring. Depend on abstractions, not concrete implementations.
 
 > **Don't Panic:** These fancy words are just names for common-sense ideas. You've probably been doing some of these already without knowing it. When you wrote small, focused functions in Sprint 2? That's the Single Responsibility Principle. When your code worked with lists AND tuples because they both support iteration? That's the Liskov Substitution Principle. You were already thinking this way. Now you just have the vocabulary.
 
@@ -6802,13 +6802,13 @@ truck = Vehicle("Ford", "F-150", 2024, diesel_engine)
 ## TL;DR
 
 - **Encapsulation** means hiding internals: `_protected` (convention), `__private` (name-mangled)
-- Python's privacy is by convention, not enforcement -- "we're all consenting adults"
+- Python's privacy is by convention, not enforcement - "we're all consenting adults"
 - **Polymorphism** means same method name, different behavior. Call `.area()` on any shape, get the right answer
-- Python's duck typing gives you polymorphism for free -- no inheritance required
-- **Composition** ("has a") is often better than inheritance ("is a") -- it's more flexible and less fragile
+- Python's duck typing gives you polymorphism for free - no inheritance required
+- **Composition** ("has a") is often better than inheritance ("is a") - it's more flexible and less fragile
 - **SOLID** principles are common-sense rules for clean design. You don't need to memorize acronyms to write good code
 - The goal of all these concepts: code that's easy to change, test, and explain to the next person
-- These aren't academic abstractions -- they're the difference between a codebase people enjoy working on and one that makes them update their resume
+- These aren't academic abstractions - they're the difference between a codebase people enjoy working on and one that makes them update their resume
 
 ---
 
@@ -6818,18 +6818,18 @@ truck = Vehicle("Ford", "F-150", 2024, diesel_engine)
 
 Sprint 3 done. Take a second to appreciate what just happened.
 
-You now think in objects. You look at a problem and you see classes, attributes, methods, relationships. That's a fundamental shift in how you write code -- and honestly, in how you *think* about code. Most of the software in the world is built this way, and now you can read it, write it, and reason about it.
+You now think in objects. You look at a problem and you see classes, attributes, methods, relationships. That's a fundamental shift in how you write code - and honestly, in how you *think* about code. Most of the software in the world is built this way, and now you can read it, write it, and reason about it.
 
 Let's prove it by building something real.
 
 ## The Project: Library Management System
 
-You're going to build a Library Management System with three core classes -- `Book`, `Member`, and `Library` -- that handles checkouts, returns, searching, and saves everything to a JSON file so your data survives between runs.
+You're going to build a Library Management System with three core classes - `Book`, `Member`, and `Library` - that handles checkouts, returns, searching, and saves everything to a JSON file so your data survives between runs.
 
 This isn't a toy example. It touches every skill from this sprint:
 
 | Concept | Where You'll Use It |
-|---------|-------------------|
+|-----|----------|
 | Classes & `__init__` (Ch. 15) | Every class you build |
 | Methods & `self` (Ch. 15) | Every method you write |
 | Inheritance (Ch. 16) | `EBook` and `AudioBook` extend `Book` |
@@ -6870,7 +6870,7 @@ class Book:
 
     def __str__(self):
         status = "Available" if self.is_available else f"Checked out to {self._borrower}"
-        return f"'{self.title}' by {self.author} (ISBN: {self.isbn}) -- {status}"
+        return f"'{self.title}' by {self.author} (ISBN: {self.isbn}) - {status}"
 
     def __repr__(self):
         return f"Book('{self.title}', '{self.author}', '{self.isbn}')"
@@ -6887,7 +6887,7 @@ class Book:
         }
 ```
 
-Notice the `to_dict()` method -- that's how we'll save to JSON later. Also notice `_borrower` has a single underscore. It's internal data that should only be changed through `check_out()` and `return_book()`. That's encapsulation in action.
+Notice the `to_dict()` method - that's how we'll save to JSON later. Also notice `_borrower` has a single underscore. It's internal data that should only be changed through `check_out()` and `return_book()`. That's encapsulation in action.
 
 ## Step 2: Specialized Book Types (Inheritance)
 
@@ -6956,7 +6956,7 @@ class Member:
 
     def __str__(self):
         count = len(self.borrowed_books)
-        return f"Member: {self.name} (ID: {self.member_id}) -- {count} book(s) borrowed"
+        return f"Member: {self.name} (ID: {self.member_id}) - {count} book(s) borrowed"
 
     def __repr__(self):
         return f"Member('{self.name}', '{self.member_id}')"
@@ -7026,7 +7026,7 @@ class Library:
     def available_books(self):
         return [b for b in self._books.values() if b.is_available]
 
-    # --- Magic methods ---
+    # -- Magic methods --
 
     def __len__(self):
         return len(self._books)
@@ -7039,7 +7039,7 @@ class Library:
     def __contains__(self, isbn):
         return isbn in self._books
 
-    # --- JSON persistence ---
+    # -- JSON persistence --
 
     def save(self, filepath="library_data.json"):
         data = {
@@ -7089,7 +7089,7 @@ def main():
     # Create the library
     lib = Library("City Central Library")
 
-    # Add books (polymorphism -- different types, same interface)
+    # Add books (polymorphism - different types, same interface)
     lib.add_book(Book("The Great Gatsby", "F. Scott Fitzgerald", "978-0743273565"))
     lib.add_book(Book("1984", "George Orwell", "978-0451524935"))
     lib.add_book(EBook("Python Crash Course", "Eric Matthes", "978-1718502703", "EPUB"))
@@ -7150,7 +7150,7 @@ Expected output:
 ```
 City Central Library: 4 books (4 available), 2 members
 
-  Found: 'Python Crash Course' by Eric Matthes (ISBN: 978-1718502703) -- Available [EBook: EPUB]
+  Found: 'Python Crash Course' by Eric Matthes (ISBN: 978-1718502703) - Available [EBook: EPUB]
 
 'The Great Gatsby' checked out to Alice
 'Python Crash Course' checked out to Alice
@@ -7159,7 +7159,7 @@ City Central Library: 4 books (4 available), 2 members
 City Central Library: 4 books (1 available), 2 members
 
 Available books:
-  '1984' by George Orwell (ISBN: 978-0451524935) -- Available
+  '1984' by George Orwell (ISBN: 978-0451524935) - Available
 
 'The Great Gatsby' returned by Alice
 
@@ -7198,16 +7198,16 @@ Welcome to City Central Library!
 
 Take a look at what you just built:
 
-- **Classes and objects** -- `Book`, `Member`, `Library` (Chapter 15)
-- **`__init__` and `self`** -- everywhere (Chapter 15)
-- **Inheritance** -- `EBook` and `AudioBook` extending `Book` (Chapter 16)
-- **`super()`** -- child constructors calling parent setup (Chapter 16)
-- **Magic methods** -- `__str__`, `__repr__`, `__len__`, `__contains__` (Chapter 17)
-- **Encapsulation** -- `_borrower`, `_books`, `_members`, `_max_books` (Chapter 18)
-- **Composition** -- `Library` HAS books and members (Chapter 18)
-- **Polymorphism** -- `EBook`, `AudioBook`, and `Book` all work the same way (Chapter 18)
-- **File handling** -- JSON save/load (Sprint 2, Chapter 12)
-- **Error handling** -- `ValueError` for invalid operations (Sprint 2, Chapter 13)
+- **Classes and objects** - `Book`, `Member`, `Library` (Chapter 15)
+- **`__init__` and `self`** - everywhere (Chapter 15)
+- **Inheritance** - `EBook` and `AudioBook` extending `Book` (Chapter 16)
+- **`super()`** - child constructors calling parent setup (Chapter 16)
+- **Magic methods** - `__str__`, `__repr__`, `__len__`, `__contains__` (Chapter 17)
+- **Encapsulation** - `_borrower`, `_books`, `_members`, `_max_books` (Chapter 18)
+- **Composition** - `Library` HAS books and members (Chapter 18)
+- **Polymorphism** - `EBook`, `AudioBook`, and `Book` all work the same way (Chapter 18)
+- **File handling** - JSON save/load (Sprint 2, Chapter 12)
+- **Error handling** - `ValueError` for invalid operations (Sprint 2, Chapter 13)
 
 That's not a toy program. That's a real system with real design patterns. You should feel good about this.
 
@@ -7215,7 +7215,7 @@ That's not a toy program. That's a real system with real design patterns. You sh
 
 You're past the halfway point of the book. Most people who start learning to code quit before getting here. You didn't. That means something. It means you're the kind of person who pushes through the hard parts, who doesn't quit when `self` is confusing or when inheritance doesn't click on the first try.
 
-Sprint 4 is where things get *really* exciting. You're going to take everything you've built -- your Python fundamentals, your OOP skills -- and start building things that connect to the real world: APIs, web scraping, databases. The code you write is about to escape your terminal and start talking to the internet.
+Sprint 4 is where things get *really* exciting. You're going to take everything you've built - your Python fundamentals, your OOP skills - and start building things that connect to the real world: APIs, web scraping, databases. The code you write is about to escape your terminal and start talking to the internet.
 
 But first, take a break. Build the library project. Maybe go outside. You've earned it.
 
@@ -7231,19 +7231,19 @@ Let's get something out of the way first.
 
 **If you've made it to Sprint 4, you're already in the top 10% of Python learners.** Most people buy a programming book and stop at Chapter 3. You've built classes, handled errors, written file I/O, and survived inheritance. You're not a beginner anymore. Stop calling yourself one.
 
-This sprint is where you go from "I know Python" to "I *use* Python." These are the tools professional developers reach for every single day -- decorators, generators, APIs, databases, web scraping, testing, and clean code practices. This is what separates hobby coders from people who get hired.
+This sprint is where you go from "I know Python" to "I *use* Python." These are the tools professional developers reach for every single day - decorators, generators, APIs, databases, web scraping, testing, and clean code practices. This is what separates hobby coders from people who get hired.
 
 If Python basics were learning to drive, this sprint is learning to drive stick, parallel park, and drift. (Okay, maybe not drift. But close.)
 
 ## What's Coming
 
-- **Chapter 19:** Decorators -- functions that upgrade other functions
-- **Chapter 20:** Generators & iterators -- memory-friendly data processing
-- **Chapter 21:** APIs -- talking to the internet
-- **Chapter 22:** Databases -- storing data for real
-- **Chapter 23:** Web scraping -- extracting data from websites
-- **Chapter 24:** Testing -- proving your code actually works
-- **Chapter 25:** Type hints, linting & clean code -- writing code like a professional
+- **Chapter 19:** Decorators - functions that upgrade other functions
+- **Chapter 20:** Generators & iterators - memory-friendly data processing
+- **Chapter 21:** APIs - talking to the internet
+- **Chapter 22:** Databases - storing data for real
+- **Chapter 23:** Web scraping - extracting data from websites
+- **Chapter 24:** Testing - proving your code actually works
+- **Chapter 25:** Type hints, linting & clean code - writing code like a professional
 
 ## The Sprint 4 Project: Job Listing Scraper & Dashboard
 
@@ -7255,7 +7255,7 @@ Let's go pro.
 
 ---
 
-# Chapter 19: Decorators -- Functions That Upgrade Functions
+# Chapter 19: Decorators - Functions That Upgrade Functions
 
 > **Sprint 4, Chapter 19** | **Estimated Time: 20-25 minutes** | **Difficulty: Advanced**
 
@@ -7279,13 +7279,13 @@ def dashboard():
 
 That `@` symbol is a **decorator**. And they're everywhere. Flask uses `@app.route` for web URLs. Django uses `@login_required` for authentication. pytest uses `@pytest.fixture` for test setup. FastAPI uses `@app.get` for API endpoints.
 
-If you want to work with any modern Python framework, you need to understand decorators. And here's the good news -- they're simpler than they look.
+If you want to work with any modern Python framework, you need to understand decorators. And here's the good news - they're simpler than they look.
 
 ## The Gift Wrapping Analogy
 
 Think of decorators as **gift wrapping**.
 
-You have a gift (your function). It does something useful. A decorator wraps that gift with extra behavior -- maybe a nice bow, maybe some tissue paper, maybe a card that says "Happy Birthday." The gift inside doesn't change. It still does exactly what it always did. But now it has something extra on the outside.
+You have a gift (your function). It does something useful. A decorator wraps that gift with extra behavior - maybe a nice bow, maybe some tissue paper, maybe a card that says "Happy Birthday." The gift inside doesn't change. It still does exactly what it always did. But now it has something extra on the outside.
 
 A `@timer` decorator wraps your function with timing code. A `@login_required` decorator wraps your function with an authentication check. The original function stays the same. The wrapper adds the extra behavior.
 
@@ -7336,7 +7336,7 @@ print(howdy("Bob"))     # Howdy, Bob!
 
 Read that carefully. `make_greeter` doesn't return a string. It returns a **function**. And that inner function (`greeter`) remembers the `greeting` variable from its parent, even after `make_greeter` has finished running.
 
-This is called a **closure** -- a function that remembers values from the scope where it was created.
+This is called a **closure** - a function that remembers values from the scope where it was created.
 
 ## Closures: Functions That Remember
 
@@ -7521,7 +7521,7 @@ In production code, you'd write to a log file instead of printing, but the idea 
 
 ## Preserving Function Identity with functools.wraps
 
-There's one gotcha with decorators. When you decorate a function, the wrapper replaces it -- including its name and docstring:
+There's one gotcha with decorators. When you decorate a function, the wrapper replaces it - including its name and docstring:
 
 ```python
 @timer
@@ -7594,11 +7594,11 @@ print(circle.area)       # 314.1592653589793
 # circle.radius = -1     # ValueError: Radius cannot be negative
 ```
 
-Notice how `circle.area` doesn't have parentheses. It looks like a regular attribute, but it's actually computed every time you access it. This is the Pythonic way to do getters and setters -- no `get_radius()` and `set_radius()` methods needed.
+Notice how `circle.area` doesn't have parentheses. It looks like a regular attribute, but it's actually computed every time you access it. This is the Pythonic way to do getters and setters - no `get_radius()` and `set_radius()` methods needed.
 
 ## A Real-World Example: Retry Decorator
 
-Here's a decorator you might actually use in production -- it retries a function if it fails:
+Here's a decorator you might actually use in production - it retries a function if it fails:
 
 ```python
 import functools
@@ -7630,7 +7630,7 @@ def fetch_data(url):
 result = fetch_data("https://api.example.com")
 ```
 
-Notice this is a decorator *with arguments* (`max_attempts`, `delay`). That requires an extra layer of nesting -- a function that returns the decorator. It looks complicated, but it's just one more layer of the same pattern.
+Notice this is a decorator *with arguments* (`max_attempts`, `delay`). That requires an extra layer of nesting - a function that returns the decorator. It looks complicated, but it's just one more layer of the same pattern.
 
 ## Your Turn: Build a @timer Decorator
 
@@ -7660,7 +7660,7 @@ print(f"Result: {result}")
 ## TL;DR
 
 | Concept | What It Does |
-|---|---|
+|--|--|
 | First-class functions | Functions can be passed around like any other value |
 | Closure | A function that remembers variables from its enclosing scope |
 | Decorator | A function that takes a function and returns a new function with added behavior |
@@ -7671,11 +7671,11 @@ print(f"Result: {result}")
 
 **The one-sentence version:** A decorator is just a function that wraps another function to add extra behavior, and the `@` symbol is just a shortcut for applying it.
 
-Next up: Generators and Iterators -- where we learn to process data without loading it all into memory at once.
+Next up: Generators and Iterators - where we learn to process data without loading it all into memory at once.
 
 ---
 
-# Chapter 20: Generators & Iterators -- Memory-Friendly Loops
+# Chapter 20: Generators & Iterators - Memory-Friendly Loops
 
 > **Sprint 4, Chapter 20** | **Estimated Time: 15-20 minutes** | **Difficulty: Advanced**
 
@@ -7683,13 +7683,13 @@ Next up: Generators and Iterators -- where we learn to process data without load
 
 Imagine you need to process a 10 GB log file. You could load the entire thing into memory... and watch your laptop freeze, crash, and possibly catch fire. Or you could process it one line at a time, using barely any memory at all.
 
-That's what generators do. They let you work with huge amounts of data -- or even *infinite* amounts of data -- without running out of memory. Data pipelines, machine learning preprocessing, reading massive files, streaming data from APIs -- generators are everywhere in professional Python code.
+That's what generators do. They let you work with huge amounts of data - or even *infinite* amounts of data - without running out of memory. Data pipelines, machine learning preprocessing, reading massive files, streaming data from APIs - generators are everywhere in professional Python code.
 
 ## The Netflix Analogy
 
 Think about the difference between **downloading** and **streaming**.
 
-If you wanted to watch every movie on Netflix, you *could* download all of them first. That would take... well, you'd need a warehouse of hard drives. Or you could **stream** -- watch one movie at a time, and the next one loads only when you hit play.
+If you wanted to watch every movie on Netflix, you *could* download all of them first. That would take... well, you'd need a warehouse of hard drives. Or you could **stream** - watch one movie at a time, and the next one loads only when you hit play.
 
 **Lists are like downloading.** They compute and store every value upfront. **Generators are like streaming.** They compute one value at a time, only when you ask for it.
 
@@ -7697,16 +7697,16 @@ Same movies. Same data. Radically different memory usage.
 
 ## The Iterator Protocol (Quick Version)
 
-Before generators, let's understand what they're built on. In Python, anything you can loop over with `for` is called an **iterable**. Lists, strings, dictionaries, files -- all iterables.
+Before generators, let's understand what they're built on. In Python, anything you can loop over with `for` is called an **iterable**. Lists, strings, dictionaries, files - all iterables.
 
 Under the hood, Python uses two special methods to make looping work:
 
 ```python
 # What Python actually does when you write: for x in [1, 2, 3]
 my_list = [1, 2, 3]
-iterator = iter(my_list)    # Calls __iter__() -- gets an iterator
+iterator = iter(my_list)    # Calls __iter__() - gets an iterator
 
-print(next(iterator))       # Calls __next__() -- gets 1
+print(next(iterator))       # Calls __next__() - gets 1
 print(next(iterator))       # Gets 2
 print(next(iterator))       # Gets 3
 # next(iterator)            # Raises StopIteration
@@ -7779,7 +7779,7 @@ print(next(gen))          # "Step 3" prints, then yields "C"
 # next(gen)               # "Done" prints, then StopIteration
 ```
 
-Notice: **creating the generator does nothing.** It doesn't start running until you call `next()` on it. This is called **lazy evaluation** -- values are computed only when needed.
+Notice: **creating the generator does nothing.** It doesn't start running until you call `next()` on it. This is called **lazy evaluation** - values are computed only when needed.
 
 > **Remember When?** Remember lists from Sprint 1? Generators are just lazy lists. They compute values one at a time instead of all at once. Same data, less memory.
 
@@ -7788,10 +7788,10 @@ Notice: **creating the generator does nothing.** It doesn't start running until 
 Just like list comprehensions give you a one-liner for lists, **generator expressions** give you a one-liner for generators. The syntax is identical, except you use parentheses instead of square brackets:
 
 ```python
-# List comprehension -- creates the entire list in memory
+# List comprehension - creates the entire list in memory
 squares_list = [x ** 2 for x in range(1000000)]
 
-# Generator expression -- creates values one at a time
+# Generator expression - creates values one at a time
 squares_gen = (x ** 2 for x in range(1000000))
 
 print(type(squares_list))  # <class 'list'>
@@ -7803,7 +7803,7 @@ The list version creates one million numbers in memory right now. The generator 
 You can use generator expressions anywhere you'd use a list comprehension:
 
 ```python
-# Sum of squares (no list needed -- just pass the generator)
+# Sum of squares (no list needed - just pass the generator)
 total = sum(x ** 2 for x in range(1000000))
 
 # Find the first even square over 100
@@ -7884,7 +7884,7 @@ def filter_by_amount(records, min_amount):
         if float(record[2]) > min_amount:
             yield record
 
-# Chain them together -- nothing runs until the for loop starts
+# Chain them together - nothing runs until the for loop starts
 lines = read_csv_lines("transactions.csv")
 records = parse_fields(lines)
 big_transactions = filter_by_amount(records, 1000)
@@ -7893,7 +7893,7 @@ for record in big_transactions:
     print(record)
 ```
 
-Each step processes one item at a time and hands it to the next step. It's like an assembly line -- nothing is stored, everything flows through.
+Each step processes one item at a time and hands it to the next step. It's like an assembly line - nothing is stored, everything flows through.
 
 ## Infinite Generators
 
@@ -7921,7 +7921,7 @@ first_10 = list(islice(fibonacci(), 10))
 print(first_10)  # [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 ```
 
-You can't do `list(fibonacci())` -- that would try to create an infinite list and crash. But you can take as many as you need with `islice`.
+You can't do `list(fibonacci())` - that would try to create an infinite list and crash. But you can take as many as you need with `islice`.
 
 > **Wait, What?** "An infinite loop that doesn't crash?" Yes! Because `yield` pauses the loop. The infinite `while True` only runs one iteration at a time. As long as you stop asking for values at some point, it's perfectly fine.
 
@@ -7949,7 +7949,7 @@ print(list(combined))  # [1, 2, 3, 4, 5, 6]
 ## When to Use Generators vs Lists
 
 | Use a **List** when... | Use a **Generator** when... |
-|---|---|
+|--|--|
 | You need to access items by index | You only need to iterate once |
 | You need to iterate multiple times | The data is large or infinite |
 | You need the length | Memory is a concern |
@@ -7980,29 +7980,29 @@ for num in even_fibonacci(limit=100):
 ## TL;DR
 
 | Concept | What It Does |
-|---|---|
+|--|--|
 | Iterator | An object with `__next__()` that produces values one at a time |
 | Generator function | A function with `yield` that becomes an iterator |
 | `yield` | Like `return` but pauses and resumes |
-| Generator expression | `(x for x in iterable)` -- lazy version of list comprehension |
+| Generator expression | `(x for x in iterable)` - lazy version of list comprehension |
 | Lazy evaluation | Values computed only when needed |
 | `itertools` | Standard library module with generator utilities |
 
 **The one-sentence version:** Generators let you process data one piece at a time instead of loading everything into memory, using `yield` to pause and resume a function.
 
-Next up: APIs -- where we teach Python to talk to the internet.
+Next up: APIs - where we teach Python to talk to the internet.
 
 ---
 
-# Chapter 21: Working with APIs -- Talking to the Internet
+# Chapter 21: Working with APIs - Talking to the Internet
 
 > **Sprint 4, Chapter 21** | **Estimated Time: 20-25 minutes** | **Difficulty: Advanced**
 
 ## Why Should I Care?
 
-Every time you check the weather on your phone, that app doesn't have its own weather satellites. It asks someone else's server for the data. Every time you see stock prices update in real time, your app is calling an API. Social media bots, AI chatbots, payment processing, maps, translation services -- all APIs.
+Every time you check the weather on your phone, that app doesn't have its own weather satellites. It asks someone else's server for the data. Every time you see stock prices update in real time, your app is calling an API. Social media bots, AI chatbots, payment processing, maps, translation services - all APIs.
 
-**APIs are how programs talk to each other over the internet.** If you want to build anything that connects to the outside world -- and you do -- you need this chapter.
+**APIs are how programs talk to each other over the internet.** If you want to build anything that connects to the outside world - and you do - you need this chapter.
 
 ## The Restaurant Analogy
 
@@ -8021,10 +8021,10 @@ APIs work exactly the same way. You don't need to know how Google's weather serv
 
 ## HTTP Methods: The Four Magic Words
 
-When you talk to an API, you use **HTTP methods** -- think of them as different types of requests:
+When you talk to an API, you use **HTTP methods** - think of them as different types of requests:
 
 | Method | What It Does | Restaurant Analogy |
-|---|---|---|
+|--|--|--|
 | `GET` | Read/retrieve data | "Can I see the menu?" |
 | `POST` | Create new data | "I'd like to place an order." |
 | `PUT` | Update existing data | "Actually, change my order to..." |
@@ -8042,7 +8042,7 @@ pip install requests
 
 ### Your First API Call
 
-Let's start with the simplest possible API call -- getting a random joke:
+Let's start with the simplest possible API call - getting a random joke:
 
 ```python
 import requests
@@ -8059,24 +8059,24 @@ That's it. Three lines of code and you're talking to the internet.
 
 Let's break it down:
 
-1. `requests.get(url)` -- sends a GET request to that URL
-2. `response.status_code` -- the HTTP status code (200 means success)
-3. `response.json()` -- parses the response body as JSON (a Python dictionary)
+1. `requests.get(url)` - sends a GET request to that URL
+2. `response.status_code` - the HTTP status code (200 means success)
+3. `response.json()` - parses the response body as JSON (a Python dictionary)
 
 ## Status Codes: What the Server Is Telling You
 
 When the server responds, it includes a status code that tells you what happened:
 
 | Code | Meaning | What to Do |
-|---|---|---|
-| `200` | OK -- success! | Parse the data |
-| `201` | Created -- new resource made | Your POST worked |
-| `400` | Bad Request -- you messed up | Check your request |
-| `401` | Unauthorized -- need credentials | Add an API key |
-| `403` | Forbidden -- not allowed | You don't have permission |
-| `404` | Not Found -- doesn't exist | Check the URL |
-| `429` | Too Many Requests -- slow down | Wait and retry |
-| `500` | Server Error -- they messed up | Not your fault, try again later |
+|--|--|--|
+| `200` | OK - success! | Parse the data |
+| `201` | Created - new resource made | Your POST worked |
+| `400` | Bad Request - you messed up | Check your request |
+| `401` | Unauthorized - need credentials | Add an API key |
+| `403` | Forbidden - not allowed | You don't have permission |
+| `404` | Not Found - doesn't exist | Check the URL |
+| `429` | Too Many Requests - slow down | Wait and retry |
+| `500` | Server Error - they messed up | Not your fault, try again later |
 
 The easy rule: **2xx means success, 4xx means you did something wrong, 5xx means the server did something wrong.**
 
@@ -8084,7 +8084,7 @@ The easy rule: **2xx means success, 4xx means you did something wrong, 5xx means
 
 ## Parsing JSON Responses
 
-Most APIs return data in **JSON** format (JavaScript Object Notation). Good news -- JSON maps directly to Python dictionaries and lists:
+Most APIs return data in **JSON** format (JavaScript Object Notation). Good news - JSON maps directly to Python dictionaries and lists:
 
 ```python
 import requests
@@ -8134,7 +8134,7 @@ The `json=data` parameter is a shortcut that:
 
 ## Query Parameters
 
-Many APIs let you customize your request with query parameters -- the stuff after the `?` in a URL:
+Many APIs let you customize your request with query parameters - the stuff after the `?` in a URL:
 
 ```python
 import requests
@@ -8163,7 +8163,7 @@ Using `params=` is cleaner than building the URL string yourself, and it handles
 
 ## API Keys and Authentication
 
-Most serious APIs require authentication -- usually an **API key**. This is a unique string that identifies you and tracks your usage.
+Most serious APIs require authentication - usually an **API key**. This is a unique string that identifies you and tracks your usage.
 
 ```python
 import requests
@@ -8190,7 +8190,7 @@ response = requests.get(
 )
 ```
 
-> **Wait, What?** "Where do I get an API key?" Sign up on the API provider's website. Most have a free tier. OpenWeatherMap, GitHub, NewsAPI -- they all give you a key when you register.
+> **Wait, What?** "Where do I get an API key?" Sign up on the API provider's website. Most have a free tier. OpenWeatherMap, GitHub, NewsAPI - they all give you a key when you register.
 
 **Important:** Never put API keys directly in your code, especially if you're pushing to GitHub. Use environment variables:
 
@@ -8243,7 +8243,7 @@ General rules:
 
 ## Error Handling for API Calls
 
-API calls can fail in many ways -- network errors, timeouts, bad responses. Always handle errors:
+API calls can fail in many ways - network errors, timeouts, bad responses. Always handle errors:
 
 ```python
 import requests
@@ -8349,7 +8349,7 @@ for repo in client.get_repos("python"):
     print(f"  {repo['name']}: {repo['stars']:,} stars")
 ```
 
-Notice we used `requests.Session()` -- this reuses the connection and headers across multiple requests. More efficient and cleaner.
+Notice we used `requests.Session()` - this reuses the connection and headers across multiple requests. More efficient and cleaner.
 
 ## Your Turn: Weather Checker
 
@@ -8398,7 +8398,7 @@ Extend it to:
 ## TL;DR
 
 | Concept | What It Does |
-|---|---|
+|--|--|
 | API | A way for programs to talk to each other over the internet |
 | `requests.get(url)` | Send a GET request (retrieve data) |
 | `requests.post(url, json=data)` | Send a POST request (send data) |
@@ -8411,11 +8411,11 @@ Extend it to:
 
 **The one-sentence version:** Use the `requests` library to send HTTP requests to APIs, get back JSON data, and always handle errors and check status codes.
 
-Next up: Databases -- where we learn to store data for real, not just in files.
+Next up: Databases - where we learn to store data for real, not just in files.
 
 ---
 
-# Chapter 22: Databases with Python -- Storing Data for Real
+# Chapter 22: Databases with Python - Storing Data for Real
 
 > **Sprint 4, Chapter 22** | **Estimated Time: 20-25 minutes** | **Difficulty: Advanced**
 
@@ -8429,17 +8429,17 @@ Databases solve all of these problems. And Python comes with one built in.
 
 ## The Spreadsheet Analogy
 
-CSV files are like spreadsheets. Databases are like spreadsheets with superpowers -- they can search millions of rows in milliseconds, enforce rules about what data is allowed, handle multiple users at once, and never lose your data if the power goes out.
+CSV files are like spreadsheets. Databases are like spreadsheets with superpowers - they can search millions of rows in milliseconds, enforce rules about what data is allowed, handle multiple users at once, and never lose your data if the power goes out.
 
 Think of a database as a collection of spreadsheets (called **tables**), where each spreadsheet has defined columns (called **fields** or **columns**) and each row is a record. The difference is that databases have a powerful query language called **SQL** that lets you ask complex questions about your data instantly.
 
 ## SQLite: A Database in Your Pocket
 
-There are many database systems -- PostgreSQL, MySQL, MongoDB, Oracle. They all require installing and running a separate server. Except one.
+There are many database systems - PostgreSQL, MySQL, MongoDB, Oracle. They all require installing and running a separate server. Except one.
 
 **SQLite** is a database that lives in a single file. No server needed. No installation. No configuration. And it's **built into Python**. Just `import sqlite3` and go.
 
-Don't let the simplicity fool you -- SQLite handles databases up to 281 terabytes. It's used in every iPhone, every Android phone, every Chrome browser, and every Firefox browser. It's the most widely deployed database engine in the world.
+Don't let the simplicity fool you - SQLite handles databases up to 281 terabytes. It's used in every iPhone, every Android phone, every Chrome browser, and every Firefox browser. It's the most widely deployed database engine in the world.
 
 ```python
 import sqlite3
@@ -8460,7 +8460,7 @@ That's it. You now have a database. The file `my_app.db` was created in your cur
 
 ## Creating Tables
 
-Before you can store data, you need to create a **table** -- the structure that defines what your data looks like:
+Before you can store data, you need to create a **table** - the structure that defines what your data looks like:
 
 ```python
 import sqlite3
@@ -8485,7 +8485,7 @@ conn.close()
 Let's decode that SQL:
 
 | Part | Meaning |
-|---|---|
+|--|--|
 | `CREATE TABLE IF NOT EXISTS` | Make a table (don't crash if it already exists) |
 | `id INTEGER PRIMARY KEY AUTOINCREMENT` | Auto-numbering ID column (1, 2, 3...) |
 | `name TEXT NOT NULL` | Text column, required (can't be empty) |
@@ -8544,7 +8544,7 @@ See those `?` marks? Those are **placeholders**. This is critically important, s
 This is one of the most important things in this entire book:
 
 ```python
-# NEVER DO THIS -- SQL injection vulnerability!
+# NEVER DO THIS - SQL injection vulnerability!
 name = input("Enter name: ")
 cursor.execute(f"SELECT * FROM users WHERE name = '{name}'")
 
@@ -8552,14 +8552,14 @@ cursor.execute(f"SELECT * FROM users WHERE name = '{name}'")
 # The query becomes: SELECT * FROM users WHERE name = '' OR '1'='1'
 # That returns EVERY user in the database!
 
-# Or worse: '; DROP TABLE users; --
+# Or worse: '; DROP TABLE users; -
 # That DELETES your entire table!
 ```
 
-This is called **SQL injection**, and it's one of the most common security vulnerabilities in web applications. The fix is simple -- always use parameterized queries:
+This is called **SQL injection**, and it's one of the most common security vulnerabilities in web applications. The fix is simple - always use parameterized queries:
 
 ```python
-# ALWAYS DO THIS -- safe!
+# ALWAYS DO THIS - safe!
 name = input("Enter name: ")
 cursor.execute("SELECT * FROM users WHERE name = ?", (name,))
 ```
@@ -8609,9 +8609,9 @@ conn.close()
 ```
 
 Key fetch methods:
-- `fetchone()` -- get the next single row (or `None` if no more rows)
-- `fetchall()` -- get all remaining rows as a list of tuples
-- `fetchmany(n)` -- get the next `n` rows
+- `fetchone()` - get the next single row (or `None` if no more rows)
+- `fetchall()` - get all remaining rows as a list of tuples
+- `fetchmany(n)` - get the next `n` rows
 
 ### Getting Named Columns with Row Factory
 
@@ -8680,11 +8680,11 @@ print(f"Deleted {cursor.rowcount} rows")
 conn.close()
 ```
 
-Same warning as `UPDATE` -- always use `WHERE`. `DELETE FROM users` without a `WHERE` clause deletes everything. Every row. Gone. No undo.
+Same warning as `UPDATE` - always use `WHERE`. `DELETE FROM users` without a `WHERE` clause deletes everything. Every row. Gone. No undo.
 
 ## Context Managers: The Right Way
 
-Manually calling `conn.close()` is fragile -- if an error happens before that line, the connection stays open. Use a context manager instead:
+Manually calling `conn.close()` is fragile - if an error happens before that line, the connection stays open. Use a context manager instead:
 
 ```python
 import sqlite3
@@ -8702,9 +8702,9 @@ for user in users:
     print(user)
 ```
 
-The `with` statement ensures the connection is properly handled -- it commits on success and rolls back on error.
+The `with` statement ensures the connection is properly handled - it commits on success and rolls back on error.
 
-> **Remember When?** We used context managers for file handling in Sprint 2 -- `with open("file.txt") as f:`. Same pattern here. Python loves context managers because they guarantee cleanup.
+> **Remember When?** We used context managers for file handling in Sprint 2 - `with open("file.txt") as f:`. Same pattern here. Python loves context managers because they guarantee cleanup.
 
 ## Building a Complete Database Module
 
@@ -8805,7 +8805,7 @@ Writing raw SQL is fine for learning and small projects, but bigger projects use
 The most popular Python ORM is **SQLAlchemy**. Here's what the same task code looks like:
 
 ```python
-# This is just a preview -- don't worry about memorizing this
+# This is just a preview - don't worry about memorizing this
 from sqlalchemy import create_engine, Column, Integer, String, Boolean
 from sqlalchemy.orm import declarative_base, Session
 
@@ -8886,7 +8886,7 @@ Try doing *that* with a CSV file.
 ## TL;DR
 
 | Concept | What It Does |
-|---|---|
+|--|--|
 | SQLite | File-based database, built into Python |
 | `sqlite3.connect("file.db")` | Create/open a database |
 | `cursor.execute(sql, params)` | Run a SQL command with safe parameters |
@@ -8899,17 +8899,17 @@ Try doing *that* with a CSV file.
 
 **The one-sentence version:** Use `sqlite3` to store data in a real database file, always use `?` placeholders to prevent SQL injection, and use context managers for clean connections.
 
-Next up: Web Scraping -- where we teach Python to read websites and extract data.
+Next up: Web Scraping - where we teach Python to read websites and extract data.
 
 ---
 
-# Chapter 23: Web Scraping -- Extracting Data from the Web
+# Chapter 23: Web Scraping - Extracting Data from the Web
 
 > **Sprint 4, Chapter 23** | **Estimated Time: 20-25 minutes** | **Difficulty: Advanced**
 
 ## Why Should I Care?
 
-Not everything has a nice, clean API. Sometimes the data you want is on a website but there's no API to access it. Price comparisons, news headlines, research data, job listings, product reviews, sports statistics -- the data is right there on the page. You just need a way to grab it.
+Not everything has a nice, clean API. Sometimes the data you want is on a website but there's no API to access it. Price comparisons, news headlines, research data, job listings, product reviews, sports statistics - the data is right there on the page. You just need a way to grab it.
 
 That's web scraping. And Python is ridiculously good at it.
 
@@ -8917,7 +8917,7 @@ Price monitoring tools that alert you when something goes on sale? Scrapers. Tho
 
 ## The Newspaper Analogy
 
-APIs are like **politely asking for data**. You call the restaurant, place your order, and they deliver. Web scraping is like **reading the newspaper yourself and taking notes**. The information is published and public -- you're just reading it programmatically instead of with your eyes.
+APIs are like **politely asking for data**. You call the restaurant, place your order, and they deliver. Web scraping is like **reading the newspaper yourself and taking notes**. The information is published and public - you're just reading it programmatically instead of with your eyes.
 
 Your Python script visits a web page (just like your browser does), reads the HTML (just like your browser does), and extracts the specific pieces you care about (which your browser shows visually, but you grab as data).
 
@@ -8949,12 +8949,12 @@ The key concepts:
 - **Tags** come in pairs: `<p>text</p>` (opening and closing)
 - **Attributes** add info to tags: `<p class="intro">` has a `class` attribute
 - **Nesting**: Tags contain other tags, forming a tree
-- **id**: A unique identifier (one per page) -- `id="content"`
-- **class**: A group label (many elements can share one) -- `class="intro"`
+- **id**: A unique identifier (one per page) - `id="content"`
+- **class**: A group label (many elements can share one) - `class="intro"`
 
 Common tags you'll encounter:
 | Tag | Purpose |
-|---|---|
+|--|--|
 | `<h1>` to `<h6>` | Headings |
 | `<p>` | Paragraphs |
 | `<a href="...">` | Links |
@@ -8969,8 +8969,8 @@ Common tags you'll encounter:
 ## The Workflow: requests + BeautifulSoup
 
 Web scraping in Python uses two libraries:
-1. **requests** -- downloads the web page (you learned this in Chapter 21)
-2. **BeautifulSoup** -- parses the HTML and lets you search through it
+1. **requests** - downloads the web page (you learned this in Chapter 21)
+2. **BeautifulSoup** - parses the HTML and lets you search through it
 
 Install BeautifulSoup:
 
@@ -8978,7 +8978,7 @@ Install BeautifulSoup:
 pip install beautifulsoup4
 ```
 
-Here's the basic pattern -- you'll use this every single time:
+Here's the basic pattern - you'll use this every single time:
 
 ```python
 import requests
@@ -9027,7 +9027,7 @@ for quote in all_quotes:
 # element = soup.find("div", {"class": "content", "id": "main"})
 ```
 
-Notice `class_` with an underscore -- that's because `class` is a reserved word in Python. BeautifulSoup uses `class_` instead.
+Notice `class_` with an underscore - that's because `class` is a reserved word in Python. BeautifulSoup uses `class_` instead.
 
 ## Extracting Text and Attributes
 
@@ -9049,7 +9049,7 @@ print(quote.string)     # Same thing for simple elements
 # Get an attribute
 link = soup.find("a")
 print(link["href"])     # The URL the link points to
-print(link.get("href")) # Same thing (safer -- returns None if missing)
+print(link.get("href")) # Same thing (safer - returns None if missing)
 
 # Get all attributes as a dictionary
 print(link.attrs)       # {'href': '/login', 'class': ['...'], ...}
@@ -9086,7 +9086,7 @@ authors = soup.select(".quote .author")
 
 Common CSS selector patterns:
 | Selector | Meaning |
-|---|---|
+|--|--|
 | `tag` | All elements of that type |
 | `.class` | All elements with that class |
 | `#id` | Element with that id |
@@ -9129,7 +9129,7 @@ def scrape_quotes(url):
 quotes = scrape_quotes("https://quotes.toscrape.com/")
 for q in quotes:
     print(f'"{q["text"][:60]}..."')
-    print(f'  -- {q["author"]}')
+    print(f'  - {q["author"]}')
     print(f'  Tags: {", ".join(q["tags"])}')
     print()
 ```
@@ -9168,7 +9168,7 @@ def scrape_all_quotes():
         else:
             page_url = None  # No more pages
         
-        time.sleep(1)  # Be polite -- wait between requests
+        time.sleep(1)  # Be polite - wait between requests
     
     return all_quotes
 
@@ -9179,7 +9179,7 @@ print(f"\nTotal quotes scraped: {len(all_quotes)}")
 Key points:
 - Look for a "next" link on each page
 - Build the full URL by combining the base URL with the relative link
-- **Always add a delay** (`time.sleep(1)`) between requests -- hammering a server with rapid requests is rude and might get you blocked
+- **Always add a delay** (`time.sleep(1)`) between requests - hammering a server with rapid requests is rude and might get you blocked
 
 ## Saving Scraped Data
 
@@ -9287,7 +9287,7 @@ Before you scrape anything, ask yourself these questions:
 
 1. **Is there an API?** Use it instead. APIs are faster, more reliable, and the site owner prefers it.
 
-2. **Check robots.txt.** Visit `example.com/robots.txt` -- it tells you what bots are allowed to access. Respect it.
+2. **Check robots.txt.** Visit `example.com/robots.txt` - it tells you what bots are allowed to access. Respect it.
 
 ```python
 import requests
@@ -9308,7 +9308,7 @@ print(response.text)
 **General rules:**
 - Public data for personal/research use: Usually fine
 - Adding delays and respecting robots.txt: Always do this
-- Scraping behind a login wall: Gray area -- be careful
+- Scraping behind a login wall: Gray area - be careful
 - Scraping and republishing content: Probably not okay
 - Overwhelming a server with requests: Never okay
 
@@ -9379,7 +9379,7 @@ if __name__ == "__main__":
 ## TL;DR
 
 | Concept | What It Does |
-|---|---|
+|--|--|
 | `requests.get(url)` | Downloads a web page |
 | `BeautifulSoup(html, "html.parser")` | Parses HTML into a searchable tree |
 | `soup.find(tag, class_=...)` | Find the first matching element |
@@ -9387,16 +9387,16 @@ if __name__ == "__main__":
 | `soup.select("css selector")` | Find elements using CSS selectors |
 | `element.text` | Get the text inside an element |
 | `element["attribute"]` | Get an attribute value |
-| `time.sleep(1)` | Be polite -- wait between requests |
+| `time.sleep(1)` | Be polite - wait between requests |
 | `robots.txt` | Check what the site allows you to scrape |
 
 **The one-sentence version:** Use `requests` to download a web page and `BeautifulSoup` to search through its HTML and extract the data you need, always being respectful of the site's rules and server resources.
 
-Next up: Testing -- where we learn to prove our code actually works.
+Next up: Testing - where we learn to prove our code actually works.
 
 ---
 
-# Chapter 24: Testing -- Proving Your Code Works
+# Chapter 24: Testing - Proving Your Code Works
 
 > **Sprint 4, Chapter 24** | **Estimated Time: 20-25 minutes** | **Difficulty: Advanced**
 
@@ -9412,9 +9412,9 @@ Every serious software company requires tests. Every open-source project worth u
 
 ## The Proofreading Analogy
 
-Testing is like **proofreading an essay**. You could skip it -- the essay is done, the ideas are there. But do you really want to submit it with typos, missing paragraphs, and your introduction accidentally pasted in twice?
+Testing is like **proofreading an essay**. You could skip it - the essay is done, the ideas are there. But do you really want to submit it with typos, missing paragraphs, and your introduction accidentally pasted in twice?
 
-You *could* proofread by reading the whole thing yourself. That's manual testing -- running your program and clicking around. It works, but it's slow, tedious, and you'll miss things because you're human.
+You *could* proofread by reading the whole thing yourself. That's manual testing - running your program and clicking around. It works, but it's slow, tedious, and you'll miss things because you're human.
 
 Automated tests are like having a robot proofreader that checks every word, every sentence, every paragraph, instantly, every time you make a change. It never gets tired. It never misses the same mistake twice.
 
@@ -9431,20 +9431,20 @@ def apply_discount(price, discount_percent):
 Looks fine, right? Let's use it:
 
 ```python
-print(apply_discount(100, 20))  # 80.0 -- correct!
-print(apply_discount(50, 10))   # 45.0 -- correct!
+print(apply_discount(100, 20))  # 80.0 - correct!
+print(apply_discount(50, 10))   # 45.0 - correct!
 ```
 
 Ship it! But wait... what about edge cases?
 
 ```python
-print(apply_discount(100, 110))  # -10.0 -- negative price?!
-print(apply_discount(-50, 20))   # -40.0 -- negative input?!
-print(apply_discount(100, 0))    # 100.0 -- okay
-print(apply_discount(0, 50))     # 0.0 -- okay
+print(apply_discount(100, 110))  # -10.0 - negative price?!
+print(apply_discount(-50, 20))   # -40.0 - negative input?!
+print(apply_discount(100, 0))    # 100.0 - okay
+print(apply_discount(0, 50))     # 0.0 - okay
 ```
 
-A 110% discount gives a **negative price** -- the store pays the customer. That's a bug. If you had a test that checked "discount should not exceed 100%", you'd have caught it before deploying.
+A 110% discount gives a **negative price** - the store pays the customer. That's a bug. If you had a test that checked "discount should not exceed 100%", you'd have caught it before deploying.
 
 Here's the fixed version:
 
@@ -9525,7 +9525,7 @@ def test_discount_over_100_raises_error():
         apply_discount(100, 110)
 ```
 
-No classes. No `self.assertEqual`. Just `assert` -- Python's built-in keyword. pytest discovers functions that start with `test_` and runs them automatically.
+No classes. No `self.assertEqual`. Just `assert` - Python's built-in keyword. pytest discovers functions that start with `test_` and runs them automatically.
 
 Run your tests:
 
@@ -9554,14 +9554,14 @@ Good tests follow the **AAA pattern**: Arrange, Act, Assert.
 
 ```python
 def test_discount_calculation():
-    # Arrange -- set up the inputs
+    # Arrange - set up the inputs
     price = 100
     discount = 20
     
-    # Act -- call the function
+    # Act - call the function
     result = apply_discount(price, discount)
     
-    # Assert -- check the result
+    # Assert - check the result
     assert result == 80.0
 ```
 
@@ -9570,7 +9570,7 @@ What makes a good test?
 1. **Test one thing.** Each test should check a single behavior.
 2. **Use descriptive names.** `test_negative_price_raises_error` tells you exactly what it tests.
 3. **Test edge cases.** Zero, negative numbers, empty strings, `None`, very large numbers.
-4. **Test both success and failure.** Don't just test that correct inputs work -- test that incorrect inputs fail properly.
+4. **Test both success and failure.** Don't just test that correct inputs work - test that incorrect inputs fail properly.
 5. **Tests should be independent.** Each test should work alone, not depend on other tests running first.
 
 Here's a complete test suite for a password strength checker:
@@ -9597,7 +9597,7 @@ def check_password_strength(password):
     else:
         return "weak"
 
-# --- Tests ---
+# -- Tests --
 
 def test_short_password_is_weak():
     assert check_password_strength("abc") == "weak"
@@ -9682,7 +9682,7 @@ Key fixture concepts:
 - `@pytest.fixture` marks a function as a fixture
 - Tests receive fixtures by including them as parameters (pytest handles the wiring)
 - `yield` lets you do cleanup after the test
-- `:memory:` SQLite databases are perfect for testing -- they're fast and auto-delete
+- `:memory:` SQLite databases are perfect for testing - they're fast and auto-delete
 
 ## Parametrize: Many Inputs, One Test
 
@@ -9733,7 +9733,7 @@ The cycle:
 
 Let's try it. We want a function that converts temperatures:
 
-**Step 1: Red -- Write the test first**
+**Step 1: Red - Write the test first**
 
 ```python
 def test_celsius_to_fahrenheit():
@@ -9749,7 +9749,7 @@ def test_fahrenheit_to_celsius():
 
 Run pytest: **FAIL** (functions don't exist yet). Red.
 
-**Step 2: Green -- Write the minimum code**
+**Step 2: Green - Write the minimum code**
 
 ```python
 def celsius_to_fahrenheit(celsius):
@@ -9761,7 +9761,7 @@ def fahrenheit_to_celsius(fahrenheit):
 
 Run pytest: **PASS**. Green.
 
-**Step 3: Refactor -- Improve if needed**
+**Step 3: Refactor - Improve if needed**
 
 Maybe add input validation, type hints, or docstrings. Run tests after each change to make sure nothing breaks.
 
@@ -9810,16 +9810,16 @@ Want to know how much of your code is tested? Use `pytest-cov`:
 ```bash
 pip install pytest-cov
 
-pytest --cov=src --cov-report=term-missing
+pytest -cov=src -cov-report=term-missing
 ```
 
 Output:
 ```
 Name                    Stmts   Miss  Cover   Missing
------------------------------------------------------
+---------------------------
 src/calculator.py          10      0   100%
 src/password_checker.py    15      3    80%   22-24
------------------------------------------------------
+---------------------------
 TOTAL                      25      3    88%
 ```
 
@@ -9867,7 +9867,7 @@ def test_common_passwords_are_weak(common_passwords):
 ## TL;DR
 
 | Concept | What It Does |
-|---|---|
+|--|--|
 | `pytest` | Modern testing framework for Python |
 | `assert` | Check that something is true (test fails if not) |
 | `pytest.raises(Error)` | Test that code raises a specific exception |
@@ -9875,11 +9875,11 @@ def test_common_passwords_are_weak(common_passwords):
 | `@pytest.mark.parametrize` | Run one test with many different inputs |
 | TDD (Red-Green-Refactor) | Write test first, then code, then clean up |
 | `pytest -v` | Run tests with detailed output |
-| `pytest --cov` | Check how much code your tests cover |
+| `pytest -cov` | Check how much code your tests cover |
 
 **The one-sentence version:** Write functions that start with `test_`, use `assert` to check results, and run `pytest` to automatically discover and execute all your tests.
 
-Next up: Type Hints, Linting & Clean Code -- the chapter that turns your code from "it works" to "it's professional."
+Next up: Type Hints, Linting & Clean Code - the chapter that turns your code from "it works" to "it's professional."
 
 ---
 
@@ -9889,17 +9889,17 @@ Next up: Type Hints, Linting & Clean Code -- the chapter that turns your code fr
 
 ## Why Should I Care?
 
-You can write Python that works but is impossible to read. You can write functions where nobody -- including you in two weeks -- knows what types the parameters should be. You can write code that's inconsistently formatted, full of unused imports, and structured like a bowl of spaghetti.
+You can write Python that works but is impossible to read. You can write functions where nobody - including you in two weeks - knows what types the parameters should be. You can write code that's inconsistently formatted, full of unused imports, and structured like a bowl of spaghetti.
 
 And it'll still run. Python doesn't care.
 
-But your teammates care. Your future self cares. The hiring manager reviewing your GitHub portfolio cares. Code readability, team collaboration, catching bugs early, and getting hired -- clean code matters for all of these.
+But your teammates care. Your future self cares. The hiring manager reviewing your GitHub portfolio cares. Code readability, team collaboration, catching bugs early, and getting hired - clean code matters for all of these.
 
 This chapter gives you the tools that professional developers use to write code that's not just correct, but *clear*.
 
 ## The Kitchen Analogy
 
-Writing clean code is like keeping a clean kitchen. You CAN cook in a messy kitchen. The food tastes the same. But everything takes longer -- you can't find the spatula, the cutting board is buried under dishes, and you accidentally grab the sugar instead of the salt.
+Writing clean code is like keeping a clean kitchen. You CAN cook in a messy kitchen. The food tastes the same. But everything takes longer - you can't find the spatula, the cutting board is buried under dishes, and you accidentally grab the sugar instead of the salt.
 
 A clean kitchen means you cook faster, make fewer mistakes, and other people can jump in and help.
 
@@ -9907,7 +9907,7 @@ Clean code is the same. Variables have clear names. Functions do one thing. Type
 
 ## Type Hints: Helping Your Future Self
 
-Python is dynamically typed -- you don't have to declare what type a variable is. That's great for quick scripts. But in larger projects, it becomes a problem:
+Python is dynamically typed - you don't have to declare what type a variable is. That's great for quick scripts. But in larger projects, it becomes a problem:
 
 ```python
 # What does this function expect? What does it return?
@@ -10018,7 +10018,7 @@ def create_user(
 
 ### Important: Type Hints Don't Enforce Anything
 
-Here's the thing -- Python **ignores** type hints at runtime. They're documentation, not enforcement:
+Here's the thing - Python **ignores** type hints at runtime. They're documentation, not enforcement:
 
 ```python
 def add(a: int, b: int) -> int:
@@ -10030,7 +10030,7 @@ print(add("hello", " world"))  # "hello world"
 
 No error. Python doesn't check types at runtime. Type hints are for **humans** and **tools** (like mypy, which we'll cover next).
 
-> **Wait, What?** "If Python ignores them, why bother?" Because *you* don't ignore them. Your IDE doesn't ignore them. Your linter doesn't ignore them. Type hints catch bugs in your editor before you even run the code. They're like lane markings on a road -- your car can cross them, but they tell you where you should be.
+> **Wait, What?** "If Python ignores them, why bother?" Because *you* don't ignore them. Your IDE doesn't ignore them. Your linter doesn't ignore them. Type hints catch bugs in your editor before you even run the code. They're like lane markings on a road - your car can cross them, but they tell you where you should be.
 
 ## mypy: The Type Checker
 
@@ -10078,7 +10078,7 @@ mypy found both bugs without running the code. In a large project, this catches 
 The key PEP 8 rules:
 
 ```python
-# --- NAMING ---
+# -- NAMING --
 
 # Variables and functions: snake_case
 user_name = "Alice"
@@ -10093,7 +10093,7 @@ class ShoppingCart:
 MAX_RETRIES = 3
 DATABASE_URL = "sqlite:///app.db"
 
-# --- SPACING ---
+# -- SPACING --
 
 # Two blank lines before top-level definitions
 def function_one():
@@ -10112,7 +10112,7 @@ class MyClass:
     def method_two(self):
         pass
 
-# --- LINE LENGTH ---
+# -- LINE LENGTH --
 
 # Keep lines under 79 characters (or 88 with black)
 # Break long lines like this:
@@ -10127,7 +10127,7 @@ user = create_user(
     age=28
 )
 
-# --- IMPORTS ---
+# -- IMPORTS --
 
 # Standard library first, then third-party, then local
 import os
@@ -10143,7 +10143,7 @@ from my_project.utils import helper
 
 ## black: The Code Formatter That Ends All Arguments
 
-Arguing about code formatting is a waste of time. **black** formats your code automatically, and it's opinionated -- it makes the decisions so you don't have to.
+Arguing about code formatting is a waste of time. **black** formats your code automatically, and it's opinionated - it makes the decisions so you don't have to.
 
 ```bash
 pip install black
@@ -10188,8 +10188,8 @@ That's it. No configuration needed. No arguments about style. black decides, and
 You can also check without modifying:
 
 ```bash
-black --check my_file.py     # Check without changing
-black --diff my_file.py      # Show what would change
+black -check my_file.py     # Check without changing
+black -diff my_file.py      # Show what would change
 black my_project/             # Format an entire directory
 ```
 
@@ -10197,7 +10197,7 @@ Most teams add black to their CI/CD pipeline so code is automatically formatted 
 
 ## pylint and flake8: The Grammar Checkers for Code
 
-**Linters** analyze your code for potential errors, style violations, and suspicious patterns -- like a grammar checker for code.
+**Linters** analyze your code for potential errors, style violations, and suspicious patterns - like a grammar checker for code.
 
 ### flake8 (Lighter, Faster)
 
@@ -10465,7 +10465,7 @@ def get_expenses(
 ## TL;DR
 
 | Tool | What It Does |
-|---|---|
+|--|--|
 | Type hints (`x: int`) | Document what types your code expects |
 | mypy | Check type hints for errors without running code |
 | PEP 8 | Python's official style guide |
@@ -10473,9 +10473,9 @@ def get_expenses(
 | flake8 | Check for style violations and common errors |
 | pylint | Thorough code analysis (more detailed than flake8) |
 
-**The one-sentence version:** Use type hints to document your code's expectations, black to format it consistently, flake8 to catch mistakes, and mypy to verify types -- these tools turn "code that works" into "code that's professional."
+**The one-sentence version:** Use type hints to document your code's expectations, black to format it consistently, flake8 to catch mistakes, and mypy to verify types - these tools turn "code that works" into "code that's professional."
 
-Next up: The Sprint 4 Checkpoint project -- where you put everything from this sprint together into a real application.
+Next up: The Sprint 4 Checkpoint project - where you put everything from this sprint together into a real application.
 
 ---
 
@@ -10495,19 +10495,19 @@ You're going to build a complete application that scrapes job listings from the 
 
 Here's what you'll build:
 
-1. **Scraper** -- Collect job listings from a practice website (Chapter 23)
-2. **Database** -- Store listings in SQLite with proper schema (Chapter 22)
-3. **Search Engine** -- Query and filter listings (Chapter 22)
-4. **API Client** -- Fetch additional data from a public API (Chapter 21)
-5. **Data Pipeline** -- Process listings efficiently with generators (Chapter 20)
-6. **Utilities** -- Decorated helper functions for timing and logging (Chapter 19)
-7. **Test Suite** -- Prove it all works with pytest (Chapter 24)
-8. **Clean Code** -- Type hints, formatting, and linting throughout (Chapter 25)
+1. **Scraper** - Collect job listings from a practice website (Chapter 23)
+2. **Database** - Store listings in SQLite with proper schema (Chapter 22)
+3. **Search Engine** - Query and filter listings (Chapter 22)
+4. **API Client** - Fetch additional data from a public API (Chapter 21)
+5. **Data Pipeline** - Process listings efficiently with generators (Chapter 20)
+6. **Utilities** - Decorated helper functions for timing and logging (Chapter 19)
+7. **Test Suite** - Prove it all works with pytest (Chapter 24)
+8. **Clean Code** - Type hints, formatting, and linting throughout (Chapter 25)
 
 ## Skills Map
 
 | Project Component | Chapter |
-|---|---|
+|--|--|
 | `@timer` and `@logger` decorators | Chapter 19: Decorators |
 | Generator-based data pipeline | Chapter 20: Generators |
 | Fetching salary data from an API | Chapter 21: APIs |
@@ -10526,7 +10526,7 @@ job_scraper/
     pipeline.py         # Generator-based data processing
     utils.py            # Decorators and helper functions
     dashboard.py        # Search and display interface
-    main.py             # Entry point -- ties everything together
+    main.py             # Entry point - ties everything together
     tests/
         test_scraper.py
         test_database.py
@@ -10548,7 +10548,7 @@ mkdir tests
 pip install requests beautifulsoup4 pytest black flake8 mypy
 ```
 
-### Step 2: Build the Decorators (utils.py) -- Chapter 19
+### Step 2: Build the Decorators (utils.py) - Chapter 19
 
 Start with your utility decorators. You'll use these throughout the project:
 
@@ -10602,7 +10602,7 @@ def retry(max_attempts: int = 3, delay: float = 1.0) -> Callable:
     return decorator
 ```
 
-### Step 3: Build the Database Layer (database.py) -- Chapter 22
+### Step 3: Build the Database Layer (database.py) - Chapter 22
 
 ```python
 # database.py
@@ -10699,7 +10699,7 @@ def get_companies() -> list[dict]:
         return [dict(row) for row in rows]
 ```
 
-### Step 4: Build the Scraper (scraper.py) -- Chapter 23
+### Step 4: Build the Scraper (scraper.py) - Chapter 23
 
 For this project, we'll scrape from a practice site. You can adapt this to any job board:
 
@@ -10779,7 +10779,7 @@ def scrape_all_jobs(base_url: str = "https://quotes.toscrape.com") -> list[dict[
     return all_jobs
 ```
 
-### Step 5: Build the Data Pipeline (pipeline.py) -- Chapter 20
+### Step 5: Build the Data Pipeline (pipeline.py) - Chapter 20
 
 Use generators to process the scraped data efficiently:
 
@@ -10824,7 +10824,7 @@ def format_for_display(
     """Format jobs as readable strings."""
     for i, job in enumerate(jobs, 1):
         yield (
-            f"\n--- Job {i} ---\n"
+            f"\n-- Job {i} --\n"
             f"Title:    {job.get('title', 'N/A')}\n"
             f"Company:  {job.get('company', 'N/A')}\n"
             f"Location: {job.get('location', 'N/A')}\n"
@@ -10954,7 +10954,7 @@ if __name__ == "__main__":
     main()
 ```
 
-### Step 8: Write Tests (tests/) -- Chapter 24
+### Step 8: Write Tests (tests/) - Chapter 24
 
 ```python
 # tests/test_database.py
@@ -11076,7 +11076,7 @@ def test_clean_removes_duplicates():
     assert len(results) == 2
 ```
 
-### Step 9: Clean Up -- Chapter 25
+### Step 9: Clean Up - Chapter 25
 
 Run the full clean code suite:
 
@@ -11108,11 +11108,11 @@ Fix any issues that come up. This is the professional workflow.
 
 If you want to go further:
 
-- **Add email alerts** -- Send yourself an email when new jobs matching your criteria are found
-- **Schedule the scraper** -- Run it automatically every day using `schedule` or cron
-- **Build a web interface** -- Use Flask (you'll learn this in Sprint 5!) to create a browser-based dashboard
-- **Add salary estimation** -- Use a public API to estimate salaries based on job title and location
-- **Export to CSV/Excel** -- Let users download search results
+- **Add email alerts** - Send yourself an email when new jobs matching your criteria are found
+- **Schedule the scraper** - Run it automatically every day using `schedule` or cron
+- **Build a web interface** - Use Flask (you'll learn this in Sprint 5!) to create a browser-based dashboard
+- **Add salary estimation** - Use a public API to estimate salaries based on job title and location
+- **Export to CSV/Excel** - Let users download search results
 
 ## What You've Accomplished
 
@@ -11132,13 +11132,13 @@ These aren't academic exercises. These are the exact skills listed on job postin
 
 **You're one sprint away from building AI applications. ONE. Let that sink in.**
 
-Sprint 5 covers AI, machine learning, and building intelligent applications with Python. Everything you've learned -- from variables in Sprint 1 to databases and APIs in Sprint 4 -- comes together. You have the foundation. You're ready.
+Sprint 5 covers AI, machine learning, and building intelligent applications with Python. Everything you've learned - from variables in Sprint 1 to databases and APIs in Sprint 4 - comes together. You have the foundation. You're ready.
 
 See you in Sprint 5.
 
 ---
 
-# Welcome to Sprint 5: Python x AI -- The Future is Now
+# Welcome to Sprint 5: Python x AI - The Future is Now
 
 > **Chapters 26-32** | **Estimated Time: 4-5 hours** | **Difficulty: You're Ready**
 
@@ -11150,13 +11150,13 @@ Over the next seven chapters, you'll go from raw data to AI-powered applications
 
 Let's talk about what's ahead:
 
-- **Chapter 26:** NumPy -- the engine under every AI library
-- **Chapter 27:** Pandas -- data analysis without the spreadsheet headaches
-- **Chapter 28:** Data Visualization -- making numbers tell stories
-- **Chapter 29:** Machine Learning -- teaching computers to learn from data
-- **Chapter 30:** AI APIs & LLMs -- building with OpenAI, Gemini, and more
-- **Chapter 31:** LangChain & AI Agents -- memory, documents, and the bleeding edge
-- **Chapter 32:** Automation -- letting Python do your job while you get coffee
+- **Chapter 26:** NumPy - the engine under every AI library
+- **Chapter 27:** Pandas - data analysis without the spreadsheet headaches
+- **Chapter 28:** Data Visualization - making numbers tell stories
+- **Chapter 29:** Machine Learning - teaching computers to learn from data
+- **Chapter 30:** AI APIs & LLMs - building with OpenAI, Gemini, and more
+- **Chapter 31:** LangChain & AI Agents - memory, documents, and the bleeding edge
+- **Chapter 32:** Automation - letting Python do your job while you get coffee
 
 You went from `print("Hello, World!")` to this. Most people who start learning to code never make it past week two. You're in Sprint 5. Let that sink in.
 
@@ -11170,20 +11170,20 @@ Let's go.
 
 > **Sprint 5, Chapter 26** | **10 min read** | **Code: [github link](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-5-ai/chapter-26-numpy/)**
 
-If Python lists are a bicycle, NumPy arrays are a Tesla. Same job -- getting you from A to B. Wildly different speed. And once you drive the Tesla, you're never going back to pedaling.
+If Python lists are a bicycle, NumPy arrays are a Tesla. Same job - getting you from A to B. Wildly different speed. And once you drive the Tesla, you're never going back to pedaling.
 
 ## What You'll Learn
 - Creating NumPy arrays (multiple ways)
-- Shape and dtype -- understanding your data's structure
+- Shape and dtype - understanding your data's structure
 - Indexing and slicing (you already know most of this)
 - Element-wise math operations (no loops!)
-- Broadcasting -- NumPy's mind-reading trick
+- Broadcasting - NumPy's mind-reading trick
 - Essential functions: mean, std, max, min, sum, reshape
 - Why NumPy is dramatically faster than regular Python lists
 
 ## Why Should I Care?
 
-Every single AI and machine learning library in Python -- TensorFlow, PyTorch, scikit-learn, pandas -- is built on top of NumPy. It's not optional. It's not a "nice to have." It's the foundation. Learning AI without NumPy is like learning to cook without knowing what a stove is.
+Every single AI and machine learning library in Python - TensorFlow, PyTorch, scikit-learn, pandas - is built on top of NumPy. It's not optional. It's not a "nice to have." It's the foundation. Learning AI without NumPy is like learning to cook without knowing what a stove is.
 
 NumPy makes math on large datasets fast, easy, and readable. Operations that would take a `for` loop and ten lines of code take one line with NumPy. And they run 50-100x faster. That's not a typo.
 
@@ -11266,21 +11266,21 @@ Every NumPy array knows two things about itself: its **shape** (how many rows an
 
 ```python
 scores = np.array([85, 92, 78, 95, 88])
-print(scores.shape)  # (5,)     -- 1D array with 5 elements
-print(scores.dtype)  # int64    -- 64-bit integers
+print(scores.shape)  # (5,)     - 1D array with 5 elements
+print(scores.dtype)  # int64    - 64-bit integers
 
 grades = np.array([
     [85, 92, 78],
     [95, 88, 76],
     [90, 85, 92]
 ])
-print(grades.shape)  # (3, 3)   -- 3 rows, 3 columns
+print(grades.shape)  # (3, 3)   - 3 rows, 3 columns
 print(grades.dtype)  # int64
 
 # You can also check other properties
-print(scores.ndim)   # 1  -- one dimension
-print(grades.ndim)   # 2  -- two dimensions
-print(grades.size)   # 9  -- total number of elements
+print(scores.ndim)   # 1  - one dimension
+print(grades.ndim)   # 2  - two dimensions
+print(grades.size)   # 9  - total number of elements
 ```
 
 Think of `shape` as the dimensions of a spreadsheet. `(3, 3)` means 3 rows and 3 columns. `(5,)` means just a single row of 5 items. When you start doing machine learning, you'll check `.shape` constantly. It's the first thing you look at when something goes wrong.
@@ -11292,7 +11292,7 @@ print(precise)       # [1. 2. 3.]
 print(precise.dtype)  # float64
 
 small = np.array([1, 2, 3], dtype=np.int8)
-print(small.dtype)    # int8 -- uses less memory
+print(small.dtype)    # int8 - uses less memory
 ```
 
 ## Indexing and Slicing
@@ -11309,7 +11309,7 @@ print(scores[-1])    # 91
 # Slicing (same as lists)
 print(scores[1:4])   # [92 78 95]
 print(scores[:3])    # [85 92 78]
-print(scores[::2])   # [85 78 88 91] -- every other element
+print(scores[::2])   # [85 78 88 91] - every other element
 ```
 
 For 2D arrays, you get an extra dimension to play with:
@@ -11336,12 +11336,12 @@ print(grades[0:2, 1:3])
 #  [88 76]]
 ```
 
-Fancy indexing -- selecting specific elements by condition:
+Fancy indexing - selecting specific elements by condition:
 
 ```python
 scores = np.array([85, 92, 78, 95, 88, 76, 91])
 
-# Boolean indexing -- this is incredibly powerful
+# Boolean indexing - this is incredibly powerful
 high_scores = scores[scores >= 90]
 print(high_scores)  # [92 95 91]
 
@@ -11380,13 +11380,13 @@ print(squared)  # [7225 8464 6084 9025 7744]
 Compare this to regular Python lists:
 
 ```python
-# Regular Python -- requires a loop
+# Regular Python - requires a loop
 scores_list = [85, 92, 78, 95, 88]
 curved_list = []
 for s in scores_list:
     curved_list.append(s + 5)
 
-# NumPy -- one line
+# NumPy - one line
 scores_np = np.array([85, 92, 78, 95, 88])
 curved_np = scores_np + 5
 ```
@@ -11433,7 +11433,7 @@ grades = np.array([
 # Weight for each subject: [math_weight, science_weight, english_weight]
 weights = np.array([0.4, 0.35, 0.25])
 
-# Broadcasting: (3, 3) * (3,) -- NumPy applies weights to each row
+# Broadcasting: (3, 3) * (3,) - NumPy applies weights to each row
 weighted = grades * weights
 print(weighted)
 # [[34.   32.2  19.5 ]
@@ -11457,16 +11457,16 @@ These are the functions you'll use every single day:
 scores = np.array([85, 92, 78, 95, 88, 76, 91, 83])
 
 # Statistics
-print(np.mean(scores))    # 86.0    -- average
-print(np.median(scores))  # 86.5    -- middle value
-print(np.std(scores))     # 6.265   -- standard deviation
-print(np.max(scores))     # 95      -- highest
-print(np.min(scores))     # 76      -- lowest
-print(np.sum(scores))     # 688     -- total
+print(np.mean(scores))    # 86.0    - average
+print(np.median(scores))  # 86.5    - middle value
+print(np.std(scores))     # 6.265   - standard deviation
+print(np.max(scores))     # 95      - highest
+print(np.min(scores))     # 76      - lowest
+print(np.sum(scores))     # 688     - total
 
 # Position finders
-print(np.argmax(scores))  # 3  -- index of the highest score
-print(np.argmin(scores))  # 5  -- index of the lowest score
+print(np.argmax(scores))  # 3  - index of the highest score
+print(np.argmin(scores))  # 5  - index of the lowest score
 
 # Sorting
 sorted_scores = np.sort(scores)
@@ -11561,7 +11561,7 @@ NumPy is 68.5x faster
 
 Almost 70 times faster. On a million elements. And the gap gets bigger as your data gets bigger. This is why every data science library uses NumPy under the hood.
 
-> **Don't Panic:** NumPy looks like a lot of new stuff, but 80% of it works exactly like lists. Indexing? Same as lists. Slicing? Same as lists. The main difference is that math operations work on the entire array at once instead of needing loops. You already know this stuff -- NumPy just makes it faster.
+> **Don't Panic:** NumPy looks like a lot of new stuff, but 80% of it works exactly like lists. Indexing? Same as lists. Slicing? Same as lists. The main difference is that math operations work on the entire array at once instead of needing loops. You already know this stuff - NumPy just makes it faster.
 
 ## Your Turn: Student Scores Analysis
 
@@ -11609,17 +11609,17 @@ Best student: Student 4 with average 90.5
 ## TL;DR
 
 - NumPy arrays are like Python lists but dramatically faster for math operations
-- `import numpy as np` -- the universal convention
+- `import numpy as np` - the universal convention
 - Create arrays with `np.array()`, `np.zeros()`, `np.ones()`, `np.arange()`, `np.linspace()`
 - `.shape` tells you dimensions, `.dtype` tells you data type
 - Indexing and slicing work just like lists, plus `[row, col]` for 2D
 - Boolean indexing: `arr[arr > 90]` gives you all elements matching the condition
-- Math operations work element-wise -- no loops needed
+- Math operations work element-wise - no loops needed
 - Broadcasting lets NumPy do math between arrays of different sizes
 - Key functions: `np.mean()`, `np.std()`, `np.max()`, `np.min()`, `np.sum()`, `np.sort()`
 - `.reshape()` changes the shape of your data
 - NumPy is 50-100x faster than regular Python lists for numerical operations
-- Every AI/ML library is built on NumPy -- this is the foundation of everything that follows
+- Every AI/ML library is built on NumPy - this is the foundation of everything that follows
 
 ---
 
@@ -11627,7 +11627,7 @@ Best student: Student 4 with average 90.5
 
 > **Sprint 5, Chapter 27** | **12 min read** | **Code: [github link](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-5-ai/chapter-27-pandas/)**
 
-If Excel and Python had a baby, it would be pandas. All the spreadsheet power, none of the mouse clicking. No more dragging formulas across 10,000 rows. No more accidentally sorting one column and scrambling all your data. Pandas does what Excel does -- but in code, which means it's reproducible, automatable, and infinitely more powerful.
+If Excel and Python had a baby, it would be pandas. All the spreadsheet power, none of the mouse clicking. No more dragging formulas across 10,000 rows. No more accidentally sorting one column and scrambling all your data. Pandas does what Excel does - but in code, which means it's reproducible, automatable, and infinitely more powerful.
 
 ## What You'll Learn
 - Series (one column) and DataFrame (the whole spreadsheet)
@@ -11636,11 +11636,11 @@ If Excel and Python had a baby, it would be pandas. All the spreadsheet power, n
 - Filtering data with conditions
 - Sorting and groupby (pivot table vibes)
 - Handling missing data
-- `describe()` -- instant statistics
+- `describe()` - instant statistics
 
 ## Why Should I Care?
 
-Data science, business analytics, machine learning prep, financial analysis, marketing reports -- they all start with pandas. If data is the new oil, pandas is the refinery. Every data science job listing mentions it. Every machine learning project starts by loading data into a pandas DataFrame. If you plan to work with data in any capacity, pandas is non-negotiable.
+Data science, business analytics, machine learning prep, financial analysis, marketing reports - they all start with pandas. If data is the new oil, pandas is the refinery. Every data science job listing mentions it. Every machine learning project starts by loading data into a pandas DataFrame. If you plan to work with data in any capacity, pandas is non-negotiable.
 
 ## Installing Pandas
 
@@ -11672,7 +11672,7 @@ print(scores)
 # dtype: int64
 ```
 
-Notice the numbers on the left? That's the **index** -- automatic labels. You can set your own:
+Notice the numbers on the left? That's the **index** - automatic labels. You can set your own:
 
 ```python
 scores = pd.Series(
@@ -11698,7 +11698,7 @@ print(scores.iloc[0])     # 85
 
 ## DataFrame: The Whole Spreadsheet
 
-A **DataFrame** is the star of the show. It's a table -- rows and columns, just like a spreadsheet. Each column is a Series.
+A **DataFrame** is the star of the show. It's a table - rows and columns, just like a spreadsheet. Each column is a Series.
 
 ```python
 import pandas as pd
@@ -11725,7 +11725,7 @@ That's it. Dictionary keys become column names. Lists become the data. You just 
 
 ```python
 # Quick info about your DataFrame
-print(df.shape)     # (5, 4) -- 5 rows, 4 columns
+print(df.shape)     # (5, 4) - 5 rows, 4 columns
 print(df.columns)   # Index(['name', 'age', 'city', 'salary'], dtype='object')
 print(df.dtypes)
 # name      object
@@ -11749,7 +11749,7 @@ print(df.head())
 print(df.tail())
 
 # How big is it?
-print(df.shape)  # (1000, 8) -- 1000 movies, 8 columns
+print(df.shape)  # (1000, 8) - 1000 movies, 8 columns
 ```
 
 Let's create a sample CSV to work with throughout this chapter:
@@ -12005,7 +12005,7 @@ Fixing missing data:
 ```python
 # Option 1: Drop rows with any missing data
 clean = df.dropna()
-print(clean)  # Only Alice, Diana -- lost 3 rows!
+print(clean)  # Only Alice, Diana - lost 3 rows!
 
 # Option 2: Fill missing values with a specific value
 filled = df.fillna({"age": df["age"].mean(), "salary": 0, "city": "Unknown"})
@@ -12022,7 +12022,7 @@ has_age = df.dropna(subset=["age"])
 print(has_age)  # Keeps Alice, Charlie, Diana
 ```
 
-> **Pro Tip:** `dropna()` is aggressive -- it can remove a lot of data. `fillna()` with the mean or median is usually a better first choice for numerical columns. For categorical columns (like city), `fillna("Unknown")` is a safe bet.
+> **Pro Tip:** `dropna()` is aggressive - it can remove a lot of data. `fillna()` with the mean or median is usually a better first choice for numerical columns. For categorical columns (like city), `fillna("Unknown")` is a safe bet.
 
 ## describe(): Instant Statistics
 
@@ -12041,7 +12041,7 @@ print(movies.describe())
 # max  2019.0000   9.200000  2700000.000   175.000000       185.000000       1005.000000
 ```
 
-Count, mean, standard deviation, min, max, and quartiles -- all in one call. This is the first thing every data scientist runs on a new dataset. Always.
+Count, mean, standard deviation, min, max, and quartiles - all in one call. This is the first thing every data scientist runs on a new dataset. Always.
 
 ```python
 # describe() for a single column
@@ -12114,18 +12114,18 @@ Expected insights:
 
 ## TL;DR
 
-- Pandas is Python's data analysis powerhouse -- think Excel but with code
-- `import pandas as pd` -- the universal convention
+- Pandas is Python's data analysis powerhouse - think Excel but with code
+- `import pandas as pd` - the universal convention
 - **Series** = one column; **DataFrame** = the whole table
 - `pd.read_csv("file.csv")` loads data; `df.head()` previews it
 - Select columns: `df["col"]` or `df[["col1", "col2"]]`
 - Select rows: `df.iloc[0]` (by position) or `df.loc[0]` (by label)
-- Filter: `df[df["col"] > value]` -- same boolean indexing pattern as NumPy
+- Filter: `df[df["col"] > value]` - same boolean indexing pattern as NumPy
 - Sort: `df.sort_values("col", ascending=False)`
-- Groupby: `df.groupby("col")["other_col"].mean()` -- pivot table in one line
+- Groupby: `df.groupby("col")["other_col"].mean()` - pivot table in one line
 - Missing data: `df.isna().sum()` to find it, `df.fillna()` or `df.dropna()` to fix it
 - `df.describe()` gives you instant statistics on every numeric column
-- You only need about 20 pandas methods for 95% of your work -- this chapter covered them
+- You only need about 20 pandas methods for 95% of your work - this chapter covered them
 
 ---
 
@@ -12138,9 +12138,9 @@ Data without visualization is like a movie without pictures. Technically the sto
 ## What You'll Learn
 - Matplotlib basics: line, scatter, bar, histogram, pie charts
 - Making charts not ugly: labels, titles, colors, legends
-- Subplots -- multiple charts in one figure
-- Seaborn -- matplotlib but prettier
-- Plotly -- interactive charts that move
+- Subplots - multiple charts in one figure
+- Seaborn - matplotlib but prettier
+- Plotly - interactive charts that move
 - Choosing the right chart for your data
 
 ## Why Should I Care?
@@ -12289,7 +12289,7 @@ plt.hist(scores, bins=25, color="steelblue", edgecolor="black", alpha=0.7)
 plt.title("Distribution of Test Scores", fontsize=14, fontweight="bold")
 plt.xlabel("Score")
 plt.ylabel("Number of Students")
-plt.axvline(np.mean(scores), color="red", linestyle="--", label=f"Mean: {np.mean(scores):.1f}")
+plt.axvline(np.mean(scores), color="red", linestyle="-", label=f"Mean: {np.mean(scores):.1f}")
 plt.legend()
 plt.tight_layout()
 plt.show()
@@ -12325,7 +12325,7 @@ import numpy as np
 months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
 sales = [120, 135, 148, 162, 155, 178]
 
-# Set a style -- this changes everything
+# Set a style - this changes everything
 plt.style.use("seaborn-v0_8-whitegrid")  # Clean, modern look
 
 fig, ax = plt.subplots(figsize=(10, 6))  # Control the size
@@ -12349,11 +12349,11 @@ plt.show()
 ```
 
 Key upgrades:
-- `plt.style.use()` -- sets a global style theme
-- `figsize=(10, 6)` -- control the chart size
-- `tight_layout()` -- prevents labels from getting cut off
-- Annotations -- add data labels directly on the chart
-- Custom colors with hex codes -- no more default blue
+- `plt.style.use()` - sets a global style theme
+- `figsize=(10, 6)` - control the chart size
+- `tight_layout()` - prevents labels from getting cut off
+- Annotations - add data labels directly on the chart
+- Custom colors with hex codes - no more default blue
 
 Available styles you can try:
 
@@ -12362,10 +12362,10 @@ Available styles you can try:
 print(plt.style.available)
 
 # Some good ones:
-# "seaborn-v0_8-whitegrid" -- clean and modern
-# "ggplot" -- R-inspired
-# "fivethirtyeight" -- news/data journalism style
-# "dark_background" -- dark mode
+# "seaborn-v0_8-whitegrid" - clean and modern
+# "ggplot" - R-inspired
+# "fivethirtyeight" - news/data journalism style
+# "dark_background" - dark mode
 ```
 
 ### Saving Charts
@@ -12376,7 +12376,7 @@ plt.savefig("sales_chart.png", dpi=150, bbox_inches="tight")
 
 # Other formats
 plt.savefig("sales_chart.pdf")
-plt.savefig("sales_chart.svg")  # Vector format -- scales perfectly
+plt.savefig("sales_chart.svg")  # Vector format - scales perfectly
 ```
 
 ## Subplots: Multiple Charts in One Figure
@@ -12484,7 +12484,7 @@ Box plots show you the median, quartiles, and outliers at a glance. They're the 
 ### Heatmap
 
 ```python
-# Correlation matrix -- how are variables related?
+# Correlation matrix - how are variables related?
 numeric_movies = movies[["rating", "budget_millions", "revenue_millions"]].copy()
 
 plt.figure(figsize=(8, 6))
@@ -12579,7 +12579,7 @@ fig.show()
 Here's your decision guide:
 
 | Question You're Asking | Chart Type | Library Call |
-|---|---|---|
+|--|--|--|
 | How does something change over time? | **Line chart** | `plt.plot()` |
 | How do categories compare? | **Bar chart** | `plt.bar()` or `sns.barplot()` |
 | What's the relationship between X and Y? | **Scatter plot** | `plt.scatter()` or `px.scatter()` |
@@ -12685,7 +12685,7 @@ Challenge: Also create one interactive Plotly chart showing budget vs revenue wi
 
 > **Sprint 5, Chapter 29** | **12 min read** | **Code: [github link](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-5-ai/chapter-29-machine-learning/)**
 
-Teaching ML is like teaching a toddler. You show them examples: "This is a cat. This is a dog. This is a cat." Eventually, they figure out the pattern themselves. You never explicitly explain whiskers or floppy ears -- they just *get it* after seeing enough examples. Machine learning works the same way. You give a computer enough data, and it figures out the rules on its own.
+Teaching ML is like teaching a toddler. You show them examples: "This is a cat. This is a dog. This is a cat." Eventually, they figure out the pattern themselves. You never explicitly explain whiskers or floppy ears - they just *get it* after seeing enough examples. Machine learning works the same way. You give a computer enough data, and it figures out the rules on its own.
 
 You're building machine learning models now. Most people who start coding never get here. Take a second to appreciate that.
 
@@ -12720,8 +12720,8 @@ And the code is literally 5 lines. Seriously. I'll show you.
 Think of it this way: traditional programming is "here are the rules, apply them to data." Machine learning is "here's the data, figure out the rules."
 
 ```
-Traditional:  Rules + Data → Answers
-ML:           Data + Answers → Rules
+Traditional:  Rules + Data -> Answers
+ML:           Data + Answers -> Rules
 ```
 
 ## The Three Types of ML
@@ -12769,7 +12769,7 @@ That's it. Six steps. Let's do them.
 
 ## Your First Model: House Price Prediction
 
-Let's predict house prices based on features like size, bedrooms, and age. This is a **regression** problem -- predicting a number.
+Let's predict house prices based on features like size, bedrooms, and age. This is a **regression** problem - predicting a number.
 
 ### Step 1: Load the Data
 
@@ -12871,7 +12871,7 @@ print(comparison)
 # 4  198000.0   205118.0     -7118.0
 ```
 
-The predictions are close. Not perfect -- there's noise in the data -- but the model learned the general pattern.
+The predictions are close. Not perfect - there's noise in the data - but the model learned the general pattern.
 
 ### Step 6: Evaluate
 
@@ -12897,7 +12897,7 @@ An R-squared of 0.972 means the model explains 97.2% of the variation in prices.
 
 ### The Whole Thing in One Block
 
-Here's the entire ML pipeline -- load to evaluate:
+Here's the entire ML pipeline - load to evaluate:
 
 ```python
 import pandas as pd
@@ -13024,7 +13024,7 @@ Detailed Report:
 ### Seeing What the Tree Learned
 
 ```python
-# Feature importance -- which features matter most?
+# Feature importance - which features matter most?
 importances = pd.Series(tree.feature_importances_, index=X.columns)
 print(importances.sort_values(ascending=False))
 # time_on_site_min     0.38
@@ -13033,7 +13033,7 @@ print(importances.sort_values(ascending=False))
 # age                  0.10
 ```
 
-Time on site is the most important predictor. Makes sense -- people who spend more time browsing are more likely to buy.
+Time on site is the most important predictor. Makes sense - people who spend more time browsing are more likely to buy.
 
 ```python
 # Visualize the tree (optional but cool)
@@ -13041,14 +13041,14 @@ from sklearn.tree import export_text
 
 tree_rules = export_text(tree, feature_names=list(X.columns))
 print(tree_rules)
-# |--- time_on_site_min <= 15.35
-# |   |--- visits_per_month <= 10.50
-# |   |   |--- income <= 49721.50
-# |   |   |   |--- class: 0
-# |   |   |--- income > 49721.50
-# |   |   |   |--- class: 0
-# |   |--- visits_per_month > 10.50
-# |   |   |--- ...
+# |-- time_on_site_min <= 15.35
+# |   |-- visits_per_month <= 10.50
+# |   |   |-- income <= 49721.50
+# |   |   |   |-- class: 0
+# |   |   |-- income > 49721.50
+# |   |   |   |-- class: 0
+# |   |-- visits_per_month > 10.50
+# |   |   |-- ...
 ```
 
 You can literally read the decision logic. "If time on site is less than 15 minutes AND visits are less than 11 AND income is under $50K, predict they won't buy." This interpretability is why decision trees are so popular in business.
@@ -13148,11 +13148,11 @@ Expected results:
 - Machine learning = computers learning patterns from data instead of following explicit rules
 - **Supervised learning**: give it examples with answers; it learns to predict on new data
 - The scikit-learn workflow: load data, split (train/test), create model, `.fit()`, `.predict()`, evaluate
-- **Train/test split** prevents overfitting -- always test on data the model hasn't seen
+- **Train/test split** prevents overfitting - always test on data the model hasn't seen
 - **Linear Regression** predicts numbers; **Decision Trees** and others predict categories
 - **Accuracy** = percentage correct; **Precision** = "when I said yes, was I right?"; **Recall** = "of all the yeses, did I catch them?"
 - **Feature importance** tells you which inputs matter most
-- scikit-learn's API is consistent: every model uses `.fit()` and `.predict()` -- learn one, know them all
+- scikit-learn's API is consistent: every model uses `.fit()` and `.predict()` - learn one, know them all
 - The ML code itself is 5 lines. The hard part is preparing good data and choosing what to predict
 - You just built machine learning models. You. This chapter. Right now. Let that sink in.
 
@@ -13162,24 +13162,24 @@ Expected results:
 
 > **Sprint 5, Chapter 30** | **12 min read** | **Code: [github link](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-5-ai/chapter-30-ai-apis/)**
 
-LLMs are like having a very smart intern. They can write, summarize, translate, and answer questions -- but they need clear instructions and sometimes make stuff up with total confidence. Sound like anyone you know from college group projects? The key difference: this intern works 24/7, never complains, and you can build an entire product around them.
+LLMs are like having a very smart intern. They can write, summarize, translate, and answer questions - but they need clear instructions and sometimes make stuff up with total confidence. Sound like anyone you know from college group projects? The key difference: this intern works 24/7, never complains, and you can build an entire product around them.
 
 You're about to build apps that use the same technology behind ChatGPT. Take a moment. This is genuinely cool.
 
 ## What You'll Learn
 - What LLMs are (simple, no PhD required)
 - OpenAI API setup and your first API call
-- Chat completions -- the core of everything
+- Chat completions - the core of everything
 - System, user, and assistant messages
-- Temperature -- the creativity dial
-- Tokens -- how AI measures text
+- Temperature - the creativity dial
+- Tokens - how AI measures text
 - Streaming responses
 - Google Gemini API basics
 - Prompt engineering fundamentals
 
 ## Why Should I Care?
 
-ChatGPT, Gemini, Claude -- you've used them. Now you're going to build with them. This is the most in-demand skill in tech right now. Job postings that mention "LLM" or "AI integration" have exploded. Companies are building AI features into everything: customer support bots, content generators, code assistants, data analyzers. And the developers building these features? They're using the exact APIs you're about to learn.
+ChatGPT, Gemini, Claude - you've used them. Now you're going to build with them. This is the most in-demand skill in tech right now. Job postings that mention "LLM" or "AI integration" have exploded. Companies are building AI features into everything: customer support bots, content generators, code assistants, data analyzers. And the developers building these features? They're using the exact APIs you're about to learn.
 
 The barrier to entry has never been lower. You don't need to train a model. You don't need a GPU. You just need an API key and Python. You have both.
 
@@ -13203,7 +13203,7 @@ Think of it like autocomplete on your phone, but trained on the entire internet 
 2. Sign up or log in
 3. Go to API Keys (in the left sidebar or settings)
 4. Click "Create new secret key"
-5. Copy it immediately -- you won't see it again
+5. Copy it immediately - you won't see it again
 
 > **Warning:** Your API key is like a password. Never put it in your code. Never commit it to GitHub. Never share it. People scan GitHub for leaked keys and will run up your bill.
 
@@ -13270,7 +13270,7 @@ print(response.choices[0].message.content)
 
 That's it. You just called the same AI that powers ChatGPT. From your own Python code. Five lines (not counting the import).
 
-> **Don't Panic:** The API is literally just sending text and getting text back. If you've used the `requests` library (Chapter 21), this is the same concept -- you send data to a server, it sends data back. The OpenAI library just wraps that into a clean interface.
+> **Don't Panic:** The API is literally just sending text and getting text back. If you've used the `requests` library (Chapter 21), this is the same concept - you send data to a server, it sends data back. The OpenAI library just wraps that into a clean interface.
 
 ## Chat Completions: The Core API
 
@@ -13358,7 +13358,7 @@ Rules of thumb:
 
 ## Tokens: How AI Measures Text
 
-LLMs don't read words -- they read **tokens**. A token is roughly 3/4 of a word. "Hello, world!" is about 3 tokens. A page of text is around 500-700 tokens.
+LLMs don't read words - they read **tokens**. A token is roughly 3/4 of a word. "Hello, world!" is about 3 tokens. A page of text is around 500-700 tokens.
 
 Why do you care? Because you're **billed per token**. Both the tokens you send (input) and the tokens the AI generates (output).
 
@@ -13378,11 +13378,11 @@ print(f"Total tokens: {response.usage.total_tokens}")
 # Total tokens: 76
 ```
 
-> **Pro Tip:** `gpt-4o-mini` is cheap and fast -- perfect for learning and most applications. `gpt-4o` is more capable but costs more. Start with mini, upgrade only if you need better quality.
+> **Pro Tip:** `gpt-4o-mini` is cheap and fast - perfect for learning and most applications. `gpt-4o` is more capable but costs more. Start with mini, upgrade only if you need better quality.
 
 ## Streaming Responses
 
-Instead of waiting for the entire response, you can stream it word by word -- just like ChatGPT does:
+Instead of waiting for the entire response, you can stream it word by word - just like ChatGPT does:
 
 ```python
 stream = client.chat.completions.create(
@@ -13532,7 +13532,7 @@ print(response.text)  # Knows we're talking about lists
 
 Gemini has a generous free tier, which makes it great for learning and prototyping. The API is slightly simpler than OpenAI's, and the models are competitive in quality.
 
-> **Pro Tip:** You don't have to pick one. Many production apps use multiple LLMs -- OpenAI for some tasks, Gemini for others, Claude for yet others. The APIs are similar enough that switching is easy.
+> **Pro Tip:** You don't have to pick one. Many production apps use multiple LLMs - OpenAI for some tasks, Gemini for others, Claude for yet others. The APIs are similar enough that switching is easy.
 
 ## Prompt Engineering: 5 Practical Tips
 
@@ -13600,7 +13600,7 @@ messages = [
 
 ## Building a Simple Chatbot
 
-Let's put it all together -- a command-line chatbot:
+Let's put it all together - a command-line chatbot:
 
 ```python
 from openai import OpenAI
@@ -13683,7 +13683,7 @@ Ideas to try:
 
 ## TL;DR
 
-- LLMs are sophisticated text predictors trained on massive amounts of data -- not magic, not thinking
+- LLMs are sophisticated text predictors trained on massive amounts of data - not magic, not thinking
 - **OpenAI API**: `pip install openai`, set `OPENAI_API_KEY`, call `client.chat.completions.create()`
 - Messages have roles: **system** (personality), **user** (you), **assistant** (AI's responses)
 - **Temperature**: 0 = focused/consistent, 1 = creative/varied
@@ -13691,7 +13691,7 @@ Ideas to try:
 - **Streaming**: `stream=True` gives you the typing effect
 - **Gemini** works similarly: `pip install google-generativeai`, same concepts
 - **Prompt engineering** matters: be specific, give roles, show examples, specify format
-- The API is just sending text and getting text back -- you already know how to do this
+- The API is just sending text and getting text back - you already know how to do this
 - You're building AI-powered applications now. This is not a drill.
 
 ---
@@ -13705,9 +13705,9 @@ If the OpenAI API is a smart employee, LangChain is the project manager that org
 ## What You'll Learn
 - What LangChain is and why it exists
 - ChatOpenAI setup
-- PromptTemplates -- reusable instructions
-- Chains -- connecting the dots
-- Memory -- AI that remembers
+- PromptTemplates - reusable instructions
+- Chains - connecting the dots
+- Memory - AI that remembers
 - RAG: letting AI read YOUR documents
 - Embeddings, vector stores, and retrieval chains
 
@@ -13726,10 +13726,10 @@ pip install langchain langchain-openai langchain-community chromadb
 ```
 
 That's a few packages:
-- `langchain` -- the core framework
-- `langchain-openai` -- OpenAI integration
-- `langchain-community` -- community integrations (document loaders, etc.)
-- `chromadb` -- a vector database (more on this soon)
+- `langchain` - the core framework
+- `langchain-openai` - OpenAI integration
+- `langchain-community` - community integrations (document loaders, etc.)
+- `chromadb` - a vector database (more on this soon)
 
 ## ChatOpenAI: LangChain's Way of Talking to OpenAI
 
@@ -13927,7 +13927,7 @@ with_memory = RunnableWithMessageHistory(
     history_messages_key="history"
 )
 
-# Conversation -- the AI remembers!
+# Conversation - the AI remembers!
 config = {"configurable": {"session_id": "user_123"}}
 
 response = with_memory.invoke(
@@ -14005,7 +14005,7 @@ print(f"Split into {len(chunks)} chunks")
 print(f"First chunk: {chunks[0].page_content[:200]}...")
 ```
 
-Why overlap? Because if a sentence gets cut in half, the overlap ensures both chunks contain the complete thought. It's like how book pages overlap topics -- you don't want to lose context at the break point.
+Why overlap? Because if a sentence gets cut in half, the overlap ensures both chunks contain the complete thought. It's like how book pages overlap topics - you don't want to lose context at the break point.
 
 ### Step 3: Create Embeddings and Store in a Vector Database
 
@@ -14032,7 +14032,7 @@ A **vector store** is like a search engine for meaning. Instead of searching for
 
 ### Step 4: Build the Retrieval Chain
 
-Now connect everything -- user asks a question, relevant chunks are retrieved, and the LLM answers:
+Now connect everything - user asks a question, relevant chunks are retrieved, and the LLM answers:
 
 ```python
 from langchain_openai import ChatOpenAI
@@ -14159,7 +14159,7 @@ Q: What's the company's policy on bringing pets to the office?
 A: I don't have that information in my documents.
 ```
 
-Notice that last answer. The AI correctly says it doesn't know because the information isn't in the documents. That's the power of RAG -- the AI stays grounded in your data instead of making things up.
+Notice that last answer. The AI correctly says it doesn't know because the information isn't in the documents. That's the power of RAG - the AI stays grounded in your data instead of making things up.
 
 ## Your Turn: PDF Q&A Bot
 
@@ -14203,10 +14203,10 @@ Ideas for documents to try:
 - **Chains** connect components with `|`: `prompt | llm | parser`
 - **Memory** gives AI conversation history so it remembers past messages
 - **RAG** = load documents, split into chunks, embed as vectors, retrieve relevant chunks, let LLM answer
-- **Embeddings** turn text into numbers that capture meaning -- similar meanings get similar numbers
+- **Embeddings** turn text into numbers that capture meaning - similar meanings get similar numbers
 - **Vector stores** (Chroma) are search engines for meaning, not just keywords
 - The RAG workflow: `TextLoader` -> `TextSplitter` -> `Embeddings` -> `Chroma` -> `RetrievalChain`
-- RAG keeps AI grounded -- it answers from YOUR data and says "I don't know" when the answer isn't there
+- RAG keeps AI grounded - it answers from YOUR data and says "I don't know" when the answer isn't there
 - This is what companies are building right now: chatbots with memory, document Q&A, AI agents with tools
 - You just learned the hottest technology in tech. Seriously. Go update your resume.
 
@@ -14223,7 +14223,7 @@ Why spend 10 minutes doing something manually when you can spend 2 hours automat
 - Bulk file renaming
 - Email automation with smtplib
 - Scheduling tasks with the schedule library
-- Selenium -- browser automation basics
+- Selenium - browser automation basics
 - Three practical recipes you can use immediately
 
 ## Why Should I Care?
@@ -14388,7 +14388,7 @@ def organize_downloads():
 organize_downloads()
 ```
 
-Run this once and your Downloads folder goes from chaos to organized folders. Run it weekly (or schedule it -- we'll get there) and it stays clean forever.
+Run this once and your Downloads folder goes from chaos to organized folders. Run it weekly (or schedule it - we'll get there) and it stays clean forever.
 
 ## Bulk File Renaming
 
@@ -14425,7 +14425,7 @@ def rename_photos(folder, prefix="vacation"):
 # Result: beach_2024_001.jpg, beach_2024_002.jpg, beach_2024_003.jpg...
 ```
 
-Another common pattern -- removing spaces from filenames:
+Another common pattern - removing spaces from filenames:
 
 ```python
 from pathlib import Path
@@ -14488,7 +14488,7 @@ send_email(
 )
 ```
 
-> **Important -- App Passwords:** Gmail doesn't let you use your regular password with smtplib. You need an **App Password**:
+> **Important - App Passwords:** Gmail doesn't let you use your regular password with smtplib. You need an **App Password**:
 > 1. Go to your Google Account settings
 > 2. Security -> 2-Step Verification (enable it if you haven't)
 > 3. Search for "App passwords"
@@ -14759,7 +14759,7 @@ def generate_weekly_report():
 generate_weekly_report()
 ```
 
-## Practical Recipe 3: Watchdog -- Monitor a Folder for Changes
+## Practical Recipe 3: Watchdog - Monitor a Folder for Changes
 
 ```python
 # pip install watchdog
@@ -14812,7 +14812,7 @@ def process_new_file(filepath):
 
 ## Putting It All Together
 
-Here's the ultimate automation combo -- a scheduled script that:
+Here's the ultimate automation combo - a scheduled script that:
 1. Organizes your Downloads folder
 2. Generates a report
 3. Emails it to you
@@ -14823,7 +14823,7 @@ import time
 
 def daily_automation():
     """Run all daily automation tasks."""
-    print("\n--- Running Daily Automation ---")
+    print("\n-- Running Daily Automation --")
 
     # 1. Organize downloads
     print("\n1. Organizing files...")
@@ -14837,7 +14837,7 @@ def daily_automation():
     print("\n3. Sending report...")
     # send_email(...)  # From earlier in this chapter
 
-    print("\n--- Daily Automation Complete ---")
+    print("\n-- Daily Automation Complete --")
 
 # Run every weekday at 9 AM
 schedule.every().monday.at("09:00").do(daily_automation)
@@ -14910,12 +14910,12 @@ print(counts)
 - **pathlib** is the modern way to work with files: `Path.home() / "Downloads"`, `path.glob("*.pdf")`
 - **shutil** handles moving, copying, and deleting files and folders
 - Bulk rename files with loops: `path.rename(new_path)`
-- **smtplib** sends emails from Python -- use App Passwords for Gmail, never hardcode credentials
+- **smtplib** sends emails from Python - use App Passwords for Gmail, never hardcode credentials
 - **schedule** runs functions at specific times: `schedule.every().day.at("09:00").do(task)`
 - **Selenium** automates web browsers: clicking, typing, filling forms, taking screenshots
 - Combine pandas + matplotlib + email for automated reporting pipelines
-- Automation gets better over time -- start with one annoying task, automate it, then add more
-- Be careful with `shutil.rmtree()` -- it permanently deletes folders with no undo
+- Automation gets better over time - start with one annoying task, automate it, then add more
+- Be careful with `shutil.rmtree()` - it permanently deletes folders with no undo
 - You just learned to make your computer work while you sleep. Welcome to the good life.
 
 ---
@@ -14946,7 +14946,7 @@ This project uses skills from every chapter in Sprint 5.
 ## Skills Used
 
 | Chapter | Skill | How It's Used |
-|---------|-------|---------------|
+|-----|----|--------|
 | 26 - NumPy | Array operations | Scoring calculations, statistics |
 | 27 - Pandas | Data analysis | Structuring resume data, analysis |
 | 28 - Visualization | Charts | Skills chart, experience timeline |
@@ -15018,7 +15018,7 @@ Path("sample_resume.txt").write_text(sample_resume)
 print("Sample resume saved!")
 ```
 
-### Step 2: Parse the Resume (Chapter 32 -- File Handling)
+### Step 2: Parse the Resume (Chapter 32 - File Handling)
 
 ```python
 def load_resume(file_path):
@@ -15058,11 +15058,11 @@ def extract_sections(resume_text):
 resume = load_resume("sample_resume.txt")
 sections = extract_sections(resume)
 for section, content in sections.items():
-    print(f"\n--- {section} ---")
+    print(f"\n-- {section} --")
     print(content[:100] + "..." if len(content) > 100 else content)
 ```
 
-### Step 3: Analyze Skills (Chapters 26 & 27 -- NumPy & Pandas)
+### Step 3: Analyze Skills (Chapters 26 & 27 - NumPy & Pandas)
 
 ```python
 def analyze_skills(resume_text):
@@ -15120,7 +15120,7 @@ def analyze_skills(resume_text):
 skills_df, found_skills = analyze_skills(resume)
 ```
 
-### Step 4: Visualize the Analysis (Chapter 28 -- Visualization)
+### Step 4: Visualize the Analysis (Chapter 28 - Visualization)
 
 ```python
 def create_resume_dashboard(skills_df, sections, output_path="resume_dashboard.png"):
@@ -15178,7 +15178,7 @@ def create_resume_dashboard(skills_df, sections, output_path="resume_dashboard.p
 create_resume_dashboard(skills_df, sections)
 ```
 
-### Step 5: Score the Resume (Chapter 29 -- ML Concepts)
+### Step 5: Score the Resume (Chapter 29 - ML Concepts)
 
 ```python
 def score_resume(resume_text, sections, skills_df):
@@ -15237,7 +15237,7 @@ def score_resume(resume_text, sections, skills_df):
 scores, overall = score_resume(resume, sections, skills_df)
 ```
 
-### Step 6: AI Feedback (Chapter 30 -- AI APIs)
+### Step 6: AI Feedback (Chapter 30 - AI APIs)
 
 ```python
 def get_ai_feedback(resume_text, scores):
@@ -15305,7 +15305,7 @@ def generate_offline_feedback(scores):
 feedback = get_ai_feedback(resume, scores)
 ```
 
-### Step 7: Generate the Final Report (Chapter 32 -- Automation)
+### Step 7: Generate the Final Report (Chapter 32 - Automation)
 
 ```python
 def generate_report(resume_path, output_dir="resume_report"):
@@ -15391,7 +15391,7 @@ Dashboard saved: resume_report/dashboard.png
   skill_diversity      [==========] 10/10
   skill_count          [==========] 10/10
   action_verbs         [==========] 10/10
-  quantified           [========--] 8/10
+  quantified           [========-] 8/10
 
   OVERALL              [==========] 9.7/10
 
@@ -15421,7 +15421,7 @@ Already done? Try these enhancements:
 Sprint 5. Complete. All five sprints. Done.
 
 Think about where you started:
-- **Sprint 1**: `print("Hello, World!")` -- variables, lists, loops
+- **Sprint 1**: `print("Hello, World!")` - variables, lists, loops
 - **Sprint 2**: Dictionaries, functions, file I/O, error handling
 - **Sprint 3**: OOP, APIs, web scraping, databases
 - **Sprint 4**: Virtual environments, testing, Flask, deployment
@@ -15429,7 +15429,7 @@ Think about where you started:
 
 That's not a "crash course." That's a transformation. You went from zero to someone who can build real, useful, AI-powered applications.
 
-You're not a beginner. You're not even intermediate. You're someone who can build real things with Python AND AI. The gap between you and a "professional developer" is now just practice and projects -- not knowledge.
+You're not a beginner. You're not even intermediate. You're someone who can build real things with Python AND AI. The gap between you and a "professional developer" is now just practice and projects - not knowledge.
 
 Now it's time to prove it with the Final Projects. Let's go.
 
@@ -15439,13 +15439,13 @@ Now it's time to prove it with the Final Projects. Let's go.
 
 You made it.
 
-If you're reading this, you've gone from zero -- knowing nothing about Python -- to understanding variables, loops, functions, classes, APIs, databases, web frameworks, and even artificial intelligence. That's not a small thing. That's a genuinely impressive thing.
+If you're reading this, you've gone from zero - knowing nothing about Python - to understanding variables, loops, functions, classes, APIs, databases, web frameworks, and even artificial intelligence. That's not a small thing. That's a genuinely impressive thing.
 
 Now it's time to prove it.
 
 ## Ten Projects. Ten Portfolio Pieces.
 
-This section contains ten final projects, arranged from beginner-friendly to advanced. Each one builds on the skills you've learned throughout this book, and each one produces something real -- something that works, something you can show off, something you can talk about.
+This section contains ten final projects, arranged from beginner-friendly to advanced. Each one builds on the skills you've learned throughout this book, and each one produces something real - something that works, something you can show off, something you can talk about.
 
 **Every project you complete here is something you can show to employers, put on GitHub, and talk about in interviews.**
 
@@ -15467,7 +15467,7 @@ Each project guide includes:
 The projects are ordered intentionally. Start wherever your comfort level is, but if you can, work through them in order:
 
 | # | Project | Difficulty | Time |
-|---|---------|-----------|------|
+|--|-----|------|---|
 | 1 | The Quiz Game | 1/5 | ~1 hour |
 | 2 | Personal Budget Tracker | 2/5 | ~1.5 hours |
 | 3 | To-Do App (CLI) | 2/5 | ~2 hours |
@@ -15490,7 +15490,7 @@ Projects 1-4 use only Python's built-in features. Projects 5-6 introduce third-p
 
 ## One More Thing
 
-You will get stuck. You will see error messages. You will spend twenty minutes hunting a bug that turns out to be a missing colon. That's not failure -- that's programming. Every working developer on the planet has been exactly where you are right now.
+You will get stuck. You will see error messages. You will spend twenty minutes hunting a bug that turns out to be a missing colon. That's not failure - that's programming. Every working developer on the planet has been exactly where you are right now.
 
 The difference between someone who "tried to learn Python" and someone who "knows Python" is simply this: they kept going.
 
@@ -15522,7 +15522,7 @@ Choose a category:
 
 Your choice: 1
 
---- Science ---
+-- Science --
 
 Q1: What planet is known as the Red Planet?
   a) Venus
@@ -15552,7 +15552,7 @@ Rating: Great job!
 
 ### Step 1: Set Up the Question Data
 
-The foundation of any quiz game is its questions. We'll store them as a list of dictionaries -- each dictionary holds the question text, the answer choices, and the correct answer.
+The foundation of any quiz game is its questions. We'll store them as a list of dictionaries - each dictionary holds the question text, the answer choices, and the correct answer.
 
 ```python
 # quiz_game.py
@@ -15670,7 +15670,7 @@ def choose_category():
         choice = input("\nYour choice: ").strip()
         if choice in categories:
             name, questions = categories[choice]
-            print(f"\n--- {name} ---")
+            print(f"\n-- {name} --")
             return name, questions
         else:
             print("Invalid choice. Please enter 1, 2, 3, or 4.")
@@ -15739,7 +15739,7 @@ def show_results(score, total, results, category_name):
     elif percentage >= 40:
         rating = "Not bad, but there's room to grow."
     else:
-        rating = "Keep learning -- you'll get there!"
+        rating = "Keep learning - you'll get there!"
 
     print(f"  Rating: {rating}")
 
@@ -15803,7 +15803,7 @@ Test each category, try invalid inputs (like entering "z" when it expects a-d), 
 
 ## Portfolio Tips
 
-This is your "Hello World on steroids" -- it shows you can structure data, handle user input, and build a complete program with a clear beginning, middle, and end. When presenting this project:
+This is your "Hello World on steroids" - it shows you can structure data, handle user input, and build a complete program with a clear beginning, middle, and end. When presenting this project:
 
 - **GitHub:** Include a clear README with a screenshot of the game running in the terminal. Mention the categories and how to add new questions.
 - **Resume:** "Built a terminal-based quiz game with multiple categories, input validation, and score tracking using Python."
@@ -15834,7 +15834,7 @@ Here's what it looks like:
 
 Choice: 3
 
---- Financial Summary ---
+-- Financial Summary --
 Total Income:   $3,250.00
 Total Expenses: $1,847.50
 Balance:        $1,402.50
@@ -15858,7 +15858,7 @@ Top Expense Categories:
 
 ### Step 1: Project Setup and Imports
 
-Create the file and import everything you'll need. The `csv` and `datetime` modules are built into Python -- no installs required.
+Create the file and import everything you'll need. The `csv` and `datetime` modules are built into Python - no installs required.
 
 ```python
 # budget_tracker.py
@@ -15948,7 +15948,7 @@ def choose_category(categories):
 
 def add_transaction(transactions, trans_type):
     """Add an income or expense transaction."""
-    print(f"\n--- Add {trans_type} ---")
+    print(f"\n-- Add {trans_type} --")
 
     if trans_type == "Income":
         category = choose_category(INCOME_CATEGORIES)
@@ -15991,7 +15991,7 @@ def view_summary(transactions):
                          if t["type"] == "Expense")
     balance = total_income - total_expenses
 
-    print("\n--- Financial Summary ---")
+    print("\n-- Financial Summary --")
     print(f"  Total Income:   ${total_income:>10,.2f}")
     print(f"  Total Expenses: ${total_expenses:>10,.2f}")
     print(f"  Balance:        ${balance:>10,.2f}")
@@ -16053,7 +16053,7 @@ def view_monthly_report(transactions):
     income = sum(t["amount"] for t in monthly if t["type"] == "Income")
     expenses = sum(t["amount"] for t in monthly if t["type"] == "Expense")
 
-    print(f"\n--- Report for {selected} ---")
+    print(f"\n-- Report for {selected} --")
     print(f"  Income:   ${income:>10,.2f}")
     print(f"  Expenses: ${expenses:>10,.2f}")
     print(f"  Net:      ${income - expenses:>10,.2f}")
@@ -16146,7 +16146,7 @@ if __name__ == "__main__":
 
 1. **Budget limits:** Let the user set monthly spending limits per category. When they add an expense that pushes a category over its limit, display a warning. Store limits in a separate CSV or JSON file.
 
-2. **Export to formatted report:** Generate a nicely formatted text file report that summarizes a month's finances -- something you could print or email to yourself.
+2. **Export to formatted report:** Generate a nicely formatted text file report that summarizes a month's finances - something you could print or email to yourself.
 
 3. **Recurring transactions:** Add support for recurring monthly transactions (like rent or salary) that auto-populate when you start a new month.
 
@@ -16156,7 +16156,7 @@ A budget tracker shows you understand data persistence, input validation, and pr
 
 - **GitHub:** Include sample CSV data so reviewers can see the app in action immediately. Add screenshots of the summary and monthly report output.
 - **Resume:** "Developed a CLI budget tracker with CSV persistence, category-based analytics, and monthly reporting using Python."
-- **Interview talking point:** Discuss your choice of CSV format for storage (human-readable, easily opened in Excel) and how you handled edge cases like empty files and invalid input. Mention how you'd evolve it -- perhaps adding a SQLite database if the data grew large.
+- **Interview talking point:** Discuss your choice of CSV format for storage (human-readable, easily opened in Excel) and how you handled edge cases like empty files and invalid input. Mention how you'd evolve it - perhaps adding a SQLite database if the data grew large.
 
 ---
 
@@ -16180,7 +16180,7 @@ Here's what it looks like when running:
 
 Choice: 2
 
---- Your Tasks ---
+-- Your Tasks --
   ID  Priority  Status      Task                    Due Date
   1   [!!!]     [ ]         Buy groceries           2026-04-05
   2   [!! ]     [x]         Finish Python project   2026-04-01
@@ -16433,7 +16433,7 @@ def display_tasks(tasks, filter_name="all"):
 ```python
 def add_task_ui(manager):
     """Interactive UI for adding a task."""
-    print("\n--- Add Task ---")
+    print("\n-- Add Task --")
     title = input("  Task title: ").strip()
     if not title:
         print("  Title cannot be empty.")
@@ -16448,7 +16448,7 @@ def add_task_ui(manager):
 
 def view_tasks_ui(manager):
     """Interactive UI for viewing tasks with filter/sort options."""
-    print("\n--- Your Tasks ---")
+    print("\n-- Your Tasks --")
     print("  Filter: 1=All  2=Active  3=Completed  4=High Priority")
     choice = input("  Choose (or Enter for all): ").strip()
 
@@ -16462,7 +16462,7 @@ def view_tasks_ui(manager):
 
 def edit_task_ui(manager):
     """Interactive UI for editing a task."""
-    print("\n--- Edit Task ---")
+    print("\n-- Edit Task --")
     display_tasks(manager.tasks)
     task_id = get_task_id("\n  Task ID to edit: ")
 
@@ -16491,7 +16491,7 @@ def edit_task_ui(manager):
 
 def complete_task_ui(manager):
     """Interactive UI for completing a task."""
-    print("\n--- Complete Task ---")
+    print("\n-- Complete Task --")
     active = [t for t in manager.tasks if not t.completed]
     display_tasks(active, "active")
 
@@ -16508,7 +16508,7 @@ def complete_task_ui(manager):
 
 def delete_task_ui(manager):
     """Interactive UI for deleting a task."""
-    print("\n--- Delete Task ---")
+    print("\n-- Delete Task --")
     display_tasks(manager.tasks)
 
     if not manager.tasks:
@@ -16578,7 +16578,7 @@ if __name__ == "__main__":
 
 ## Portfolio Tips
 
-This project demonstrates OOP, data persistence, and clean architecture -- three things every employer cares about. When presenting it:
+This project demonstrates OOP, data persistence, and clean architecture - three things every employer cares about. When presenting it:
 
 - **GitHub:** Structure your repo cleanly. Put the code in a `/src` folder, include sample data, and write a README that shows the app in action.
 - **Resume:** "Built an OOP-based CLI task manager with CRUD operations, JSON persistence, and priority-based filtering using Python."
@@ -16602,13 +16602,13 @@ Here's what it looks like:
 
 Category: Animals | Difficulty: Medium | Lives: 6
 
-   ------
+   ---
    |    |
    |    O
    |   /|
    |
    |
-  ---
+  --
 
 Word: _ _ _ _ _ _ _
 
@@ -16659,64 +16659,64 @@ WORD_BANK = {
     }
 }
 
-# Each stage is one more body part -- 7 stages (0 = no parts, 6 = full body)
+# Each stage is one more body part - 7 stages (0 = no parts, 6 = full body)
 HANGMAN_STAGES = [
     """
-   ------
+   ---
    |    |
    |
    |
    |
    |
-  ---""",
+  --""",
     """
-   ------
+   ---
    |    |
    |    O
    |
    |
    |
-  ---""",
+  --""",
     """
-   ------
+   ---
    |    |
    |    O
    |    |
    |
    |
-  ---""",
+  --""",
     """
-   ------
+   ---
    |    |
    |    O
    |   /|
    |
    |
-  ---""",
+  --""",
     """
-   ------
+   ---
    |    |
    |    O
    |   /|\\
    |
    |
-  ---""",
+  --""",
     """
-   ------
+   ---
    |    |
    |    O
    |   /|\\
    |   /
    |
-  ---""",
+  --""",
     """
-   ------
+   ---
    |    |
    |    O
    |   /|\\
    |   / \\
    |
-  ---"""
+  --"""
 ]
 ```
 
@@ -16865,7 +16865,7 @@ def show_scoreboard(wins, losses):
         return
 
     win_rate = (wins / total) * 100
-    print("\n--- Scoreboard ---")
+    print("\n-- Scoreboard --")
     print(f"  Wins: {wins}  |  Losses: {losses}  |  "
           f"Win Rate: {win_rate:.0f}%")
 
@@ -16902,7 +16902,7 @@ def main():
 
         again = input("\nPlay again? (y/n): ").strip().lower()
         if again != "y":
-            print("\n--- Final Results ---")
+            print("\n-- Final Results --")
             show_scoreboard(wins, losses)
             print("\nThanks for playing!")
             break
@@ -16951,7 +16951,7 @@ Here's what it looks like:
 Choice: 1
 City: London
 
---- Current Weather: London ---
+-- Current Weather: London --
   Condition:   Partly cloudy
   Temperature: 15C (59F)
   Feels Like:  13C (55F)
@@ -17036,7 +17036,7 @@ def display_current_weather(data, city):
         area_name = area.get("areaName", [{}])[0].get("value", city)
         country = area.get("country", [{}])[0].get("value", "")
 
-        print(f"\n--- Current Weather: {area_name}, {country} ---")
+        print(f"\n-- Current Weather: {area_name}, {country} --")
         print(f"  Condition:   {description}")
         print(f"  Temperature: {temp_c}C ({temp_f}F)")
         print(f"  Feels Like:  {feels_c}C ({feels_f}F)")
@@ -17066,7 +17066,7 @@ def display_forecast(data, city):
         area = data.get("nearest_area", [{}])[0]
         area_name = area.get("areaName", [{}])[0].get("value", city)
 
-        print(f"\n--- 3-Day Forecast: {area_name} ---")
+        print(f"\n-- 3-Day Forecast: {area_name} --")
         print(f"  {'Date':<14}{'Condition':<22}{'High':<10}{'Low':<10}{'Rain %'}")
         print("  " + "-" * 60)
 
@@ -17177,7 +17177,7 @@ def view_favorites(favorites):
         print("\n  No favorites saved yet. Add some with option 3!")
         return
 
-    print("\n--- Favorite Cities ---")
+    print("\n-- Favorite Cities --")
     for city in favorites:
         data = fetch_weather(city)
         if data:
@@ -17281,7 +17281,7 @@ This project shows you can work with real external APIs, handle network errors g
 
 ## What You'll Build
 
-A web scraper that collects quotes from quotes.toscrape.com (a site built specifically for practicing scraping), stores the data in a structured format, and then analyzes it -- finding the most prolific authors, the most popular tags, and generating text-based visualizations.
+A web scraper that collects quotes from quotes.toscrape.com (a site built specifically for practicing scraping), stores the data in a structured format, and then analyzes it - finding the most prolific authors, the most popular tags, and generating text-based visualizations.
 
 Here's what the output looks like:
 
@@ -17295,7 +17295,7 @@ Scraping page 10... found 10 quotes
 
 Total quotes collected: 100
 
---- Analysis Menu ---
+-- Analysis Menu --
 1. Top Authors
 2. Tag Analysis
 3. Longest/Shortest Quotes
@@ -17305,7 +17305,7 @@ Total quotes collected: 100
 
 Choice: 1
 
---- Top 10 Authors ---
+-- Top 10 Authors --
   Albert Einstein      ################  10 quotes
   J.K. Rowling         ############      6 quotes
   Steve Martin         ######            3 quotes
@@ -17416,7 +17416,7 @@ def scrape_all_quotes():
 
 ### Step 3: Build the Analysis Functions
 
-Now the fun part -- turning raw data into insights. We'll analyze authors, tags, and quote characteristics.
+Now the fun part - turning raw data into insights. We'll analyze authors, tags, and quote characteristics.
 
 ```python
 def analyze_top_authors(quotes, limit=10):
@@ -17424,7 +17424,7 @@ def analyze_top_authors(quotes, limit=10):
     author_counts = Counter(q["author"] for q in quotes)
     top = author_counts.most_common(limit)
 
-    print(f"\n--- Top {limit} Authors ---")
+    print(f"\n-- Top {limit} Authors --")
     if not top:
         print("  No data to analyze.")
         return
@@ -17447,7 +17447,7 @@ def analyze_tags(quotes, limit=15):
     tag_counts = Counter(all_tags)
     top = tag_counts.most_common(limit)
 
-    print(f"\n--- Top {limit} Tags ---")
+    print(f"\n-- Top {limit} Tags --")
     if not top:
         print("  No tags found.")
         return
@@ -17485,7 +17485,7 @@ def analyze_quote_lengths(quotes):
 
     avg_length = sum(l for l, _ in lengths) / len(lengths)
 
-    print("\n--- Quote Length Analysis ---")
+    print("\n-- Quote Length Analysis --")
     print(f"  Total quotes: {len(quotes)}")
     print(f"  Average length: {avg_length:.0f} characters")
     print(f"  Shortest: {lengths[0][0]} characters")
@@ -17503,13 +17503,13 @@ def analyze_quote_lengths(quotes):
 
     print(f"\n  Shortest quote:")
     print(f'    "{lengths[0][1]["text"][:80]}..."')
-    print(f'    -- {lengths[0][1]["author"]}')
+    print(f'    - {lengths[0][1]["author"]}')
 
     print(f"\n  Longest quote:")
     text = lengths[-1][1]["text"]
     preview = text[:100] + "..." if len(text) > 100 else text
     print(f'    "{preview}"')
-    print(f'    -- {lengths[-1][1]["author"]}')
+    print(f'    - {lengths[-1][1]["author"]}')
 ```
 
 ### Step 4: Add Search and Export
@@ -17517,7 +17517,7 @@ def analyze_quote_lengths(quotes):
 ```python
 def search_quotes(quotes):
     """Search quotes by keyword, author, or tag."""
-    print("\n--- Search Quotes ---")
+    print("\n-- Search Quotes --")
     print("  Search by: 1=Keyword  2=Author  3=Tag")
     search_type = input("  Choice: ").strip()
 
@@ -17543,7 +17543,7 @@ def search_quotes(quotes):
     for i, q in enumerate(results[:10], 1):
         text = q["text"][:80] + "..." if len(q["text"]) > 80 else q["text"]
         print(f'\n  {i}. "{text}"')
-        print(f'     -- {q["author"]}')
+        print(f'     - {q["author"]}')
         if q["tags"]:
             print(f'     Tags: {", ".join(q["tags"])}')
 
@@ -17594,7 +17594,7 @@ def main():
         return
 
     while True:
-        print("\n--- Analysis Menu ---")
+        print("\n-- Analysis Menu --")
         print("1. Top Authors")
         print("2. Tag Analysis")
         print("3. Quote Length Analysis")
@@ -17635,7 +17635,7 @@ if __name__ == "__main__":
 
 ## Portfolio Tips
 
-This project combines web scraping, data analysis, and data export -- skills that data science and backend employers look for. When presenting it:
+This project combines web scraping, data analysis, and data export - skills that data science and backend employers look for. When presenting it:
 
 - **GitHub:** Include sample output files (CSV, JSON) and screenshots of the analysis. Note that you scrape a practice site designed for this purpose (shows ethical awareness).
 - **Resume:** "Built a web scraper using BeautifulSoup to collect and analyze 100+ data points, with statistical analysis, search, and CSV/JSON export capabilities."
@@ -18016,7 +18016,7 @@ A networking project is a standout on any junior developer's portfolio. When pre
 
 - **GitHub:** Include clear instructions for running the server and client. Add a diagram showing the client-server architecture. Mention the threading model.
 - **Resume:** "Built a multi-user CLI chat application using TCP sockets and threading with broadcast messaging, user commands, and graceful disconnection handling."
-- **Interview talking point:** Explain the threading model and why you used a lock for the client dictionary. Discuss the difference between TCP and UDP and why TCP is appropriate for chat (reliable, ordered delivery). Mention how you'd scale this -- an event loop with `asyncio` or a message broker like Redis Pub/Sub.
+- **Interview talking point:** Explain the threading model and why you used a lock for the client dictionary. Discuss the difference between TCP and UDP and why TCP is appropriate for chat (reliable, ordered delivery). Mention how you'd scale this - an event loop with `asyncio` or a message broker like Redis Pub/Sub.
 
 ---
 
@@ -18263,7 +18263,7 @@ def login():
 
 ### Step 5: Build the Blog Post CRUD Endpoints
 
-These are the core of the API -- creating, reading, updating, and deleting blog posts.
+These are the core of the API - creating, reading, updating, and deleting blog posts.
 
 ```python
 @app.route("/api/posts", methods=["GET"])
@@ -18495,7 +18495,7 @@ curl -X DELETE http://localhost:5000/api/posts/1 \
 
 ## Portfolio Tips
 
-A REST API is one of the most valuable portfolio pieces you can have -- it's the backbone of modern web applications. When presenting this:
+A REST API is one of the most valuable portfolio pieces you can have - it's the backbone of modern web applications. When presenting this:
 
 - **GitHub:** Include a comprehensive README with all endpoints documented, example `curl` commands, and setup instructions. Consider adding a Postman collection file.
 - **Resume:** "Built a RESTful blog API with Flask featuring token-based authentication, SQLite persistence, full CRUD operations, and authorization controls."
@@ -18955,7 +18955,7 @@ An ML project that goes from data to trained model to serving API is exactly wha
 
 ## What You'll Build
 
-An intelligent study assistant that loads your study materials (text files, notes, PDFs), lets you ask questions about them using AI, generates quizzes based on the content, and maintains conversation history so it remembers context. This is a real-world application of Retrieval-Augmented Generation (RAG) -- the same pattern used in enterprise AI tools.
+An intelligent study assistant that loads your study materials (text files, notes, PDFs), lets you ask questions about them using AI, generates quizzes based on the content, and maintains conversation history so it remembers context. This is a real-world application of Retrieval-Augmented Generation (RAG) - the same pattern used in enterprise AI tools.
 
 Here's what it looks like:
 
@@ -19153,7 +19153,7 @@ class DocumentLoader:
             )
             total_chars += len(chunk["content"])
 
-        return "\n\n---\n\n".join(context_parts)
+        return "\n\n--\n\n".join(context_parts)
 
     def _create_sample_files(self):
         """Create sample study materials for demonstration."""
@@ -19253,7 +19253,7 @@ class ConversationMemory:
             print("\n  No conversation history yet.")
             return
 
-        print(f"\n--- Conversation History ({len(self.messages)} messages) ---")
+        print(f"\n-- Conversation History ({len(self.messages)} messages) --")
         for msg in self.messages[-10:]:  # Show last 10
             role = "You" if msg["role"] == "user" else "Study Buddy"
             content = msg["content"][:100]
@@ -19266,7 +19266,7 @@ class ConversationMemory:
 
 ### Step 4: Build the AI Study Buddy Core
 
-This is the main class that ties everything together -- document context, conversation memory, and AI responses.
+This is the main class that ties everything together - document context, conversation memory, and AI responses.
 
 ```python
 class StudyBuddy:
@@ -19420,7 +19420,7 @@ class StudyBuddy:
 ```python
 def print_help():
     """Print available commands."""
-    print("\n--- Commands ---")
+    print("\n-- Commands --")
     print("  /quiz      - Generate a quiz from your materials")
     print("  /summary   - Summarize your study materials")
     print("  /history   - View conversation history")
@@ -19492,7 +19492,7 @@ def main():
                 print("  Type /help for available commands.")
 
         else:
-            # It's a question -- ask the study buddy
+            # It's a question - ask the study buddy
             print()
             answer = buddy.ask(user_input)
             print(f"Study Buddy: {answer}\n")
@@ -19528,7 +19528,7 @@ Try asking questions, generating quizzes, and getting summaries. The more materi
 
 ## Portfolio Tips
 
-This is your capstone project -- the one that makes hiring managers sit up. AI-powered applications are the hottest thing in tech right now. When presenting this:
+This is your capstone project - the one that makes hiring managers sit up. AI-powered applications are the hottest thing in tech right now. When presenting this:
 
 - **GitHub:** Write an excellent README with screenshots, architecture explanation (document loading, chunking, retrieval, generation), and clear setup instructions. Include sample study materials.
 - **Resume:** "Built an AI-powered study assistant using OpenAI's API with RAG (Retrieval-Augmented Generation), document chunking, context-aware Q&A, quiz generation, and persistent conversation memory."
@@ -19538,14 +19538,14 @@ This is your capstone project -- the one that makes hiring managers sit up. AI-p
 
 # Appendix A: Python Cheat Sheet
 
-A quick-reference guide to Python syntax and common patterns. Bookmark this page -- you'll come back to it constantly.
+A quick-reference guide to Python syntax and common patterns. Bookmark this page - you'll come back to it constantly.
 
 ---
 
 ## Variables and Data Types
 
 | Syntax | Example | Notes |
-|--------|---------|-------|
+|----|-----|----|
 | Integer | `x = 42` | Whole numbers, no size limit |
 | Float | `pi = 3.14` | Decimal numbers |
 | String | `name = "Alice"` | Text, single or double quotes |
@@ -19557,7 +19557,7 @@ A quick-reference guide to Python syntax and common patterns. Bookmark this page
 ## Strings
 
 | Operation | Syntax | Result |
-|-----------|--------|--------|
+|------|----|----|
 | Concatenation | `"Hello" + " " + "World"` | `"Hello World"` |
 | Repetition | `"ha" * 3` | `"hahaha"` |
 | f-string | `f"Hello, {name}!"` | `"Hello, Alice!"` |
@@ -19576,7 +19576,7 @@ A quick-reference guide to Python syntax and common patterns. Bookmark this page
 ## f-String Formatting
 
 | Syntax | Example | Result |
-|--------|---------|--------|
+|----|-----|----|
 | Variable | `f"{name}"` | Value of `name` |
 | Expression | `f"{2 + 3}"` | `"5"` |
 | Decimal places | `f"{3.14159:.2f}"` | `"3.14"` |
@@ -19590,7 +19590,7 @@ A quick-reference guide to Python syntax and common patterns. Bookmark this page
 ## Lists
 
 | Operation | Syntax | Result/Effect |
-|-----------|--------|---------------|
+|------|----|--------|
 | Create | `nums = [1, 2, 3]` | |
 | Empty list | `items = []` | |
 | Access | `nums[0]`, `nums[-1]` | `1`, `3` |
@@ -19628,7 +19628,7 @@ flat = [x for row in matrix for x in row]
 ## Dictionaries
 
 | Operation | Syntax | Result/Effect |
-|-----------|--------|---------------|
+|------|----|--------|
 | Create | `d = {"name": "Alice", "age": 30}` | |
 | Empty dict | `d = {}` | |
 | Access | `d["name"]` | `"Alice"` (KeyError if missing) |
@@ -19647,7 +19647,7 @@ flat = [x for row in matrix for x in row]
 ## Sets
 
 | Operation | Syntax | Result |
-|-----------|--------|--------|
+|------|----|----|
 | Create | `s = {1, 2, 3}` | |
 | Empty set | `s = set()` | NOT `{}` (that's a dict) |
 | Add | `s.add(4)` | |
@@ -19661,7 +19661,7 @@ flat = [x for row in matrix for x in row]
 ## Tuples
 
 | Operation | Syntax | Notes |
-|-----------|--------|-------|
+|------|----|----|
 | Create | `t = (1, 2, 3)` | Immutable (can't change) |
 | Single item | `t = (1,)` | Comma required |
 | Unpack | `a, b, c = t` | `a=1, b=2, c=3` |
@@ -19881,7 +19881,7 @@ if age < 0:
 ## Common Built-in Functions
 
 | Function | Example | Result |
-|----------|---------|--------|
+|-----|-----|----|
 | `print()` | `print("hi", end="")` | Output to console |
 | `input()` | `name = input("Name: ")` | Read from user |
 | `len()` | `len([1, 2, 3])` | `3` |
@@ -19924,7 +19924,7 @@ from pathlib import Path   # Modern file paths
 
 # Appendix B: Top 20 Python Errors (and How to Fix Them)
 
-Every Python developer -- from complete beginner to seasoned professional -- has seen these errors. The difference between a beginner and an expert isn't that experts don't get errors; it's that experts read the error message, nod, and fix it in thirty seconds. By the end of this appendix, you'll do the same.
+Every Python developer - from complete beginner to seasoned professional - has seen these errors. The difference between a beginner and an expert isn't that experts don't get errors; it's that experts read the error message, nod, and fix it in thirty seconds. By the end of this appendix, you'll do the same.
 
 ---
 
@@ -19963,7 +19963,7 @@ x = 5
 
 **What it means:** A line is indented when it shouldn't be, or indented to the wrong level.
 
-**Fix:** Make sure indentation is consistent. Use 4 spaces per level (never mix tabs and spaces). Most editors have a "convert tabs to spaces" setting -- turn it on.
+**Fix:** Make sure indentation is consistent. Use 4 spaces per level (never mix tabs and spaces). Most editors have a "convert tabs to spaces" setting - turn it on.
 
 ---
 
@@ -20113,7 +20113,7 @@ If it IS installed, check you're using the right Python environment (virtual env
 average = total / count  # count is 0
 ```
 
-**What it means:** Exactly what it says -- you divided by zero.
+**What it means:** Exactly what it says - you divided by zero.
 
 **Fix:** Check for zero before dividing:
 ```python
@@ -20312,11 +20312,11 @@ The error message is your friend. Read it carefully, and it will tell you exactl
 
 # Appendix C: What Next? Career Paths After This Book
 
-You've finished the book. You can write Python. But "I know Python" isn't a job title -- so where do you go from here?
+You've finished the book. You can write Python. But "I know Python" isn't a job title - so where do you go from here?
 
 This appendix maps out five career paths you can pursue with Python as your foundation. Each path includes what to learn next, in what order, and what job titles to search for when you're ready.
 
-Pick the one that excites you most. You don't have to choose forever -- many developers switch paths or combine them. But having a direction beats wandering.
+Pick the one that excites you most. You don't have to choose forever - many developers switch paths or combine them. But having a direction beats wandering.
 
 ---
 
@@ -20328,16 +20328,16 @@ Python is one of the most popular languages for backend web development. You'll 
 
 ### What to Learn Next (in order)
 
-1. **Django or Flask (deeper)** -- You touched Flask in this book. Django is the "batteries-included" framework used by Instagram, Spotify, and Mozilla. Learn one deeply before the other.
-2. **HTML, CSS, JavaScript basics** -- You don't need to become a frontend expert, but you need to understand what the browser does with what your server sends.
-3. **SQL and PostgreSQL** -- Move beyond SQLite to a production database. Learn JOINs, indexes, and query optimization.
-4. **REST API design** -- Learn to design clean, consistent APIs. Study authentication patterns (OAuth, JWT).
-5. **Deployment** -- Learn to deploy with Docker, Heroku, or AWS. Understand Linux servers, NGINX, and HTTPS.
-6. **Frontend framework (optional)** -- React or Vue.js to become full-stack.
+1. **Django or Flask (deeper)** - You touched Flask in this book. Django is the "batteries-included" framework used by Instagram, Spotify, and Mozilla. Learn one deeply before the other.
+2. **HTML, CSS, JavaScript basics** - You don't need to become a frontend expert, but you need to understand what the browser does with what your server sends.
+3. **SQL and PostgreSQL** - Move beyond SQLite to a production database. Learn JOINs, indexes, and query optimization.
+4. **REST API design** - Learn to design clean, consistent APIs. Study authentication patterns (OAuth, JWT).
+5. **Deployment** - Learn to deploy with Docker, Heroku, or AWS. Understand Linux servers, NGINX, and HTTPS.
+6. **Frontend framework (optional)** - React or Vue.js to become full-stack.
 
 ### Recommended Resources
 
-- Django official tutorial (djangoproject.com) -- free, thorough, and well-written
+- Django official tutorial (djangoproject.com) - free, thorough, and well-written
 - "Django for Beginners" by William S. Vincent
 - MDN Web Docs for HTML/CSS/JS fundamentals
 
@@ -20363,18 +20363,18 @@ Data scientists are the detectives of the tech world. You'll clean messy dataset
 
 ### What to Learn Next (in order)
 
-1. **pandas (deep dive)** -- You've seen the basics. Now learn groupby, merge, pivot tables, and time series handling. This is your most-used tool.
-2. **Data visualization** -- Matplotlib, Seaborn, and Plotly. Learn to make charts that communicate clearly.
-3. **SQL** -- Most real-world data lives in databases. Learn to query, join, and aggregate.
-4. **Statistics fundamentals** -- Mean, median, standard deviation, distributions, hypothesis testing, correlation. You don't need a math degree, but you need the basics.
-5. **Jupyter Notebooks** -- The standard environment for data exploration. Interactive, visual, shareable.
-6. **Machine learning basics** -- scikit-learn for classification, regression, and clustering. Understand when to use what.
-7. **A specialization** -- Natural language processing (NLP), computer vision, time series forecasting, or recommendation systems.
+1. **pandas (deep dive)** - You've seen the basics. Now learn groupby, merge, pivot tables, and time series handling. This is your most-used tool.
+2. **Data visualization** - Matplotlib, Seaborn, and Plotly. Learn to make charts that communicate clearly.
+3. **SQL** - Most real-world data lives in databases. Learn to query, join, and aggregate.
+4. **Statistics fundamentals** - Mean, median, standard deviation, distributions, hypothesis testing, correlation. You don't need a math degree, but you need the basics.
+5. **Jupyter Notebooks** - The standard environment for data exploration. Interactive, visual, shareable.
+6. **Machine learning basics** - scikit-learn for classification, regression, and clustering. Understand when to use what.
+7. **A specialization** - Natural language processing (NLP), computer vision, time series forecasting, or recommendation systems.
 
 ### Recommended Resources
 
 - "Python for Data Analysis" by Wes McKinney (the creator of pandas)
-- Kaggle.com -- free datasets and competitions to practice on
+- Kaggle.com - free datasets and competitions to practice on
 - Khan Academy for statistics fundamentals (free)
 
 ### Job Titles to Search For
@@ -20395,16 +20395,16 @@ $65,000 - $95,000, scaling to $130,000+ for senior data scientists.
 
 **The path:** Build intelligent systems that learn from data.
 
-This is the cutting edge. AI/ML engineers build the models and systems behind recommendation engines, self-driving cars, chatbots, image recognition, and everything in between. This book gave you the foundation -- now you go deep.
+This is the cutting edge. AI/ML engineers build the models and systems behind recommendation engines, self-driving cars, chatbots, image recognition, and everything in between. This book gave you the foundation - now you go deep.
 
 ### What to Learn Next (in order)
 
-1. **Mathematics** -- Linear algebra (vectors, matrices), calculus (derivatives, gradients), and probability. Khan Academy and 3Blue1Brown make these accessible.
-2. **scikit-learn (mastery)** -- Classification, regression, clustering, cross-validation, hyperparameter tuning, pipelines.
-3. **Deep learning** -- Neural networks, CNNs (for images), RNNs and Transformers (for text). Start with PyTorch or TensorFlow.
-4. **Natural Language Processing** -- Tokenization, embeddings, transformer models, fine-tuning. Hugging Face is the go-to library.
-5. **MLOps** -- Model versioning (MLflow), deployment (Docker, FastAPI), monitoring, and CI/CD for ML pipelines.
-6. **Large Language Models** -- Prompt engineering, fine-tuning, RAG architectures, LangChain, vector databases.
+1. **Mathematics** - Linear algebra (vectors, matrices), calculus (derivatives, gradients), and probability. Khan Academy and 3Blue1Brown make these accessible.
+2. **scikit-learn (mastery)** - Classification, regression, clustering, cross-validation, hyperparameter tuning, pipelines.
+3. **Deep learning** - Neural networks, CNNs (for images), RNNs and Transformers (for text). Start with PyTorch or TensorFlow.
+4. **Natural Language Processing** - Tokenization, embeddings, transformer models, fine-tuning. Hugging Face is the go-to library.
+5. **MLOps** - Model versioning (MLflow), deployment (Docker, FastAPI), monitoring, and CI/CD for ML pipelines.
+6. **Large Language Models** - Prompt engineering, fine-tuning, RAG architectures, LangChain, vector databases.
 
 ### Recommended Resources
 
@@ -20436,13 +20436,13 @@ DevOps engineers are the invisible heroes who keep software running smoothly. Yo
 
 ### What to Learn Next (in order)
 
-1. **Linux command line** -- Become comfortable in a terminal. Learn bash scripting, file permissions, process management, and SSH.
-2. **Git (advanced)** -- Branching strategies, rebasing, cherry-picking, hooks. You'll manage complex workflows.
-3. **Docker** -- Containerize applications. Learn Dockerfiles, docker-compose, and container networking.
-4. **CI/CD pipelines** -- GitHub Actions, Jenkins, or GitLab CI. Automate testing and deployment.
-5. **Cloud platforms** -- AWS, Google Cloud, or Azure. Start with one. Learn compute (EC2/VMs), storage (S3), and networking basics.
-6. **Infrastructure as Code** -- Terraform or Ansible. Define your infrastructure in files, not click-ops.
-7. **Monitoring** -- Prometheus, Grafana, or cloud-native monitoring. Know when things break before users notice.
+1. **Linux command line** - Become comfortable in a terminal. Learn bash scripting, file permissions, process management, and SSH.
+2. **Git (advanced)** - Branching strategies, rebasing, cherry-picking, hooks. You'll manage complex workflows.
+3. **Docker** - Containerize applications. Learn Dockerfiles, docker-compose, and container networking.
+4. **CI/CD pipelines** - GitHub Actions, Jenkins, or GitLab CI. Automate testing and deployment.
+5. **Cloud platforms** - AWS, Google Cloud, or Azure. Start with one. Learn compute (EC2/VMs), storage (S3), and networking basics.
+6. **Infrastructure as Code** - Terraform or Ansible. Define your infrastructure in files, not click-ops.
+7. **Monitoring** - Prometheus, Grafana, or cloud-native monitoring. Know when things break before users notice.
 
 ### Recommended Resources
 
@@ -20474,19 +20474,19 @@ Game development combines programming, art, math, and storytelling. Python is a 
 
 ### What to Learn Next (in order)
 
-1. **Pygame** -- Build 2D games from scratch. Learn game loops, sprite management, collision detection, and audio.
-2. **Game design fundamentals** -- Game mechanics, level design, player psychology, balancing. Read "The Art of Game Design" by Jesse Schell.
-3. **Object-oriented patterns** -- State machines, entity-component systems, observer pattern. Games rely heavily on design patterns.
-4. **Math for games** -- Vectors, trigonometry, physics simulation (gravity, momentum, collision).
-5. **A game engine** -- Godot (uses GDScript, similar to Python) or Unity (uses C#, but your programming fundamentals transfer). Pick one and build several small games.
-6. **3D basics (optional)** -- If you want to go beyond 2D, learn 3D coordinate systems, cameras, lighting, and shaders.
+1. **Pygame** - Build 2D games from scratch. Learn game loops, sprite management, collision detection, and audio.
+2. **Game design fundamentals** - Game mechanics, level design, player psychology, balancing. Read "The Art of Game Design" by Jesse Schell.
+3. **Object-oriented patterns** - State machines, entity-component systems, observer pattern. Games rely heavily on design patterns.
+4. **Math for games** - Vectors, trigonometry, physics simulation (gravity, momentum, collision).
+5. **A game engine** - Godot (uses GDScript, similar to Python) or Unity (uses C#, but your programming fundamentals transfer). Pick one and build several small games.
+6. **3D basics (optional)** - If you want to go beyond 2D, learn 3D coordinate systems, cameras, lighting, and shaders.
 
 ### Recommended Resources
 
 - Pygame official documentation and tutorials
 - "Invent Your Own Computer Games with Python" by Al Sweigart (free online)
 - Godot Engine documentation (free, open-source game engine)
-- Game jams on itch.io (build a game in 48 hours -- incredibly educational)
+- Game jams on itch.io (build a game in 48 hours - incredibly educational)
 
 ### Job Titles to Search For
 
@@ -20536,7 +20536,7 @@ Focuses on Python for machine learning, data analysis, and AI. His series on bui
 Beginner-friendly Python content with a focus on projects. Game development with Pygame, web development, and automation. His project-based tutorials help you build real things.
 
 **ArjanCodes**
-Software design and architecture in Python. Once you've learned the basics, Arjan teaches you how to write CLEAN Python -- design patterns, SOLID principles, and professional code structure. This is what takes you from "knows Python" to "writes good Python."
+Software design and architecture in Python. Once you've learned the basics, Arjan teaches you how to write CLEAN Python - design patterns, SOLID principles, and professional code structure. This is what takes you from "knows Python" to "writes good Python."
 
 **Fireship**
 Not Python-specific, but outstanding for understanding technology concepts quickly. His "100 seconds of X" series gives you rapid overviews of frameworks, languages, and tools. Great for exploring different career paths.
@@ -20570,7 +20570,7 @@ Free datasets, competitions, and notebooks for data science practice. Their "Lea
 The world's largest programming Q&A site. Nearly every error message you'll encounter has already been asked and answered here. Learn to search effectively: include the error message, the language, and the library name.
 
 **GitHub (github.com)**
-Not just for hosting your code -- it's the world's largest library of open-source projects. Read other people's code. Study how popular Python projects are structured. Star repos you find useful.
+Not just for hosting your code - it's the world's largest library of open-source projects. Read other people's code. Study how popular Python projects are structured. Star repos you find useful.
 
 ---
 
@@ -20608,7 +20608,7 @@ A large, active Discord server with channels organized by topic (help, career ad
 Listed under websites too, but it deserves mention as a community. Once you're experienced enough, answering other people's questions is one of the best ways to solidify your own knowledge.
 
 **Dev.to (dev.to)**
-A blogging platform for developers. Read articles, follow Python tags, and when you're ready, start writing your own posts. Writing about what you've learned is a powerful way to reinforce it -- and it builds your professional presence.
+A blogging platform for developers. Read articles, follow Python tags, and when you're ready, start writing your own posts. Writing about what you've learned is a powerful way to reinforce it - and it builds your professional presence.
 
 ---
 
@@ -20659,7 +20659,7 @@ The most important resource is the one you actually use. Consistency beats varie
 
 [Author Name] is a software developer, educator, and firm believer that programming should be fun, accessible, and free of unnecessary jargon.
 
-After spending years watching talented people bounce off dry textbooks and confusing tutorials, they decided to write the book they wished they'd had when starting out -- one that treats readers like intelligent adults, explains things in plain language, and builds toward real projects instead of endless toy examples.
+After spending years watching talented people bounce off dry textbooks and confusing tutorials, they decided to write the book they wished they'd had when starting out - one that treats readers like intelligent adults, explains things in plain language, and builds toward real projects instead of endless toy examples.
 
 They've worked across the software industry, from scrappy startups to established companies, and have taught Python to beginners in classrooms, workshops, and late-night debugging sessions over coffee. The common thread in all of it: the moment when something clicks for someone who thought they "weren't a tech person." That moment never gets old.
 

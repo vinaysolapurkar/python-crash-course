@@ -2,7 +2,7 @@
 
 > **Project** | **30 min build** | **Code: [starter](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-1-basics/sprint-1-project/starter/) | [solution](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-1-basics/sprint-1-project/solution/)**
 
-Congratulations! You just finished Sprint 1. Eight chapters. Variables, strings, numbers, decisions, lists, loops, tuples, sets. That's a LOT of Python, and you should feel genuinely proud. Seriously -- most people who say "I'll learn to code" never get past Chapter 2. You're here at the checkpoint. That puts you ahead of 90% of people who downloaded this book.
+Congratulations! You just finished Sprint 1. Eight chapters. Variables, strings, numbers, decisions, lists, loops, tuples, sets. That's a LOT of Python, and you should feel genuinely proud. Seriously - most people who say "I'll learn to code" never get past Chapter 2. You're here at the checkpoint. That puts you ahead of 90% of people who downloaded this book.
 
 Now let's prove you learned something. We're going to build a **Mad Libs Generator** that uses practically everything from Sprint 1.
 
@@ -20,7 +20,7 @@ Our version will:
 ## Skills You'll Use
 
 | Skill | Where You Learned It |
-|-------|---------------------|
+|----|-----------|
 | `input()` and `print()` | Chapters 1 & 3 |
 | Variables and f-strings | Chapter 2 |
 | Type conversion (`int()`) | Chapter 3 |
@@ -128,7 +128,7 @@ Now let's build the main game logic:
 ```python
 # Game state
 rounds_played = 0
-words_used = set()  # Track unique words they've used (sets -- Chapter 8!)
+words_used = set()  # Track unique words they've used (sets - Chapter 8!)
 
 print("=" * 50)
 print("   WELCOME TO MAD LIBS GENERATOR!")
@@ -157,7 +157,7 @@ while True:
 
 ```python
     # Collect words
-    print(f"\n--- {title} ---")
+    print(f"\n-- {title} --")
     print("Give me the following words:\n")
 
     collected_words = {}
@@ -168,13 +168,13 @@ while True:
         # Clean up the input a little
         if word == "":
             word = "banana"  # Default for lazy players
-            print(f"  (Nothing entered -- using 'banana' because why not)")
+            print(f"  (Nothing entered - using 'banana' because why not)")
 
         collected_words[placeholder] = word
         words_used.add(word.lower())  # Track unique words
 ```
 
-Don't worry about the `{}` dictionary syntax -- that's a preview of Sprint 2. For now, just know it maps each placeholder name to the word the user entered.
+Don't worry about the `{}` dictionary syntax - that's a preview of Sprint 2. For now, just know it maps each placeholder name to the word the user entered.
 
 ### Step 4: Fill In the Story and Display It
 
@@ -236,21 +236,21 @@ Put steps 1-5 together in `mad_libs.py` and run it. You should be able to:
 
 Once you've got the basic version working, try these enhancements:
 
-1. **Add your own story templates** -- the sillier the better
-2. **Add a "random word" option** -- create lists of random nouns, verbs, adjectives and pick from them when the user types "random"
-3. **Save the best stories** -- collect them in a list and print a "greatest hits" at the end
-4. **Add categories** -- "funny," "scary," "work-appropriate" story groups
-5. **Score system** -- rate each story on a silliness scale based on the words used
+1. **Add your own story templates** - the sillier the better
+2. **Add a "random word" option** - create lists of random nouns, verbs, adjectives and pick from them when the user types "random"
+3. **Save the best stories** - collect them in a list and print a "greatest hits" at the end
+4. **Add categories** - "funny," "scary," "work-appropriate" story groups
+5. **Score system** - rate each story on a silliness scale based on the words used
 
 ## What's Coming in Sprint 2
 
 You've got the basics down. Sprint 2 is where things get interesting:
 
-- **Dictionaries** -- the data structure that powers most real-world programs
-- **Functions** -- stop repeating yourself and start building reusable blocks
-- **Error handling** -- your programs stop crashing on bad input
-- **File I/O** -- read from and write to actual files
-- **Modules** -- tap into Python's massive standard library
+- **Dictionaries** - the data structure that powers most real-world programs
+- **Functions** - stop repeating yourself and start building reusable blocks
+- **Error handling** - your programs stop crashing on bad input
+- **File I/O** - read from and write to actual files
+- **Modules** - tap into Python's massive standard library
 
 The project? A **Personal Finance Tracker** that reads and writes files, handles errors gracefully, and is actually useful in your daily life.
 

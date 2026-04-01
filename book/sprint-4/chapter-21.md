@@ -1,12 +1,12 @@
-# Chapter 21: Working with APIs -- Talking to the Internet
+# Chapter 21: Working with APIs - Talking to the Internet
 
 > **Sprint 4, Chapter 21** | **Estimated Time: 20-25 minutes** | **Difficulty: Advanced**
 
 ## Why Should I Care?
 
-Every time you check the weather on your phone, that app doesn't have its own weather satellites. It asks someone else's server for the data. Every time you see stock prices update in real time, your app is calling an API. Social media bots, AI chatbots, payment processing, maps, translation services -- all APIs.
+Every time you check the weather on your phone, that app doesn't have its own weather satellites. It asks someone else's server for the data. Every time you see stock prices update in real time, your app is calling an API. Social media bots, AI chatbots, payment processing, maps, translation services - all APIs.
 
-**APIs are how programs talk to each other over the internet.** If you want to build anything that connects to the outside world -- and you do -- you need this chapter.
+**APIs are how programs talk to each other over the internet.** If you want to build anything that connects to the outside world - and you do - you need this chapter.
 
 ## The Restaurant Analogy
 
@@ -25,10 +25,10 @@ APIs work exactly the same way. You don't need to know how Google's weather serv
 
 ## HTTP Methods: The Four Magic Words
 
-When you talk to an API, you use **HTTP methods** -- think of them as different types of requests:
+When you talk to an API, you use **HTTP methods** - think of them as different types of requests:
 
 | Method | What It Does | Restaurant Analogy |
-|---|---|---|
+|--|--|--|
 | `GET` | Read/retrieve data | "Can I see the menu?" |
 | `POST` | Create new data | "I'd like to place an order." |
 | `PUT` | Update existing data | "Actually, change my order to..." |
@@ -46,7 +46,7 @@ pip install requests
 
 ### Your First API Call
 
-Let's start with the simplest possible API call -- getting a random joke:
+Let's start with the simplest possible API call - getting a random joke:
 
 ```python
 import requests
@@ -63,24 +63,24 @@ That's it. Three lines of code and you're talking to the internet.
 
 Let's break it down:
 
-1. `requests.get(url)` -- sends a GET request to that URL
-2. `response.status_code` -- the HTTP status code (200 means success)
-3. `response.json()` -- parses the response body as JSON (a Python dictionary)
+1. `requests.get(url)` - sends a GET request to that URL
+2. `response.status_code` - the HTTP status code (200 means success)
+3. `response.json()` - parses the response body as JSON (a Python dictionary)
 
 ## Status Codes: What the Server Is Telling You
 
 When the server responds, it includes a status code that tells you what happened:
 
 | Code | Meaning | What to Do |
-|---|---|---|
-| `200` | OK -- success! | Parse the data |
-| `201` | Created -- new resource made | Your POST worked |
-| `400` | Bad Request -- you messed up | Check your request |
-| `401` | Unauthorized -- need credentials | Add an API key |
-| `403` | Forbidden -- not allowed | You don't have permission |
-| `404` | Not Found -- doesn't exist | Check the URL |
-| `429` | Too Many Requests -- slow down | Wait and retry |
-| `500` | Server Error -- they messed up | Not your fault, try again later |
+|--|--|--|
+| `200` | OK - success! | Parse the data |
+| `201` | Created - new resource made | Your POST worked |
+| `400` | Bad Request - you messed up | Check your request |
+| `401` | Unauthorized - need credentials | Add an API key |
+| `403` | Forbidden - not allowed | You don't have permission |
+| `404` | Not Found - doesn't exist | Check the URL |
+| `429` | Too Many Requests - slow down | Wait and retry |
+| `500` | Server Error - they messed up | Not your fault, try again later |
 
 The easy rule: **2xx means success, 4xx means you did something wrong, 5xx means the server did something wrong.**
 
@@ -88,7 +88,7 @@ The easy rule: **2xx means success, 4xx means you did something wrong, 5xx means
 
 ## Parsing JSON Responses
 
-Most APIs return data in **JSON** format (JavaScript Object Notation). Good news -- JSON maps directly to Python dictionaries and lists:
+Most APIs return data in **JSON** format (JavaScript Object Notation). Good news - JSON maps directly to Python dictionaries and lists:
 
 ```python
 import requests
@@ -138,7 +138,7 @@ The `json=data` parameter is a shortcut that:
 
 ## Query Parameters
 
-Many APIs let you customize your request with query parameters -- the stuff after the `?` in a URL:
+Many APIs let you customize your request with query parameters - the stuff after the `?` in a URL:
 
 ```python
 import requests
@@ -167,7 +167,7 @@ Using `params=` is cleaner than building the URL string yourself, and it handles
 
 ## API Keys and Authentication
 
-Most serious APIs require authentication -- usually an **API key**. This is a unique string that identifies you and tracks your usage.
+Most serious APIs require authentication - usually an **API key**. This is a unique string that identifies you and tracks your usage.
 
 ```python
 import requests
@@ -194,7 +194,7 @@ response = requests.get(
 )
 ```
 
-> **Wait, What?** "Where do I get an API key?" Sign up on the API provider's website. Most have a free tier. OpenWeatherMap, GitHub, NewsAPI -- they all give you a key when you register.
+> **Wait, What?** "Where do I get an API key?" Sign up on the API provider's website. Most have a free tier. OpenWeatherMap, GitHub, NewsAPI - they all give you a key when you register.
 
 **Important:** Never put API keys directly in your code, especially if you're pushing to GitHub. Use environment variables:
 
@@ -247,7 +247,7 @@ General rules:
 
 ## Error Handling for API Calls
 
-API calls can fail in many ways -- network errors, timeouts, bad responses. Always handle errors:
+API calls can fail in many ways - network errors, timeouts, bad responses. Always handle errors:
 
 ```python
 import requests
@@ -353,7 +353,7 @@ for repo in client.get_repos("python"):
     print(f"  {repo['name']}: {repo['stars']:,} stars")
 ```
 
-Notice we used `requests.Session()` -- this reuses the connection and headers across multiple requests. More efficient and cleaner.
+Notice we used `requests.Session()` - this reuses the connection and headers across multiple requests. More efficient and cleaner.
 
 ## Your Turn: Weather Checker
 
@@ -402,7 +402,7 @@ Extend it to:
 ## TL;DR
 
 | Concept | What It Does |
-|---|---|
+|--|--|
 | API | A way for programs to talk to each other over the internet |
 | `requests.get(url)` | Send a GET request (retrieve data) |
 | `requests.post(url, json=data)` | Send a POST request (send data) |
@@ -415,4 +415,4 @@ Extend it to:
 
 **The one-sentence version:** Use the `requests` library to send HTTP requests to APIs, get back JSON data, and always handle errors and check status codes.
 
-Next up: Databases -- where we learn to store data for real, not just in files.
+Next up: Databases - where we learn to store data for real, not just in files.

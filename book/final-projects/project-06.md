@@ -5,7 +5,7 @@
 
 ## What You'll Build
 
-A web scraper that collects quotes from quotes.toscrape.com (a site built specifically for practicing scraping), stores the data in a structured format, and then analyzes it -- finding the most prolific authors, the most popular tags, and generating text-based visualizations.
+A web scraper that collects quotes from quotes.toscrape.com (a site built specifically for practicing scraping), stores the data in a structured format, and then analyzes it - finding the most prolific authors, the most popular tags, and generating text-based visualizations.
 
 Here's what the output looks like:
 
@@ -19,7 +19,7 @@ Scraping page 10... found 10 quotes
 
 Total quotes collected: 100
 
---- Analysis Menu ---
+-- Analysis Menu --
 1. Top Authors
 2. Tag Analysis
 3. Longest/Shortest Quotes
@@ -29,7 +29,7 @@ Total quotes collected: 100
 
 Choice: 1
 
---- Top 10 Authors ---
+-- Top 10 Authors --
   Albert Einstein      ################  10 quotes
   J.K. Rowling         ############      6 quotes
   Steve Martin         ######            3 quotes
@@ -140,7 +140,7 @@ def scrape_all_quotes():
 
 ### Step 3: Build the Analysis Functions
 
-Now the fun part -- turning raw data into insights. We'll analyze authors, tags, and quote characteristics.
+Now the fun part - turning raw data into insights. We'll analyze authors, tags, and quote characteristics.
 
 ```python
 def analyze_top_authors(quotes, limit=10):
@@ -148,7 +148,7 @@ def analyze_top_authors(quotes, limit=10):
     author_counts = Counter(q["author"] for q in quotes)
     top = author_counts.most_common(limit)
 
-    print(f"\n--- Top {limit} Authors ---")
+    print(f"\n-- Top {limit} Authors --")
     if not top:
         print("  No data to analyze.")
         return
@@ -171,7 +171,7 @@ def analyze_tags(quotes, limit=15):
     tag_counts = Counter(all_tags)
     top = tag_counts.most_common(limit)
 
-    print(f"\n--- Top {limit} Tags ---")
+    print(f"\n-- Top {limit} Tags --")
     if not top:
         print("  No tags found.")
         return
@@ -209,7 +209,7 @@ def analyze_quote_lengths(quotes):
 
     avg_length = sum(l for l, _ in lengths) / len(lengths)
 
-    print("\n--- Quote Length Analysis ---")
+    print("\n-- Quote Length Analysis --")
     print(f"  Total quotes: {len(quotes)}")
     print(f"  Average length: {avg_length:.0f} characters")
     print(f"  Shortest: {lengths[0][0]} characters")
@@ -227,13 +227,13 @@ def analyze_quote_lengths(quotes):
 
     print(f"\n  Shortest quote:")
     print(f'    "{lengths[0][1]["text"][:80]}..."')
-    print(f'    -- {lengths[0][1]["author"]}')
+    print(f'    - {lengths[0][1]["author"]}')
 
     print(f"\n  Longest quote:")
     text = lengths[-1][1]["text"]
     preview = text[:100] + "..." if len(text) > 100 else text
     print(f'    "{preview}"')
-    print(f'    -- {lengths[-1][1]["author"]}')
+    print(f'    - {lengths[-1][1]["author"]}')
 ```
 
 ### Step 4: Add Search and Export
@@ -241,7 +241,7 @@ def analyze_quote_lengths(quotes):
 ```python
 def search_quotes(quotes):
     """Search quotes by keyword, author, or tag."""
-    print("\n--- Search Quotes ---")
+    print("\n-- Search Quotes --")
     print("  Search by: 1=Keyword  2=Author  3=Tag")
     search_type = input("  Choice: ").strip()
 
@@ -267,7 +267,7 @@ def search_quotes(quotes):
     for i, q in enumerate(results[:10], 1):
         text = q["text"][:80] + "..." if len(q["text"]) > 80 else q["text"]
         print(f'\n  {i}. "{text}"')
-        print(f'     -- {q["author"]}')
+        print(f'     - {q["author"]}')
         if q["tags"]:
             print(f'     Tags: {", ".join(q["tags"])}')
 
@@ -318,7 +318,7 @@ def main():
         return
 
     while True:
-        print("\n--- Analysis Menu ---")
+        print("\n-- Analysis Menu --")
         print("1. Top Authors")
         print("2. Tag Analysis")
         print("3. Quote Length Analysis")
@@ -359,7 +359,7 @@ if __name__ == "__main__":
 
 ## Portfolio Tips
 
-This project combines web scraping, data analysis, and data export -- skills that data science and backend employers look for. When presenting it:
+This project combines web scraping, data analysis, and data export - skills that data science and backend employers look for. When presenting it:
 
 - **GitHub:** Include sample output files (CSV, JSON) and screenshots of the analysis. Note that you scrape a practice site designed for this purpose (shows ethical awareness).
 - **Resume:** "Built a web scraper using BeautifulSoup to collect and analyze 100+ data points, with statistical analysis, search, and CSV/JSON export capabilities."

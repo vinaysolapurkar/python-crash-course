@@ -10,7 +10,7 @@ That's a serious level-up. Time to prove it.
 
 ## What You're Building
 
-An **Expense Tracker** that runs in the terminal. It lets you add expenses, view them by category, see spending summaries, and -- here's the important part -- it saves everything to a CSV file so your data survives between sessions.
+An **Expense Tracker** that runs in the terminal. It lets you add expenses, view them by category, see spending summaries, and - here's the important part - it saves everything to a CSV file so your data survives between sessions.
 
 This isn't a toy. This is a tool you could actually use. (Or at least show off in an interview.)
 
@@ -26,7 +26,7 @@ This isn't a toy. This is a tool you could actually use. (Or at least show off i
 ### Skills You'll Use
 
 | Feature | Chapter |
-|---------|---------|
+|-----|-----|
 | Storing expense data as dictionaries | Chapter 9 - Dictionaries |
 | Organizing code into reusable functions | Chapter 10 - Functions |
 | Using `csv`, `datetime`, and `os` modules | Chapter 11 - Modules |
@@ -131,7 +131,7 @@ def get_category():
 ```python
 def add_expense(expenses):
     """Add a new expense to the list."""
-    print("\n--- Add Expense ---")
+    print("\n-- Add Expense --")
 
     amount = get_amount("Amount: $")
     category = get_category()
@@ -183,7 +183,7 @@ def view_by_category(expenses):
         print(f"\nNo expenses in {category}.")
         return
 
-    print(f"\n--- {category} Expenses ---")
+    print(f"\n-- {category} Expenses --")
     for e in filtered:
         print(f"  {e['date']} - ${e['amount']:.2f} - {e['description']}")
 
@@ -200,7 +200,7 @@ def spending_summary(expenses):
         print("\nNo expenses recorded yet.")
         return
 
-    print("\n--- Spending Summary ---")
+    print("\n-- Spending Summary --")
 
     # Group expenses by category
     category_totals = {}
@@ -232,7 +232,7 @@ def main():
     print("=" * 40)
 
     while True:
-        print("\n--- Menu ---")
+        print("\n-- Menu --")
         print("1. Add Expense")
         print("2. View All Expenses")
         print("3. View by Category")
@@ -268,17 +268,17 @@ Save the file and run it:
 python expense_tracker.py
 ```
 
-Try adding a few expenses, viewing them, checking the summary. Close the program and run it again -- your expenses are still there because they're saved to `expenses.csv`.
+Try adding a few expenses, viewing them, checking the summary. Close the program and run it again - your expenses are still there because they're saved to `expenses.csv`.
 
 ## Challenge Upgrades
 
 If you breezed through the basic version, try these enhancements:
 
-1. **Delete an expense** -- Show numbered expenses and let the user pick one to remove
-2. **Monthly report** -- Filter expenses by month and show monthly totals
-3. **Budget limits** -- Set a budget per category and warn when approaching the limit
-4. **Export summary** -- Save the spending summary to a separate text file
-5. **JSON storage** -- Replace CSV with JSON for more flexible data storage
+1. **Delete an expense** - Show numbered expenses and let the user pick one to remove
+2. **Monthly report** - Filter expenses by month and show monthly totals
+3. **Budget limits** - Set a budget per category and warn when approaching the limit
+4. **Export summary** - Save the spending summary to a separate text file
+5. **JSON storage** - Replace CSV with JSON for more flexible data storage
 
 ## The Full Code
 
@@ -286,15 +286,15 @@ The complete, working expense tracker is available at:
 `https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-2-intermediate/sprint-2-checkpoint-expense-tracker/`
 
 The repo includes:
-- `expense_tracker.py` -- The complete solution
-- `expense_tracker_starter.py` -- A skeleton with function signatures and comments
-- `sample_expenses.csv` -- Sample data to test with
+- `expense_tracker.py` - The complete solution
+- `expense_tracker_starter.py` - A skeleton with function signatures and comments
+- `sample_expenses.csv` - Sample data to test with
 
 ## What's Next: Sprint 3
 
-You've just built a real application. It has a menu system, file persistence, error handling, and organized code. That's not a tutorial exercise -- that's a project.
+You've just built a real application. It has a menu system, file persistence, error handling, and organized code. That's not a tutorial exercise - that's a project.
 
-Sprint 3 is where things get *really* interesting. You're going to learn **Object-Oriented Programming** -- the paradigm that powers everything from video games to web apps to AI systems. You'll learn about classes, objects, inheritance, and all the patterns that make large-scale software possible.
+Sprint 3 is where things get *really* interesting. You're going to learn **Object-Oriented Programming** - the paradigm that powers everything from video games to web apps to AI systems. You'll learn about classes, objects, inheritance, and all the patterns that make large-scale software possible.
 
 You'll build a **Library Management System** that puts all of it together.
 

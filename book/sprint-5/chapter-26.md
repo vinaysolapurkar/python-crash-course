@@ -2,20 +2,20 @@
 
 > **Sprint 5, Chapter 26** | **10 min read** | **Code: [github link](https://github.com/vinaysolapurkar/python-crash-course/tree/main/code/sprint-5-ai/chapter-26-numpy/)**
 
-If Python lists are a bicycle, NumPy arrays are a Tesla. Same job -- getting you from A to B. Wildly different speed. And once you drive the Tesla, you're never going back to pedaling.
+If Python lists are a bicycle, NumPy arrays are a Tesla. Same job - getting you from A to B. Wildly different speed. And once you drive the Tesla, you're never going back to pedaling.
 
 ## What You'll Learn
 - Creating NumPy arrays (multiple ways)
-- Shape and dtype -- understanding your data's structure
+- Shape and dtype - understanding your data's structure
 - Indexing and slicing (you already know most of this)
 - Element-wise math operations (no loops!)
-- Broadcasting -- NumPy's mind-reading trick
+- Broadcasting - NumPy's mind-reading trick
 - Essential functions: mean, std, max, min, sum, reshape
 - Why NumPy is dramatically faster than regular Python lists
 
 ## Why Should I Care?
 
-Every single AI and machine learning library in Python -- TensorFlow, PyTorch, scikit-learn, pandas -- is built on top of NumPy. It's not optional. It's not a "nice to have." It's the foundation. Learning AI without NumPy is like learning to cook without knowing what a stove is.
+Every single AI and machine learning library in Python - TensorFlow, PyTorch, scikit-learn, pandas - is built on top of NumPy. It's not optional. It's not a "nice to have." It's the foundation. Learning AI without NumPy is like learning to cook without knowing what a stove is.
 
 NumPy makes math on large datasets fast, easy, and readable. Operations that would take a `for` loop and ten lines of code take one line with NumPy. And they run 50-100x faster. That's not a typo.
 
@@ -98,21 +98,21 @@ Every NumPy array knows two things about itself: its **shape** (how many rows an
 
 ```python
 scores = np.array([85, 92, 78, 95, 88])
-print(scores.shape)  # (5,)     -- 1D array with 5 elements
-print(scores.dtype)  # int64    -- 64-bit integers
+print(scores.shape)  # (5,)     - 1D array with 5 elements
+print(scores.dtype)  # int64    - 64-bit integers
 
 grades = np.array([
     [85, 92, 78],
     [95, 88, 76],
     [90, 85, 92]
 ])
-print(grades.shape)  # (3, 3)   -- 3 rows, 3 columns
+print(grades.shape)  # (3, 3)   - 3 rows, 3 columns
 print(grades.dtype)  # int64
 
 # You can also check other properties
-print(scores.ndim)   # 1  -- one dimension
-print(grades.ndim)   # 2  -- two dimensions
-print(grades.size)   # 9  -- total number of elements
+print(scores.ndim)   # 1  - one dimension
+print(grades.ndim)   # 2  - two dimensions
+print(grades.size)   # 9  - total number of elements
 ```
 
 Think of `shape` as the dimensions of a spreadsheet. `(3, 3)` means 3 rows and 3 columns. `(5,)` means just a single row of 5 items. When you start doing machine learning, you'll check `.shape` constantly. It's the first thing you look at when something goes wrong.
@@ -124,7 +124,7 @@ print(precise)       # [1. 2. 3.]
 print(precise.dtype)  # float64
 
 small = np.array([1, 2, 3], dtype=np.int8)
-print(small.dtype)    # int8 -- uses less memory
+print(small.dtype)    # int8 - uses less memory
 ```
 
 ## Indexing and Slicing
@@ -141,7 +141,7 @@ print(scores[-1])    # 91
 # Slicing (same as lists)
 print(scores[1:4])   # [92 78 95]
 print(scores[:3])    # [85 92 78]
-print(scores[::2])   # [85 78 88 91] -- every other element
+print(scores[::2])   # [85 78 88 91] - every other element
 ```
 
 For 2D arrays, you get an extra dimension to play with:
@@ -168,12 +168,12 @@ print(grades[0:2, 1:3])
 #  [88 76]]
 ```
 
-Fancy indexing -- selecting specific elements by condition:
+Fancy indexing - selecting specific elements by condition:
 
 ```python
 scores = np.array([85, 92, 78, 95, 88, 76, 91])
 
-# Boolean indexing -- this is incredibly powerful
+# Boolean indexing - this is incredibly powerful
 high_scores = scores[scores >= 90]
 print(high_scores)  # [92 95 91]
 
@@ -212,13 +212,13 @@ print(squared)  # [7225 8464 6084 9025 7744]
 Compare this to regular Python lists:
 
 ```python
-# Regular Python -- requires a loop
+# Regular Python - requires a loop
 scores_list = [85, 92, 78, 95, 88]
 curved_list = []
 for s in scores_list:
     curved_list.append(s + 5)
 
-# NumPy -- one line
+# NumPy - one line
 scores_np = np.array([85, 92, 78, 95, 88])
 curved_np = scores_np + 5
 ```
@@ -265,7 +265,7 @@ grades = np.array([
 # Weight for each subject: [math_weight, science_weight, english_weight]
 weights = np.array([0.4, 0.35, 0.25])
 
-# Broadcasting: (3, 3) * (3,) -- NumPy applies weights to each row
+# Broadcasting: (3, 3) * (3,) - NumPy applies weights to each row
 weighted = grades * weights
 print(weighted)
 # [[34.   32.2  19.5 ]
@@ -289,16 +289,16 @@ These are the functions you'll use every single day:
 scores = np.array([85, 92, 78, 95, 88, 76, 91, 83])
 
 # Statistics
-print(np.mean(scores))    # 86.0    -- average
-print(np.median(scores))  # 86.5    -- middle value
-print(np.std(scores))     # 6.265   -- standard deviation
-print(np.max(scores))     # 95      -- highest
-print(np.min(scores))     # 76      -- lowest
-print(np.sum(scores))     # 688     -- total
+print(np.mean(scores))    # 86.0    - average
+print(np.median(scores))  # 86.5    - middle value
+print(np.std(scores))     # 6.265   - standard deviation
+print(np.max(scores))     # 95      - highest
+print(np.min(scores))     # 76      - lowest
+print(np.sum(scores))     # 688     - total
 
 # Position finders
-print(np.argmax(scores))  # 3  -- index of the highest score
-print(np.argmin(scores))  # 5  -- index of the lowest score
+print(np.argmax(scores))  # 3  - index of the highest score
+print(np.argmin(scores))  # 5  - index of the lowest score
 
 # Sorting
 sorted_scores = np.sort(scores)
@@ -393,7 +393,7 @@ NumPy is 68.5x faster
 
 Almost 70 times faster. On a million elements. And the gap gets bigger as your data gets bigger. This is why every data science library uses NumPy under the hood.
 
-> **Don't Panic:** NumPy looks like a lot of new stuff, but 80% of it works exactly like lists. Indexing? Same as lists. Slicing? Same as lists. The main difference is that math operations work on the entire array at once instead of needing loops. You already know this stuff -- NumPy just makes it faster.
+> **Don't Panic:** NumPy looks like a lot of new stuff, but 80% of it works exactly like lists. Indexing? Same as lists. Slicing? Same as lists. The main difference is that math operations work on the entire array at once instead of needing loops. You already know this stuff - NumPy just makes it faster.
 
 ## Your Turn: Student Scores Analysis
 
@@ -441,14 +441,14 @@ Best student: Student 4 with average 90.5
 ## TL;DR
 
 - NumPy arrays are like Python lists but dramatically faster for math operations
-- `import numpy as np` -- the universal convention
+- `import numpy as np` - the universal convention
 - Create arrays with `np.array()`, `np.zeros()`, `np.ones()`, `np.arange()`, `np.linspace()`
 - `.shape` tells you dimensions, `.dtype` tells you data type
 - Indexing and slicing work just like lists, plus `[row, col]` for 2D
 - Boolean indexing: `arr[arr > 90]` gives you all elements matching the condition
-- Math operations work element-wise -- no loops needed
+- Math operations work element-wise - no loops needed
 - Broadcasting lets NumPy do math between arrays of different sizes
 - Key functions: `np.mean()`, `np.std()`, `np.max()`, `np.min()`, `np.sum()`, `np.sort()`
 - `.reshape()` changes the shape of your data
 - NumPy is 50-100x faster than regular Python lists for numerical operations
-- Every AI/ML library is built on NumPy -- this is the foundation of everything that follows
+- Every AI/ML library is built on NumPy - this is the foundation of everything that follows

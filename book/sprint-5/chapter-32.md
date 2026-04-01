@@ -9,7 +9,7 @@ Why spend 10 minutes doing something manually when you can spend 2 hours automat
 - Bulk file renaming
 - Email automation with smtplib
 - Scheduling tasks with the schedule library
-- Selenium -- browser automation basics
+- Selenium - browser automation basics
 - Three practical recipes you can use immediately
 
 ## Why Should I Care?
@@ -174,7 +174,7 @@ def organize_downloads():
 organize_downloads()
 ```
 
-Run this once and your Downloads folder goes from chaos to organized folders. Run it weekly (or schedule it -- we'll get there) and it stays clean forever.
+Run this once and your Downloads folder goes from chaos to organized folders. Run it weekly (or schedule it - we'll get there) and it stays clean forever.
 
 ## Bulk File Renaming
 
@@ -211,7 +211,7 @@ def rename_photos(folder, prefix="vacation"):
 # Result: beach_2024_001.jpg, beach_2024_002.jpg, beach_2024_003.jpg...
 ```
 
-Another common pattern -- removing spaces from filenames:
+Another common pattern - removing spaces from filenames:
 
 ```python
 from pathlib import Path
@@ -274,7 +274,7 @@ send_email(
 )
 ```
 
-> **Important -- App Passwords:** Gmail doesn't let you use your regular password with smtplib. You need an **App Password**:
+> **Important - App Passwords:** Gmail doesn't let you use your regular password with smtplib. You need an **App Password**:
 > 1. Go to your Google Account settings
 > 2. Security -> 2-Step Verification (enable it if you haven't)
 > 3. Search for "App passwords"
@@ -545,7 +545,7 @@ def generate_weekly_report():
 generate_weekly_report()
 ```
 
-## Practical Recipe 3: Watchdog -- Monitor a Folder for Changes
+## Practical Recipe 3: Watchdog - Monitor a Folder for Changes
 
 ```python
 # pip install watchdog
@@ -598,7 +598,7 @@ def process_new_file(filepath):
 
 ## Putting It All Together
 
-Here's the ultimate automation combo -- a scheduled script that:
+Here's the ultimate automation combo - a scheduled script that:
 1. Organizes your Downloads folder
 2. Generates a report
 3. Emails it to you
@@ -609,7 +609,7 @@ import time
 
 def daily_automation():
     """Run all daily automation tasks."""
-    print("\n--- Running Daily Automation ---")
+    print("\n-- Running Daily Automation --")
 
     # 1. Organize downloads
     print("\n1. Organizing files...")
@@ -623,7 +623,7 @@ def daily_automation():
     print("\n3. Sending report...")
     # send_email(...)  # From earlier in this chapter
 
-    print("\n--- Daily Automation Complete ---")
+    print("\n-- Daily Automation Complete --")
 
 # Run every weekday at 9 AM
 schedule.every().monday.at("09:00").do(daily_automation)
@@ -696,10 +696,10 @@ print(counts)
 - **pathlib** is the modern way to work with files: `Path.home() / "Downloads"`, `path.glob("*.pdf")`
 - **shutil** handles moving, copying, and deleting files and folders
 - Bulk rename files with loops: `path.rename(new_path)`
-- **smtplib** sends emails from Python -- use App Passwords for Gmail, never hardcode credentials
+- **smtplib** sends emails from Python - use App Passwords for Gmail, never hardcode credentials
 - **schedule** runs functions at specific times: `schedule.every().day.at("09:00").do(task)`
 - **Selenium** automates web browsers: clicking, typing, filling forms, taking screenshots
 - Combine pandas + matplotlib + email for automated reporting pipelines
-- Automation gets better over time -- start with one annoying task, automate it, then add more
-- Be careful with `shutil.rmtree()` -- it permanently deletes folders with no undo
+- Automation gets better over time - start with one annoying task, automate it, then add more
+- Be careful with `shutil.rmtree()` - it permanently deletes folders with no undo
 - You just learned to make your computer work while you sleep. Welcome to the good life.

@@ -19,7 +19,7 @@ Here's what it looks like:
 Choice: 1
 City: London
 
---- Current Weather: London ---
+-- Current Weather: London --
   Condition:   Partly cloudy
   Temperature: 15C (59F)
   Feels Like:  13C (55F)
@@ -104,7 +104,7 @@ def display_current_weather(data, city):
         area_name = area.get("areaName", [{}])[0].get("value", city)
         country = area.get("country", [{}])[0].get("value", "")
 
-        print(f"\n--- Current Weather: {area_name}, {country} ---")
+        print(f"\n-- Current Weather: {area_name}, {country} --")
         print(f"  Condition:   {description}")
         print(f"  Temperature: {temp_c}C ({temp_f}F)")
         print(f"  Feels Like:  {feels_c}C ({feels_f}F)")
@@ -134,7 +134,7 @@ def display_forecast(data, city):
         area = data.get("nearest_area", [{}])[0]
         area_name = area.get("areaName", [{}])[0].get("value", city)
 
-        print(f"\n--- 3-Day Forecast: {area_name} ---")
+        print(f"\n-- 3-Day Forecast: {area_name} --")
         print(f"  {'Date':<14}{'Condition':<22}{'High':<10}{'Low':<10}{'Rain %'}")
         print("  " + "-" * 60)
 
@@ -245,7 +245,7 @@ def view_favorites(favorites):
         print("\n  No favorites saved yet. Add some with option 3!")
         return
 
-    print("\n--- Favorite Cities ---")
+    print("\n-- Favorite Cities --")
     for city in favorites:
         data = fetch_weather(city)
         if data:

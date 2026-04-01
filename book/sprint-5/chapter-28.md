@@ -7,9 +7,9 @@ Data without visualization is like a movie without pictures. Technically the sto
 ## What You'll Learn
 - Matplotlib basics: line, scatter, bar, histogram, pie charts
 - Making charts not ugly: labels, titles, colors, legends
-- Subplots -- multiple charts in one figure
-- Seaborn -- matplotlib but prettier
-- Plotly -- interactive charts that move
+- Subplots - multiple charts in one figure
+- Seaborn - matplotlib but prettier
+- Plotly - interactive charts that move
 - Choosing the right chart for your data
 
 ## Why Should I Care?
@@ -158,7 +158,7 @@ plt.hist(scores, bins=25, color="steelblue", edgecolor="black", alpha=0.7)
 plt.title("Distribution of Test Scores", fontsize=14, fontweight="bold")
 plt.xlabel("Score")
 plt.ylabel("Number of Students")
-plt.axvline(np.mean(scores), color="red", linestyle="--", label=f"Mean: {np.mean(scores):.1f}")
+plt.axvline(np.mean(scores), color="red", linestyle="-", label=f"Mean: {np.mean(scores):.1f}")
 plt.legend()
 plt.tight_layout()
 plt.show()
@@ -194,7 +194,7 @@ import numpy as np
 months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
 sales = [120, 135, 148, 162, 155, 178]
 
-# Set a style -- this changes everything
+# Set a style - this changes everything
 plt.style.use("seaborn-v0_8-whitegrid")  # Clean, modern look
 
 fig, ax = plt.subplots(figsize=(10, 6))  # Control the size
@@ -218,11 +218,11 @@ plt.show()
 ```
 
 Key upgrades:
-- `plt.style.use()` -- sets a global style theme
-- `figsize=(10, 6)` -- control the chart size
-- `tight_layout()` -- prevents labels from getting cut off
-- Annotations -- add data labels directly on the chart
-- Custom colors with hex codes -- no more default blue
+- `plt.style.use()` - sets a global style theme
+- `figsize=(10, 6)` - control the chart size
+- `tight_layout()` - prevents labels from getting cut off
+- Annotations - add data labels directly on the chart
+- Custom colors with hex codes - no more default blue
 
 Available styles you can try:
 
@@ -231,10 +231,10 @@ Available styles you can try:
 print(plt.style.available)
 
 # Some good ones:
-# "seaborn-v0_8-whitegrid" -- clean and modern
-# "ggplot" -- R-inspired
-# "fivethirtyeight" -- news/data journalism style
-# "dark_background" -- dark mode
+# "seaborn-v0_8-whitegrid" - clean and modern
+# "ggplot" - R-inspired
+# "fivethirtyeight" - news/data journalism style
+# "dark_background" - dark mode
 ```
 
 ### Saving Charts
@@ -245,7 +245,7 @@ plt.savefig("sales_chart.png", dpi=150, bbox_inches="tight")
 
 # Other formats
 plt.savefig("sales_chart.pdf")
-plt.savefig("sales_chart.svg")  # Vector format -- scales perfectly
+plt.savefig("sales_chart.svg")  # Vector format - scales perfectly
 ```
 
 ## Subplots: Multiple Charts in One Figure
@@ -353,7 +353,7 @@ Box plots show you the median, quartiles, and outliers at a glance. They're the 
 ### Heatmap
 
 ```python
-# Correlation matrix -- how are variables related?
+# Correlation matrix - how are variables related?
 numeric_movies = movies[["rating", "budget_millions", "revenue_millions"]].copy()
 
 plt.figure(figsize=(8, 6))
@@ -448,7 +448,7 @@ fig.show()
 Here's your decision guide:
 
 | Question You're Asking | Chart Type | Library Call |
-|---|---|---|
+|--|--|--|
 | How does something change over time? | **Line chart** | `plt.plot()` |
 | How do categories compare? | **Bar chart** | `plt.bar()` or `sns.barplot()` |
 | What's the relationship between X and Y? | **Scatter plot** | `plt.scatter()` or `px.scatter()` |
