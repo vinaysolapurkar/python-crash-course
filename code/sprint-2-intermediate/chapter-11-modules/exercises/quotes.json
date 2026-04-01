@@ -1,0 +1,42 @@
+[
+  {
+    "quote": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
+    "author": "Martin Fowler"
+  },
+  {
+    "quote": "First, solve the problem. Then, write the code.",
+    "author": "John Johnson"
+  },
+  {
+    "quote": "Talk is cheap. Show me the code.",
+    "author": "Linus Torvalds"
+  },
+  {
+    "quote": "It works on my machine.",
+    "author": "Every Developer Ever"
+  },
+  {
+    "quote": "There are only two hard things in Computer Science: cache invalidation and naming things.",
+    "author": "Phil Karlton"
+  },
+  {
+    "quote": "The best error message is the one that never shows up.",
+    "author": "Thomas Fuchs"
+  },
+  {
+    "quote": "Code is like humor. When you have to explain it, it's bad.",
+    "author": "Cory House"
+  },
+  {
+    "quote": "Programming is 10% writing code and 90% figuring out why it doesn't work.",
+    "author": "Unknown Wisdom"
+  },
+  {
+    "quote": "In order to understand recursion, one must first understand recursion.",
+    "author": "Ancient Programmer Proverb"
+  },
+  {
+    "quote": "Python is the second-best language for everything.",
+    "author": "The Python Community"
+  }
+]
